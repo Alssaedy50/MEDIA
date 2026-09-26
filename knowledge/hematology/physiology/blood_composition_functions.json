@@ -1,0 +1,85 @@
+{
+  "id": "hematology.physiology.blood_composition_functions",
+  "domain": "Hematology",
+  "subject": "Physiology",
+  "topic": "Blood Composition and Functions",
+  "subtopic": "Blood components, transport, regulation and protection",
+  "concept": "Blood is a specialized connective tissue composed of plasma and formed elements that together provide transport, homeostasis, defense and hemostasis.",
+  "content": {
+    "definition": "Blood is a circulating connective tissue consisting of a fluid matrix called plasma and formed elements consisting of erythrocytes, leukocytes and platelets.",
+    "explanation": "In a typical adult, plasma accounts for about 55% of blood volume and the cellular fraction about 45%, although values vary with hydration and hematocrit. Plasma is predominantly water and contains proteins, electrolytes, nutrients, hormones, dissolved gases and metabolic waste. The formed elements are erythrocytes, leukocytes and platelets.",
+    "mechanism": "Blood performs its functions through coordinated movement of plasma and cells through the circulation. Erythrocytes transport oxygen mainly through reversible binding of oxygen to hemoglobin and participate in carbon dioxide transport and acid-base buffering. Plasma carries nutrients, hormones, electrolytes, respiratory gases and wastes and contributes to fluid, osmotic and acid-base homeostasis. Leukocytes provide immune defense and can leave the circulation to enter tissues. Platelets respond to vascular injury through adhesion, activation, secretion and aggregation, initiating primary hemostasis.",
+    "structure": "Blood has two major components: plasma and formed elements. Plasma contains water, plasma proteins such as albumin, globulins and fibrinogen, electrolytes, nutrients, hormones, gases and waste products. Formed elements include erythrocytes, leukocytes and platelets.",
+    "function": "The major physiological functions of blood are transportation, regulation and protection. Transportation includes oxygen, carbon dioxide, nutrients, hormones, electrolytes and metabolic wastes. Regulation includes maintenance of body temperature, fluid and osmotic balance and acid-base status. Protection includes immune defense and hemostasis.",
+    "causes": [],
+    "effects": [],
+    "clinical_relevance": "Changes in blood composition or function can alter oxygen delivery, immune defense, fluid balance or hemostasis. Hematocrit, complete blood count and plasma studies are commonly used to assess different components of blood.",
+    "diagnosis": "Common laboratory assessment includes complete blood count, hematocrit and relevant plasma chemistry or coagulation studies according to the clinical question.",
+    "treatment": "Treatment is directed at the underlying disorder affecting blood volume, composition or function rather than at blood as a single system.",
+    "high_yield": [
+      "Blood consists of plasma plus formed elements.",
+      "Plasma is approximately 55% of blood volume in a typical adult.",
+      "Formed elements are erythrocytes, leukocytes and platelets.",
+      "The major functions of blood are transport, regulation and protection.",
+      "Hemoglobin carries most oxygen in blood; only a small fraction is physically dissolved in plasma.",
+      "Plasma proteins contribute to oncotic pressure, transport, immunity and coagulation.",
+      "Leukocytes provide immune defense and can migrate from blood into tissues.",
+      "Platelets are central to primary hemostasis."
+    ]
+  },
+  "terminology": [
+    {"term": "Plasma", "language": "English", "Arabic": "البلازما", "pronunciation": "PLAZ-muh", "etymology": "Greek plasma, something molded or formed.", "notes": "Fluid matrix of blood containing water and dissolved substances."},
+    {"term": "Formed elements", "language": "English", "Arabic": "العناصر المشكلة للدم", "pronunciation": "FORMD EL-uh-ments", "etymology": "Descriptive term for cellular blood components.", "notes": "Erythrocytes, leukocytes and platelets."},
+    {"term": "Erythrocyte", "language": "English", "Arabic": "كُرية الدم الحمراء", "pronunciation": "eh-RITH-ro-site", "etymology": "Greek erythros, red, plus kytos, cell.", "notes": "Red blood cell specialized for gas transport."},
+    {"term": "Leukocyte", "language": "English", "Arabic": "كُرية الدم البيضاء", "pronunciation": "LOO-koh-site", "etymology": "Greek leukos, white, plus kytos, cell.", "notes": "White blood cell involved in immune defense."},
+    {"term": "Thrombocyte", "language": "English", "Arabic": "الصفيحة الدموية", "pronunciation": "THROM-bo-site", "etymology": "Greek thrombos, clot, plus kytos, cell.", "notes": "Platelet involved in primary hemostasis."},
+    {"term": "Hematocrit", "language": "English", "Arabic": "الهيماتوكريت / مكداس الدم", "pronunciation": "hee-MAT-oh-krit", "etymology": "Greek haima, blood, plus krites, judge/separator.", "notes": "Fraction of blood volume occupied by erythrocytes."},
+    {"term": "Homeostasis", "language": "English", "Arabic": "الاستتباب / الاتزان الداخلي", "pronunciation": "HOH-mee-oh-STAY-sis", "etymology": "Greek homoios, similar, plus stasis, standing still.", "notes": "Maintenance of a relatively stable internal environment."}
+  ],
+  "relations": [
+    {"target_id": "hematology.histology.blood_tissue", "relation": "physiological_basis_of", "note": "The physiological functions of blood depend on its plasma and formed-element composition."},
+    {"target_id": "hematology.histology.rbc_erythropoiesis", "relation": "includes_function_of", "note": "Erythrocytes are major blood elements responsible for oxygen transport."},
+    {"target_id": "hematology.histology.leukocytes", "relation": "includes_function_of", "note": "Leukocytes provide immune defense."},
+    {"target_id": "hematology.histology.platelets_thrombopoiesis", "relation": "includes_function_of", "note": "Platelets contribute to primary hemostasis."}
+  ],
+  "yemen_context": {
+    "relevance": "Blood composition and function are foundational for interpreting common hematology investigations and understanding anemia, infection and bleeding disorders.",
+    "evidence": "General medical relevance; no Yemen-specific epidemiologic claim is made."
+  },
+  "evidence_level": "reference",
+  "status": "reviewed",
+  "review_notes": "Original synthesized educational content with source metadata; no copyrighted textbook text copied.",
+  "last_verified": "2026-09-27",
+  "sources": [
+    {
+      "title": "Physiology, Blood Plasma",
+      "source_type": "reference",
+      "authors": ["Sujatha Mahadevarao Premnath", "Parvathy Sankar", "Bassem Khalil"],
+      "year": 2026,
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK531504/",
+      "license": "NCBI Bookshelf / StatPearls",
+      "location": "NCBI Bookshelf",
+      "notes": "Supports plasma composition, functions, homeostasis and blood as specialized connective tissue."
+    },
+    {
+      "title": "In brief: What does blood do?",
+      "source_type": "reference",
+      "authors": ["Institute for Quality and Efficiency in Health Care"],
+      "year": 2023,
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK279392/",
+      "license": "NCBI Bookshelf",
+      "location": "NCBI Bookshelf",
+      "notes": "Supports major blood functions, composition and roles of erythrocytes, leukocytes and platelets."
+    },
+    {
+      "title": "Oxygen Transport - Regulation of Tissue Oxygenation",
+      "source_type": "reference",
+      "authors": ["NCBI Bookshelf"],
+      "year": 2010,
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK54103/",
+      "license": "NCBI Bookshelf",
+      "location": "NCBI Bookshelf",
+      "notes": "Supports oxygen transport by hemoglobin and the dissolved fraction."
+    }
+  ]
+}
