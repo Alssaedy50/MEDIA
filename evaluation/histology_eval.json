@@ -1,0 +1,43 @@
+{
+  "name": "MEDAI Hematology Histology v0.1 evaluation set",
+  "version": "0.1.0",
+  "scope": "hematology.histology",
+  "purpose": "Validate retrieval and evidence-state behavior for the first Histology knowledge record before adding additional Histology records.",
+  "cases": [
+    {
+      "id": "hist-001",
+      "query": "What is blood tissue composed of?",
+      "mode": "quick",
+      "expected_concepts": ["hematology.histology.blood_tissue"],
+      "expected_evidence_state": "supported"
+    },
+    {
+      "id": "hist-002",
+      "query": "What is plasma?",
+      "mode": "explain",
+      "expected_concepts": ["hematology.histology.blood_tissue"],
+      "expected_evidence_state": "supported"
+    },
+    {
+      "id": "hist-003",
+      "query": "What are the formed elements of blood?",
+      "mode": "quick",
+      "expected_concepts": ["hematology.histology.blood_tissue"],
+      "expected_evidence_state": "supported"
+    },
+    {
+      "id": "hist-004",
+      "query": "What is the difference between plasma and serum?",
+      "mode": "compare",
+      "expected_concepts": ["hematology.histology.blood_tissue"],
+      "expected_evidence_state": "multi_concept"
+    },
+    {
+      "id": "hist-005",
+      "query": "What is the molecular mechanism of a fictional blood drug called XenoMed-9000?",
+      "mode": "quick",
+      "expected_concepts": [],
+      "expected_evidence_state": "insufficient"
+    }
+  ]
+}
