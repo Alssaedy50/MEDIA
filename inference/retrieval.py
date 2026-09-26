@@ -12,11 +12,10 @@ from __future__ import annotations
 
 import argparse
 import json
-import math
 import re
 from dataclasses import dataclass
 from pathlib import Path
-from typing import Any, Iterable
+from typing import Any
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -71,8 +70,7 @@ def load_records(kb_dir: Path = DEFAULT_KB) -> list[Record]:
 
 
 def _field_text(record: Record, field: str) -> str:
-    value = record.data.get(field, "")
-    return flatten_text(value)
+    return flatten_text(record.data.get(field, ""))
 
 
 def _score(query_tokens: list[str], record: Record) -> tuple[float, dict[str, Any]]:
@@ -116,14 +114,12 @@ def _score(query_tokens: list[str], record: Record) -> tuple[float, dict[str, An
     coverage = len(matched) / len(set(query_tokens))
     score += 6.0 * coverage
 
-    # Reward exact phrase presence in the concept/topic fields.
     normalized_query = " ".join(query_tokens)
     for field in ("concept", "topic", "subtopic"):
         normalized_field = " ".join(tokenize(fields[field]))
         if normalized_query and normalized_query in normalized_field:
             score += 8.0
 
-    # Mild specificity reward for reviewed/verified knowledge.
     status = record.data.get("status")
     evidence = record.data.get("evidence_level")
     if status == "verified":
