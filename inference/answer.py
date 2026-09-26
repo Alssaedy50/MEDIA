@@ -129,7 +129,7 @@ def answer(query: str, *, mode: str = "quick", top_k: int = 3) -> dict[str, Any]
 
         explicit_hits: dict[str, dict[str, Any]] = {}
         for candidate in candidates:
-            extra = retrieve(candidate, top_k=3)
+            extra = retrieve(candidate, top_k=10)
             for hit in extra.get("hits", []):
                 candidate_tokens = set(tokenize(candidate))
                 matched = set(hit.get("match", {}).get("matched_terms", []))
