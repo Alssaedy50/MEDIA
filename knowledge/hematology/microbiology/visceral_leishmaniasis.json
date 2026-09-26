@@ -1,0 +1,83 @@
+{
+  "id": "hematology.microbiology.visceral_leishmaniasis",
+  "domain": "Hematology",
+  "subject": "Microbiology",
+  "topic": "Leishmania and Visceral Leishmaniasis",
+  "subtopic": "Visceral leishmaniasis: Leishmania, sandfly transmission, macrophage infection, kala-azar, diagnosis and treatment",
+  "concept": "Visceral leishmaniasis (kala-azar) is a systemic protozoal infection caused by Leishmania parasites transmitted by infected female phlebotomine sandflies.",
+  "content": {
+    "definition": "Visceral leishmaniasis (kala-azar) is a systemic protozoal infection caused by Leishmania parasites transmitted by infected female phlebotomine sandflies.",
+    "explanation": "Leishmania amastigotes reside within macrophages. Visceral disease involves the reticuloendothelial system, especially spleen, liver and bone marrow, leading to prolonged fever, weight loss and cytopenias.",
+    "mechanism": "Leishmania amastigotes reside within macrophages. Visceral disease involves the reticuloendothelial system, especially spleen, liver and bone marrow, leading to prolonged fever, weight loss and cytopenias.",
+    "structure": "Clinically important organism-specific structural and biologic features are summarized in the explanation and terminology fields.",
+    "function": "The pathogen's biologic properties determine transmission, tissue tropism, clinical manifestations and diagnostic strategy.",
+    "causes": [
+      "Bite of infected female sandfly",
+      "Animal or human reservoirs depending on endemic transmission cycle",
+      "Rare alternative transmission routes can occur in specific settings"
+    ],
+    "effects": [
+      "Prolonged irregular fever",
+      "Weight loss and marked splenomegaly",
+      "Anemia and other cytopenias; severe untreated disease can be fatal"
+    ],
+    "clinical_relevance": "This is an official Hematology microbiology syllabus organism/disease. Leishmania and Visceral Leishmaniasis should be interpreted using current diagnostic and treatment guidance.",
+    "diagnosis": "Diagnosis may use parasite detection in tissue, antigen/antibody-based tests depending on region and clinical context, with confirmation strategies varying by endemic setting.",
+    "treatment": "Treatment depends on geographic region, species, immune status and resistance patterns; liposomal amphotericin B is an important modern treatment in many settings, with other regimens selected according to local guidance.",
+    "high_yield": [
+      "Visceral leishmaniasis (kala-azar) is a systemic protozoal infection caused by Leishmania parasites transmitted by infected female phlebotomine sandflies.",
+      "Prolonged irregular fever",
+      "Weight loss and marked splenomegaly",
+      "Anemia and other cytopenias; severe untreated disease can be fatal",
+      "Bite of infected female sandfly",
+      "Animal or human reservoirs depending on endemic transmission cycle",
+      "Rare alternative transmission routes can occur in specific settings"
+    ]
+  },
+  "terminology": [
+    {
+      "term": "Kala-azar",
+      "language": "English",
+      "arabic": "الحُمّى السوداء",
+      "pronunciation": "kah-luh ah-ZAR",
+      "etymology": "Medical terminology retained for exam and clinical use.",
+      "notes": "Key term for Leishmania and Visceral Leishmaniasis."
+    },
+    {
+      "term": "Amastigote",
+      "language": "English",
+      "arabic": "الأماستيغوت",
+      "pronunciation": "am-AS-ti-goht",
+      "etymology": "Medical terminology retained for exam and clinical use.",
+      "notes": "Key term for Leishmania and Visceral Leishmaniasis."
+    },
+    {
+      "term": "Phlebotomine sandfly",
+      "language": "English",
+      "arabic": "ذبابة الرمل الفليبوتومينية",
+      "pronunciation": "FLEE-boh-toh-meen sandfly",
+      "etymology": "Medical terminology retained for exam and clinical use.",
+      "notes": "Key term for Leishmania and Visceral Leishmaniasis."
+    }
+  ],
+  "relations": [],
+  "yemen_context": {
+    "relevance": "Potentially relevant to infectious-disease and hematology teaching in Yemen; no unsupported Yemen-specific incidence is asserted.",
+    "evidence": "General WHO/CDC evidence; local epidemiology should be added only from authoritative Yemen-specific sources."
+  },
+  "evidence_level": "guideline",
+  "status": "reviewed",
+  "review_notes": "Original synthesis based on WHO Leishmaniasis Fact Sheet; no textbook text copied. Treatment statements are intentionally current-guidance aware.",
+  "last_verified": "2026-09-27",
+  "sources": [
+    {
+      "title": "WHO Leishmaniasis Fact Sheet",
+      "source_type": "guideline",
+      "year": 2023,
+      "url": "https://www.who.int/news-room/fact-sheets/detail/leishmaniasis",
+      "license": "WHO",
+      "location": "World Health Organization",
+      "notes": "Clinical and microbiology overview."
+    }
+  ]
+}
