@@ -1,0 +1,60 @@
+{
+  "name": "MEDAI Hematology Pharmacology evaluation set",
+  "version": "0.1.0",
+  "scope": "hematology.pharmacology.toxoplasmosis_trypanosomiasis_treatment",
+  "purpose": "Validate retrieval and safe abstention.",
+  "cases": [
+    {
+      "id": "pharm-tt-001",
+      "query": "How does treatment selection differ in toxoplasmosis and African trypanosomiasis?",
+      "mode": "explain",
+      "expected_concepts": [
+        "hematology.pharmacology.toxoplasmosis_trypanosomiasis_treatment"
+      ],
+      "expected_evidence_state": "supported"
+    },
+    {
+      "id": "pharm-tt-002",
+      "query": "Why is host immune status important in toxoplasmosis?",
+      "mode": "explain",
+      "expected_concepts": [
+        "hematology.pharmacology.toxoplasmosis_trypanosomiasis_treatment"
+      ],
+      "expected_evidence_state": "supported"
+    },
+    {
+      "id": "pharm-tt-003",
+      "query": "Why does CNS involvement matter in African trypanosomiasis?",
+      "mode": "quick",
+      "expected_concepts": [
+        "hematology.pharmacology.toxoplasmosis_trypanosomiasis_treatment"
+      ],
+      "expected_evidence_state": "supported"
+    },
+    {
+      "id": "pharm-tt-004",
+      "query": "What is the role of folinic acid in pyrimethamine-based treatment?",
+      "mode": "explain",
+      "expected_concepts": [
+        "hematology.pharmacology.toxoplasmosis_trypanosomiasis_treatment"
+      ],
+      "expected_evidence_state": "supported"
+    },
+    {
+      "id": "pharm-tt-005",
+      "query": "Why are species and stage important in trypanosomiasis treatment?",
+      "mode": "quick",
+      "expected_concepts": [
+        "hematology.pharmacology.toxoplasmosis_trypanosomiasis_treatment"
+      ],
+      "expected_evidence_state": "supported"
+    },
+    {
+      "id": "pharm-tt-006",
+      "query": "What is the mechanism of fictional TrypanoX?",
+      "mode": "quick",
+      "expected_concepts": [],
+      "expected_evidence_state": "insufficient"
+    }
+  ]
+}
