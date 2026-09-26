@@ -1,0 +1,52 @@
+{
+  "version": "0.1.0",
+  "scope": "Hematology Microbiology — Lymphatic Filariasis",
+  "cases": [
+    {
+      "id": "lymphatic_filariasis_001",
+      "query": "What is the causative organism and main transmission route of Lymphatic Filariasis?",
+      "expected_state": "supported",
+      "expected_ids": [
+        "hematology.microbiology.lymphatic_filariasis"
+      ]
+    },
+    {
+      "id": "lymphatic_filariasis_002",
+      "query": "Explain the pathogenesis and important biologic features of Lymphatic Filariasis.",
+      "expected_state": "supported",
+      "expected_ids": [
+        "hematology.microbiology.lymphatic_filariasis"
+      ]
+    },
+    {
+      "id": "lymphatic_filariasis_003",
+      "query": "What are the main clinical manifestations and complications of Lymphatic Filariasis?",
+      "expected_state": "supported",
+      "expected_ids": [
+        "hematology.microbiology.lymphatic_filariasis"
+      ]
+    },
+    {
+      "id": "lymphatic_filariasis_004",
+      "query": "How is Lymphatic Filariasis diagnosed?",
+      "expected_state": "supported",
+      "expected_ids": [
+        "hematology.microbiology.lymphatic_filariasis"
+      ]
+    },
+    {
+      "id": "lymphatic_filariasis_005",
+      "query": "What are the main treatment and prevention principles for Lymphatic Filariasis?",
+      "expected_state": "supported",
+      "expected_ids": [
+        "hematology.microbiology.lymphatic_filariasis"
+      ]
+    },
+    {
+      "id": "lymphatic_filariasis_006",
+      "query": "What is the mechanism of the fictional antimicrobial XenoMed-999 against Lymphatic Filariasis?",
+      "expected_state": "abstain",
+      "expected_ids": []
+    }
+  ]
+}
