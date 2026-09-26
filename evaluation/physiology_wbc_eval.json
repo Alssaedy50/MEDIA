@@ -1,0 +1,42 @@
+{
+  "version": "0.1.0",
+  "scope": "Hematology Physiology — White Blood Cell Characteristics and Functions",
+  "cases": [
+    {
+      "id": "wbc_phys_001",
+      "query": "What are the five major types of circulating white blood cells?",
+      "expected_state": "supported",
+      "expected_ids": ["hematology.physiology.wbc_characteristics_functions"]
+    },
+    {
+      "id": "wbc_phys_002",
+      "query": "What are the main functions of neutrophils and monocytes?",
+      "expected_state": "supported",
+      "expected_ids": ["hematology.physiology.wbc_characteristics_functions"]
+    },
+    {
+      "id": "wbc_phys_003",
+      "query": "What are the physiological roles of eosinophils, basophils and lymphocytes?",
+      "expected_state": "supported",
+      "expected_ids": ["hematology.physiology.wbc_characteristics_functions"]
+    },
+    {
+      "id": "wbc_phys_004",
+      "query": "What are the steps of leukocyte extravasation from blood into tissues?",
+      "expected_state": "supported",
+      "expected_ids": ["hematology.physiology.wbc_characteristics_functions"]
+    },
+    {
+      "id": "wbc_phys_005",
+      "query": "What is chemotaxis and why is it important for leukocytes?",
+      "expected_state": "supported",
+      "expected_ids": ["hematology.physiology.wbc_characteristics_functions"]
+    },
+    {
+      "id": "wbc_phys_006",
+      "query": "What is the mechanism of a fictional drug called Leukomab-9000?",
+      "expected_state": "abstain",
+      "expected_ids": []
+    }
+  ]
+}
