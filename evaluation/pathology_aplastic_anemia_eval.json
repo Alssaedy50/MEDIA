@@ -1,0 +1,42 @@
+{
+  "version": "0.1.0",
+  "scope": "Hematology Pathology — Aplastic Anemia",
+  "cases": [
+    {
+      "id": "aplastic_path_001",
+      "query": "What defines aplastic anemia?",
+      "expected_state": "supported",
+      "expected_ids": ["hematology.pathology.aplastic_anemia"]
+    },
+    {
+      "id": "aplastic_path_002",
+      "query": "What is the main pathophysiological mechanism in most acquired aplastic anemia?",
+      "expected_state": "supported",
+      "expected_ids": ["hematology.pathology.aplastic_anemia"]
+    },
+    {
+      "id": "aplastic_path_003",
+      "query": "What would be expected in the bone marrow of a patient with aplastic anemia?",
+      "expected_state": "supported",
+      "expected_ids": ["hematology.pathology.aplastic_anemia"]
+    },
+    {
+      "id": "aplastic_path_004",
+      "query": "Why can aplastic anemia cause infection and bleeding?",
+      "expected_state": "supported",
+      "expected_ids": ["hematology.pathology.aplastic_anemia"]
+    },
+    {
+      "id": "aplastic_path_005",
+      "query": "How is aplastic anemia diagnosed and what are the main treatment approaches?",
+      "expected_state": "supported",
+      "expected_ids": ["hematology.pathology.aplastic_anemia"]
+    },
+    {
+      "id": "aplastic_path_006",
+      "query": "What is the mechanism of a fictional aplastic-anemia drug called MarrowBoost-9000?",
+      "expected_state": "abstain",
+      "expected_ids": []
+    }
+  ]
+}
