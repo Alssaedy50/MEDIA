@@ -1,0 +1,43 @@
+{
+  "id": "hematology.pharmacology.nutritional_anemia_treatment",
+  "domain": "Hematology",
+  "subject": "Pharmacology",
+  "topic": "Treatment of Nutritional Anemia",
+  "concept": "Nutritional anemia is treated by replacing the deficient nutrient and correcting the underlying cause.",
+  "content": {
+    "definition": "Treatment restores the nutrient required for effective erythropoiesis.",
+    "explanation": "Iron replacement supports heme synthesis; vitamin B12 and folate replacement supports effective DNA synthesis and erythropoiesis.",
+    "mechanism": "Iron provides substrate for heme; B12 and folate participate in one-carbon metabolism and DNA synthesis.",
+    "clinical_relevance": "Iron deficiency requires investigation of ongoing loss; B12 deficiency may cause neurologic disease; folate should not substitute for B12 treatment.",
+    "treatment": "Replacement is selected according to the confirmed deficiency and clinical setting.",
+    "high_yield": [
+      "Iron replacement treats iron deficiency.",
+      "B12 deficiency requires appropriate cobalamin replacement.",
+      "Folate treats folate deficiency but does not replace B12 when B12 deficiency is present."
+    ]
+  },
+  "terminology": [],
+  "relations": [],
+  "yemen_context": {
+    "relevance": "Core Hematology pharmacology topic; local availability may vary.",
+    "evidence": "General evidence; no Yemen-specific regimen asserted."
+  },
+  "evidence_level": "guideline",
+  "status": "reviewed",
+  "review_notes": "Original educational synthesis.",
+  "last_verified": "2026-09-27",
+  "sources": [
+    {
+      "title": "WHO anemia guidance",
+      "source_type": "guideline",
+      "authors": [
+        "World Health Organization"
+      ],
+      "year": 2024,
+      "url": "https://www.who.int/publications/i/item/9789240088542",
+      "license": "WHO",
+      "location": "WHO",
+      "notes": "Anemia guidance."
+    }
+  ]
+}
