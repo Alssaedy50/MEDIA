@@ -22,23 +22,20 @@ def evaluate_case(case: dict[str, Any]) -> dict[str, Any]:
     result = answer(case["query"], mode=case.get("mode", "quick"), top_k=3)
 
     expected_ids = set(case.get("expected_concepts", []))
-    if result.get("comparison"):
-        actual_names = {str(item.get("concept")) for item in result["comparison"]}
-    else:
-        actual_names = set(result.get("retrieved_concepts", []))
-
+    actual_ids = set(result.get("retrieved_ids", []))
     expected_state = case["expected_evidence_state"]
+
     state_ok = result.get("evidence_state") == expected_state
 
-    if expected_ids and case.get("mode") != "compare":
-        concept_ok = bool(result.get("answer")) and not result.get("abstain")
-    elif expected_ids:
-        concept_ok = (
-            any("Spleen" in name for name in actual_names)
-            and any("Lymph Nodes" in name for name in actual_names)
-        )
+    if expected_ids:
+        if case.get("mode") == "compare":
+            concept_ok = expected_ids.issubset(actual_ids)
+        else:
+            concept_ok = bool(result.get("answer")) and not result.get("abstain") and (
+                bool(expected_ids & actual_ids)
+            )
     else:
-        concept_ok = result.get("abstain") is True
+        concept_ok = result.get("abstain") is True and not actual_ids
 
     passed = state_ok and concept_ok
     return {
@@ -48,6 +45,8 @@ def evaluate_case(case: dict[str, Any]) -> dict[str, Any]:
         "concept_ok": concept_ok,
         "expected_evidence_state": expected_state,
         "actual_evidence_state": result.get("evidence_state"),
+        "expected_ids": sorted(expected_ids),
+        "actual_ids": sorted(actual_ids),
     }
 
 
