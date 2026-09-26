@@ -1,0 +1,43 @@
+{
+  "name": "MEDAI Hematology Histology v0.2 evaluation set",
+  "version": "0.2.0",
+  "scope": "hematology.histology.fetal_hematopoiesis",
+  "purpose": "Validate retrieval of fetal hematopoietic organs, developmental stages, and safe abstention.",
+  "cases": [
+    {
+      "id": "hist-fetal-001",
+      "query": "What is the sequence of major fetal hematopoietic sites?",
+      "mode": "explain",
+      "expected_concepts": ["hematology.histology.fetal_hematopoiesis"],
+      "expected_evidence_state": "supported"
+    },
+    {
+      "id": "hist-fetal-002",
+      "query": "Where do definitive hematopoietic stem cells emerge?",
+      "mode": "quick",
+      "expected_concepts": ["hematology.histology.fetal_hematopoiesis"],
+      "expected_evidence_state": "supported"
+    },
+    {
+      "id": "hist-fetal-003",
+      "query": "What is the role of the fetal liver in hematopoiesis?",
+      "mode": "explain",
+      "expected_concepts": ["hematology.histology.fetal_hematopoiesis"],
+      "expected_evidence_state": "supported"
+    },
+    {
+      "id": "hist-fetal-004",
+      "query": "What is endothelial-to-hematopoietic transition?",
+      "mode": "explain",
+      "expected_concepts": ["hematology.histology.fetal_hematopoiesis"],
+      "expected_evidence_state": "supported"
+    },
+    {
+      "id": "hist-fetal-005",
+      "query": "What is the molecular mechanism of fictional XenoMed-9000 hematopoietic activation?",
+      "mode": "quick",
+      "expected_concepts": [],
+      "expected_evidence_state": "insufficient"
+    }
+  ]
+}
