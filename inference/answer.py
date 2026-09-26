@@ -7,7 +7,7 @@ import argparse
 import json
 from typing import Any
 
-from retrieval import retrieve
+from retrieval import retrieve, tokenize
 
 
 def _first_nonempty(*values: Any) -> str | None:
