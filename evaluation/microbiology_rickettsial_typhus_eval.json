@@ -1,0 +1,9 @@
+{
+"version":"0.1.0","scope":"Hematology Microbiology — Rickettsial Typhus Fevers","cases":[
+{"id":"rickettsial_typhus_001","query":"What causes and transmits rickettsial typhus?","expected_state":"supported","expected_ids":["hematology.microbiology.rickettsial_typhus"]},
+{"id":"rickettsial_typhus_002","query":"Explain the pathogenesis of rickettsial typhus.","expected_state":"supported","expected_ids":["hematology.microbiology.rickettsial_typhus"]},
+{"id":"rickettsial_typhus_003","query":"What are the main clinical manifestations of rickettsial typhus?","expected_state":"supported","expected_ids":["hematology.microbiology.rickettsial_typhus"]},
+{"id":"rickettsial_typhus_004","query":"How is rickettsial typhus diagnosed?","expected_state":"supported","expected_ids":["hematology.microbiology.rickettsial_typhus"]},
+{"id":"rickettsial_typhus_005","query":"What are the treatment and prevention principles for rickettsial typhus?","expected_state":"supported","expected_ids":["hematology.microbiology.rickettsial_typhus"]},
+{"id":"rickettsial_typhus_006","query":"What is the mechanism of fictional antimicrobial XenoMed-999?","expected_state":"abstain","expected_ids":[]}
+]}
