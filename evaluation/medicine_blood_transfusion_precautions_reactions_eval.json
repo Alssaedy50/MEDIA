@@ -1,0 +1,60 @@
+{
+  "name": "MEDAI Hematology Medicine evaluation set",
+  "version": "0.1.0",
+  "scope": "hematology.medicine.blood_transfusion_precautions_reactions",
+  "purpose": "Validate retrieval and safe abstention.",
+  "cases": [
+    {
+      "id": "medicine_blood_transfusion_precautions_reactions_eval-001",
+      "query": "What are the essential precautions for safe blood transfusion?",
+      "mode": "explain",
+      "expected_concepts": [
+        "hematology.medicine.blood_transfusion_precautions_reactions"
+      ],
+      "expected_evidence_state": "supported"
+    },
+    {
+      "id": "medicine_blood_transfusion_precautions_reactions_eval-002",
+      "query": "What are the essential precautions for safe blood transfusion?",
+      "mode": "quick",
+      "expected_concepts": [
+        "hematology.medicine.blood_transfusion_precautions_reactions"
+      ],
+      "expected_evidence_state": "supported"
+    },
+    {
+      "id": "medicine_blood_transfusion_precautions_reactions_eval-003",
+      "query": "What are the essential precautions for safe blood transfusion?",
+      "mode": "explain",
+      "expected_concepts": [
+        "hematology.medicine.blood_transfusion_precautions_reactions"
+      ],
+      "expected_evidence_state": "supported"
+    },
+    {
+      "id": "medicine_blood_transfusion_precautions_reactions_eval-004",
+      "query": "What are the essential precautions for safe blood transfusion?",
+      "mode": "quick",
+      "expected_concepts": [
+        "hematology.medicine.blood_transfusion_precautions_reactions"
+      ],
+      "expected_evidence_state": "supported"
+    },
+    {
+      "id": "medicine_blood_transfusion_precautions_reactions_eval-005",
+      "query": "What are the essential precautions for safe blood transfusion?",
+      "mode": "explain",
+      "expected_concepts": [
+        "hematology.medicine.blood_transfusion_precautions_reactions"
+      ],
+      "expected_evidence_state": "supported"
+    },
+    {
+      "id": "medicine_blood_transfusion_precautions_reactions_eval-006",
+      "query": "What is the fictional transfusion reaction called X-reaction?",
+      "mode": "quick",
+      "expected_concepts": [],
+      "expected_evidence_state": "insufficient"
+    }
+  ]
+}
