@@ -97,13 +97,16 @@
   ],
   "yemen_context": {
     "relevance": "Understanding splenic anatomy and function is relevant to hematology, infectious disease, malaria, hemolytic anemia, and clinical assessment of splenomegaly.",
-    "evidence": []
+    "evidence": ""
   },
   "sources": [
     {
       "title": "Anatomy, Abdomen and Pelvis, Spleen",
       "source_type": "reference",
-      "authors": ["Adekunle E. Omole", "Marjorie V. Launico"],
+      "authors": [
+        "Adekunle E. Omole",
+        "Marjorie V. Launico"
+      ],
       "year": 2026,
       "url": "https://www.ncbi.nlm.nih.gov/books/NBK482235/",
       "license": "NCBI Bookshelf / StatPearls",
@@ -113,7 +116,11 @@
     {
       "title": "Physiology, Spleen",
       "source_type": "reference",
-      "authors": ["Vaishali Kapila", "Chase J. Wehrle", "Faiz Tuma"],
+      "authors": [
+        "Vaishali Kapila",
+        "Chase J. Wehrle",
+        "Faiz Tuma"
+      ],
       "year": 2023,
       "url": "https://www.ncbi.nlm.nih.gov/books/NBK537307/",
       "license": "NCBI Bookshelf / StatPearls",
@@ -123,7 +130,10 @@
     {
       "title": "Embryology, Hematopoiesis",
       "source_type": "reference",
-      "authors": ["Ranbir Singh", "Kavin Sugumar"],
+      "authors": [
+        "Ranbir Singh",
+        "Kavin Sugumar"
+      ],
       "year": 2025,
       "url": "https://www.ncbi.nlm.nih.gov/books/NBK544245/",
       "license": "NCBI Bookshelf / StatPearls",
