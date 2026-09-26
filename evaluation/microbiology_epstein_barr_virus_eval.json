@@ -1,0 +1,52 @@
+{
+  "version": "0.1.0",
+  "scope": "Hematology Microbiology — Epstein-Barr Virus",
+  "cases": [
+    {
+      "id": "epstein_barr_virus_001",
+      "query": "What causes and transmits Epstein-Barr Virus?",
+      "expected_state": "supported",
+      "expected_ids": [
+        "hematology.microbiology.epstein_barr_virus"
+      ]
+    },
+    {
+      "id": "epstein_barr_virus_002",
+      "query": "Explain the pathogenesis of Epstein-Barr Virus.",
+      "expected_state": "supported",
+      "expected_ids": [
+        "hematology.microbiology.epstein_barr_virus"
+      ]
+    },
+    {
+      "id": "epstein_barr_virus_003",
+      "query": "What are the main clinical manifestations of Epstein-Barr Virus?",
+      "expected_state": "supported",
+      "expected_ids": [
+        "hematology.microbiology.epstein_barr_virus"
+      ]
+    },
+    {
+      "id": "epstein_barr_virus_004",
+      "query": "How is Epstein-Barr Virus diagnosed?",
+      "expected_state": "supported",
+      "expected_ids": [
+        "hematology.microbiology.epstein_barr_virus"
+      ]
+    },
+    {
+      "id": "epstein_barr_virus_005",
+      "query": "What are the treatment and prevention principles for Epstein-Barr Virus?",
+      "expected_state": "supported",
+      "expected_ids": [
+        "hematology.microbiology.epstein_barr_virus"
+      ]
+    },
+    {
+      "id": "epstein_barr_virus_006",
+      "query": "What is the mechanism of the fictional antimicrobial XenoMed-999?",
+      "expected_state": "abstain",
+      "expected_ids": []
+    }
+  ]
+}
