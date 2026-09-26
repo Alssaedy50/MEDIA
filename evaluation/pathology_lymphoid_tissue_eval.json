@@ -1,0 +1,12 @@
+{
+  "version":"0.1.0",
+  "scope":"Hematology Pathology — Lymphoid Tissue Disorders",
+  "cases":[
+    {"id":"lymphoid_path_001","query":"How can reactive lymphadenopathy differ from lymphoma?","expected_state":"supported","expected_ids":["hematology.pathology.lymphoid_tissue_disorders"]},
+    {"id":"lymphoid_path_002","query":"Why is lymph-node architecture important when diagnosing lymphoma?","expected_state":"supported","expected_ids":["hematology.pathology.lymphoid_tissue_disorders"]},
+    {"id":"lymphoid_path_003","query":"What is the difference between Hodgkin lymphoma and non-Hodgkin lymphoma?","expected_state":"supported","expected_ids":["hematology.pathology.lymphoid_tissue_disorders"]},
+    {"id":"lymphoid_path_004","query":"What are the characteristic cells of classical Hodgkin lymphoma?","expected_state":"supported","expected_ids":["hematology.pathology.lymphoid_tissue_disorders"]},
+    {"id":"lymphoid_path_005","query":"What are the major clinical and laboratory features of multiple myeloma?","expected_state":"supported","expected_ids":["hematology.pathology.lymphoid_tissue_disorders"]},
+    {"id":"lymphoid_path_006","query":"What is the mechanism of the fictional lymphoma drug LymphoMax-999?","expected_state":"abstain","expected_ids":[]}
+  ]
+}
