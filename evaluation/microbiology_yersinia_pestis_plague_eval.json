@@ -1,0 +1,52 @@
+{
+  "version": "0.1.0",
+  "scope": "Hematology Microbiology — Yersinia pestis and Plague",
+  "cases": [
+    {
+      "id": "yersinia_pestis_plague_001",
+      "query": "What is the causative organism and main transmission route of Yersinia pestis and Plague?",
+      "expected_state": "supported",
+      "expected_ids": [
+        "hematology.microbiology.yersinia_pestis_plague"
+      ]
+    },
+    {
+      "id": "yersinia_pestis_plague_002",
+      "query": "Explain the pathogenesis and important biologic features of Yersinia pestis and Plague.",
+      "expected_state": "supported",
+      "expected_ids": [
+        "hematology.microbiology.yersinia_pestis_plague"
+      ]
+    },
+    {
+      "id": "yersinia_pestis_plague_003",
+      "query": "What are the main clinical manifestations and complications of Yersinia pestis and Plague?",
+      "expected_state": "supported",
+      "expected_ids": [
+        "hematology.microbiology.yersinia_pestis_plague"
+      ]
+    },
+    {
+      "id": "yersinia_pestis_plague_004",
+      "query": "How is Yersinia pestis and Plague diagnosed?",
+      "expected_state": "supported",
+      "expected_ids": [
+        "hematology.microbiology.yersinia_pestis_plague"
+      ]
+    },
+    {
+      "id": "yersinia_pestis_plague_005",
+      "query": "What are the main treatment and prevention principles for Yersinia pestis and Plague?",
+      "expected_state": "supported",
+      "expected_ids": [
+        "hematology.microbiology.yersinia_pestis_plague"
+      ]
+    },
+    {
+      "id": "yersinia_pestis_plague_006",
+      "query": "What is the mechanism of the fictional antimicrobial XenoMed-999 against Yersinia pestis and Plague?",
+      "expected_state": "abstain",
+      "expected_ids": []
+    }
+  ]
+}
