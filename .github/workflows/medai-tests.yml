@@ -25,3 +25,5 @@ jobs:
         run: python evaluation/run_evaluation.py --cases evaluation/histology_eval.json
       - name: Run Fetal Hematopoiesis evaluation report
         run: python evaluation/run_evaluation.py --cases evaluation/histology_fetal_eval.json
+      - name: Run RBC erythropoiesis evaluation report
+        run: python evaluation/run_evaluation.py --cases evaluation/histology_rbc_eval.json
