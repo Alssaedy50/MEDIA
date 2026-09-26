@@ -1,0 +1,85 @@
+{
+  "id": "hematology.microbiology.brucella_brucellosis",
+  "domain": "Hematology",
+  "subject": "Microbiology",
+  "topic": "Brucella and Brucellosis",
+  "subtopic": "Brucellosis: zoonosis, transmission, intracellular survival, clinical disease, diagnosis, treatment and prevention",
+  "concept": "Brucellosis is a zoonotic infection caused by Brucella spp., acquired mainly through contact with infected animals or consumption of unpasteurized animal products.",
+  "content": {
+    "definition": "Brucellosis is a zoonotic infection caused by Brucella spp., acquired mainly through contact with infected animals or consumption of unpasteurized animal products.",
+    "explanation": "Brucella are small Gram-negative coccobacilli that survive intracellularly, especially in macrophages, allowing persistent infection. Exposure commonly occurs through raw milk/cheese, animal tissues or occupational contact.",
+    "mechanism": "Brucella are small Gram-negative coccobacilli that survive intracellularly, especially in macrophages, allowing persistent infection. Exposure commonly occurs through raw milk/cheese, animal tissues or occupational contact.",
+    "structure": "Clinically important organism-specific structural and biologic features are summarized in the explanation and terminology fields.",
+    "function": "The pathogen's biologic properties determine transmission, tissue tropism, clinical manifestations and diagnostic strategy.",
+    "causes": [
+      "B. melitensis",
+      "B. abortus",
+      "B. suis",
+      "B. canis"
+    ],
+    "effects": [
+      "Fever, sweats, fatigue, headache, arthralgia and myalgia",
+      "Hepatosplenomegaly and focal disease such as osteoarticular infection, endocarditis or neurobrucellosis",
+      "Relapsing or chronic disease if inadequately treated"
+    ],
+    "clinical_relevance": "This is an official Hematology microbiology syllabus organism/disease. Brucella and Brucellosis should be interpreted using current diagnostic and treatment guidance.",
+    "diagnosis": "Laboratory confirmation is required because symptoms are nonspecific. Blood cultures and serology are commonly used; prolonged incubation and laboratory biosafety precautions are important.",
+    "treatment": "Treatment generally requires combination antimicrobial therapy for sufficient duration; CDC commonly describes doxycycline plus rifampin for at least 6 weeks for major Brucella species, with regimen modification for pregnancy, children, focal disease or resistance such as RB51 rifampin resistance.",
+    "high_yield": [
+      "Brucellosis is a zoonotic infection caused by Brucella spp., acquired mainly through contact with infected animals or consumption of unpasteurized animal products.",
+      "Fever, sweats, fatigue, headache, arthralgia and myalgia",
+      "Hepatosplenomegaly and focal disease such as osteoarticular infection, endocarditis or neurobrucellosis",
+      "Relapsing or chronic disease if inadequately treated",
+      "B. melitensis",
+      "B. abortus",
+      "B. suis",
+      "B. canis"
+    ]
+  },
+  "terminology": [
+    {
+      "term": "Brucellosis",
+      "language": "English",
+      "arabic": "داء البروسيلات",
+      "pronunciation": "broo-suh-LOH-sis",
+      "etymology": "Medical terminology retained for exam and clinical use.",
+      "notes": "Key term for Brucella and Brucellosis."
+    },
+    {
+      "term": "Brucella",
+      "language": "English",
+      "arabic": "البروسيلا",
+      "pronunciation": "broo-SELL-uh",
+      "etymology": "Medical terminology retained for exam and clinical use.",
+      "notes": "Key term for Brucella and Brucellosis."
+    },
+    {
+      "term": "Undulant fever",
+      "language": "English",
+      "arabic": "الحمى المتموجة",
+      "pronunciation": "UN-joo-lant FEE-ver",
+      "etymology": "Medical terminology retained for exam and clinical use.",
+      "notes": "Key term for Brucella and Brucellosis."
+    }
+  ],
+  "relations": [],
+  "yemen_context": {
+    "relevance": "Potentially relevant to infectious-disease and hematology teaching in Yemen; no unsupported Yemen-specific incidence is asserted.",
+    "evidence": "General WHO/CDC evidence; local epidemiology should be added only from authoritative Yemen-specific sources."
+  },
+  "evidence_level": "guideline",
+  "status": "reviewed",
+  "review_notes": "Original synthesis based on CDC Clinical Overview of Brucellosis; no textbook text copied. Treatment statements are intentionally current-guidance aware.",
+  "last_verified": "2026-09-27",
+  "sources": [
+    {
+      "title": "CDC Clinical Overview of Brucellosis",
+      "source_type": "guideline",
+      "year": 2026,
+      "url": "https://www.cdc.gov/brucellosis/hcp/clinical-overview/index.html",
+      "license": "CDC",
+      "location": "CDC",
+      "notes": "Clinical and microbiology overview."
+    }
+  ]
+}
