@@ -1,0 +1,52 @@
+{
+  "version": "0.1.0",
+  "scope": "Hematology Microbiology — Salmonella Typhi / Enteric Fever",
+  "cases": [
+    {
+      "id": "salmonella_typhi_001",
+      "query": "What causes and transmits enteric fever?",
+      "expected_state": "supported",
+      "expected_ids": [
+        "hematology.microbiology.salmonella_typhi_enteric_fever"
+      ]
+    },
+    {
+      "id": "salmonella_typhi_002",
+      "query": "Explain the pathogenesis of Salmonella Typhi infection.",
+      "expected_state": "supported",
+      "expected_ids": [
+        "hematology.microbiology.salmonella_typhi_enteric_fever"
+      ]
+    },
+    {
+      "id": "salmonella_typhi_003",
+      "query": "What are the main clinical manifestations and complications of enteric fever?",
+      "expected_state": "supported",
+      "expected_ids": [
+        "hematology.microbiology.salmonella_typhi_enteric_fever"
+      ]
+    },
+    {
+      "id": "salmonella_typhi_004",
+      "query": "How is enteric fever diagnosed?",
+      "expected_state": "supported",
+      "expected_ids": [
+        "hematology.microbiology.salmonella_typhi_enteric_fever"
+      ]
+    },
+    {
+      "id": "salmonella_typhi_005",
+      "query": "What are the treatment and prevention principles for enteric fever?",
+      "expected_state": "supported",
+      "expected_ids": [
+        "hematology.microbiology.salmonella_typhi_enteric_fever"
+      ]
+    },
+    {
+      "id": "salmonella_typhi_006",
+      "query": "What is the mechanism of the fictional antimicrobial XenoMed-999 against Salmonella Typhi?",
+      "expected_state": "abstain",
+      "expected_ids": []
+    }
+  ]
+}
