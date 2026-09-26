@@ -1,0 +1,70 @@
+{
+  "id": "hematology.pathology.leukemias_acute_chronic",
+  "domain": "Hematology",
+  "subject": "Pathology",
+  "topic": "Acute and Chronic Leukemias",
+  "subtopic": "AML, ALL, CML and CLL",
+  "concept": "Leukemias are clonal hematologic malignancies involving abnormal leukocyte precursors or mature leukocytes, broadly classified by lineage and clinical tempo into acute and chronic forms.",
+  "content": {
+    "definition": "Acute leukemias are aggressive neoplasms of immature hematopoietic precursors that accumulate in marrow and often blood, producing marrow failure. Chronic leukemias generally involve more mature cells and may have a more indolent initial course, although they can progress or transform.",
+    "explanation": "The major leukemia groups are acute myeloid leukemia (AML), acute lymphoblastic leukemia (ALL), chronic myeloid leukemia (CML) and chronic lymphocytic leukemia (CLL). Classification integrates morphology, immunophenotype, cytogenetics and molecular genetics. Modern classifications emphasize defining genetic abnormalities rather than relying only on morphology or a fixed blast percentage.",
+    "mechanism": "Leukemic clones gain abnormal self-renewal, proliferation, survival or differentiation properties. In acute leukemia, accumulation of blasts suppresses normal hematopoiesis and causes anemia, thrombocytopenia and neutropenia. CML is defined by BCR::ABL1-driven myeloid proliferation and commonly follows chronic, accelerated and blast-phase biology. CLL is a clonal mature B-cell neoplasm; circulating clonal B lymphocytes can accumulate and cause lymphocytosis, lymphadenopathy, splenomegaly and immune dysfunction.",
+    "structure": "Diagnosis integrates complete blood count and smear, bone marrow examination when indicated, flow cytometry, cytogenetics/FISH and molecular testing. Lineage assignment distinguishes myeloid from B- or T-lymphoid disease and genetic findings increasingly define clinically meaningful leukemia entities.",
+    "function": "Normal marrow production is progressively displaced by leukemic cells, reducing effective production of erythrocytes, platelets and functional leukocytes.",
+    "causes": [
+      "Acquired genetic and epigenetic alterations in hematopoietic cells",
+      "Prior cytotoxic chemotherapy or radiation for selected secondary myeloid leukemias",
+      "Inherited predisposition syndromes in a subset of patients",
+      "Specific recurrent genetic alterations that define particular leukemia entities"
+    ],
+    "effects": [
+      "Anemia causing fatigue or pallor",
+      "Thrombocytopenia causing bleeding or bruising",
+      "Neutropenia or dysfunctional leukocytes causing infection risk",
+      "Organ infiltration causing lymphadenopathy, hepatosplenomegaly, bone pain or extramedullary disease",
+      "Hyperleukocytosis and leukostasis in selected acute leukemia presentations"
+    ],
+    "clinical_relevance": "Acute leukemia often presents over a short interval with symptoms of marrow failure or tissue infiltration. Chronic leukemias may be detected incidentally through persistent leukocytosis or lymphocytosis, but symptomatic disease and progression can occur.",
+    "diagnosis": "Initial evaluation includes CBC with differential and peripheral smear. Suspected acute leukemia generally requires marrow evaluation with morphology, flow cytometry and cytogenetic/molecular testing. AML classification now incorporates defining genetic abnormalities and does not universally depend on a 20% blast threshold. ALL requires demonstration of lymphoid blasts and lineage by immunophenotyping. CML is established by detection of BCR::ABL1. CLL is diagnosed by persistent clonal B-cell lymphocytosis with a characteristic immunophenotype; current references use at least 5 × 10^9/L clonal B cells in peripheral blood for the clinical diagnosis.",
+    "treatment": "Treatment is subtype- and risk-specific. AML and ALL use intensive or adapted systemic antileukemic therapy, with supportive care and central nervous system-directed therapy particularly important in ALL; selected patients receive targeted therapy or stem-cell transplantation. CML is treated primarily with BCR::ABL1-targeted tyrosine kinase inhibitors. CLL treatment depends on symptoms, disease burden, biology and patient factors; observation is appropriate for selected asymptomatic patients, while targeted agents and other systemic therapies are used when treatment is indicated.",
+    "high_yield": [
+      "Acute leukemia is dominated by immature blasts and rapid marrow failure; chronic leukemia generally contains more mature cells.",
+      "AML is a myeloid acute leukemia; ALL is a lymphoid acute leukemia.",
+      "AML classification increasingly relies on genetic abnormalities, morphology, immunophenotype and clinical context.",
+      "ALL commonly causes marrow-failure symptoms and requires lineage-directed immunophenotyping; CNS prophylaxis is an important treatment component.",
+      "CML is defined by BCR::ABL1 and commonly presents with neutrophilic leukocytosis and splenomegaly.",
+      "CLL is a mature clonal B-cell leukemia; flow cytometry typically demonstrates a characteristic CD19+, CD5+, CD23+ phenotype.",
+      "Leukemic marrow replacement can cause anemia, thrombocytopenia and neutropenia.",
+      "A peripheral blood smear is an essential initial investigation, but definitive classification often requires flow cytometry and molecular/cytogenetic studies."
+    ]
+  },
+  "terminology": [
+    {"term": "Acute myeloid leukemia", "language": "English", "Arabic": "ابيضاض الدم النقوي الحاد", "pronunciation": "uh-KYOOT MY-eh-loyd loo-KEE-mee-uh", "etymology": "Acute, rapid; myeloid, marrow-derived; leukemia, abnormal white-blood-cell malignancy.", "notes": "AML is a malignant myeloid precursor disorder."},
+    {"term": "Acute lymphoblastic leukemia", "language": "English", "Arabic": "ابيضاض الدم اللمفاوي الحاد", "pronunciation": "uh-KYOOT LIM-foh-BLAS-tik loo-KEE-mee-uh", "etymology": "Lymphoblastic refers to immature lymphoid precursors.", "notes": "ALL arises from lymphoid precursor cells."},
+    {"term": "Chronic myeloid leukemia", "language": "English", "Arabic": "ابيضاض الدم النقوي المزمن", "pronunciation": "KRON-ik MY-eh-loyd loo-KEE-mee-uh", "etymology": "Chronic, persistent; myeloid, marrow-derived.", "notes": "CML is BCR::ABL1-positive."},
+    {"term": "Chronic lymphocytic leukemia", "language": "English", "Arabic": "ابيضاض الدم اللمفاوي المزمن", "pronunciation": "KRON-ik LIM-foh-SIT-ik loo-KEE-mee-uh", "etymology": "Chronic plus lymphocytic, involving lymphocytes.", "notes": "CLL is a mature clonal B-cell neoplasm."},
+    {"term": "Blast", "language": "English", "Arabic": "خلية أرومية غير ناضجة", "pronunciation": "blast", "etymology": "Greek blastos, germ or bud.", "notes": "Immature precursor cell; excess blasts are characteristic of acute leukemia."},
+    {"term": "Leukostasis", "language": "English", "Arabic": "ركودة الكريات البيضاء", "pronunciation": "loo-koh-STAY-sis", "etymology": "Leuko-, white, plus stasis, standing or slowing.", "notes": "Symptomatic microvascular obstruction associated with very high leukocyte counts in selected leukemias."}
+  ],
+  "relations": [
+    {"target_id": "hematology.pathology.stem_cell_disorders", "relation": "arises_from", "note": "Leukemias originate from hematopoietic precursor or mature-cell clones depending on subtype."},
+    {"target_id": "hematology.pathology.myeloproliferative_disorders_polycythemia", "relation": "differential_from", "note": "Some chronic myeloid neoplasms and leukemias share proliferative features but are distinguished by morphology and molecular genetics."},
+    {"target_id": "hematology.anatomy.bone_marrow", "relation": "involves", "note": "Bone marrow is central to leukemic hematopoiesis and diagnosis."},
+    {"target_id": "hematology.histology.leukocytes", "relation": "involves", "note": "Leukemia alters the number, maturation and function of leukocyte populations."}
+  ],
+  "yemen_context": {
+    "relevance": "The diagnostic framework is applicable to hematology practice in Yemen.",
+    "evidence": "No Yemen-specific incidence or outcome claim is made."
+  },
+  "evidence_level": "reference",
+  "status": "reviewed",
+  "review_notes": "Original synthesis using current WHO/ICC-era classification sources and NCBI references. Treatment is intentionally an overview rather than a protocol.",
+  "last_verified": "2026-09-27",
+  "sources": [
+    {"title": "The 5th edition of the World Health Organization Classification of Haematolymphoid Tumours: Myeloid and Histiocytic/Dendritic Neoplasms", "source_type": "reference", "authors": ["Khoury JD", "Solary E", "Abla O", "et al."], "year": 2022, "url": "https://pmc.ncbi.nlm.nih.gov/articles/9252913/", "license": "PMC", "location": "PMC", "notes": "Modern WHO classification framework for myeloid neoplasms and AML."},
+    {"title": "International Consensus Classification of Myeloid Neoplasms and Acute Leukemias", "source_type": "reference", "authors": ["Arber DA", "Orazi A", "Hasserjian RP", "et al."], "year": 2022, "url": "https://pmc.ncbi.nlm.nih.gov/articles/pmid/35767897/", "license": "PMC", "location": "PMC", "notes": "ICC framework integrating morphology, clinical data and genomics."},
+    {"title": "Acute Lymphoblastic Leukemia Treatment (PDQ)", "source_type": "reference", "authors": ["National Cancer Institute"], "year": 2025, "url": "https://www.ncbi.nlm.nih.gov/books/NBK65727.21/", "license": "NCBI Bookshelf", "location": "NCBI Bookshelf", "notes": "Supports ALL treatment principles and CNS-directed therapy."},
+    {"title": "Chronic Lymphocytic Leukemia", "source_type": "reference", "authors": ["StatPearls"], "year": 2023, "url": "https://www.ncbi.nlm.nih.gov/books/NBK470433/", "license": "NCBI Bookshelf / StatPearls", "location": "NCBI Bookshelf", "notes": "Supports CLL diagnostic evaluation and immunophenotype."},
+    {"title": "Chronic Myeloid Leukemia, BCR-ABL1 Positive", "source_type": "reference", "authors": ["NCBI MedGen"], "year": 2026, "url": "https://www.ncbi.nlm.nih.gov/medgen/714993", "license": "NCBI", "location": "NCBI MedGen", "notes": "Supports the defining BCR::ABL1 feature of CML."}
+  ]
+}
