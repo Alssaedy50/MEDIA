@@ -1,0 +1,226 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Alssaedy50/MEDIA/blob/main/schemas/knowledge.schema.json",
+  "title": "MEDAI Medical Knowledge Record",
+  "description": "Canonical schema for source-traceable medical knowledge records used by MEDAI.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "domain",
+    "topic",
+    "concept",
+    "content",
+    "status",
+    "sources"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9._-]*$"
+    },
+    "domain": {
+      "type": "string",
+      "minLength": 1
+    },
+    "subject": {
+      "type": "string"
+    },
+    "topic": {
+      "type": "string",
+      "minLength": 1
+    },
+    "subtopic": {
+      "type": "string"
+    },
+    "concept": {
+      "type": "string",
+      "minLength": 1
+    },
+    "content": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "definition": {
+          "type": "string"
+        },
+        "explanation": {
+          "type": "string"
+        },
+        "mechanism": {
+          "type": "string"
+        },
+        "structure": {
+          "type": "string"
+        },
+        "function": {
+          "type": "string"
+        },
+        "causes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "effects": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "clinical_relevance": {
+          "type": "string"
+        },
+        "diagnosis": {
+          "type": "string"
+        },
+        "treatment": {
+          "type": "string"
+        },
+        "high_yield": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "terminology": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "term"
+        ],
+        "properties": {
+          "term": {
+            "type": "string"
+          },
+          "language": {
+            "type": "string"
+          },
+          "arabic": {
+            "type": "string"
+          },
+          "pronunciation": {
+            "type": "string"
+          },
+          "etymology": {
+            "type": "string"
+          },
+          "notes": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "relations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "target_id",
+          "relation"
+        ],
+        "properties": {
+          "target_id": {
+            "type": "string"
+          },
+          "relation": {
+            "type": "string"
+          },
+          "note": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "yemen_context": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "relevance": {
+          "type": "string"
+        },
+        "evidence": {
+          "type": "string"
+        }
+      }
+    },
+    "sources": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "title",
+          "source_type"
+        ],
+        "properties": {
+          "title": {
+            "type": "string"
+          },
+          "source_type": {
+            "type": "string"
+          },
+          "authors": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "year": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "url": {
+            "type": "string",
+            "format": "uri"
+          },
+          "license": {
+            "type": "string"
+          },
+          "location": {
+            "type": "string"
+          },
+          "notes": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "evidence_level": {
+      "type": "string",
+      "enum": [
+        "primary",
+        "guideline",
+        "reference",
+        "review",
+        "observational",
+        "educational",
+        "derived",
+        "unknown"
+      ]
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "draft",
+        "reviewed",
+        "verified",
+        "needs_update",
+        "rejected"
+      ]
+    },
+    "review_notes": {
+      "type": "string"
+    },
+    "last_verified": {
+      "type": "string",
+      "format": "date"
+    }
+  }
+}
