@@ -1,0 +1,12 @@
+{
+  "version":"0.1.0",
+  "scope":"Hematology Microbiology — Salmonella Typhi and Enteric Fever",
+  "cases":[
+    {"id":"salmonella_micro_001","query":"How is Salmonella Typhi transmitted?","expected_state":"supported","expected_ids":["hematology.microbiology.salmonella_typhi_enteric_fever"]},
+    {"id":"salmonella_micro_002","query":"What is the pathogenesis of typhoid fever after intestinal invasion?","expected_state":"supported","expected_ids":["hematology.microbiology.salmonella_typhi_enteric_fever"]},
+    {"id":"salmonella_micro_003","query":"What are the main clinical features and severe complications of typhoid fever?","expected_state":"supported","expected_ids":["hematology.microbiology.salmonella_typhi_enteric_fever"]},
+    {"id":"salmonella_micro_004","query":"What is the main diagnostic test for typhoid fever, and why is Widal testing limited?","expected_state":"supported","expected_ids":["hematology.microbiology.salmonella_typhi_enteric_fever"]},
+    {"id":"salmonella_micro_005","query":"How does antimicrobial resistance affect treatment of typhoid fever?","expected_state":"supported","expected_ids":["hematology.microbiology.salmonella_typhi_enteric_fever"]},
+    {"id":"salmonella_micro_006","query":"What is the mechanism of the fictional antibiotic TyphiCure-888?","expected_state":"abstain","expected_ids":[]}
+  ]
+}
