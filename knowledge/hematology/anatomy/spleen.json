@@ -1,0 +1,168 @@
+{
+  "id": "hematology.anatomy.spleen",
+  "domain": "hematology",
+  "subject": "anatomy",
+  "topic": "Spleen",
+  "subtopic": "Gross anatomy, microanatomy, development, hematologic and immune functions",
+  "concept": "Spleen",
+  "content": {
+    "definition": "The spleen is the largest lymphoid organ and a highly vascular organ that filters blood, removes aged or abnormal blood cells, supports immune surveillance, and has a temporary hematopoietic role during fetal development.",
+    "explanation": "The spleen develops from mesenchymal cells in the dorsal mesogastrium. During fetal life it contributes to hematopoiesis, while after birth its major roles are blood filtration, immune surveillance, and removal of senescent erythrocytes and platelets.",
+    "mechanism": "Splenic blood enters a highly vascular pulp. In the red pulp, blood passes through splenic cords and sinuses; flexible cells can re-enter the circulation, whereas aged or poorly deformable erythrocytes are retained and removed by macrophages. In the white pulp, lymphoid tissue surrounding central arterioles supports immune responses to blood-borne antigens.",
+    "structure": "The spleen is enclosed by a connective-tissue capsule that sends trabeculae into the organ. Its functional tissue is organized into white pulp and red pulp. White pulp contains lymphoid tissue associated with central arterioles, including periarteriolar lymphoid sheaths and lymphoid follicles. Red pulp consists mainly of splenic cords and venous sinuses. The spleen is intraperitoneal in the left upper quadrant and is associated with the stomach, left kidney, diaphragm, pancreatic tail, and splenic flexure.",
+    "function": "Functions include filtration of circulating blood, removal of aged or abnormal erythrocytes and platelets, immune surveillance against blood-borne antigens, participation in iron recycling, and temporary fetal hematopoiesis.",
+    "causes": [],
+    "effects": [],
+    "clinical_relevance": "Splenic dysfunction or removal increases susceptibility to severe infection by encapsulated bacteria because splenic immune and filtration functions are lost. Splenomegaly can occur in infections, hematologic disorders, portal hypertension, and other systemic conditions. Accessory spleens can result from incomplete fusion of developing splenic tissue and may remain functional.",
+    "diagnosis": "Assessment may include physical examination for splenomegaly, complete blood count and peripheral blood smear when hematologic disease is suspected, and imaging such as ultrasound or CT when structural assessment is required.",
+    "treatment": "Treatment depends on the underlying disorder. Management may include treatment of infection or hematologic disease, vaccination and infection-prevention measures after splenectomy, and splenectomy in selected clinical conditions.",
+    "high_yield": [
+      "The spleen develops from mesenchyme in the dorsal mesogastrium during early embryonic development.",
+      "Rotation of the stomach and remodeling of the dorsal mesogastrium contribute to the spleen reaching the left upper abdomen and to formation of its peritoneal attachments.",
+      "The developing spleen is initially represented by mesenchymal tissue that becomes organized into splenic tissue; incomplete fusion of developing tissue can produce accessory spleens.",
+      "The spleen contributes to fetal hematopoiesis, but normal adult hematopoiesis occurs in bone marrow.",
+      "White pulp is primarily associated with immune surveillance, whereas red pulp is specialized for blood filtration and removal of aged or abnormal erythrocytes.",
+      "The spleen is intraperitoneal and lies in the left hypochondriac region beneath the left ninth to eleventh ribs."
+    ]
+  },
+  "terminology": [
+    {
+      "term": "Spleen",
+      "language": "English",
+      "Arabic": "الطحال",
+      "pronunciation": "spleen",
+      "etymology": "From Old English splēn, ultimately related to Greek splēn.",
+      "notes": "A major lymphoid organ that filters blood."
+    },
+    {
+      "term": "Dorsal mesogastrium",
+      "language": "English",
+      "Arabic": "المسراق الظهري للمعدة",
+      "pronunciation": "DOR-sal MEZ-oh-GAS-tree-um",
+      "etymology": "Dorsal refers to the back; mesogastrium is the embryonic mesentery associated with the stomach.",
+      "notes": "Mesenchyme within this embryonic structure gives rise to the spleen."
+    },
+    {
+      "term": "White pulp",
+      "language": "English",
+      "Arabic": "اللب الأبيض",
+      "pronunciation": "white pulp",
+      "etymology": "Descriptive anatomical term based on its pale lymphoid appearance.",
+      "notes": "Lymphoid component involved in immune responses to blood-borne antigens."
+    },
+    {
+      "term": "Red pulp",
+      "language": "English",
+      "Arabic": "اللب الأحمر",
+      "pronunciation": "red pulp",
+      "etymology": "Descriptive anatomical term based on its blood-rich appearance.",
+      "notes": "Contains splenic cords and sinuses and participates in blood filtration."
+    },
+    {
+      "term": "Splenic cords",
+      "language": "English",
+      "Arabic": "الحبال الطحالية / حبال بيلروث",
+      "pronunciation": "SPLEN-ik cords",
+      "etymology": "Also called cords of Billroth after the anatomist Theodor Billroth.",
+      "notes": "Reticular tissue in the red pulp through which circulating blood is filtered."
+    },
+    {
+      "term": "Hematopoiesis",
+      "language": "English",
+      "Arabic": "تكوّن الدم",
+      "pronunciation": "hee-MAT-oh-poy-EE-sis",
+      "etymology": "Greek haima, blood, plus poiesis, making.",
+      "notes": "Production of blood cells; the spleen has a temporary fetal role."
+    },
+    {
+      "term": "Accessory spleen",
+      "language": "English",
+      "Arabic": "طحال إضافي",
+      "pronunciation": "ak-SES-or-ee spleen",
+      "etymology": "Accessory means additional or supplementary.",
+      "notes": "Functional splenic tissue arising from incomplete fusion of developing splenic tissue."
+    }
+  ],
+  "relations": [
+    {
+      "target_id": "hematology.anatomy.bone_marrow",
+      "relation": "shares_hematopoietic_function_during_development",
+      "note": "The spleen contributes to fetal hematopoiesis, while bone marrow becomes the principal hematopoietic site later in development."
+    },
+    {
+      "target_id": "hematology.anatomy.lymph_nodes",
+      "relation": "secondary_lymphoid_organ_relationship",
+      "note": "Both are lymphoid organs involved in immune surveillance, but the spleen primarily filters blood whereas lymph nodes filter lymph."
+    }
+  ],
+  "yemen_context": {
+    "relevance": "Understanding splenic anatomy and function is relevant to hematology, infectious disease, malaria, hemolytic anemia, and clinical assessment of splenomegaly.",
+    "evidence": []
+  },
+  "sources": [
+    {
+      "title": "Anatomy, Abdomen and Pelvis, Spleen",
+      "source_type": "reference",
+      "authors": ["Adekunle E. Omole", "Marjorie V. Launico"],
+      "year": 2026,
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK482235/",
+      "license": "NCBI Bookshelf / StatPearls",
+      "location": "Embryology and anatomy sections",
+      "notes": "Used for embryologic origin, developmental timing, anatomy, and peritoneal relationships."
+    },
+    {
+      "title": "Physiology, Spleen",
+      "source_type": "reference",
+      "authors": ["Vaishali Kapila", "Chase J. Wehrle", "Faiz Tuma"],
+      "year": 2023,
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK537307/",
+      "license": "NCBI Bookshelf / StatPearls",
+      "location": "Development and cellular-level sections",
+      "notes": "Used for fetal hematopoietic role, white/red pulp organization, and splenic filtration."
+    },
+    {
+      "title": "Embryology, Hematopoiesis",
+      "source_type": "reference",
+      "authors": ["Ranbir Singh", "Kavin Sugumar"],
+      "year": 2025,
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK544245/",
+      "license": "NCBI Bookshelf / StatPearls",
+      "location": "Development section",
+      "notes": "Used to cross-check the transition of hematopoiesis from fetal liver and spleen toward bone marrow."
+    },
+    {
+      "title": "Morphological variations of the human spleen: no evidence for a multifocal or lobulated developmental origin",
+      "source_type": "primary",
+      "authors": [],
+      "year": 2023,
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10161904/",
+      "license": "Open-access PMC article; license as stated by publisher",
+      "location": "Embryonic spleen development",
+      "notes": "Used to refine the description of early human splenic development and avoid overstating the traditional multiple-nodule model."
+    },
+    {
+      "title": "Post-splenectomy Sepsis: A Review of the Literature",
+      "source_type": "review",
+      "authors": [],
+      "year": 2020,
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7059871/",
+      "license": "Open-access PMC article; license as stated by publisher",
+      "location": "Embryology section",
+      "notes": "Used as a supporting review for developmental origin and fetal hematopoietic function."
+    },
+    {
+      "title": "Anatomy, Abdomen and Pelvis: Accessory Spleen",
+      "source_type": "reference",
+      "authors": [],
+      "year": 2023,
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK519040/",
+      "license": "NCBI Bookshelf / StatPearls",
+      "location": "Embryology section",
+      "notes": "Used for accessory spleen development through incomplete fusion of splenic tissue."
+    }
+  ],
+  "evidence_level": "reference",
+  "status": "reviewed",
+  "review_notes": "Original synthesized record checked against current NCBI Bookshelf/StatPearls and peer-reviewed PMC sources. Traditional teaching that the spleen forms from multiple mesenchymal nodules was not treated as an absolute human developmental fact because modern human embryology evidence supports an initially single splenic primordium.",
+  "last_verified": "2026-09-27"
+}
