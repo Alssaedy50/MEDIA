@@ -1,0 +1,48 @@
+{
+  "name": "MEDAI Hematology Anatomy Knowledge Base",
+  "version": "1.0.0",
+  "release_type": "first_knowledge_snapshot",
+  "status": "prepared",
+  "released_on": "2026-09-27",
+  "repository": "Alssaedy50/MEDIA",
+  "schema": "schemas/knowledge.schema.json",
+  "record_count": 6,
+  "records": [
+    {
+      "id": "hematology.anatomy.bone_marrow",
+      "path": "knowledge/hematology/anatomy/bone_marrow.json"
+    },
+    {
+      "id": "hematology.anatomy.thymus",
+      "path": "knowledge/hematology/anatomy/thymus.json"
+    },
+    {
+      "id": "hematology.anatomy.lymph_nodes",
+      "path": "knowledge/hematology/anatomy/lymph_nodes.json"
+    },
+    {
+      "id": "hematology.anatomy.spleen",
+      "path": "knowledge/hematology/anatomy/spleen.json"
+    },
+    {
+      "id": "hematology.anatomy.lymphatic_vessels",
+      "path": "knowledge/hematology/anatomy/lymphatic_vessels.json"
+    },
+    {
+      "id": "hematology.anatomy.embryology_hemopoietic_lymphatic",
+      "path": "knowledge/hematology/anatomy/embryology_hemopoietic_lymphatic.json"
+    }
+  ],
+  "validation": {
+    "json_parse": "passed",
+    "required_schema_fields": "passed",
+    "status_and_evidence_enums": "passed",
+    "source_presence": "passed",
+    "relation_integrity": "passed",
+    "yemen_context_type_normalization": "passed",
+    "note": "The six records were re-read from main after normalization. No dangling relation targets were found. The canonical JSON Schema remains at schemas/knowledge.schema.json."
+  },
+  "scope": "Hematology Anatomy: Bone Marrow; Thymus; Lymph Nodes; Spleen; Lymphatic Vessels; Embryology of Hemopoietic and Lymphatic Systems.",
+  "next_scope": "Hematology Histology: Blood Tissue — composition, plasma and formed elements.",
+  "content_policy": "Original synthesized educational content with source metadata; copyrighted textbook content is not copied into the repository."
+}
