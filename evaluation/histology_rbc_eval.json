@@ -1,0 +1,50 @@
+{
+  "name": "MEDAI Hematology Histology RBC evaluation set",
+  "version": "0.1.0",
+  "scope": "hematology.histology.rbc_erythropoiesis",
+  "purpose": "Validate retrieval of RBC structure, function, erythropoiesis and safe abstention.",
+  "cases": [
+    {
+      "id": "hist-rbc-001",
+      "query": "What is the structure of a mature red blood cell?",
+      "mode": "explain",
+      "expected_concepts": ["hematology.histology.rbc_erythropoiesis"],
+      "expected_evidence_state": "supported"
+    },
+    {
+      "id": "hist-rbc-002",
+      "query": "Why are mature RBCs biconcave and anucleate?",
+      "mode": "explain",
+      "expected_concepts": ["hematology.histology.rbc_erythropoiesis"],
+      "expected_evidence_state": "supported"
+    },
+    {
+      "id": "hist-rbc-003",
+      "query": "What are the stages of erythropoiesis from proerythroblast to mature RBC?",
+      "mode": "quick",
+      "expected_concepts": ["hematology.histology.rbc_erythropoiesis"],
+      "expected_evidence_state": "supported"
+    },
+    {
+      "id": "hist-rbc-004",
+      "query": "What is the role of erythropoietin in erythropoiesis?",
+      "mode": "explain",
+      "expected_concepts": ["hematology.histology.rbc_erythropoiesis"],
+      "expected_evidence_state": "supported"
+    },
+    {
+      "id": "hist-rbc-005",
+      "query": "What is the clinical significance of the reticulocyte count?",
+      "mode": "explain",
+      "expected_concepts": ["hematology.histology.rbc_erythropoiesis"],
+      "expected_evidence_state": "supported"
+    },
+    {
+      "id": "hist-rbc-006",
+      "query": "What is the mechanism of fictional XenoMed-9000 erythrocyte activation?",
+      "mode": "quick",
+      "expected_concepts": [],
+      "expected_evidence_state": "insufficient"
+    }
+  ]
+}
