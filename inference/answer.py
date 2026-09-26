@@ -7,7 +7,7 @@ import argparse
 import json
 from typing import Any
 
-from retrieval import retrieve, tokenize
+from retrieval import retrieve
 
 
 def _first_nonempty(*values: Any) -> str | None:
@@ -119,40 +119,7 @@ def answer(query: str, *, mode: str = "quick", top_k: int = 3) -> dict[str, Any]
         return response
 
     if mode == "compare":
-        # Comparison questions need concept coverage, not just global ranking.
-        # Retrieve each explicit term and adjacent phrase, then keep the best
-        # fully matched hit for each requested concept.
-        query_terms = result.get("query_terms", [])
-        candidate_queries = [
-            f"{query_terms[i]} {query_terms[i + 1]}"
-            for i in range(len(query_terms) - 1)
-        ]
-        candidate_queries.extend(query_terms)
-
-        explicit_hits: dict[str, dict[str, Any]] = {}
-        for candidate in candidate_queries:
-            extra = retrieve(candidate, top_k=3)
-            candidate_tokens = [token.lower() for token in candidate.split() if token.strip()]
-            for hit in extra.get("hits", []):
-                concept_text = (
-                    str(hit.get("concept", "")).lower()
-                    + " "
-                    + str(hit.get("topic", "")).lower()
-                )
-                if candidate_tokens and all(token in concept_text for token in candidate_tokens):
-                    explicit_hits.setdefault(hit["id"], hit)
-
-        comparison_hits = list(explicit_hits.values())
-
-        # Fall back to the original ranked evidence only if explicit concept
-        # retrieval produced fewer than two concepts.
-        if len(comparison_hits) < 2:
-            comparison_hits = result["hits"][:2]
-
-        result["hits"] = comparison_hits
-        hits = comparison_hits
-
-        if len(comparison_hits) < 2:
+        if len(hits) < 2:
             text, points = _hit_summary(hits[0], "explain")
             response = _base(result, mode)
             response.update({
@@ -164,12 +131,20 @@ def answer(query: str, *, mode: str = "quick", top_k: int = 3) -> dict[str, Any]
             })
             return response
 
+        comparison_hits = [
+            hit for hit in hits
+            if set(hit.get("match", {}).get("matched_terms", []))
+            & set(result.get("query_terms", []))
+        ]
+        if len(comparison_hits) < 2:
+            comparison_hits = hits[:2]
+
         comparison = []
         for hit in comparison_hits[:2]:
             evidence = hit.get("evidence", {}) or {}
             comparison.append({
                 "id": hit.get("id"),
-                "concept": hit.get("topic") or hit.get("concept"),
+                "concept": hit.get("concept"),
                 "definition": _first_nonempty(evidence.get("definition")),
                 "structure": _first_nonempty(evidence.get("structure")),
                 "function": _first_nonempty(evidence.get("function")),

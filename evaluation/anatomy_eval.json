@@ -1,21 +1,25 @@
 {
   "name": "MEDAI Anatomy v0.1 evaluation set",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "scope": "hematology.anatomy",
-  "purpose": "Measure retrieval and evidence-state behavior before expanding the knowledge base.",
+  "purpose": "Measure retrieval, multi-concept coverage, source traceability, and safe abstention before expanding the knowledge base.",
   "cases": [
     {
       "id": "anat-001",
       "query": "What is the function of the red pulp?",
       "mode": "quick",
-      "expected_concepts": ["hematology.anatomy.spleen"],
+      "expected_concepts": [
+        "hematology.anatomy.spleen"
+      ],
       "expected_evidence_state": "supported"
     },
     {
       "id": "anat-002",
       "query": "Explain the role of PROX1 in lymphatic development.",
       "mode": "explain",
-      "expected_concepts": ["hematology.anatomy.embryology_hemopoietic_lymphatic"],
+      "expected_concepts": [
+        "hematology.anatomy.embryology_hemopoietic_lymphatic"
+      ],
       "expected_evidence_state": "supported"
     },
     {
@@ -32,28 +36,36 @@
       "id": "anat-004",
       "query": "Where does definitive hematopoiesis originate?",
       "mode": "explain",
-      "expected_concepts": ["hematology.anatomy.embryology_hemopoietic_lymphatic"],
+      "expected_concepts": [
+        "hematology.anatomy.embryology_hemopoietic_lymphatic"
+      ],
       "expected_evidence_state": "supported"
     },
     {
       "id": "anat-005",
       "query": "What is the role of Hassall corpuscles?",
       "mode": "quick",
-      "expected_concepts": ["hematology.anatomy.thymus"],
+      "expected_concepts": [
+        "hematology.anatomy.thymus"
+      ],
       "expected_evidence_state": "supported"
     },
     {
       "id": "anat-006",
       "query": "What is the thoracic duct?",
       "mode": "quick",
-      "expected_concepts": ["hematology.anatomy.lymphatic_vessels"],
+      "expected_concepts": [
+        "hematology.anatomy.lymphatic_vessels"
+      ],
       "expected_evidence_state": "supported"
     },
     {
       "id": "anat-007",
       "query": "What is the function of bone marrow?",
       "mode": "exam",
-      "expected_concepts": ["hematology.anatomy.bone_marrow"],
+      "expected_concepts": [
+        "hematology.anatomy.bone_marrow"
+      ],
       "expected_evidence_state": "supported"
     },
     {
@@ -62,6 +74,60 @@
       "mode": "quick",
       "expected_concepts": [],
       "expected_evidence_state": "insufficient"
+    },
+    {
+      "id": "anat-009",
+      "query": "What are Hassall corpuscles in the thymic medulla?",
+      "mode": "explain",
+      "expected_concepts": [
+        "hematology.anatomy.thymus"
+      ],
+      "expected_evidence_state": "supported"
+    },
+    {
+      "id": "anat-010",
+      "query": "What is the thoracic duct and where does it drain?",
+      "mode": "explain",
+      "expected_concepts": [
+        "hematology.anatomy.lymphatic_vessels"
+      ],
+      "expected_evidence_state": "supported"
+    },
+    {
+      "id": "anat-011",
+      "query": "What are high endothelial venules (HEVs) in lymph nodes?",
+      "mode": "quick",
+      "expected_concepts": [
+        "hematology.anatomy.lymph_nodes"
+      ],
+      "expected_evidence_state": "supported"
+    },
+    {
+      "id": "anat-012",
+      "query": "Describe the hematopoietic sequence from yolk sac to fetal liver to bone marrow.",
+      "mode": "explain",
+      "expected_concepts": [
+        "hematology.anatomy.embryology_hemopoietic_lymphatic"
+      ],
+      "expected_evidence_state": "supported"
+    },
+    {
+      "id": "anat-013",
+      "query": "What is the red pulp of the spleen responsible for?",
+      "mode": "exam",
+      "expected_concepts": [
+        "hematology.anatomy.spleen"
+      ],
+      "expected_evidence_state": "supported"
+    },
+    {
+      "id": "anat-014",
+      "query": "What is the role of the bone marrow as a primary lymphoid organ?",
+      "mode": "quick",
+      "expected_concepts": [
+        "hematology.anatomy.bone_marrow"
+      ],
+      "expected_evidence_state": "supported"
     }
   ]
 }
