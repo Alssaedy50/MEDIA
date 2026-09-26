@@ -1,0 +1,42 @@
+{
+  "version": "0.1.0",
+  "scope": "Hematology Pathology — Myeloproliferative Disorders and Polycythemia",
+  "cases": [
+    {
+      "id": "mpn_path_001",
+      "query": "What are the classic myeloproliferative neoplasms and what is the defining molecular feature of CML?",
+      "expected_state": "supported",
+      "expected_ids": ["hematology.pathology.myeloproliferative_disorders_polycythemia"]
+    },
+    {
+      "id": "mpn_path_002",
+      "query": "What is the pathophysiological basis of polycythemia vera?",
+      "expected_state": "supported",
+      "expected_ids": ["hematology.pathology.myeloproliferative_disorders_polycythemia"]
+    },
+    {
+      "id": "mpn_path_003",
+      "query": "How do primary and secondary polycythemia differ?",
+      "expected_state": "supported",
+      "expected_ids": ["hematology.pathology.myeloproliferative_disorders_polycythemia"]
+    },
+    {
+      "id": "mpn_path_004",
+      "query": "What mutations are important in essential thrombocythemia and what does the marrow show?",
+      "expected_state": "supported",
+      "expected_ids": ["hematology.pathology.myeloproliferative_disorders_polycythemia"]
+    },
+    {
+      "id": "mpn_path_005",
+      "query": "Why can myeloproliferative neoplasms cause both thrombosis and bleeding?",
+      "expected_state": "supported",
+      "expected_ids": ["hematology.pathology.myeloproliferative_disorders_polycythemia"]
+    },
+    {
+      "id": "mpn_path_006",
+      "query": "What is the mechanism of a fictional MPN drug called MyeloPro-9000?",
+      "expected_state": "abstain",
+      "expected_ids": []
+    }
+  ]
+}
