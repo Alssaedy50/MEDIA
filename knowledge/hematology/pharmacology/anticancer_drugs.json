@@ -1,0 +1,61 @@
+{
+  "id": "hematology.pharmacology.anticancer_drugs",
+  "domain": "Hematology",
+  "subject": "Pharmacology",
+  "topic": "Anticancer Drugs",
+  "concept": "Drug treatment of leukemias and lymphomas uses cytotoxic, targeted and immune-based therapies selected according to disease biology.",
+  "content": {
+    "definition": "Anticancer pharmacology includes agents that inhibit malignant-cell proliferation or exploit disease-specific molecular or immune vulnerabilities.",
+    "explanation": "Teaching groups include antimetabolites, alkylating agents, anthracyclines, vinca alkaloids, corticosteroids, monoclonal antibodies and molecularly targeted inhibitors.",
+    "mechanism": "Different classes interfere with DNA synthesis, DNA integrity, mitosis, signaling pathways or immune recognition.",
+    "clinical_relevance": "Modern treatment is increasingly guided by molecular and immunophenotypic classification.",
+    "treatment": "Regimens are malignancy-specific and should follow current oncology/hematology guidance.",
+    "effects": [
+      "Myelosuppression and infection risk are important class effects.",
+      "Organ-specific toxicity varies by drug class.",
+      "Targeted and immune therapies have characteristic mechanism-related adverse effects."
+    ],
+    "high_yield": [
+      "Anticancer therapy in hematology is disease- and biology-specific.",
+      "Cytotoxic drugs commonly cause myelosuppression.",
+      "Targeted therapy acts on defined molecular pathways.",
+      "Monoclonal antibodies can target lineage-associated surface antigens."
+    ]
+  },
+  "terminology": [],
+  "relations": [],
+  "yemen_context": {
+    "relevance": "Core Hematology block pharmacology topic; access to advanced targeted agents varies by setting.",
+    "evidence": "General evidence; no local formulary asserted."
+  },
+  "evidence_level": "guideline",
+  "status": "reviewed",
+  "review_notes": "Original educational synthesis based on major hematology/oncology references.",
+  "last_verified": "2026-09-27",
+  "sources": [
+    {
+      "title": "Cancer Treatment Information",
+      "source_type": "reference",
+      "authors": [
+        "National Cancer Institute"
+      ],
+      "year": 2026,
+      "url": "https://www.cancer.gov/",
+      "license": "NCI",
+      "location": "NCI",
+      "notes": "Current cancer treatment and drug information."
+    },
+    {
+      "title": "ASH Clinical Practice Guidelines",
+      "source_type": "guideline",
+      "authors": [
+        "American Society of Hematology"
+      ],
+      "year": 2026,
+      "url": "https://www.hematology.org/education/clinicians/guidelines-and-quality-care/clinical-practice-guidelines",
+      "license": "ASH",
+      "location": "ASH",
+      "notes": "Current hematology treatment guidance."
+    }
+  ]
+}
