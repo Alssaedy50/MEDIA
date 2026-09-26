@@ -1,0 +1,47 @@
+{
+  "version": "0.1.0",
+  "scope": "Hematology Physiology — Blood Composition and Functions",
+  "cases": [
+    {
+      "id": "blood_phys_001",
+      "query": "What are the major components of blood?",
+      "expected_state": "supported",
+      "expected_ids": ["hematology.physiology.blood_composition_functions"]
+    },
+    {
+      "id": "blood_phys_002",
+      "query": "What are the main functions of blood?",
+      "expected_state": "supported",
+      "expected_ids": ["hematology.physiology.blood_composition_functions"]
+    },
+    {
+      "id": "blood_phys_003",
+      "query": "What does plasma contain and what are its functions?",
+      "expected_state": "supported",
+      "expected_ids": ["hematology.physiology.blood_composition_functions"]
+    },
+    {
+      "id": "blood_phys_004",
+      "query": "What are the functions of erythrocytes, leukocytes and platelets?",
+      "expected_state": "supported",
+      "expected_ids": [
+        "hematology.physiology.blood_composition_functions",
+        "hematology.histology.rbc_erythropoiesis",
+        "hematology.histology.leukocytes",
+        "hematology.histology.platelets_thrombopoiesis"
+      ]
+    },
+    {
+      "id": "blood_phys_005",
+      "query": "How does blood contribute to homeostasis?",
+      "expected_state": "supported",
+      "expected_ids": ["hematology.physiology.blood_composition_functions"]
+    },
+    {
+      "id": "blood_phys_006",
+      "query": "What is the mechanism of a fictional blood drug called Hemoxyl-9000?",
+      "expected_state": "abstain",
+      "expected_ids": []
+    }
+  ]
+}
