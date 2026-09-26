@@ -4,6 +4,7 @@
 This module deliberately does not generate unsupported medical facts.
 It retrieves source-traceable Anatomy knowledge records from the repository
 and returns an evidence packet that a later answer-generation model can use.
+The default scope covers the registered Hematology knowledge tree, including Anatomy and Histology.
 
 Standard library only.
 """
@@ -19,7 +20,7 @@ from typing import Any
 
 
 ROOT = Path(__file__).resolve().parents[1]
-DEFAULT_KB = ROOT / "knowledge" / "hematology" / "anatomy"
+DEFAULT_KB = ROOT / "knowledge" / "hematology"
 
 TOKEN_RE = re.compile(r"[A-Za-z][A-Za-z0-9_-]*|[\u0600-\u06FF]+")
 STOPWORDS = {
@@ -252,7 +253,7 @@ def format_human(result: dict[str, Any]) -> str:
 
 
 def main() -> None:
-    parser = argparse.ArgumentParser(description="MEDAI v0.1 Anatomy retrieval demo")
+    parser = argparse.ArgumentParser(description="MEDAI v0.1 Hematology retrieval demo")
     parser.add_argument("query", help="Medical question or concept to retrieve")
     parser.add_argument("--top-k", type=int, default=3)
     parser.add_argument("--json", action="store_true", help="Print machine-readable JSON")
