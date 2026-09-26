@@ -1,0 +1,42 @@
+{
+  "version": "0.1.0",
+  "scope": "Hematology Pathology — Stem Cell Disorders",
+  "cases": [
+    {
+      "id": "stem_cell_path_001",
+      "query": "What are the defining properties of hematopoietic stem cells?",
+      "expected_state": "supported",
+      "expected_ids": ["hematology.pathology.stem_cell_disorders"]
+    },
+    {
+      "id": "stem_cell_path_002",
+      "query": "How can a hematopoietic stem cell disorder produce pancytopenia?",
+      "expected_state": "supported",
+      "expected_ids": ["hematology.pathology.stem_cell_disorders"]
+    },
+    {
+      "id": "stem_cell_path_003",
+      "query": "What mechanisms can cause hematopoietic stem cell or bone marrow failure?",
+      "expected_state": "supported",
+      "expected_ids": ["hematology.pathology.stem_cell_disorders"]
+    },
+    {
+      "id": "stem_cell_path_004",
+      "query": "How do clonal stem or progenitor cell disorders differ biologically from global marrow failure?",
+      "expected_state": "supported",
+      "expected_ids": ["hematology.pathology.stem_cell_disorders"]
+    },
+    {
+      "id": "stem_cell_path_005",
+      "query": "How are suspected hematopoietic stem cell disorders evaluated?",
+      "expected_state": "supported",
+      "expected_ids": ["hematology.pathology.stem_cell_disorders"]
+    },
+    {
+      "id": "stem_cell_path_006",
+      "query": "What is the mechanism of a fictional stem-cell drug called HemaStem-9000?",
+      "expected_state": "abstain",
+      "expected_ids": []
+    }
+  ]
+}
