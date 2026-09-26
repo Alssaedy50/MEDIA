@@ -119,25 +119,26 @@ def answer(query: str, *, mode: str = "quick", top_k: int = 3) -> dict[str, Any]
         return response
 
     if mode == "compare":
-        if len(hits) < 2:
-            text, points = _hit_summary(hits[0], "explain")
-            response = _base(result, mode)
-            response.update({
-                "evidence_state": "single_concept",
-                "answer": text,
-                "key_points": points,
-                "terms": _terms(hits[0]),
-                "sources": _sources(hits),
-            })
-            return response
+        # Retrieve explicit concepts from contiguous query phrases, then combine
+        # them without relying on the global top-k ranking.
+        terms = result.get("query_terms", [])
+        candidates = []
+        for size in (3, 2, 1):
+            for i in range(len(terms) - size + 1):
+                candidates.append(" ".join(terms[i:i + size]))
 
-        comparison_hits = [
-            hit for hit in hits
-            if set(hit.get("match", {}).get("matched_terms", []))
-            & set(result.get("query_terms", []))
-        ]
+        explicit_hits: dict[str, dict[str, Any]] = {}
+        for candidate in candidates:
+            extra = retrieve(candidate, top_k=3)
+            for hit in extra.get("hits", []):
+                candidate_tokens = set(tokenize(candidate))
+                matched = set(hit.get("match", {}).get("matched_terms", []))
+                if candidate_tokens and candidate_tokens.issubset(matched):
+                    explicit_hits.setdefault(hit["id"], hit)
+
+        comparison_hits = list(explicit_hits.values())
         if len(comparison_hits) < 2:
-            comparison_hits = hits[:2]
+            comparison_hits = result["hits"][:2]
 
         comparison = []
         for hit in comparison_hits[:2]:
@@ -151,13 +152,14 @@ def answer(query: str, *, mode: str = "quick", top_k: int = 3) -> dict[str, Any]
                 "clinical_relevance": _first_nonempty(evidence.get("clinical_relevance")),
             })
 
+        result["hits"] = comparison_hits
         response = _base(result, mode)
         response.update({
-            "evidence_state": "multi_concept",
+            "evidence_state": "multi_concept" if len(comparison_hits) >= 2 else "single_concept",
             "answer": "Comparison assembled only from registered knowledge evidence.",
             "comparison": comparison,
             "key_points": [],
-            "terms": sorted(set(_terms(comparison_hits[0]) + _terms(comparison_hits[1])))[:10],
+            "terms": sorted(set(sum((_terms(hit) for hit in comparison_hits[:2]), [])))[:10],
             "sources": _sources(comparison_hits),
         })
         return response
