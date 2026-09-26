@@ -1,0 +1,60 @@
+{
+  "name": "MEDAI Hematology Medicine evaluation set",
+  "version": "0.1.0",
+  "scope": "hematology.medicine.malaria_filariasis_leishmaniasis",
+  "purpose": "Validate retrieval and safe abstention.",
+  "cases": [
+    {
+      "id": "pharmacology_medicine_malaria_filariasis_leishmaniasis_eval-001",
+      "query": "What are the main hematologic clinical manifestations of malaria, filariasis and visceral leishmaniasis?",
+      "mode": "explain",
+      "expected_concepts": [
+        "hematology.medicine.malaria_filariasis_leishmaniasis"
+      ],
+      "expected_evidence_state": "supported"
+    },
+    {
+      "id": "pharmacology_medicine_malaria_filariasis_leishmaniasis_eval-002",
+      "query": "What are the main hematologic clinical manifestations of malaria, filariasis and visceral leishmaniasis?",
+      "mode": "quick",
+      "expected_concepts": [
+        "hematology.medicine.malaria_filariasis_leishmaniasis"
+      ],
+      "expected_evidence_state": "supported"
+    },
+    {
+      "id": "pharmacology_medicine_malaria_filariasis_leishmaniasis_eval-003",
+      "query": "What are the main hematologic clinical manifestations of malaria, filariasis and visceral leishmaniasis?",
+      "mode": "explain",
+      "expected_concepts": [
+        "hematology.medicine.malaria_filariasis_leishmaniasis"
+      ],
+      "expected_evidence_state": "supported"
+    },
+    {
+      "id": "pharmacology_medicine_malaria_filariasis_leishmaniasis_eval-004",
+      "query": "What are the main hematologic clinical manifestations of malaria, filariasis and visceral leishmaniasis?",
+      "mode": "quick",
+      "expected_concepts": [
+        "hematology.medicine.malaria_filariasis_leishmaniasis"
+      ],
+      "expected_evidence_state": "supported"
+    },
+    {
+      "id": "pharmacology_medicine_malaria_filariasis_leishmaniasis_eval-005",
+      "query": "What are the main hematologic clinical manifestations of malaria, filariasis and visceral leishmaniasis?",
+      "mode": "explain",
+      "expected_concepts": [
+        "hematology.medicine.malaria_filariasis_leishmaniasis"
+      ],
+      "expected_evidence_state": "supported"
+    },
+    {
+      "id": "pharmacology_medicine_malaria_filariasis_leishmaniasis_eval-006",
+      "query": "What is the mechanism of fictional ParasitoX?",
+      "mode": "quick",
+      "expected_concepts": [],
+      "expected_evidence_state": "insufficient"
+    }
+  ]
+}
