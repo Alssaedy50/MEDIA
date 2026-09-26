@@ -1,0 +1,38 @@
+{
+  "id":"hematology.pediatrics.hemolytic_anemias",
+  "domain":"Hematology","subject":"Pediatrics","topic":"Pediatric Hemolytic Anemias",
+  "subtopic":"Clinical picture, diagnosis, treatment and prognosis of inherited and acquired hemolysis",
+  "concept":"Pediatric hemolytic anemia results from shortened red-cell survival with marrow compensation when possible. Important childhood disorders include sickle cell disease, thalassemia, hereditary spherocytosis, G6PD deficiency and immune hemolysis.",
+  "content":{
+    "definition":"Hemolytic anemia occurs when red-cell destruction exceeds effective production. Hemolysis may be intravascular or extravascular and inherited or acquired.",
+    "explanation":"Typical clues include anemia with reticulocytosis, indirect hyperbilirubinemia, elevated LDH and reduced haptoglobin when appropriate. Splenomegaly is common in extravascular hemolysis. The exact presentation depends on the disorder: sickle cell disease causes vaso-occlusion and hemolysis; thalassemia causes ineffective erythropoiesis and chronic anemia; hereditary spherocytosis causes membrane-related extravascular hemolysis; G6PD deficiency can cause episodic oxidative hemolysis.",
+    "mechanism":"Increased red-cell destruction stimulates erythropoietin and marrow reticulocytosis. In sickle cell disease, HbS polymerization under deoxygenation promotes sickling, hemolysis and vaso-occlusion. In thalassemia, reduced globin-chain synthesis causes ineffective erythropoiesis and hemolysis.",
+    "structure":"Evaluation combines CBC, reticulocyte count, smear, bilirubin, LDH and haptoglobin with targeted testing. Hemoglobin analysis by electrophoresis/HPLC helps identify hemoglobinopathies. Family history and genetic testing may be useful. Direct antiglobulin testing helps evaluate immune hemolysis.",
+    "function":"Hemolysis lowers oxygen-carrying capacity and may cause jaundice, pigment gallstones, splenomegaly and compensatory reticulocytosis.",
+    "causes":["Sickle cell disease","Alpha or beta thalassemia","Hereditary spherocytosis and other membrane disorders","G6PD deficiency and other enzymopathies","Autoimmune hemolytic anemia","Infections, drugs and mechanical causes"],
+    "effects":["Pallor and fatigue","Jaundice","Splenomegaly","Reticulocytosis","Pain crises and acute chest syndrome in sickle cell disease","Growth and endocrine complications in severe transfusion-dependent thalassemia"],
+    "clinical_relevance":"Pediatric hemolytic anemia requires recognition of acute complications and long-term complications. Inherited disorders need family counseling and longitudinal care.",
+    "diagnosis":"Confirm hemolysis with a compatible laboratory pattern, then identify the cause. Smear may reveal spherocytes or sickling-related changes; hemoglobin analysis is important for hemoglobinopathies; enzyme or membrane testing is selected according to the suspected disorder. In G6PD deficiency, testing can be falsely reassuring during or shortly after hemolysis because young reticulocytes contain more enzyme.",
+    "treatment":"Treatment is disorder-specific. Sickle cell disease management includes disease-modifying therapy such as hydroxyurea, infection prevention, pain and acute complication management, transfusion when indicated, and selected curative cellular or gene therapies. Severe transfusion-dependent thalassemia is managed with regular RBC transfusions and iron-overload monitoring/chelation. Hereditary spherocytosis may require folate support and, in selected patients, splenectomy; G6PD deficiency centers on trigger avoidance and supportive care. Immune hemolysis requires treatment of the immune cause and severity-guided therapy.",
+    "high_yield":["Reticulocytosis is a key clue to marrow compensation in hemolysis.","Sickle cell disease is diagnosed using hemoglobin testing and may be confirmed with genetic testing.","Severe thalassemia may require regular transfusions and iron chelation.","Do not give iron simply because a patient with thalassemia is anemic unless iron deficiency is independently demonstrated.","G6PD assays may need repeat testing after an acute hemolytic episode if the initial result is not definitive."]
+  },
+  "terminology":[
+    {"term":"Hemolysis","language":"English","Arabic":"انحلال الدم","pronunciation":"heh-MOL-ih-sis","etymology":"Hemo-, blood; -lysis, breakdown.","notes":"Premature destruction of red blood cells."},
+    {"term":"Sickle cell disease","language":"English","Arabic":"داء الخلايا المنجلية","pronunciation":"SIK-ul sel dih-ZEEZ","etymology":"Sickle, crescent-shaped; cell; disease.","notes":"Inherited hemoglobin disorder dominated by HbS-related sickling."},
+    {"term":"Thalassemia","language":"English","Arabic":"الثلاسيميا","pronunciation":"thal-uh-SEE-mee-uh","etymology":"Greek thalassa, sea, historically linked to Mediterranean disease.","notes":"Inherited reduced globin-chain production."}
+  ],
+  "relations":[
+    {"target_id":"hematology.pathology.hemolytic_anemia_hemoglobinopathies","relation":"extends","note":"Adds pediatric clinical presentation and management context."},
+    {"target_id":"hematology.medicine.transplantation","relation":"connects_to","note":"HSCT may be used in selected inherited hemolytic disorders."},
+    {"target_id":"hematology.pharmacology.nutritional_anemia_treatment","relation":"contrasts_with","note":"Hemolytic anemia is not treated as nutritional anemia unless a concurrent deficiency exists."}
+  ],
+  "yemen_context":{"relevance":"Inherited hemoglobin disorders and hemolytic infections are clinically relevant in malaria-endemic and malaria-history populations; diagnosis should remain laboratory based.","evidence":"No Yemen-specific prevalence estimate is asserted."},
+  "evidence_level":"guideline","status":"reviewed","review_notes":"Pediatric synthesis using WHO 2026 sickle-cell guidance, NHLBI/NIH material and CDC thalassemia resources.",
+  "last_verified":"2026-09-27",
+  "sources":[
+    {"title":"WHO consolidated guidelines for the management of common childhood illness: management of sickle-cell disease in children and adolescents","source_type":"guideline","authors":["World Health Organization"],"year":2026,"url":"https://www.who.int/publications/i/item/9789240122666","license":"WHO","location":"WHO","notes":"Current pediatric SCD guideline."},
+    {"title":"Sickle Cell Disease - Diagnosis","source_type":"reference","authors":["National Heart, Lung, and Blood Institute"],"year":2024,"url":"https://www.nhlbi.nih.gov/health/sickle-cell-disease/diagnosis","license":"NIH","location":"NHLBI","notes":"Diagnostic testing and newborn screening."},
+    {"title":"Sickle Cell Disease - Treatment","source_type":"reference","authors":["National Heart, Lung, and Blood Institute"],"year":2024,"url":"https://www.nhlbi.nih.gov/health/sickle-cell-disease/treatment","license":"NIH","location":"NHLBI","notes":"Current treatment overview including hydroxyurea and transfusion."},
+    {"title":"Treatment of Thalassemia","source_type":"reference","authors":["Centers for Disease Control and Prevention"],"year":2025,"url":"https://www.cdc.gov/thalassemia/treatment/index.html","license":"CDC","location":"CDC","notes":"Transfusion and iron-overload management."}
+  ]
+}
