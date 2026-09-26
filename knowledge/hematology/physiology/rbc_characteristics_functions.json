@@ -1,0 +1,93 @@
+{
+  "id": "hematology.physiology.rbc_characteristics_functions",
+  "domain": "Hematology",
+  "subject": "Physiology",
+  "topic": "Red Blood Cell Characteristics and Functions",
+  "subtopic": "Erythrocyte physiology, oxygen transport and carbon dioxide transport",
+  "concept": "Red blood cells are specialized, flexible, anucleate cells whose principal physiological role is transporting oxygen and contributing to carbon dioxide transport and acid-base homeostasis.",
+  "content": {
+    "definition": "An erythrocyte is a mature red blood cell specialized for respiratory gas transport. Its high hemoglobin content and flexible biconcave form allow efficient oxygen loading in the lungs, oxygen unloading in tissues and participation in carbon dioxide transport.",
+    "explanation": "Mature human RBCs lack a nucleus and mitochondria and therefore do not consume the oxygen they transport through oxidative phosphorylation. They obtain ATP mainly through anaerobic glycolysis. Their biconcave shape provides a high surface-area-to-volume ratio and supports deformation through small vessels. A typical RBC circulates for about 120 days before senescent cells are removed mainly by macrophages in the spleen and liver.",
+    "mechanism": "Oxygen binds reversibly to the iron-containing heme groups of hemoglobin. About 98% of transported oxygen is carried bound to hemoglobin, with a small fraction dissolved in plasma. Oxygen loading is favored in the lungs, while tissue conditions promote unloading. Increased temperature, increased carbon dioxide, decreased pH and increased 2,3-BPG decrease hemoglobin oxygen affinity and shift the oxyhemoglobin dissociation curve to the right, facilitating oxygen unloading. RBCs also participate in carbon dioxide transport: carbon dioxide enters RBCs, carbonic anhydrase catalyzes conversion with water to carbonic acid, and much of the resulting bicarbonate is transported in plasma. Hemoglobin also buffers hydrogen ions and thereby contributes to acid-base balance.",
+    "structure": "Mature RBCs are flexible biconcave discs approximately 6–8 micrometers in diameter. They contain a plasma membrane supported by a spectrin-based cytoskeleton and are densely packed with hemoglobin. They lack a nucleus, mitochondria, ribosomes and endoplasmic reticulum.",
+    "function": "RBCs transport oxygen from lungs to tissues, participate in carbon dioxide transport from tissues to lungs, buffer hydrogen ions and contribute to blood viscosity and rheological behavior.",
+    "causes": [],
+    "effects": [],
+    "clinical_relevance": "Reduced RBC number or hemoglobin concentration can impair oxygen delivery and cause anemia. Abnormal hemoglobin structure or concentration can alter oxygen transport. Changes in RBC deformability, membrane integrity or lifespan can contribute to hemolytic and other blood disorders.",
+    "diagnosis": "RBC physiology is assessed clinically using hemoglobin concentration, hematocrit, RBC count and red-cell indices, together with peripheral smear and reticulocyte count when indicated.",
+    "treatment": "Management depends on the underlying disorder affecting RBC production, hemoglobin, membrane function, destruction or blood loss.",
+    "high_yield": [
+      "Mature human RBCs are anucleate and lack mitochondria.",
+      "RBCs use anaerobic glycolysis for ATP production.",
+      "The main function of RBCs is oxygen transport through hemoglobin.",
+      "Approximately 98% of blood oxygen is transported bound to hemoglobin.",
+      "A normal RBC lifespan is about 120 days.",
+      "Increased temperature, increased CO2, decreased pH and increased 2,3-BPG favor oxygen unloading by shifting the oxyhemoglobin dissociation curve to the right.",
+      "Carbonic anhydrase inside RBCs facilitates conversion of CO2 to bicarbonate.",
+      "Hemoglobin buffers hydrogen ions and contributes to acid-base homeostasis."
+    ]
+  },
+  "terminology": [
+    {"term": "Oxygen-carrying capacity", "language": "English", "Arabic": "قدرة الدم على حمل الأكسجين", "pronunciation": "OK-si-jen KARE-ee-ing kuh-PASS-uh-tee", "etymology": "Physiological term describing the amount of oxygen blood can carry, mainly determined by hemoglobin.", "notes": "Strongly influenced by hemoglobin concentration."},
+    {"term": "Oxyhemoglobin", "language": "English", "Arabic": "الأوكسي هيموغلوبين", "pronunciation": "OK-see-HEE-moh-GLOH-bin", "etymology": "Oxy- plus hemoglobin.", "notes": "Hemoglobin with oxygen reversibly bound."},
+    {"term": "Deoxyhemoglobin", "language": "English", "Arabic": "منزوع الأكسجين من الهيموغلوبين", "pronunciation": "DEE-ok-see-HEE-moh-GLOH-bin", "etymology": "Deoxy- indicates loss of oxygen.", "notes": "Hemoglobin without oxygen bound at its heme sites."},
+    {"term": "2,3-Bisphosphoglycerate", "language": "English", "Arabic": "2,3-بيسفوسفوغليسيرات", "pronunciation": "TOO THREE bis-FOS-foh-GLISS-er-ate", "etymology": "A glycolytic intermediate with phosphate groups at carbons 2 and 3.", "notes": "Binds deoxyhemoglobin and decreases oxygen affinity."},
+    {"term": "Bohr effect", "language": "English", "Arabic": "تأثير بور", "pronunciation": "BOHR eh-FEKT", "etymology": "Named after Christian Bohr.", "notes": "Reduced pH and increased CO2 decrease hemoglobin oxygen affinity and promote oxygen unloading."},
+    {"term": "Carbonic anhydrase", "language": "English", "Arabic": "أنهيدراز الكربونيك", "pronunciation": "kar-BON-ik an-HY-drayz", "etymology": "Enzyme catalyzing reversible hydration of carbon dioxide.", "notes": "Important for rapid CO2 conversion to bicarbonate in RBCs."}
+  ],
+  "relations": [
+    {"target_id": "hematology.histology.rbc_erythropoiesis", "relation": "physiology_of", "note": "This record describes the physiological functions of the erythrocytes whose structure and maturation are covered in the histology record."},
+    {"target_id": "hematology.physiology.blood_composition_functions", "relation": "specialized_function_of", "note": "RBC physiology is a major component of whole-blood function."},
+    {"target_id": "hematology.anatomy.bone_marrow", "relation": "produced_in", "note": "Mature RBCs are produced through erythropoiesis in bone marrow."}
+  ],
+  "yemen_context": {
+    "relevance": "RBC physiology is foundational for understanding anemia, hemoglobinopathies and oxygen delivery in hematology practice.",
+    "evidence": "General medical relevance; no Yemen-specific epidemiologic claim is made."
+  },
+  "evidence_level": "reference",
+  "status": "reviewed",
+  "review_notes": "Original synthesized educational content with source metadata; no copyrighted textbook text copied.",
+  "last_verified": "2026-09-27",
+  "sources": [
+    {
+      "title": "Physiology, Oxygen Transport",
+      "source_type": "reference",
+      "authors": ["StatPearls"],
+      "year": 2022,
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK538336/",
+      "license": "NCBI Bookshelf / StatPearls",
+      "location": "NCBI Bookshelf",
+      "notes": "Supports hemoglobin-mediated oxygen transport, oxygen dissociation curve and factors affecting oxygen unloading."
+    },
+    {
+      "title": "Renewal by Multipotent Stem Cells: Blood Cell Formation",
+      "source_type": "reference",
+      "authors": ["Alberts B", "Johnson A", "Lewis J", "et al."],
+      "year": 2002,
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK26919/",
+      "license": "NCBI Bookshelf",
+      "location": "NCBI Bookshelf",
+      "notes": "Supports RBC lifespan, erythropoiesis, EPO regulation and mature RBC characteristics."
+    },
+    {
+      "title": "Erythrocytes",
+      "source_type": "reference",
+      "authors": ["NCBI MeSH"],
+      "year": 2026,
+      "url": "https://www.ncbi.nlm.nih.gov/mesh/68004912",
+      "license": "NCBI",
+      "location": "NCBI MeSH",
+      "notes": "Supports mature erythrocyte characteristics and oxygen transport role."
+    },
+    {
+      "title": "Histology, Red Blood Cell",
+      "source_type": "reference",
+      "authors": ["Laura Barbalato", "Leela Sharath Pillarisetty"],
+      "year": 2022,
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK539702/",
+      "license": "NCBI Bookshelf / StatPearls",
+      "location": "NCBI Bookshelf",
+      "notes": "Supports RBC structure, gas transport, carbon dioxide handling and lifespan."
+    }
+  ]
+}
