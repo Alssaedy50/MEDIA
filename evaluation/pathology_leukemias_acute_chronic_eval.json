@@ -1,0 +1,12 @@
+{
+  "version": "0.1.0",
+  "scope": "Hematology Pathology — Acute and Chronic Leukemias",
+  "cases": [
+    {"id": "leuk_path_001", "query": "What is the basic difference between acute and chronic leukemia?", "expected_state": "supported", "expected_ids": ["hematology.pathology.leukemias_acute_chronic"]},
+    {"id": "leuk_path_002", "query": "What are the key diagnostic principles for acute myeloid leukemia in modern classification?", "expected_state": "supported", "expected_ids": ["hematology.pathology.leukemias_acute_chronic"]},
+    {"id": "leuk_path_003", "query": "What molecular abnormality defines chronic myeloid leukemia?", "expected_state": "supported", "expected_ids": ["hematology.pathology.leukemias_acute_chronic"]},
+    {"id": "leuk_path_004", "query": "How is chronic lymphocytic leukemia diagnosed?", "expected_state": "supported", "expected_ids": ["hematology.pathology.leukemias_acute_chronic"]},
+    {"id": "leuk_path_005", "query": "Why do acute leukemias cause anemia, thrombocytopenia and infection risk?", "expected_state": "supported", "expected_ids": ["hematology.pathology.leukemias_acute_chronic"]},
+    {"id": "leuk_path_006", "query": "What is the mechanism of the fictional leukemia drug Leukemax-777?", "expected_state": "abstain", "expected_ids": []}
+  ]
+}
