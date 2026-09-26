@@ -1,0 +1,52 @@
+{
+  "version": "0.1.0",
+  "scope": "Hematology Microbiology — Parvovirus B19",
+  "cases": [
+    {
+      "id": "parvovirus_b19_001",
+      "query": "What causes and transmits Parvovirus B19?",
+      "expected_state": "supported",
+      "expected_ids": [
+        "hematology.microbiology.parvovirus_b19"
+      ]
+    },
+    {
+      "id": "parvovirus_b19_002",
+      "query": "Explain the pathogenesis of Parvovirus B19.",
+      "expected_state": "supported",
+      "expected_ids": [
+        "hematology.microbiology.parvovirus_b19"
+      ]
+    },
+    {
+      "id": "parvovirus_b19_003",
+      "query": "What are the main clinical manifestations of Parvovirus B19?",
+      "expected_state": "supported",
+      "expected_ids": [
+        "hematology.microbiology.parvovirus_b19"
+      ]
+    },
+    {
+      "id": "parvovirus_b19_004",
+      "query": "How is Parvovirus B19 diagnosed?",
+      "expected_state": "supported",
+      "expected_ids": [
+        "hematology.microbiology.parvovirus_b19"
+      ]
+    },
+    {
+      "id": "parvovirus_b19_005",
+      "query": "What are the treatment and prevention principles for Parvovirus B19?",
+      "expected_state": "supported",
+      "expected_ids": [
+        "hematology.microbiology.parvovirus_b19"
+      ]
+    },
+    {
+      "id": "parvovirus_b19_006",
+      "query": "What is the mechanism of the fictional antimicrobial XenoMed-999?",
+      "expected_state": "abstain",
+      "expected_ids": []
+    }
+  ]
+}
