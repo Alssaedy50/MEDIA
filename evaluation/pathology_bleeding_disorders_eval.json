@@ -1,0 +1,12 @@
+{
+  "version":"0.1.0",
+  "scope":"Hematology Pathology — Bleeding Disorders and Investigations",
+  "cases":[
+    {"id":"bleeding_path_001","query":"How do platelet or von Willebrand disorders differ clinically from severe coagulation-factor deficiencies?","expected_state":"supported","expected_ids":["hematology.pathology.bleeding_disorders_investigations"]},
+    {"id":"bleeding_path_002","query":"What do PT and aPTT primarily evaluate?","expected_state":"supported","expected_ids":["hematology.pathology.bleeding_disorders_investigations"]},
+    {"id":"bleeding_path_003","query":"How is an isolated prolonged aPTT investigated?","expected_state":"supported","expected_ids":["hematology.pathology.bleeding_disorders_investigations"]},
+    {"id":"bleeding_path_004","query":"How is von Willebrand disease investigated in the laboratory?","expected_state":"supported","expected_ids":["hematology.pathology.bleeding_disorders_investigations"]},
+    {"id":"bleeding_path_005","query":"Why can normal PT and aPTT fail to exclude an important bleeding disorder?","expected_state":"supported","expected_ids":["hematology.pathology.bleeding_disorders_investigations"]},
+    {"id":"bleeding_path_006","query":"What is the mechanism of the fictional bleeding drug CoaguloMax-777?","expected_state":"abstain","expected_ids":[]}
+  ]
+}
