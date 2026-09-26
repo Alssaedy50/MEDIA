@@ -1,0 +1,60 @@
+{
+  "name": "MEDAI Hematology Medicine evaluation set",
+  "version": "0.1.0",
+  "scope": "hematology.medicine.bone_marrow_aspiration_biopsy",
+  "purpose": "Validate retrieval and safe abstention.",
+  "cases": [
+    {
+      "id": "medicine_bone_marrow_aspiration_biopsy_eval-001",
+      "query": "What is the difference between bone marrow aspiration and core biopsy?",
+      "mode": "explain",
+      "expected_concepts": [
+        "hematology.medicine.bone_marrow_aspiration_biopsy"
+      ],
+      "expected_evidence_state": "supported"
+    },
+    {
+      "id": "medicine_bone_marrow_aspiration_biopsy_eval-002",
+      "query": "What is the difference between bone marrow aspiration and core biopsy?",
+      "mode": "quick",
+      "expected_concepts": [
+        "hematology.medicine.bone_marrow_aspiration_biopsy"
+      ],
+      "expected_evidence_state": "supported"
+    },
+    {
+      "id": "medicine_bone_marrow_aspiration_biopsy_eval-003",
+      "query": "What is the difference between bone marrow aspiration and core biopsy?",
+      "mode": "explain",
+      "expected_concepts": [
+        "hematology.medicine.bone_marrow_aspiration_biopsy"
+      ],
+      "expected_evidence_state": "supported"
+    },
+    {
+      "id": "medicine_bone_marrow_aspiration_biopsy_eval-004",
+      "query": "What is the difference between bone marrow aspiration and core biopsy?",
+      "mode": "quick",
+      "expected_concepts": [
+        "hematology.medicine.bone_marrow_aspiration_biopsy"
+      ],
+      "expected_evidence_state": "supported"
+    },
+    {
+      "id": "medicine_bone_marrow_aspiration_biopsy_eval-005",
+      "query": "What is the difference between bone marrow aspiration and core biopsy?",
+      "mode": "explain",
+      "expected_concepts": [
+        "hematology.medicine.bone_marrow_aspiration_biopsy"
+      ],
+      "expected_evidence_state": "supported"
+    },
+    {
+      "id": "medicine_bone_marrow_aspiration_biopsy_eval-006",
+      "query": "What does fictional MarrowX diagnose?",
+      "mode": "quick",
+      "expected_concepts": [],
+      "expected_evidence_state": "insufficient"
+    }
+  ]
+}
