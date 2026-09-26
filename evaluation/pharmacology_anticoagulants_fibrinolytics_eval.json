@@ -1,0 +1,60 @@
+{
+  "name": "MEDAI Hematology Pharmacology evaluation set",
+  "version": "0.1.0",
+  "scope": "hematology.pharmacology.anticoagulants_fibrinolytics",
+  "purpose": "Validate retrieval and safe abstention for the pharmacology knowledge record.",
+  "cases": [
+    {
+      "id": "pharmacology_anticoagulants_fibrinolytics_eval-001",
+      "query": "What is the pharmacologic difference between anticoagulants and fibrinolytics?",
+      "mode": "explain",
+      "expected_concepts": [
+        "hematology.pharmacology.anticoagulants_fibrinolytics"
+      ],
+      "expected_evidence_state": "supported"
+    },
+    {
+      "id": "pharmacology_anticoagulants_fibrinolytics_eval-002",
+      "query": "What is the pharmacologic difference between anticoagulants and fibrinolytics?",
+      "mode": "quick",
+      "expected_concepts": [
+        "hematology.pharmacology.anticoagulants_fibrinolytics"
+      ],
+      "expected_evidence_state": "supported"
+    },
+    {
+      "id": "pharmacology_anticoagulants_fibrinolytics_eval-003",
+      "query": "What is the pharmacologic difference between anticoagulants and fibrinolytics?",
+      "mode": "explain",
+      "expected_concepts": [
+        "hematology.pharmacology.anticoagulants_fibrinolytics"
+      ],
+      "expected_evidence_state": "supported"
+    },
+    {
+      "id": "pharmacology_anticoagulants_fibrinolytics_eval-004",
+      "query": "What is the pharmacologic difference between anticoagulants and fibrinolytics?",
+      "mode": "quick",
+      "expected_concepts": [
+        "hematology.pharmacology.anticoagulants_fibrinolytics"
+      ],
+      "expected_evidence_state": "supported"
+    },
+    {
+      "id": "pharmacology_anticoagulants_fibrinolytics_eval-005",
+      "query": "What is the pharmacologic difference between anticoagulants and fibrinolytics?",
+      "mode": "explain",
+      "expected_concepts": [
+        "hematology.pharmacology.anticoagulants_fibrinolytics"
+      ],
+      "expected_evidence_state": "supported"
+    },
+    {
+      "id": "pharmacology_anticoagulants_fibrinolytics_eval-006",
+      "query": "What fictional mechanism does Xylomab use?",
+      "mode": "quick",
+      "expected_concepts": [],
+      "expected_evidence_state": "insufficient"
+    }
+  ]
+}
