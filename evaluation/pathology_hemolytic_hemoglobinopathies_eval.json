@@ -1,0 +1,12 @@
+{
+  "version":"0.1.0",
+  "scope":"Hematology Pathology — Hemolytic Anemia and Hemoglobinopathies",
+  "cases":[
+    {"id":"hemolysis_path_001","query":"What laboratory pattern supports hemolytic anemia?","expected_state":"supported","expected_ids":["hematology.pathology.hemolytic_anemia_hemoglobinopathies"]},
+    {"id":"hemolysis_path_002","query":"What is the mechanism of hemolysis and vaso-occlusion in sickle cell disease?","expected_state":"supported","expected_ids":["hematology.pathology.hemolytic_anemia_hemoglobinopathies"]},
+    {"id":"hemolysis_path_003","query":"How is thalassemia distinguished and confirmed in laboratory evaluation?","expected_state":"supported","expected_ids":["hematology.pathology.hemolytic_anemia_hemoglobinopathies"]},
+    {"id":"hemolysis_path_004","query":"What causes hereditary spherocytosis and what happens to the abnormal RBCs?","expected_state":"supported","expected_ids":["hematology.pathology.hemolytic_anemia_hemoglobinopathies"]},
+    {"id":"hemolysis_path_005","query":"How are G6PD deficiency and immune hemolytic anemia investigated?","expected_state":"supported","expected_ids":["hematology.pathology.hemolytic_anemia_hemoglobinopathies"]},
+    {"id":"hemolysis_path_006","query":"What is the mechanism of the fictional hemolysis drug HemoLysis-X99?","expected_state":"abstain","expected_ids":[]}
+  ]
+}
