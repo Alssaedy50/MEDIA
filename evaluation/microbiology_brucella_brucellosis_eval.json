@@ -1,0 +1,52 @@
+{
+  "version": "0.1.0",
+  "scope": "Hematology Microbiology — Brucella and Brucellosis",
+  "cases": [
+    {
+      "id": "brucella_brucellosis_001",
+      "query": "What is the causative organism and main transmission route of Brucella and Brucellosis?",
+      "expected_state": "supported",
+      "expected_ids": [
+        "hematology.microbiology.brucella_brucellosis"
+      ]
+    },
+    {
+      "id": "brucella_brucellosis_002",
+      "query": "Explain the pathogenesis and important biologic features of Brucella and Brucellosis.",
+      "expected_state": "supported",
+      "expected_ids": [
+        "hematology.microbiology.brucella_brucellosis"
+      ]
+    },
+    {
+      "id": "brucella_brucellosis_003",
+      "query": "What are the main clinical manifestations and complications of Brucella and Brucellosis?",
+      "expected_state": "supported",
+      "expected_ids": [
+        "hematology.microbiology.brucella_brucellosis"
+      ]
+    },
+    {
+      "id": "brucella_brucellosis_004",
+      "query": "How is Brucella and Brucellosis diagnosed?",
+      "expected_state": "supported",
+      "expected_ids": [
+        "hematology.microbiology.brucella_brucellosis"
+      ]
+    },
+    {
+      "id": "brucella_brucellosis_005",
+      "query": "What are the main treatment and prevention principles for Brucella and Brucellosis?",
+      "expected_state": "supported",
+      "expected_ids": [
+        "hematology.microbiology.brucella_brucellosis"
+      ]
+    },
+    {
+      "id": "brucella_brucellosis_006",
+      "query": "What is the mechanism of the fictional antimicrobial XenoMed-999 against Brucella and Brucellosis?",
+      "expected_state": "abstain",
+      "expected_ids": []
+    }
+  ]
+}
