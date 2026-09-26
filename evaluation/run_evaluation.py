@@ -5,31 +5,23 @@ from __future__ import annotations
 
 import argparse
 import json
+import sys
 from pathlib import Path
 from typing import Any
+
+ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT / "inference"))
 
 from answer import answer
 
 
-ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_CASES = ROOT / "evaluation" / "anatomy_eval.json"
 
 
 def evaluate_case(case: dict[str, Any]) -> dict[str, Any]:
-    result = answer(
-        case["query"],
-        mode=case.get("mode", "quick"),
-        top_k=3,
-    )
+    result = answer(case["query"], mode=case.get("mode", "quick"), top_k=3)
 
     expected_ids = set(case.get("expected_concepts", []))
-    actual_ids = set()
-
-    if result.get("retrieved_concepts"):
-        # Normal answer modes expose concept names rather than IDs.
-        # The evaluation currently checks evidence state for these modes.
-        pass
-
     if result.get("comparison"):
         actual_names = {str(item.get("concept")) for item in result["comparison"]}
     else:
@@ -38,8 +30,6 @@ def evaluate_case(case: dict[str, Any]) -> dict[str, Any]:
     expected_state = case["expected_evidence_state"]
     state_ok = result.get("evidence_state") == expected_state
 
-    # Compare mode is validated by required concept names because its public
-    # response is intentionally student-facing.
     if expected_ids and case.get("mode") != "compare":
         concept_ok = bool(result.get("answer")) and not result.get("abstain")
     elif expected_ids:
