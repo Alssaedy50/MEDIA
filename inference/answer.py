@@ -123,11 +123,11 @@ def answer(query: str, *, mode: str = "quick", top_k: int = 3) -> dict[str, Any]
         # Retrieve each explicit term and adjacent phrase, then keep the best
         # fully matched hit for each requested concept.
         query_terms = result.get("query_terms", [])
-        candidate_queries = list(query_terms)
-        candidate_queries.extend(
+        candidate_queries = [
             f"{query_terms[i]} {query_terms[i + 1]}"
             for i in range(len(query_terms) - 1)
-        )
+        ]
+        candidate_queries.extend(query_terms)
 
         explicit_hits: dict[str, dict[str, Any]] = {}
         for candidate in candidate_queries:
@@ -139,9 +139,6 @@ def answer(query: str, *, mode: str = "quick", top_k: int = 3) -> dict[str, Any]
                     explicit_hits.setdefault(hit["id"], hit)
 
         comparison_hits = list(explicit_hits.values())
-        comparison_hits.sort(
-            key=lambda hit: (-hit.get("score", 0), hit.get("id", ""))
-        )
 
         # Fall back to the original ranked evidence only if explicit concept
         # retrieval produced fewer than two concepts.
