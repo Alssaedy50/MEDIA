@@ -134,7 +134,11 @@ def answer(query: str, *, mode: str = "quick", top_k: int = 3) -> dict[str, Any]
             extra = retrieve(candidate, top_k=3)
             candidate_tokens = [token.lower() for token in candidate.split() if token.strip()]
             for hit in extra.get("hits", []):
-                concept_text = str(hit.get("concept", "")).lower()
+                concept_text = (
+                    str(hit.get("concept", "")).lower()
+                    + " "
+                    + str(hit.get("topic", "")).lower()
+                )
                 if candidate_tokens and all(token in concept_text for token in candidate_tokens):
                     explicit_hits.setdefault(hit["id"], hit)
 
