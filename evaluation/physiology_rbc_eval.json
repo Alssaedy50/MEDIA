@@ -1,0 +1,42 @@
+{
+  "version": "0.1.0",
+  "scope": "Hematology Physiology — Red Blood Cell Characteristics and Functions",
+  "cases": [
+    {
+      "id": "rbc_phys_001",
+      "query": "What are the main physiological functions of red blood cells?",
+      "expected_state": "supported",
+      "expected_ids": ["hematology.physiology.rbc_characteristics_functions"]
+    },
+    {
+      "id": "rbc_phys_002",
+      "query": "How does hemoglobin transport oxygen?",
+      "expected_state": "supported",
+      "expected_ids": ["hematology.physiology.rbc_characteristics_functions"]
+    },
+    {
+      "id": "rbc_phys_003",
+      "query": "What factors shift the oxyhemoglobin dissociation curve to the right?",
+      "expected_state": "supported",
+      "expected_ids": ["hematology.physiology.rbc_characteristics_functions"]
+    },
+    {
+      "id": "rbc_phys_004",
+      "query": "How do red blood cells participate in carbon dioxide transport and acid-base balance?",
+      "expected_state": "supported",
+      "expected_ids": ["hematology.physiology.rbc_characteristics_functions"]
+    },
+    {
+      "id": "rbc_phys_005",
+      "query": "Why is the red blood cell lifespan about 120 days?",
+      "expected_state": "supported",
+      "expected_ids": ["hematology.physiology.rbc_characteristics_functions"]
+    },
+    {
+      "id": "rbc_phys_006",
+      "query": "What is the mechanism of a fictional drug called Erythroxin-9000?",
+      "expected_state": "abstain",
+      "expected_ids": []
+    }
+  ]
+}
