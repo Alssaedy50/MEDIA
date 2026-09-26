@@ -129,12 +129,9 @@ def answer(query: str, *, mode: str = "quick", top_k: int = 3) -> dict[str, Any]
 
         explicit_hits: dict[str, dict[str, Any]] = {}
         for candidate in candidates:
-            extra = retrieve(candidate, top_k=10)
+            extra = retrieve(candidate, top_k=1)
             for hit in extra.get("hits", []):
-                candidate_tokens = set(tokenize(candidate))
-                matched = set(hit.get("match", {}).get("matched_terms", []))
-                if candidate_tokens and candidate_tokens.issubset(matched):
-                    explicit_hits.setdefault(hit["id"], hit)
+                explicit_hits.setdefault(hit["id"], hit)
 
         comparison_hits = list(explicit_hits.values())
         if len(comparison_hits) < 2:
