@@ -7,7 +7,7 @@ from retrieval import DEFAULT_KB, load_records, retrieve
 class AnatomyRetrievalSmokeTests(unittest.TestCase):
     def test_knowledge_scope_is_loaded(self):
         records = load_records(DEFAULT_KB)
-        self.assertEqual(len(records), 7)
+        self.assertEqual(len(records), 8)
         self.assertTrue(all(r.data.get("status") in {"reviewed", "verified"} for r in records))
 
     def test_red_pulp_query_retrieves_spleen(self):
