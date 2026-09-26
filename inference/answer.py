@@ -131,11 +131,11 @@ def answer(query: str, *, mode: str = "quick", top_k: int = 3) -> dict[str, Any]
 
         explicit_hits: dict[str, dict[str, Any]] = {}
         for candidate in candidate_queries:
-            extra = retrieve(candidate, top_k=1)
-            candidate_tokens = set(tokenize(candidate))
+            extra = retrieve(candidate, top_k=3)
+            candidate_tokens = [token.lower() for token in candidate.split() if token.strip()]
             for hit in extra.get("hits", []):
-                matched = set(hit.get("match", {}).get("matched_terms", []))
-                if candidate_tokens and candidate_tokens.issubset(matched):
+                concept_text = str(hit.get("concept", "")).lower()
+                if candidate_tokens and all(token in concept_text for token in candidate_tokens):
                     explicit_hits.setdefault(hit["id"], hit)
 
         comparison_hits = list(explicit_hits.values())
