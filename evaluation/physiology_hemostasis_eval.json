@@ -1,0 +1,42 @@
+{
+  "version": "0.1.0",
+  "scope": "Hematology Physiology — Homeostasis and Coagulation",
+  "cases": [
+    {
+      "id": "hemostasis_phys_001",
+      "query": "What are the main stages of hemostasis after vascular injury?",
+      "expected_state": "supported",
+      "expected_ids": ["hematology.physiology.hemostasis_coagulation"]
+    },
+    {
+      "id": "hemostasis_phys_002",
+      "query": "How does von Willebrand factor help platelets adhere to an injured vessel?",
+      "expected_state": "supported",
+      "expected_ids": ["hematology.physiology.hemostasis_coagulation"]
+    },
+    {
+      "id": "hemostasis_phys_003",
+      "query": "How does platelet GPIIb/IIIa contribute to platelet aggregation?",
+      "expected_state": "supported",
+      "expected_ids": ["hematology.physiology.hemostasis_coagulation"]
+    },
+    {
+      "id": "hemostasis_phys_004",
+      "query": "How do tissue factor, factor X, thrombin and fibrin produce a stable clot?",
+      "expected_state": "supported",
+      "expected_ids": ["hematology.physiology.hemostasis_coagulation"]
+    },
+    {
+      "id": "hemostasis_phys_005",
+      "query": "What is the difference between primary and secondary hemostasis?",
+      "expected_state": "supported",
+      "expected_ids": ["hematology.physiology.hemostasis_coagulation"]
+    },
+    {
+      "id": "hemostasis_phys_006",
+      "query": "What is the mechanism of a fictional anticoagulant called CoaguloX-9000?",
+      "expected_state": "abstain",
+      "expected_ids": []
+    }
+  ]
+}
