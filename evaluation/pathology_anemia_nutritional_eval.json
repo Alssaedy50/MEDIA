@@ -1,0 +1,12 @@
+{
+  "version":"0.1.0",
+  "scope":"Hematology Pathology — Anemia Classification and Nutritional Anemias",
+  "cases":[
+    {"id":"anemia_path_001","query":"How should anemia be initially classified using MCV and what additional tests refine the diagnosis?","expected_state":"supported","expected_ids":["hematology.pathology.anemia_classification_nutritional"]},
+    {"id":"anemia_path_002","query":"What is the mechanism and typical laboratory pattern of iron deficiency anemia?","expected_state":"supported","expected_ids":["hematology.pathology.anemia_classification_nutritional"]},
+    {"id":"anemia_path_003","query":"Why can ferritin be misleading when inflammation is present?","expected_state":"supported","expected_ids":["hematology.pathology.anemia_classification_nutritional"]},
+    {"id":"anemia_path_004","query":"What distinguishes megaloblastic anemia due to vitamin B12 or folate deficiency?","expected_state":"supported","expected_ids":["hematology.pathology.anemia_classification_nutritional"]},
+    {"id":"anemia_path_005","query":"Why must the underlying cause of nutritional anemia be investigated instead of treating the MCV alone?","expected_state":"supported","expected_ids":["hematology.pathology.anemia_classification_nutritional"]},
+    {"id":"anemia_path_006","query":"What is the mechanism of the fictional anemia drug HemoBoost-9000?","expected_state":"abstain","expected_ids":[]}
+  ]
+}
