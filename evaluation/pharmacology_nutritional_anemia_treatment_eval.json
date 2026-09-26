@@ -1,0 +1,60 @@
+{
+  "name": "MEDAI Hematology Pharmacology evaluation set",
+  "version": "0.1.0",
+  "scope": "hematology.pharmacology.nutritional_anemia_treatment",
+  "purpose": "Validate retrieval and safe abstention.",
+  "cases": [
+    {
+      "id": "pharm-nut-001",
+      "query": "How is nutritional anemia treated pharmacologically?",
+      "mode": "explain",
+      "expected_concepts": [
+        "hematology.pharmacology.nutritional_anemia_treatment"
+      ],
+      "expected_evidence_state": "supported"
+    },
+    {
+      "id": "pharm-nut-002",
+      "query": "What does iron replacement accomplish?",
+      "mode": "quick",
+      "expected_concepts": [
+        "hematology.pharmacology.nutritional_anemia_treatment"
+      ],
+      "expected_evidence_state": "supported"
+    },
+    {
+      "id": "pharm-nut-003",
+      "query": "Why must vitamin B12 deficiency be recognized?",
+      "mode": "explain",
+      "expected_concepts": [
+        "hematology.pharmacology.nutritional_anemia_treatment"
+      ],
+      "expected_evidence_state": "supported"
+    },
+    {
+      "id": "pharm-nut-004",
+      "query": "What is the role of folate replacement?",
+      "mode": "quick",
+      "expected_concepts": [
+        "hematology.pharmacology.nutritional_anemia_treatment"
+      ],
+      "expected_evidence_state": "supported"
+    },
+    {
+      "id": "pharm-nut-005",
+      "query": "What is the general principle of treating nutritional anemia?",
+      "mode": "explain",
+      "expected_concepts": [
+        "hematology.pharmacology.nutritional_anemia_treatment"
+      ],
+      "expected_evidence_state": "supported"
+    },
+    {
+      "id": "pharm-nut-006",
+      "query": "What is the mechanism of fictional Nutrivex?",
+      "mode": "quick",
+      "expected_concepts": [],
+      "expected_evidence_state": "insufficient"
+    }
+  ]
+}
