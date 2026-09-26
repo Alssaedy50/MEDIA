@@ -145,7 +145,7 @@ def answer(query: str, *, mode: str = "quick", top_k: int = 3) -> dict[str, Any]
             evidence = hit.get("evidence", {}) or {}
             comparison.append({
                 "id": hit.get("id"),
-                "concept": hit.get("concept"),
+                "concept": hit.get("topic") or hit.get("concept"),
                 "definition": _first_nonempty(evidence.get("definition")),
                 "structure": _first_nonempty(evidence.get("structure")),
                 "function": _first_nonempty(evidence.get("function")),
