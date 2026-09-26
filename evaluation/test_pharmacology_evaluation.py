@@ -12,6 +12,10 @@ CASES = [
     ("pharmacology_anticancer_drugs_eval.json", 6),
     ("pharmacology_leishmaniasis_filariasis_treatment_eval.json", 6),
     ("pharmacology_toxoplasmosis_trypanosomiasis_treatment_eval.json", 6),
+    ("pharmacology_medicine_malaria_filariasis_leishmaniasis_eval.json", 6),
+    ("medicine_bone_marrow_aspiration_biopsy_eval.json", 6),
+    ("medicine_transplantation_eval.json", 6),
+    ("medicine_blood_transfusion_precautions_reactions_eval.json", 6),
 ]
 
 
