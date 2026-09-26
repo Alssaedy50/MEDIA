@@ -119,38 +119,37 @@ def answer(query: str, *, mode: str = "quick", top_k: int = 3) -> dict[str, Any]
         return response
 
     if mode == "compare":
-        # A comparison query often names multiple concepts that are ranked
-        # separately. Expand the query into single terms and adjacent phrases
-        # so both explicitly requested concepts can enter the evidence set.
-        expanded: dict[str, dict[str, Any]] = {hit["id"]: hit for hit in hits}
+        # Comparison questions need concept coverage, not just global ranking.
+        # Retrieve each explicit term and adjacent phrase, then keep the best
+        # fully matched hit for each requested concept.
         query_terms = result.get("query_terms", [])
         candidate_queries = list(query_terms)
         candidate_queries.extend(
             f"{query_terms[i]} {query_terms[i + 1]}"
             for i in range(len(query_terms) - 1)
         )
+
+        explicit_hits: dict[str, dict[str, Any]] = {}
         for candidate in candidate_queries:
-            if not candidate.strip():
-                continue
             extra = retrieve(candidate, top_k=1)
+            candidate_tokens = set(tokenize(candidate))
             for hit in extra.get("hits", []):
-                expanded.setdefault(hit["id"], hit)
+                matched = set(hit.get("match", {}).get("matched_terms", []))
+                if candidate_tokens and candidate_tokens.issubset(matched):
+                    explicit_hits.setdefault(hit["id"], hit)
 
-        comparison_pool = list(expanded.values())
-        comparison_hits = [
-            hit for hit in comparison_pool
-            if set(hit.get("match", {}).get("matched_terms", []))
-            & set(query_terms)
-        ]
-        comparison_hits.sort(key=lambda hit: (-hit.get("score", 0), hit.get("id", "")))
+        comparison_hits = list(explicit_hits.values())
+        comparison_hits.sort(
+            key=lambda hit: (-hit.get("score", 0), hit.get("id", ""))
+        )
 
+        # Fall back to the original ranked evidence only if explicit concept
+        # retrieval produced fewer than two concepts.
         if len(comparison_hits) < 2:
-            comparison_hits = comparison_pool[:2]
+            comparison_hits = result["hits"][:2]
 
-        # Expose the expanded evidence set to evaluation and downstream
-        # reasoning, not only the initial top-k retrieval.
-        result["hits"] = comparison_pool
-        hits = comparison_pool
+        result["hits"] = comparison_hits
+        hits = comparison_hits
 
         if len(comparison_hits) < 2:
             text, points = _hit_summary(hits[0], "explain")
