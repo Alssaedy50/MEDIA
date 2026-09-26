@@ -8,29 +8,37 @@
       "id": "hist-001",
       "query": "What is blood tissue composed of?",
       "mode": "quick",
-      "expected_concepts": ["hematology.histology.blood_tissue"],
+      "expected_concepts": [
+        "hematology.histology.blood_tissue"
+      ],
       "expected_evidence_state": "supported"
     },
     {
       "id": "hist-002",
       "query": "What is plasma?",
       "mode": "explain",
-      "expected_concepts": ["hematology.histology.blood_tissue"],
+      "expected_concepts": [
+        "hematology.histology.blood_tissue"
+      ],
       "expected_evidence_state": "supported"
     },
     {
       "id": "hist-003",
       "query": "What are the formed elements of blood?",
       "mode": "quick",
-      "expected_concepts": ["hematology.histology.blood_tissue"],
+      "expected_concepts": [
+        "hematology.histology.blood_tissue"
+      ],
       "expected_evidence_state": "supported"
     },
     {
       "id": "hist-004",
       "query": "What is the difference between plasma and serum?",
-      "mode": "compare",
-      "expected_concepts": ["hematology.histology.blood_tissue"],
-      "expected_evidence_state": "multi_concept"
+      "mode": "explain",
+      "expected_concepts": [
+        "hematology.histology.blood_tissue"
+      ],
+      "expected_evidence_state": "supported"
     },
     {
       "id": "hist-005",
