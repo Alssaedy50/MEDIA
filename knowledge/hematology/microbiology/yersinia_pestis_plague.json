@@ -1,0 +1,83 @@
+{
+  "id": "hematology.microbiology.yersinia_pestis_plague",
+  "domain": "Hematology",
+  "subject": "Microbiology",
+  "topic": "Yersinia pestis and Plague",
+  "subtopic": "Plague: organism, flea transmission, bubonic/pneumonic/septicemic disease, diagnosis, treatment and prevention",
+  "concept": "Plague is a potentially life-threatening zoonotic infection caused by Yersinia pestis, usually transmitted by infected rodent fleas or contact with infected animals.",
+  "content": {
+    "definition": "Plague is a potentially life-threatening zoonotic infection caused by Yersinia pestis, usually transmitted by infected rodent fleas or contact with infected animals.",
+    "explanation": "Y. pestis is a Gram-negative coccobacillus with important antiphagocytic virulence factors. After flea inoculation it can multiply in regional lymphatic tissue, producing buboes; hematogenous spread causes septicemic disease and pulmonary involvement can produce pneumonic plague.",
+    "mechanism": "Y. pestis is a Gram-negative coccobacillus with important antiphagocytic virulence factors. After flea inoculation it can multiply in regional lymphatic tissue, producing buboes; hematogenous spread causes septicemic disease and pulmonary involvement can produce pneumonic plague.",
+    "structure": "Clinically important organism-specific structural and biologic features are summarized in the explanation and terminology fields.",
+    "function": "The pathogen's biologic properties determine transmission, tissue tropism, clinical manifestations and diagnostic strategy.",
+    "causes": [
+      "Infected flea bite",
+      "Handling infected animals or tissues",
+      "Respiratory droplets from pneumonic plague in close contact"
+    ],
+    "effects": [
+      "Bubonic plague: fever and painful regional lymphadenopathy (bubo)",
+      "Septicemic plague: systemic toxicity and bacteremia",
+      "Pneumonic plague: severe pneumonia and respiratory transmission"
+    ],
+    "clinical_relevance": "This is an official Hematology microbiology syllabus organism/disease. Yersinia pestis and Plague should be interpreted using current diagnostic and treatment guidance.",
+    "diagnosis": "Diagnosis may involve culture, molecular testing or other laboratory methods on appropriate specimens such as bubo aspirate, blood or respiratory samples; notify the laboratory because of biosafety concerns.",
+    "treatment": "Plague is treatable with prompt antibiotics. Therapy should be started urgently when clinical suspicion is high rather than waiting for definitive laboratory confirmation; public-health contact management is important for pneumonic exposure.",
+    "high_yield": [
+      "Plague is a potentially life-threatening zoonotic infection caused by Yersinia pestis, usually transmitted by infected rodent fleas or contact with infected animals.",
+      "Bubonic plague: fever and painful regional lymphadenopathy (bubo)",
+      "Septicemic plague: systemic toxicity and bacteremia",
+      "Pneumonic plague: severe pneumonia and respiratory transmission",
+      "Infected flea bite",
+      "Handling infected animals or tissues",
+      "Respiratory droplets from pneumonic plague in close contact"
+    ]
+  },
+  "terminology": [
+    {
+      "term": "Bubo",
+      "language": "English",
+      "arabic": "الدبل",
+      "pronunciation": "BOO-boh",
+      "etymology": "Medical terminology retained for exam and clinical use.",
+      "notes": "Key term for Yersinia pestis and Plague."
+    },
+    {
+      "term": "Pneumonic plague",
+      "language": "English",
+      "arabic": "الطاعون الرئوي",
+      "pronunciation": "noo-MON-ik playg",
+      "etymology": "Medical terminology retained for exam and clinical use.",
+      "notes": "Key term for Yersinia pestis and Plague."
+    },
+    {
+      "term": "Yersinia pestis",
+      "language": "English",
+      "arabic": "يرسينيا بيستس",
+      "pronunciation": "yer-SIN-ee-uh PES-tis",
+      "etymology": "Medical terminology retained for exam and clinical use.",
+      "notes": "Key term for Yersinia pestis and Plague."
+    }
+  ],
+  "relations": [],
+  "yemen_context": {
+    "relevance": "Potentially relevant to infectious-disease and hematology teaching in Yemen; no unsupported Yemen-specific incidence is asserted.",
+    "evidence": "General WHO/CDC evidence; local epidemiology should be added only from authoritative Yemen-specific sources."
+  },
+  "evidence_level": "guideline",
+  "status": "reviewed",
+  "review_notes": "Original synthesis based on CDC About Plague; no textbook text copied. Treatment statements are intentionally current-guidance aware.",
+  "last_verified": "2026-09-27",
+  "sources": [
+    {
+      "title": "CDC About Plague",
+      "source_type": "guideline",
+      "year": 2026,
+      "url": "https://www.cdc.gov/plague/about/index.html",
+      "license": "CDC",
+      "location": "CDC",
+      "notes": "Clinical and microbiology overview."
+    }
+  ]
+}
