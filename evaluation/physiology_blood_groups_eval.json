@@ -1,0 +1,42 @@
+{
+  "version": "0.1.0",
+  "scope": "Hematology Physiology — Blood Groups",
+  "cases": [
+    {
+      "id": "blood_groups_phys_001",
+      "query": "What are the four main ABO blood groups and which antigens and antibodies characterize each?",
+      "expected_state": "supported",
+      "expected_ids": ["hematology.physiology.blood_groups"]
+    },
+    {
+      "id": "blood_groups_phys_002",
+      "query": "Why can an ABO-incompatible red blood cell transfusion cause acute hemolysis?",
+      "expected_state": "supported",
+      "expected_ids": ["hematology.physiology.blood_groups"]
+    },
+    {
+      "id": "blood_groups_phys_003",
+      "query": "What is the difference between ABO antibodies and anti-D in the Rh system?",
+      "expected_state": "supported",
+      "expected_ids": ["hematology.physiology.blood_groups"]
+    },
+    {
+      "id": "blood_groups_phys_004",
+      "query": "What is forward typing, reverse typing and crossmatching?",
+      "expected_state": "supported",
+      "expected_ids": ["hematology.physiology.blood_groups"]
+    },
+    {
+      "id": "blood_groups_phys_005",
+      "query": "Why is RhD incompatibility important during pregnancy?",
+      "expected_state": "supported",
+      "expected_ids": ["hematology.physiology.blood_groups"]
+    },
+    {
+      "id": "blood_groups_phys_006",
+      "query": "What is the mechanism of a fictional blood-group drug called ABOclear-9000?",
+      "expected_state": "abstain",
+      "expected_ids": []
+    }
+  ]
+}
