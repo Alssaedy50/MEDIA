@@ -1,0 +1,67 @@
+{
+  "name": "MEDAI Anatomy v0.1 evaluation set",
+  "version": "0.1.0",
+  "scope": "hematology.anatomy",
+  "purpose": "Measure retrieval and evidence-state behavior before expanding the knowledge base.",
+  "cases": [
+    {
+      "id": "anat-001",
+      "query": "What is the function of the red pulp?",
+      "mode": "quick",
+      "expected_concepts": ["hematology.anatomy.spleen"],
+      "expected_evidence_state": "supported"
+    },
+    {
+      "id": "anat-002",
+      "query": "Explain the role of PROX1 in lymphatic development.",
+      "mode": "explain",
+      "expected_concepts": ["hematology.anatomy.embryology_hemopoietic_lymphatic"],
+      "expected_evidence_state": "supported"
+    },
+    {
+      "id": "anat-003",
+      "query": "Compare spleen and lymph nodes.",
+      "mode": "compare",
+      "expected_concepts": [
+        "hematology.anatomy.spleen",
+        "hematology.anatomy.lymph_nodes"
+      ],
+      "expected_evidence_state": "multi_concept"
+    },
+    {
+      "id": "anat-004",
+      "query": "Where does definitive hematopoiesis originate?",
+      "mode": "explain",
+      "expected_concepts": ["hematology.anatomy.embryology_hemopoietic_lymphatic"],
+      "expected_evidence_state": "supported"
+    },
+    {
+      "id": "anat-005",
+      "query": "What is the role of Hassall corpuscles?",
+      "mode": "quick",
+      "expected_concepts": ["hematology.anatomy.thymus"],
+      "expected_evidence_state": "supported"
+    },
+    {
+      "id": "anat-006",
+      "query": "What is the thoracic duct?",
+      "mode": "quick",
+      "expected_concepts": ["hematology.anatomy.lymphatic_vessels"],
+      "expected_evidence_state": "supported"
+    },
+    {
+      "id": "anat-007",
+      "query": "What is the function of bone marrow?",
+      "mode": "exam",
+      "expected_concepts": ["hematology.anatomy.bone_marrow"],
+      "expected_evidence_state": "supported"
+    },
+    {
+      "id": "anat-008",
+      "query": "What is the dose of XenoMed-9000 for anemia?",
+      "mode": "quick",
+      "expected_concepts": [],
+      "expected_evidence_state": "insufficient"
+    }
+  ]
+}
