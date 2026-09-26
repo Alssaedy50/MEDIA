@@ -1,0 +1,14 @@
+{
+  "name": "MEDAI Hematology Histology Leukocyte evaluation set",
+  "version": "0.1.0",
+  "scope": "hematology.histology.leukocytes",
+  "purpose": "Validate retrieval of leukocyte classification, morphology, functions and safe abstention.",
+  "cases": [
+    {"id":"hist-wbc-001","query":"What are the five major types of white blood cells?","mode":"quick","expected_concepts":["hematology.histology.leukocytes"],"expected_evidence_state":"supported"},
+    {"id":"hist-wbc-002","query":"Which leukocytes are granulocytes and which are agranulocytes?","mode":"explain","expected_concepts":["hematology.histology.leukocytes"],"expected_evidence_state":"supported"},
+    {"id":"hist-wbc-003","query":"How can neutrophils, eosinophils and basophils be distinguished histologically?","mode":"explain","expected_concepts":["hematology.histology.leukocytes"],"expected_evidence_state":"supported"},
+    {"id":"hist-wbc-004","query":"What are the main functions of monocytes and lymphocytes?","mode":"explain","expected_concepts":["hematology.histology.leukocytes"],"expected_evidence_state":"supported"},
+    {"id":"hist-wbc-005","query":"What is diapedesis and why is it important for leukocytes?","mode":"explain","expected_concepts":["hematology.histology.leukocytes"],"expected_evidence_state":"supported"},
+    {"id":"hist-wbc-006","query":"What is the mechanism of fictional XenoMed-9000 leukocyte activation?","mode":"quick","expected_concepts":[],"expected_evidence_state":"insufficient"}
+  ]
+}
