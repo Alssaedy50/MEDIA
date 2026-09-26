@@ -98,21 +98,6 @@
       "target_id": "hematology.anatomy.bone_marrow",
       "relation": "formed_elements_produced_by",
       "note": "Bone marrow is the principal site of hematopoiesis for the circulating formed elements in normal adult physiology."
-    },
-    {
-      "target_id": "hematology.histology.erythrocyte",
-      "relation": "contains",
-      "note": "This record introduces erythrocytes; a later Histology record will cover their detailed structure and erythropoiesis."
-    },
-    {
-      "target_id": "hematology.histology.leukocytes",
-      "relation": "contains",
-      "note": "This record introduces leukocytes; a later Histology record will cover their detailed classification and morphology."
-    },
-    {
-      "target_id": "hematology.histology.platelets",
-      "relation": "contains",
-      "note": "This record introduces platelets; a later Histology record will cover their detailed structure and formation."
     }
   ],
   "yemen_context": {
