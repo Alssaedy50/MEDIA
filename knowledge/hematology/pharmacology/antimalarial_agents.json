@@ -1,0 +1,14 @@
+{
+  "id":"hematology.pharmacology.antimalarial_agents",
+  "domain":"Hematology",
+  "subject":"Pharmacology",
+  "topic":"Antimalarial Agents",
+  "concept":"Antimalarial medicines are selected according to parasite species, severity, resistance pattern and patient factors.",
+  "content":{"definition":"Medicines used to prevent or treat malaria.","explanation":"Major teaching groups include artemisinin-based combinations, quinoline-related agents and drugs active against liver-stage parasites.","mechanism":"Different classes act at different parasite stages and biological targets.","high_yield":["ACT is a central treatment approach for uncomplicated falciparum malaria.","Severe malaria requires prompt parenteral antimalarial therapy.","Primaquine and tafenoquine have important liver-stage activity and require attention to G6PD status."]},
+  "terminology":[{"term":"Artemisinin-based combination therapy","language":"English","Arabic":"العلاج المركب القائم على الأرتيميسينين","pronunciation":"ar-teh-MIS-ih-nin based kom-bin-AY-shun THER-uh-pee"}],
+  "evidence_level":"guideline",
+  "status":"verified",
+  "review_notes":"Educational synthesis aligned with current WHO malaria guidance.",
+  "last_verified":"2026-09-27",
+  "sources":[{"title":"WHO guidelines for malaria","source_type":"guideline","authors":["World Health Organization"],"year":2026,"url":"https://www.who.int/publications/i/item/guidelines-for-malaria/","license":"WHO","location":"WHO","notes":"Current consolidated malaria recommendations."}]
+}
