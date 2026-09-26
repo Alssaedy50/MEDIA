@@ -7,7 +7,7 @@ from retrieval import DEFAULT_KB, load_records, retrieve
 class HematologyRetrievalSmokeTests(unittest.TestCase):
     def test_knowledge_scope_is_loaded(self):
         records = load_records(DEFAULT_KB)
-        self.assertEqual(len(records), 35)
+        self.assertEqual(len(records), 41)
         self.assertTrue(all(r.data.get("status") in {"reviewed", "verified"} for r in records))
 
     def test_red_pulp_query_retrieves_spleen(self):
@@ -26,6 +26,12 @@ class HematologyRetrievalSmokeTests(unittest.TestCase):
         result = retrieve("Where does hematopoiesis occur in bone marrow?", top_k=3)
         self.assertFalse(result["abstain"])
         self.assertEqual(result["hits"][0]["id"], "hematology.anatomy.bone_marrow")
+
+    def test_antimalarial_query_retrieves_pharmacology(self):
+        result = retrieve("What are the main principles of antimalarial pharmacology?", top_k=3)
+        self.assertFalse(result["abstain"])
+        ids = [hit["id"] for hit in result["hits"]]
+        self.assertIn("hematology.pharmacology.antimalarial_agents", ids)
 
     def test_unknown_query_abstains(self):
         result = retrieve("What is the molecular mechanism of a fictional drug called Xylomab?", top_k=3)
