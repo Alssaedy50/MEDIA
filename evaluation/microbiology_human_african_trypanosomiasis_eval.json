@@ -1,0 +1,52 @@
+{
+  "version": "0.1.0",
+  "scope": "Hematology Microbiology — Human African Trypanosomiasis",
+  "cases": [
+    {
+      "id": "human_african_trypanosomiasis_001",
+      "query": "What is the causative organism and main transmission route of Human African Trypanosomiasis?",
+      "expected_state": "supported",
+      "expected_ids": [
+        "hematology.microbiology.human_african_trypanosomiasis"
+      ]
+    },
+    {
+      "id": "human_african_trypanosomiasis_002",
+      "query": "Explain the pathogenesis and important biologic features of Human African Trypanosomiasis.",
+      "expected_state": "supported",
+      "expected_ids": [
+        "hematology.microbiology.human_african_trypanosomiasis"
+      ]
+    },
+    {
+      "id": "human_african_trypanosomiasis_003",
+      "query": "What are the main clinical manifestations and complications of Human African Trypanosomiasis?",
+      "expected_state": "supported",
+      "expected_ids": [
+        "hematology.microbiology.human_african_trypanosomiasis"
+      ]
+    },
+    {
+      "id": "human_african_trypanosomiasis_004",
+      "query": "How is Human African Trypanosomiasis diagnosed?",
+      "expected_state": "supported",
+      "expected_ids": [
+        "hematology.microbiology.human_african_trypanosomiasis"
+      ]
+    },
+    {
+      "id": "human_african_trypanosomiasis_005",
+      "query": "What are the main treatment and prevention principles for Human African Trypanosomiasis?",
+      "expected_state": "supported",
+      "expected_ids": [
+        "hematology.microbiology.human_african_trypanosomiasis"
+      ]
+    },
+    {
+      "id": "human_african_trypanosomiasis_006",
+      "query": "What is the mechanism of the fictional antimicrobial XenoMed-999 against Human African Trypanosomiasis?",
+      "expected_state": "abstain",
+      "expected_ids": []
+    }
+  ]
+}
