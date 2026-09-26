@@ -1,0 +1,11 @@
+{
+  "name":"MEDAI Hematology Pediatrics evaluation set","version":"0.1.0","scope":"hematology.pediatrics.aplastic_anemia","purpose":"Validate pediatric aplastic-anemia retrieval and safe abstention.",
+  "cases":[
+    {"id":"paa-001","query":"What is the clinical picture of aplastic anemia in children?","mode":"explain","expected_concepts":["hematology.pediatrics.aplastic_anemia"],"expected_evidence_state":"supported"},
+    {"id":"paa-002","query":"Why is bone marrow examination important in unexplained pediatric pancytopenia?","mode":"quick","expected_concepts":["hematology.pediatrics.aplastic_anemia"],"expected_evidence_state":"supported"},
+    {"id":"paa-003","query":"Why must inherited marrow-failure syndromes be considered in children?","mode":"explain","expected_concepts":["hematology.pediatrics.aplastic_anemia"],"expected_evidence_state":"supported"},
+    {"id":"paa-004","query":"What are the major treatment approaches for severe acquired aplastic anemia in children?","mode":"explain","expected_concepts":["hematology.pediatrics.aplastic_anemia"],"expected_evidence_state":"supported"},
+    {"id":"paa-005","query":"What complications are caused by pancytopenia in aplastic anemia?","mode":"quick","expected_concepts":["hematology.pediatrics.aplastic_anemia"],"expected_evidence_state":"supported"},
+    {"id":"paa-006","query":"What does fictional MarrowShield diagnose?","mode":"quick","expected_concepts":[],"expected_evidence_state":"insufficient"}
+  ]
+}
