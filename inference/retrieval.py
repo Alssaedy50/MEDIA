@@ -30,6 +30,8 @@ STOPWORDS = {
     "ماهو", "ماهي", "وظيفة", "دور", "اشرح", "قارن", "أين",
 }
 
+MIN_COVERAGE = 0.5
+
 
 @dataclass(frozen=True)
 class Record:
@@ -161,7 +163,7 @@ def retrieve(
     ranked = []
     for record in records:
         score, match = _score(query_tokens, record)
-        if score > 0:
+        if score > 0 and match["coverage"] >= MIN_COVERAGE:
             ranked.append((score, record, match))
 
     ranked.sort(key=lambda item: (-item[0], item[1].id))

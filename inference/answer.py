@@ -17,7 +17,7 @@ def _first_nonempty(*values: Any) -> str | None:
     return None
 
 
-def _terms(hit: dict[str, Any], limit: int = 6) -> list[str]:
+def _terms(hit: dict[str, Any], limit: int = 10) -> list[str]:
     result = []
     for item in hit.get("terminology", []) or []:
         if isinstance(item, dict) and item.get("term"):
@@ -131,8 +131,16 @@ def answer(query: str, *, mode: str = "quick", top_k: int = 3) -> dict[str, Any]
             })
             return response
 
+        comparison_hits = [
+            hit for hit in hits
+            if set(hit.get("match", {}).get("matched_terms", []))
+            & set(result.get("query_terms", []))
+        ]
+        if len(comparison_hits) < 2:
+            comparison_hits = hits[:2]
+
         comparison = []
-        for hit in hits[:2]:
+        for hit in comparison_hits[:2]:
             evidence = hit.get("evidence", {}) or {}
             comparison.append({
                 "id": hit.get("id"),
@@ -149,8 +157,8 @@ def answer(query: str, *, mode: str = "quick", top_k: int = 3) -> dict[str, Any]
             "answer": "Comparison assembled only from registered knowledge evidence.",
             "comparison": comparison,
             "key_points": [],
-            "terms": sorted(set(_terms(hits[0]) + _terms(hits[1])))[:8],
-            "sources": _sources(hits),
+            "terms": sorted(set(_terms(comparison_hits[0]) + _terms(comparison_hits[1])))[:10],
+            "sources": _sources(comparison_hits),
         })
         return response
 
