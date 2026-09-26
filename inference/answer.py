@@ -119,7 +119,40 @@ def answer(query: str, *, mode: str = "quick", top_k: int = 3) -> dict[str, Any]
         return response
 
     if mode == "compare":
-        if len(hits) < 2:
+        # A comparison query often names multiple concepts that are ranked
+        # separately. Expand the query into single terms and adjacent phrases
+        # so both explicitly requested concepts can enter the evidence set.
+        expanded: dict[str, dict[str, Any]] = {hit["id"]: hit for hit in hits}
+        query_terms = result.get("query_terms", [])
+        candidate_queries = list(query_terms)
+        candidate_queries.extend(
+            f"{query_terms[i]} {query_terms[i + 1]}"
+            for i in range(len(query_terms) - 1)
+        )
+        for candidate in candidate_queries:
+            if not candidate.strip():
+                continue
+            extra = retrieve(candidate, top_k=1)
+            for hit in extra.get("hits", []):
+                expanded.setdefault(hit["id"], hit)
+
+        comparison_pool = list(expanded.values())
+        comparison_hits = [
+            hit for hit in comparison_pool
+            if set(hit.get("match", {}).get("matched_terms", []))
+            & set(query_terms)
+        ]
+        comparison_hits.sort(key=lambda hit: (-hit.get("score", 0), hit.get("id", "")))
+
+        if len(comparison_hits) < 2:
+            comparison_hits = comparison_pool[:2]
+
+        # Expose the expanded evidence set to evaluation and downstream
+        # reasoning, not only the initial top-k retrieval.
+        result["hits"] = comparison_pool
+        hits = comparison_pool
+
+        if len(comparison_hits) < 2:
             text, points = _hit_summary(hits[0], "explain")
             response = _base(result, mode)
             response.update({
@@ -130,14 +163,6 @@ def answer(query: str, *, mode: str = "quick", top_k: int = 3) -> dict[str, Any]
                 "sources": _sources(hits),
             })
             return response
-
-        comparison_hits = [
-            hit for hit in hits
-            if set(hit.get("match", {}).get("matched_terms", []))
-            & set(result.get("query_terms", []))
-        ]
-        if len(comparison_hits) < 2:
-            comparison_hits = hits[:2]
 
         comparison = []
         for hit in comparison_hits[:2]:
