@@ -16,6 +16,12 @@ class EvaluationTests(unittest.TestCase):
         self.assertEqual(report["failed_cases"], 0)
         self.assertEqual(report["pass_rate"], 1.0)
 
+    def test_leukocyte_evaluation_passes(self):
+        report = run(ROOT / "histology_leukocytes_eval.json")
+        self.assertEqual(report["total_cases"], 6)
+        self.assertEqual(report["failed_cases"], 0)
+        self.assertEqual(report["pass_rate"], 1.0)
+
     def test_anatomy_evaluation_passes(self):
         report = run()
         self.assertEqual(report["total_cases"], 8)
