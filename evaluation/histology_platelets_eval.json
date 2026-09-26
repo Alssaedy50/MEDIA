@@ -1,0 +1,42 @@
+{
+  "version": "0.1.0",
+  "scope": "Hematology Histology — Platelets and Thrombopoiesis",
+  "cases": [
+    {
+      "id": "platelets_001",
+      "query": "What are platelets and what is their basic structure?",
+      "expected_state": "supported",
+      "expected_ids": ["hematology.histology.platelets_thrombopoiesis"]
+    },
+    {
+      "id": "platelets_002",
+      "query": "How are platelets produced from megakaryocytes?",
+      "expected_state": "supported",
+      "expected_ids": ["hematology.histology.platelets_thrombopoiesis"]
+    },
+    {
+      "id": "platelets_003",
+      "query": "What is the role of thrombopoietin in thrombopoiesis?",
+      "expected_state": "supported",
+      "expected_ids": ["hematology.histology.platelets_thrombopoiesis"]
+    },
+    {
+      "id": "platelets_004",
+      "query": "What are the major platelet granules and what do they contain?",
+      "expected_state": "supported",
+      "expected_ids": ["hematology.histology.platelets_thrombopoiesis"]
+    },
+    {
+      "id": "platelets_005",
+      "query": "How do platelets contribute to primary hemostasis?",
+      "expected_state": "supported",
+      "expected_ids": ["hematology.histology.platelets_thrombopoiesis"]
+    },
+    {
+      "id": "platelets_006",
+      "query": "What is the mechanism of a fictional drug called Platelex-9000?",
+      "expected_state": "abstain",
+      "expected_ids": []
+    }
+  ]
+}
