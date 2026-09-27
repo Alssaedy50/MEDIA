@@ -1,0 +1,50 @@
+{
+  "version": "media-100m-foundation-v1",
+  "status": "frozen",
+  "frozen_at": "2026-09-27",
+  "purpose": "Frozen engineering baseline for the first MEDIA model/inference integration.",
+  "selection_policy": {
+    "corpus_split": "training",
+    "unknown_tokens_required": 0,
+    "compression_tolerance": "within 2% of minimum token count",
+    "tie_breaker": "smallest actual vocabulary"
+  },
+  "selected_tokenizer": {
+    "requested_vocab_size": 8192,
+    "actual_vocab_size": 4709,
+    "merge_count": 4591,
+    "token_count_including_specials": 48690,
+    "mean_tokens": 25.653,
+    "p95_tokens": 61,
+    "max_tokens": 179,
+    "compression_ratio_tokens_per_pretoken": 1.1364,
+    "unknown_token_count": 0
+  },
+  "transformer": {
+    "vocab_size": 4709,
+    "d_model": 896,
+    "n_heads": 8,
+    "n_layers": 10,
+    "d_ff": 3584,
+    "max_seq_len": 256,
+    "dropout": 0.1,
+    "weight_tying": true,
+    "parameter_count": 101266816
+  },
+  "corpus": {
+    "domain": "Hematology",
+    "registered_knowledge_records": 51,
+    "generated_examples": 1186,
+    "train_examples": 949,
+    "validation_examples": 63,
+    "test_examples": 174,
+    "train_tokenizer_only": true,
+    "heldout_unknown_tokens_observed": 44,
+    "heldout_unknown_tokens_are_not_used_for_selection": true
+  },
+  "training_status": {
+    "pretrained_weights": false,
+    "checkpoint": false,
+    "note": "This freezes the architecture/tokenizer baseline only. It does not claim that the 100M model has been pretrained."
+  }
+}
