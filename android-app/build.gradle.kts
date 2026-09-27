@@ -16,15 +16,20 @@ android {
 
     buildFeatures { buildConfig = true }
 
-    // Offline Alpha knowledge is stored in the repository-level android/assets tree.
-    // Expose that directory to Android AssetManager at runtime.
-    sourceSets {
-        getByName("main") {
-            assets.srcDir(rootProject.projectDir.parentFile.resolve("android/assets"))
-        }
-    }
-
     packaging { resources.excludes += "/META-INF/{AL2.0,LGPL2.1}" }
+}
+
+val offlineKnowledgeSource = rootProject.projectDir.parentFile.resolve("android/assets/knowledge/hematology")
+val offlineKnowledgeTarget = projectDir.resolve("src/main/assets/knowledge/hematology")
+
+tasks.register<Copy>("syncOfflineKnowledge") {
+    from(offlineKnowledgeSource)
+    into(offlineKnowledgeTarget)
+    include("**/*.json")
+}
+
+tasks.named("preBuild").configure {
+    dependsOn("syncOfflineKnowledge")
 }
 
 dependencies {
