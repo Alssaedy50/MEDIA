@@ -1,0 +1,108 @@
+{
+  "id": "hematology.anatomy.bone_marrow",
+  "domain": "Hematology",
+  "subject": "Anatomy",
+  "topic": "Bone Marrow",
+  "subtopic": "Structure and hematopoietic function",
+  "concept": "Bone marrow is a vascular, soft tissue within the medullary spaces of bones that provides the principal site of hematopoiesis after birth.",
+  "content": {
+    "definition": "Bone marrow is the soft tissue occupying the cavities and medullary spaces of bones. It contains hematopoietic tissue, stromal/supporting cells, adipocytes, and a specialized vascular network.",
+    "explanation": "Bone marrow is both an anatomical compartment and a functional hematopoietic organ. Its microenvironment supports hematopoietic stem and progenitor cells, their differentiation into blood-cell lineages, and release of mature cells into the circulation.",
+    "mechanism": "Hematopoietic stem cells self-renew and differentiate through progressively committed progenitor stages. Developing blood cells occupy hematopoietic niches associated with stromal cells and vasculature; mature cells enter the circulation through marrow vascular sinusoids.",
+    "structure": "The marrow space is organized around trabecular bone, vascular sinusoids, and stromal networks. Major cellular components include hematopoietic cells, endothelial cells, stromal/reticular cells, adipocytes, and other supporting cells.",
+    "function": "The major function of active red marrow is hematopoiesis: production of erythrocytes, leukocytes, and platelets. The marrow microenvironment also regulates stem-cell maintenance, proliferation, differentiation, and trafficking.",
+    "causes": [],
+    "effects": [],
+    "clinical_relevance": "Bone marrow examination is central to evaluating many hematologic disorders because marrow architecture and cellular composition reflect blood-cell production and disease processes.",
+    "diagnosis": "Bone marrow aspiration and biopsy can directly assess marrow cellularity, hematopoietic lineages, architecture, and abnormal infiltrates when clinically indicated.",
+    "treatment": "Bone marrow itself is not a treatment; marrow-directed therapies and transplantation are used in selected hematologic diseases.",
+    "high_yield": [
+      "Red bone marrow is hematopoietically active.",
+      "Yellow bone marrow contains predominantly adipose tissue and can contain hematopoietic stem/progenitor cells.",
+      "Bone marrow hematopoiesis occurs in a specialized microenvironment containing vascular and stromal components.",
+      "Developing blood cells gain access to the circulation through marrow vascular sinusoids.",
+      "In adults, active red marrow is concentrated mainly in the axial skeleton, with variable residual red marrow in parts of the proximal long bones."
+    ]
+  },
+  "terminology": [
+    {
+      "term": "Bone marrow",
+      "language": "English",
+      "Arabic": "نخاع العظم",
+      "pronunciation": "BOHN MAIR-oh",
+      "etymology": "Marrow derives from Middle English marrow, referring to the soft material within bones.",
+      "notes": "Do not confuse bone marrow with spinal cord; they are anatomically and functionally distinct."
+    },
+    {
+      "term": "Hematopoiesis",
+      "language": "English",
+      "Arabic": "تكوّن الدم / تكوّن الخلايا الدموية",
+      "pronunciation": "hee-MAT-oh-poy-EE-sis",
+      "etymology": "From Greek haima (blood) and poiein (to make).",
+      "notes": "The process of producing blood cells."
+    },
+    {
+      "term": "Red bone marrow",
+      "language": "English",
+      "Arabic": "نخاع العظم الأحمر",
+      "pronunciation": "red bohn MAIR-oh",
+      "etymology": "Named for its high hematopoietic cellular content and vascularity.",
+      "notes": "The principal hematopoietically active marrow."
+    },
+    {
+      "term": "Yellow bone marrow",
+      "language": "English",
+      "Arabic": "نخاع العظم الأصفر",
+      "pronunciation": "YEL-oh bohn MAIR-oh",
+      "etymology": "Named for its predominance of yellow adipose tissue.",
+      "notes": "Its composition changes with age and physiologic demand."
+    }
+  ],
+  "relations": [],
+  "evidence_level": "reference",
+  "status": "reviewed",
+  "review_notes": "Original synthesis checked against NCBI/NIH reference material and peer-reviewed reviews. Detailed spatial niche statements should be treated as an evolving research area rather than fixed textbook anatomy.",
+  "last_verified": "2026-09-27",
+  "sources": [
+    {
+      "title": "Bone Marrow - MeSH",
+      "source_type": "reference",
+      "authors": [],
+      "year": 2026,
+      "url": "https://www.ncbi.nlm.nih.gov/mesh/68001853",
+      "license": "U.S. National Library of Medicine / NCBI",
+      "location": "NCBI MeSH",
+      "notes": "Definition and distinction of red and yellow marrow."
+    },
+    {
+      "title": "Histology, Hematopoiesis",
+      "source_type": "reference",
+      "authors": ["Joseph Chapman", "Yaoping Zhang"],
+      "year": 2023,
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK534246/",
+      "license": "NCBI Bookshelf / StatPearls",
+      "location": "NCBI Bookshelf",
+      "notes": "Hematopoietic stem/progenitor hierarchy, marrow structure, vascular sinusoids, and cellular components."
+    },
+    {
+      "title": "Structural organization of the bone marrow and its role in hematopoiesis",
+      "source_type": "review",
+      "authors": ["Daniel Lucas"],
+      "year": 2021,
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7769132/",
+      "license": "PMC author manuscript",
+      "location": "Current Opinion in Hematology",
+      "notes": "Bone, vasculature, stromal networks, and hematopoietic microenvironments."
+    },
+    {
+      "title": "Anatomy of Hematopoiesis and Local Microenvironments in the Bone Marrow. Where to?",
+      "source_type": "review",
+      "authors": ["Qingqing Wu", "Jizhou Zhang", "Daniel Lucas"],
+      "year": 2021,
+      "url": "https://pubmed.ncbi.nlm.nih.gov/34858426/",
+      "license": "Peer-reviewed publication",
+      "location": "Frontiers in Immunology",
+      "notes": "Review of the spatial organization and local microenvironments of hematopoiesis."
+    }
+  ]
+}
