@@ -166,7 +166,7 @@ def _score(query_tokens: list[str], record: Record) -> tuple[float, dict[str, An
                 for i in range(len(anchor_tokens) - 1)
             }
             if query_bigrams & topic_bigrams:
-                score += 100.0
+                score += 500.0
         if len(anchor_tokens) < 2:
             continue
         for size in (4, 3, 2):
@@ -183,6 +183,13 @@ def _score(query_tokens: list[str], record: Record) -> tuple[float, dict[str, An
             if query_ngrams & anchor_ngrams:
                 score += 20.0 * size
                 break
+
+        if field == "terminology":
+            query_set = set(query_tokens)
+            terminology_tokens = set(anchor_tokens)
+            exact_terms = query_set & terminology_tokens
+            if any(len(term) >= 3 for term in exact_terms):
+                score += 300.0
 
     status = record.data.get("status")
     evidence = record.data.get("evidence_level")
