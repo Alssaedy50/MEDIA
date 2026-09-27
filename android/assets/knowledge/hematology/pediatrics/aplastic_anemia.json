@@ -1,0 +1,31 @@
+{
+  "id":"hematology.pediatrics.aplastic_anemia",
+  "domain":"Hematology","subject":"Pediatrics","topic":"Pediatric Aplastic Anemia",
+  "subtopic":"Clinical picture, diagnosis, treatment and prognosis",
+  "concept":"Aplastic anemia is a marrow-failure syndrome characterized by cytopenias and hypocellular marrow. In children, acquired disease must be distinguished from inherited marrow-failure syndromes.",
+  "content":{
+    "definition":"Aplastic anemia is persistent cytopenia associated with markedly hypocellular bone marrow without an adequate malignant infiltrative or fibrotic explanation.",
+    "explanation":"Children may present with pallor and fatigue, infection from neutropenia, or bruising and bleeding from thrombocytopenia. Inherited marrow-failure syndromes must be considered with early onset, congenital features or family history.",
+    "mechanism":"Reduced hematopoietic stem-cell activity decreases production of erythrocytes, leukocytes and platelets.",
+    "clinical_relevance":"Pediatric unexplained pancytopenia requires careful history for drugs, toxins, infections and inherited disease because diagnosis affects treatment and donor selection.",
+    "diagnosis":"CBC with differential and reticulocytes demonstrate cytopenias. Bone-marrow aspirate/core biopsy establishes hypocellularity and excludes important alternatives. HLA testing is important when transplantation may be indicated; phenotype-directed germline testing is relevant when inherited disease is suspected.",
+    "treatment":"Management depends on severity, age, donor availability and whether disease is acquired or inherited. Major approaches include supportive care, hematopoietic cell transplantation for selected eligible patients, and immunosuppressive therapy for severe acquired disease. Current ASH guidance also addresses eltrombopag and antimicrobial prophylaxis in severe disease.",
+    "high_yield":["Think pancytopenia plus hypocellular marrow.","Bone-marrow examination is central to diagnosis.","Consider inherited marrow failure in children with congenital features or suggestive family history.","Neutropenia increases infection risk and thrombocytopenia increases bleeding risk.","Treatment selection depends on severity, donor availability and disease type."]
+  },
+  "terminology":[
+    {"term":"Aplastic anemia","language":"English","Arabic":"فقر الدم اللاتنسجي","pronunciation":"uh-PLAS-tik uh-NEE-mee-uh"},
+    {"term":"Pancytopenia","language":"English","Arabic":"قلة شاملة في خلايا الدم","pronunciation":"pan-sy-toh-PEE-nee-uh"},
+    {"term":"Hypocellular marrow","language":"English","Arabic":"نخاع ناقص الخلوية","pronunciation":"hy-poh-SEL-yoo-lar"}
+  ],
+  "relations":[
+    {"target_id":"hematology.pathology.aplastic_anemia","relation":"extends","note":"Pediatric context."},
+    {"target_id":"hematology.medicine.transplantation","relation":"connects_to","note":"Hematopoietic cell transplantation may be used in selected patients."}
+  ],
+  "yemen_context":{"relevance":"Pediatric pancytopenia requires consideration of inherited marrow failure, infection, nutritional causes and treatment access.","evidence":"No Yemen-specific epidemiologic estimate is asserted."},
+  "evidence_level":"guideline","status":"reviewed","review_notes":"Original pediatric synthesis incorporating ASH 2026 acquired aplastic anemia guideline.",
+  "last_verified":"2026-09-27",
+  "sources":[
+    {"title":"American Society of Hematology 2026 guidelines for the diagnosis and management of severe and very severe acquired aplastic anemia","source_type":"guideline","authors":["American Society of Hematology"],"year":2026,"url":"https://ashpublications.org/bloodadvances/article/10/17/5962/567383/American-Society-of-Hematology-2026-guidelines-for","license":"ASH","location":"Blood Advances"},
+    {"title":"Anemia in the pediatric patient","source_type":"review","authors":["American Society of Hematology"],"year":2022,"url":"https://ashpublications.org/blood/article/140/6/571/484178/Anemia-in-the-pediatric-patient","license":"ASH","location":"Blood"}
+  ]
+}
