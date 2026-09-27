@@ -52,8 +52,7 @@ jobs:
         run: |
           apk=android-app/build/outputs/apk/debug/android-app-debug.apk
           test -f "$apk"
-          unzip -l "$apk" > /tmp/media-apk-list.txt
-          count=$(grep -E 'assets/knowledge/hematology/.+\.json$' /tmp/media-apk-list.txt | wc -l)
+          count=$(unzip -Z1 "$apk" | awk '/^assets\/knowledge\/hematology\/.*\.json$/ {n++} END {print n+0}')
           echo "APK contains $count bundled Hematology JSON entries"
           test "$count" -eq 51
 
