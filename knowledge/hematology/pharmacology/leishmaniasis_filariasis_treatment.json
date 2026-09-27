@@ -17,7 +17,13 @@
       "Drug toxicity and interactions vary among antiparasitic agents."
     ]
   },
-  "terminology": [],
+  "terminology": [
+    {
+      "term": "Visceral leishmaniasis treatment",
+      "language": "English",
+      "notes": "Search synonym/clinical terminology used for evidence retrieval."
+    }
+  ],
   "relations": [],
   "yemen_context": {
     "relevance": "Leishmaniasis and filarial disease are important infectious-disease pharmacology topics in the region.",

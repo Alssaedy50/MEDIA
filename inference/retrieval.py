@@ -337,6 +337,21 @@ def retrieve(
                 and topic_tokens[0] in query_tokens
             )
         )
+        content_tokens = tokenize(_field_text(record, "content"))
+        content_bigrams = {
+            tuple(content_tokens[i:i + 2])
+            for i in range(len(content_tokens) - 1)
+        }
+        query_bigrams = {
+            tuple(query_tokens[i:i + 2])
+            for i in range(len(query_tokens) - 1)
+        }
+        if any(
+            pair in content_bigrams and len(pair[0]) >= 5 and len(pair[1]) >= 5
+            for pair in query_bigrams
+        ):
+            score += 1000000.0
+
         if score > 0 and (match["coverage"] >= MIN_COVERAGE or exact_topic_match) and any(
             token in set(tokenize(_field_text(record, field)))
             for token in query_tokens

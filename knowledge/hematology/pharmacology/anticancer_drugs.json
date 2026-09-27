@@ -22,7 +22,18 @@
       "Monoclonal antibodies can target lineage-associated surface antigens."
     ]
   },
-  "terminology": [],
+  "terminology": [
+    {
+      "term": "Drug classes",
+      "language": "English",
+      "notes": "Search synonym/clinical terminology used for evidence retrieval."
+    },
+    {
+      "term": "Hematologic malignancies",
+      "language": "English",
+      "notes": "Search synonym/clinical terminology used for evidence retrieval."
+    }
+  ],
   "relations": [],
   "yemen_context": {
     "relevance": "Core Hematology block pharmacology topic; access to advanced targeted agents varies by setting.",
