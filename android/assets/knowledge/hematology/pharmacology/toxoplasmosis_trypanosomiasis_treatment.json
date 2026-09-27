@@ -1,0 +1,56 @@
+{
+  "id": "hematology.pharmacology.toxoplasmosis_trypanosomiasis_treatment",
+  "domain": "Hematology",
+  "subject": "Pharmacology",
+  "topic": "Treatment of Toxoplasmosis and Trypanosomiasis",
+  "concept": "Therapy for toxoplasmosis and human African trypanosomiasis is selected according to disease stage, severity and host factors.",
+  "content": {
+    "definition": "Antiparasitic treatment varies with organism, stage and immune status.",
+    "explanation": "Serious toxoplasmosis commonly uses a pyrimethamine-based combination with a sulfonamide and folinic acid in appropriate patients; human African trypanosomiasis therapy differs by parasite species and CNS involvement.",
+    "mechanism": "Toxoplasmosis regimens inhibit parasite folate metabolism; trypanosomiasis drugs have stage- and species-specific antiparasitic mechanisms.",
+    "clinical_relevance": "CNS disease is a major determinant of treatment selection in African trypanosomiasis, while immune status strongly influences toxoplasmosis management.",
+    "treatment": "Treatment should follow current specialist and public-health guidance for the specific species, stage and host.",
+    "high_yield": [
+      "Toxoplasmosis therapy depends on clinical form and immune status.",
+      "Folinic acid is used with pyrimethamine-based therapy to reduce host folate toxicity.",
+      "Trypanosomiasis treatment differs between T. brucei gambiense and T. brucei rhodesiense and by CNS stage.",
+      "Drug toxicity and monitoring requirements are regimen-specific."
+    ]
+  },
+  "terminology": [],
+  "relations": [],
+  "yemen_context": {
+    "relevance": "Included in the official Hematology Pharmacology syllabus as antiparasitic therapy.",
+    "evidence": "General evidence; no Yemen-specific regimen asserted."
+  },
+  "evidence_level": "guideline",
+  "status": "reviewed",
+  "review_notes": "Original educational synthesis using WHO/CDC and clinical reference principles.",
+  "last_verified": "2026-09-27",
+  "sources": [
+    {
+      "title": "WHO neglected tropical disease guidance",
+      "source_type": "guideline",
+      "authors": [
+        "World Health Organization"
+      ],
+      "year": 2026,
+      "url": "https://www.who.int/health-topics/neglected-tropical-diseases",
+      "license": "WHO",
+      "location": "WHO",
+      "notes": "Current neglected tropical disease guidance."
+    },
+    {
+      "title": "CDC Toxoplasmosis Clinical Care",
+      "source_type": "reference",
+      "authors": [
+        "Centers for Disease Control and Prevention"
+      ],
+      "year": 2026,
+      "url": "https://www.cdc.gov/toxoplasmosis/hcp/clinical-care/index.html",
+      "license": "CDC",
+      "location": "CDC",
+      "notes": "Clinical treatment reference."
+    }
+  ]
+}

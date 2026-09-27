@@ -1,0 +1,71 @@
+{
+  "id":"hematology.pathology.bleeding_disorders_investigations",
+  "domain":"Hematology",
+  "subject":"Pathology",
+  "topic":"Bleeding Disorders and Investigations",
+  "subtopic":"Platelet disorders, coagulation factor defects, von Willebrand disease and laboratory evaluation",
+  "concept":"Bleeding disorders arise from abnormalities of platelets, coagulation factors, vascular integrity or combinations of these mechanisms. Clinical bleeding pattern and targeted laboratory testing help distinguish primary hemostatic disorders from coagulation-factor disorders.",
+  "content":{
+    "definition":"Primary hemostasis involves platelet adhesion, activation and aggregation with endothelial and von Willebrand factor participation, whereas secondary hemostasis generates fibrin through coagulation factors. Bleeding disorders may affect either system or both.",
+    "explanation":"Mucocutaneous bleeding such as petechiae, epistaxis, gum bleeding and heavy menstrual bleeding suggests a platelet or von Willebrand-type disorder, while deep tissue bleeding, hemarthrosis and delayed postoperative bleeding suggest a coagulation-factor defect. History, medication review and family history are essential before interpreting laboratory results.",
+    "mechanism":"von Willebrand factor mediates platelet adhesion and stabilizes factor VIII. Hemophilia A results from factor VIII deficiency and hemophilia B from factor IX deficiency, producing impaired secondary hemostasis. Platelet number or function disorders impair primary hemostasis. Disseminated intravascular coagulation causes simultaneous systemic coagulation activation, consumption of platelets and clotting factors, and secondary fibrinolysis.",
+    "structure":"Initial laboratory assessment commonly includes CBC with platelet count, peripheral smear when indicated, PT/INR and aPTT. Fibrinogen, thrombin time, mixing studies, factor assays, VWF antigen/activity and platelet-function testing are selected according to the initial pattern.",
+    "function":"Effective hemostasis requires coordinated vascular response, platelet plug formation and fibrin stabilization. Laboratory abnormalities should be interpreted with the clinical bleeding phenotype because no single screening test detects every bleeding disorder.",
+    "causes":[
+      "Thrombocytopenia from reduced production, increased destruction or consumption",
+      "Inherited or acquired platelet-function disorders",
+      "von Willebrand disease",
+      "Hemophilia A or B and other coagulation-factor deficiencies",
+      "Acquired coagulation inhibitors, including specific factor inhibitors",
+      "Liver disease, vitamin K deficiency and anticoagulant effects",
+      "Disseminated intravascular coagulation",
+      "Vascular/connective-tissue disorders"
+    ],
+    "effects":[
+      "Petechiae, purpura and mucocutaneous bleeding in primary-hemostasis disorders",
+      "Hemarthrosis and deep muscle bleeding in severe coagulation-factor deficiency",
+      "Excessive bleeding after surgery, dental procedures or trauma",
+      "Anemia when bleeding is chronic or severe",
+      "Simultaneous thrombosis and bleeding in selected systemic disorders such as DIC"
+    ],
+    "clinical_relevance":"A normal PT and aPTT do not exclude all clinically important bleeding disorders, including many platelet-function disorders and von Willebrand disease. Conversely, abnormal screening tests require interpretation in context and may need confirmatory testing.",
+    "diagnosis":"Start with bleeding history, medication review, family history, CBC/platelet count, PT/INR and aPTT. If PT is prolonged with aPTT relatively normal, consider extrinsic-pathway defects, vitamin K deficiency, liver disease or anticoagulant effects. An isolated prolonged aPTT suggests intrinsic-pathway deficiency or inhibitor and can be investigated with a mixing study and factor assays. Normal PT/aPTT with a convincing bleeding history prompts evaluation for VWD or platelet dysfunction. Suspected VWD is evaluated with VWF antigen, platelet-dependent VWF activity and factor VIII activity; VWF is an acute-phase reactant, so testing should be interpreted with clinical context.",
+    "treatment":"Treatment is directed at the underlying disorder and bleeding severity. Options may include local hemostatic measures, antifibrinolytic therapy, replacement of deficient factors or VWF, desmopressin in selected disorders, platelet support when indicated, reversal of anticoagulant effects, and treatment of the underlying cause of acquired coagulopathy. Specific treatment should follow the relevant disease guideline.",
+    "high_yield":[
+      "Platelet/VWF disorders typically cause mucocutaneous bleeding; severe coagulation-factor deficiencies classically cause deep tissue bleeding and hemarthrosis.",
+      "PT primarily screens the extrinsic and common pathways; aPTT primarily screens the intrinsic and common pathways.",
+      "An isolated prolonged aPTT can reflect factor deficiency or an inhibitor; a mixing study helps distinguish these mechanisms.",
+      "VWD is the most common inherited bleeding disorder and can involve both platelet adhesion and factor VIII stability.",
+      "In VWD, PT is usually normal and aPTT may be normal or prolonged depending on factor VIII level.",
+      "CBC and platelet count are essential first-line tests when thrombocytopenia or platelet disorders are possible.",
+      "Normal PT and aPTT do not exclude VWD or platelet-function disorders.",
+      "DIC can produce thrombocytopenia, prolonged coagulation times, low fibrinogen and increased fibrin degradation products in an appropriate clinical setting.",
+      "Laboratory testing for VWD includes VWF antigen, VWF activity and factor VIII activity; interpretation depends on assay and clinical context."
+    ]
+  },
+  "terminology":[
+    {"term":"Primary hemostasis","language":"English","Arabic":"الإرقاء الأولي","pronunciation":"PRY-mare-ee hee-moh-STAY-sis","etymology":"Hemo-, blood; stasis, stopping; primary, first stage.","notes":"Platelet adhesion, activation and aggregation forming the initial platelet plug."},
+    {"term":"Secondary hemostasis","language":"English","Arabic":"الإرقاء الثانوي","pronunciation":"SEK-un-dair-ee hee-moh-STAY-sis","etymology":"Secondary, following; hemostasis, stopping bleeding.","notes":"Coagulation cascade generating fibrin to stabilize the platelet plug."},
+    {"term":"Prothrombin time","language":"English","Arabic":"زمن البروثرومبين","pronunciation":"proh-THROM-bin time","etymology":"Prothrombin, precursor of thrombin.","notes":"Screening test primarily reflecting extrinsic and common coagulation pathways."},
+    {"term":"Activated partial thromboplastin time","language":"English","Arabic":"زمن الثرومبوبلاستين الجزئي المنشط","pronunciation":"AK-tih-vay-ted PAR-shul throm-boh-PLAS-tin time","etymology":"Partial thromboplastin plus activation.","notes":"Screening test primarily reflecting intrinsic and common pathways."},
+    {"term":"von Willebrand factor","language":"English","Arabic":"عامل فون ويلبراند","pronunciation":"von VIL-eh-brand factor","etymology":"Named after Erik von Willebrand.","notes":"Mediates platelet adhesion and carries/stabilizes factor VIII."},
+    {"term":"Mixing study","language":"English","Arabic":"اختبار المزج","pronunciation":"MIX-ing study","etymology":"Mixing patient plasma with normal plasma.","notes":"Used to investigate prolonged clotting time for deficiency versus inhibitor."}
+  ],
+  "relations":[
+    {"target_id":"hematology.physiology.hemostasis_coagulation","relation":"extends","note":"Provides pathology and investigation framework for normal hemostasis and coagulation."},
+    {"target_id":"hematology.histology.platelets_thrombopoiesis","relation":"involves","note":"Platelet number and function are central to primary hemostasis."},
+    {"target_id":"hematology.physiology.blood_groups","relation":"intersects_with","note":"Transfusion and alloimmune processes can complicate bleeding and coagulation management."},
+    {"target_id":"hematology.pathology.hemolytic_anemia_hemoglobinopathies","relation":"differential_from","note":"Bleeding-related anemia must be distinguished from hemolytic anemia."}
+  ],
+  "yemen_context":{"relevance":"The investigation framework is applicable to evaluating bleeding presentations in clinical practice.","evidence":"General medical evidence; no Yemen-specific prevalence estimate is asserted."},
+  "evidence_level":"guideline",
+  "status":"reviewed",
+  "review_notes":"Original synthesis grounded in ASH/ISTH/NHF/WFH VWD guidance and NCBI clinical references. Treatment is presented as an overview, not patient-specific prescribing.",
+  "last_verified":"2026-09-27",
+  "sources":[
+    {"title":"ASH ISTH NHF WFH 2021 guidelines on the diagnosis of von Willebrand disease","source_type":"guideline","authors":["James PD","Connell NT","Ameer B","et al."],"year":2021,"url":"https://ashpublications.org/bloodadvances/article/5/1/280/474888/ASH-ISTH-NHF-WFH-2021-guidelines-on-the-diagnosis","license":"ASH Blood Advances","location":"Blood Advances","notes":"Diagnostic approach and VWF testing recommendations."},
+    {"title":"Von Willebrand Disease","source_type":"reference","authors":["NCBI GeneReviews"],"year":2024,"url":"https://www.ncbi.nlm.nih.gov/books/NBK7014/","license":"NCBI Bookshelf / GeneReviews","location":"NCBI Bookshelf","notes":"Clinical phenotype and laboratory findings."},
+    {"title":"Von Willebrand Disease","source_type":"reference","authors":["StatPearls"],"year":2023,"url":"https://www.ncbi.nlm.nih.gov/books/NBK459222/","license":"NCBI Bookshelf / StatPearls","location":"NCBI Bookshelf","notes":"Clinical evaluation and laboratory testing."},
+    {"title":"Clinical Methods: Coagulation Tests","source_type":"reference","authors":["NCBI Bookshelf"],"year":1990,"url":"https://www.ncbi.nlm.nih.gov/books/NBK259/","license":"NCBI Bookshelf","location":"NCBI Bookshelf","notes":"Foundational interpretation of coagulation screening tests."}
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "id":"hematology.pathology.anemia_classification_nutritional",
+  "domain":"Hematology",
+  "subject":"Pathology",
+  "topic":"Anemia Classification and Nutritional Anemias",
+  "subtopic":"Microcytic, normocytic, macrocytic anemia; iron, vitamin B12 and folate deficiency",
+  "concept":"Anemia is a reduction in hemoglobin concentration or red-cell mass below an appropriate reference threshold. Classification by red-cell size, mechanism and morphology helps organize the differential diagnosis, while nutritional anemias include iron deficiency and megaloblastic anemia caused by vitamin B12 or folate deficiency.",
+  "content":{
+    "definition":"Anemia is a manifestation of an underlying disorder rather than a single disease. A practical initial classification uses mean corpuscular volume (MCV): microcytic, normocytic or macrocytic, followed by assessment of reticulocyte response, blood film and targeted laboratory studies.",
+    "explanation":"Microcytic anemia commonly results from impaired hemoglobin synthesis, especially iron deficiency and thalassemia, with anemia of inflammation and sideroblastic processes also considered. Normocytic anemia may reflect acute blood loss, hemolysis, chronic disease, renal disease or marrow disorders. Macrocytic anemia is divided into megaloblastic and nonmegaloblastic patterns. Megaloblastic anemia reflects impaired DNA synthesis, classically from vitamin B12 or folate deficiency, and produces macro-ovalocytes and hypersegmented neutrophils.",
+    "mechanism":"Iron deficiency progresses from depleted iron stores to iron-restricted erythropoiesis and eventually microcytic hypochromic anemia. Ferritin reflects iron stores but is also an acute-phase reactant, so inflammation can raise ferritin despite iron deficiency. Vitamin B12 or folate deficiency impairs DNA synthesis, causing nuclear-cytoplasmic maturation asynchrony and ineffective hematopoiesis; intramedullary destruction can produce elevated LDH and indirect bilirubin. Vitamin B12 deficiency may additionally cause neurologic dysfunction.",
+    "structure":"Evaluation integrates hemoglobin, hematocrit, RBC indices, reticulocyte count, peripheral smear and targeted biochemical testing. Iron studies include ferritin and, when needed, transferrin saturation and related measures. Macrocytic anemia requires assessment for B12/folate deficiency and nonmegaloblastic causes.",
+    "function":"Reduced hemoglobin lowers oxygen-carrying capacity. The physiological response may include increased cardiac output and redistribution of blood flow; chronic or severe anemia can produce fatigue, dyspnea, tachycardia and reduced exercise tolerance.",
+    "causes":[
+      "Iron deficiency from inadequate intake, increased requirements, impaired absorption or blood loss",
+      "Vitamin B12 deficiency from inadequate intake, impaired gastric/ileal absorption or medication-related causes",
+      "Folate deficiency from inadequate intake, malabsorption, increased requirements or medication effects",
+      "Anemia of inflammation/chronic disease",
+      "Thalassemia and other inherited hemoglobin disorders",
+      "Acute or chronic blood loss and hemolysis",
+      "Renal, endocrine and primary marrow disorders"
+    ],
+    "effects":[
+      "Fatigue and reduced exercise tolerance",
+      "Dyspnea and tachycardia, particularly with more severe anemia",
+      "Pallor",
+      "Iron deficiency may cause pica, glossitis or epithelial changes",
+      "Vitamin B12 deficiency may cause neurologic manifestations that are not explained by folate deficiency alone"
+    ],
+    "clinical_relevance":"The morphology of anemia should guide testing rather than substitute for identifying the cause. In iron deficiency, the source of iron loss—especially chronic blood loss in appropriate patients—should be sought. In vitamin deficiency, the reason for deficiency must also be established.",
+    "diagnosis":"Start with CBC including MCV and RDW, reticulocyte count and peripheral smear. Microcytosis prompts iron studies and consideration of thalassemia or other causes. Ferritin is a key marker of iron stores; WHO recommends interpreting ferritin with inflammation/infection status when relevant. Macrocytosis prompts vitamin B12 and folate assessment and evaluation for liver disease, alcohol exposure, hypothyroidism, medications, reticulocytosis and marrow disease. WHO's 2024 anemia guideline emphasizes that hemoglobin thresholds vary with age, sex, pregnancy and other population factors.",
+    "treatment":"Treatment is cause-directed. Iron deficiency requires iron replacement plus identification and management of the source of deficiency or blood loss. Vitamin B12 deficiency requires B12 replacement and evaluation of its cause; suspected megaloblastic anemia with neurologic features should not have B12 treatment unnecessarily delayed while awaiting testing. Folate deficiency is treated with folate replacement after considering B12 deficiency so that neurologic B12 disease is not masked. Underlying inflammation, bleeding, malabsorption or inherited disorders must be addressed when present.",
+    "high_yield":[
+      "Classify anemia by MCV: microcytic, normocytic or macrocytic, then use reticulocytes and smear to refine the mechanism.",
+      "Iron deficiency classically causes microcytic hypochromic anemia after iron stores become depleted.",
+      "Ferritin is a useful marker of iron stores but rises with inflammation; a normal or high ferritin does not always exclude iron deficiency in inflammatory states.",
+      "Megaloblastic anemia is caused by impaired DNA synthesis, classically vitamin B12 or folate deficiency.",
+      "Macro-ovalocytes and hypersegmented neutrophils support megaloblastic anemia.",
+      "Vitamin B12 deficiency can cause neurologic manifestations; folate deficiency does not produce the same characteristic neurologic syndrome.",
+      "Anemia should be investigated for its underlying cause rather than treated only according to the MCV.",
+      "WHO updated hemoglobin cutoffs for defining anemia in 2024 and recommends context-sensitive interpretation."
+    ]
+  },
+  "terminology":[
+    {"term":"Microcytic anemia","language":"English","Arabic":"فقر الدم صغير الكريات","pronunciation":"my-kroh-SIT-ik","etymology":"Micro-, small; cyt-, cell; -ic, pertaining to.","notes":"Anemia with reduced mean corpuscular volume."},
+    {"term":"Megaloblastic anemia","language":"English","Arabic":"فقر الدم ضخم الأرومات","pronunciation":"meg-uh-loh-BLAS-tik","etymology":"Megalo-, large; blast, precursor cell.","notes":"Anemia caused by impaired DNA synthesis with characteristic marrow and blood morphology."},
+    {"term":"Iron deficiency","language":"English","Arabic":"نقص الحديد","pronunciation":"EYE-urn dih-FISH-un-see","etymology":"Deficiency means inadequate amount; iron is the essential heme metal.","notes":"Depleted body iron stores with possible progression to iron-deficiency anemia."},
+    {"term":"Ferritin","language":"English","Arabic":"الفيريتين","pronunciation":"FAIR-ih-tin","etymology":"Named from ferrum, Latin for iron.","notes":"Major intracellular iron-storage protein; serum ferritin reflects iron stores but is influenced by inflammation."},
+    {"term":"Reticulocyte","language":"English","Arabic":"الخلايا الشبكية","pronunciation":"reh-TIK-yoo-loh-site","etymology":"Reticulum, a small network, referring to residual RNA.","notes":"Immature circulating red cell used to assess marrow erythropoietic response."},
+    {"term":"Megaloblast","language":"English","Arabic":"أرومة ضخمة","pronunciation":"MEG-uh-loh-blast","etymology":"Megalo-, large; blast, precursor.","notes":"Abnormally large erythroid precursor associated with defective DNA synthesis."}
+  ],
+  "relations":[
+    {"target_id":"hematology.histology.rbc_erythropoiesis","relation":"alters","note":"Nutritional deficiencies impair normal erythropoiesis and RBC maturation."},
+    {"target_id":"hematology.physiology.rbc_characteristics_functions","relation":"reduces","note":"Anemia reduces effective oxygen transport by lowering hemoglobin or red-cell mass."},
+    {"target_id":"hematology.pathology.stem_cell_disorders","relation":"differential_from","note":"Marrow failure can cause anemia but has a different mechanism from nutritional deficiency."},
+    {"target_id":"hematology.pathology.myeloproliferative_disorders_polycythemia","relation":"contrasts_with","note":"Anemia represents reduced effective red-cell mass, whereas polycythemia involves increased red-cell mass or concentration."}
+  ],
+  "yemen_context":{"relevance":"Nutritional anemia is clinically relevant in low-resource settings and should be evaluated alongside infection, inflammation, blood loss and inherited disorders.","evidence":"General global evidence; no Yemen-specific prevalence estimate is asserted."},
+  "evidence_level":"guideline",
+  "status":"reviewed",
+  "review_notes":"Original synthesis based on WHO anemia and ferritin guidance plus NCBI clinical references. Treatment is presented as principles rather than patient-specific prescribing.",
+  "last_verified":"2026-09-27",
+  "sources":[
+    {"title":"Guideline on haemoglobin cutoffs to define anaemia in individuals and populations","source_type":"guideline","authors":["World Health Organization"],"year":2024,"url":"https://www.who.int/publications/i/item/9789240088542","license":"WHO","location":"WHO","notes":"Updated hemoglobin-based anemia definition guidance."},
+    {"title":"WHO guideline on use of ferritin concentrations to assess iron status in individuals and populations","source_type":"guideline","authors":["World Health Organization"],"year":2020,"url":"https://www.ncbi.nlm.nih.gov/books/NBK569877/","license":"WHO / NCBI Bookshelf","location":"NCBI Bookshelf","notes":"Ferritin interpretation and inflammation considerations."},
+    {"title":"Macrocytic Anemia","source_type":"reference","authors":["Killeen RB","Adil A"],"year":2025,"url":"https://www.ncbi.nlm.nih.gov/books/NBK459295/","license":"NCBI Bookshelf / StatPearls","location":"NCBI Bookshelf","notes":"Macrocytic and megaloblastic anemia mechanisms, morphology and causes."},
+    {"title":"Anaemia","source_type":"reference","authors":["World Health Organization"],"year":2025,"url":"https://www.who.int/news-room/fact-sheets/detail/ANAEMIA","license":"WHO","location":"WHO","notes":"Global clinical and public-health overview of anemia causes and effects."},
+    {"title":"Anemia - Clinical Methods","source_type":"reference","authors":["NCBI Bookshelf"],"year":1990,"url":"https://www.ncbi.nlm.nih.gov/books/NBK254/","license":"NCBI Bookshelf","location":"NCBI Bookshelf","notes":"Structured laboratory approach to anemia classification and differential diagnosis."}
+  ]
+}

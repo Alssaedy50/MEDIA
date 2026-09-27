@@ -1,0 +1,39 @@
+{
+  "id":"hematology.community_medicine.anemia_public_health",
+  "domain":"Hematology","subject":"Community Medicine","topic":"Anemia as a public health problem",
+  "concept":"Anaemia is a major public-health problem with multiple causes; population control requires measurement, cause assessment and coordinated nutrition, infection-control, reproductive-health, WASH and health-system interventions.",
+  "content":{
+    "definition":"Anaemia is a condition in which hemoglobin concentration or red-cell mass is below the level appropriate for the individual; public-health assessment relies primarily on appropriately measured hemoglobin interpreted with age, sex, physiological status and relevant population factors.",
+    "explanation":"Anaemia is not synonymous with iron deficiency. Nutritional deficiencies, infections, inflammation, chronic disease, blood loss and inherited red-cell disorders can contribute. Therefore programmes should identify context-specific causes rather than assuming one cause.",
+    "mechanism":"Low hemoglobin reduces oxygen-carrying capacity. At population level, persistent anaemia can reflect interacting nutritional, infectious, environmental, reproductive and socioeconomic determinants.",
+    "clinical_relevance":"Children, pregnant women and women of reproductive age are particularly affected globally. In children, iron deficiency anaemia can impair cognitive and physical development.",
+    "diagnosis":"Population surveys need standardized hemoglobin measurement and quality control. WHO's 2024 guideline provides updated cutoffs and emphasizes appropriate measurement and interpretation. Programme planning should also characterize causes and severity rather than using prevalence alone.",
+    "treatment":"Public-health action is integrated: improve dietary diversity and infant feeding, use evidence-based micronutrient fortification or supplementation, control infections and parasites where relevant, improve WASH, address blood loss and chronic disease, and strengthen access to diagnosis and treatment.",
+    "high_yield":[
+      "Anaemia is a multifactorial public-health indicator, not a diagnosis of iron deficiency by itself.",
+      "WHO's 2024 hemoglobin guideline updated age- and population-sensitive approaches to defining anaemia.",
+      "Accurate hemoglobin measurement is essential for valid prevalence estimates.",
+      "Programme priorities should consider prevalence, severity and local causes.",
+      "Infection control, nutrition, WASH and treatment of underlying disease may all be necessary.",
+      "In Yemen, WHO has documented major humanitarian and health-system constraints; this supports a context-sensitive approach but does not establish a Yemen-specific anaemia prevalence in this record."
+    ]
+  },
+  "terminology":[
+    {"term":"Public health problem","language":"English","Arabic":"مشكلة صحية عامة","pronunciation":"PUB-lik helth PROB-lum"},
+    {"term":"Prevalence","language":"English","Arabic":"الانتشار","pronunciation":"PREV-uh-lens"},
+    {"term":"Micronutrient fortification","language":"English","Arabic":"تدعيم الأغذية بالمغذيات الدقيقة","pronunciation":"MY-kroh-NOO-tree-unt for-tih-fih-KAY-shun"}
+  ],
+  "relations":[
+    {"target_id":"hematology.pediatrics.nutritional_anemias","relation":"supports","note":"Clinical nutritional anemia is one component of the population burden."},
+    {"target_id":"hematology.pathology.anemia_classification_nutritional","relation":"connects_to","note":"Clinical classification informs individual diagnosis but does not replace population surveillance."}
+  ],
+  "yemen_context":{"relevance":"WHO's Yemen strategy and emergency reporting describe food insecurity, limited health-service functionality and infectious-disease risks; these contextual determinants matter when designing anemia-control programmes.","evidence":"No current Yemen-specific anaemia prevalence is asserted without a dedicated survey source."},
+  "evidence_level":"guideline","status":"reviewed","review_notes":"Original public-health synthesis based on WHO 2024 anaemia framework and haemoglobin guideline plus WHO Yemen context.",
+  "last_verified":"2026-09-27",
+  "sources":[
+    {"title":"Anaemia","source_type":"reference","authors":["World Health Organization"],"year":2026,"url":"https://www.who.int/health-topics/anaemia","license":"WHO","location":"WHO"},
+    {"title":"Guideline on haemoglobin cutoffs to define anaemia in individuals and populations","source_type":"guideline","authors":["World Health Organization"],"year":2024,"url":"https://www.who.int/publications/i/item/9789240088542","license":"WHO","location":"WHO"},
+    {"title":"Accelerating anaemia reduction: a comprehensive framework for action. Summary report","source_type":"framework","authors":["World Health Organization"],"year":2024,"url":"https://www.who.int/publications/b/72698","license":"WHO","location":"WHO"},
+    {"title":"Country cooperation strategy for WHO and Yemen 2024-2025","source_type":"country_strategy","authors":["World Health Organization"],"year":2024,"url":"https://www.who.int/publications/i/item/9789292742089","license":"WHO","location":"WHO"}
+  ]
+}

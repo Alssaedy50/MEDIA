@@ -1,0 +1,69 @@
+{
+  "id": "hematology.medicine.malaria_filariasis_leishmaniasis",
+  "domain": "Hematology",
+  "subject": "Medicine",
+  "topic": "Malaria, Filariasis and Leishmaniasis",
+  "concept": "Major parasitic diseases in the Hematology Medicine block can produce fever, anemia, splenomegaly or lymphatic disease.",
+  "content": {
+    "definition": "Major parasitic diseases in the Hematology Medicine block can produce fever, anemia, splenomegaly or lymphatic disease.",
+    "explanation": "Malaria can cause hemolysis, anemia and thrombocytopenia; visceral leishmaniasis can cause prolonged fever, splenomegaly and pancytopenia; lymphatic filariasis causes lymphatic obstruction and chronic lymphedema.",
+    "mechanism": "Malaria can cause hemolysis, anemia and thrombocytopenia; visceral leishmaniasis can cause prolonged fever, splenomegaly and pancytopenia; lymphatic filariasis causes lymphatic obstruction and chronic lymphedema.",
+    "clinical_relevance": "Malaria may cause hemolytic anemia and thrombocytopenia. Severe malaria requires prompt treatment. Visceral leishmaniasis can present with fever, splenomegaly and cytopenias. Filariasis causes chronic lymphatic disease.",
+    "diagnosis": "Diagnosis uses the appropriate clinical, laboratory, microbiologic, marrow or blood-bank studies for the suspected condition.",
+    "treatment": "Management is disease- and patient-specific and should follow current authoritative guidance.",
+    "high_yield": [
+      "Malaria may cause hemolytic anemia and thrombocytopenia.",
+      "Severe malaria requires prompt treatment.",
+      "Visceral leishmaniasis can present with fever, splenomegaly and cytopenias.",
+      "Filariasis causes chronic lymphatic disease."
+    ]
+  },
+  "terminology": [],
+  "relations": [],
+  "yemen_context": {
+    "relevance": "Official Hematology Medicine block topic.",
+    "evidence": "General evidence; no Yemen-specific regimen or availability asserted."
+  },
+  "evidence_level": "guideline",
+  "status": "reviewed",
+  "review_notes": "Original educational synthesis; not a patient-specific treatment protocol.",
+  "last_verified": "2026-09-27",
+  "sources": [
+    {
+      "title": "WHO guidelines for malaria",
+      "source_type": "guideline",
+      "authors": [
+        "World Health Organization"
+      ],
+      "year": 2026,
+      "url": "https://www.who.int/publications/i/item/guidelines-for-malaria/",
+      "license": "WHO",
+      "location": "WHO",
+      "notes": "Current malaria guidance."
+    },
+    {
+      "title": "WHO guidelines on leishmaniases",
+      "source_type": "guideline",
+      "authors": [
+        "World Health Organization"
+      ],
+      "year": 2026,
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK624452/",
+      "license": "WHO / NCBI Bookshelf",
+      "location": "NCBI Bookshelf",
+      "notes": "Current leishmaniasis recommendations."
+    },
+    {
+      "title": "Lymphatic filariasis",
+      "source_type": "guideline",
+      "authors": [
+        "World Health Organization"
+      ],
+      "year": 2026,
+      "url": "https://www.who.int/teams/control-of-neglected-tropical-diseases/lymphatic-filariasis",
+      "license": "WHO",
+      "location": "WHO",
+      "notes": "Current filariasis guidance."
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "id": "hematology.pharmacology.leishmaniasis_filariasis_treatment",
+  "domain": "Hematology",
+  "subject": "Pharmacology",
+  "topic": "Treatment of Leishmaniasis and Filariasis",
+  "concept": "Antiparasitic therapy depends on parasite species, clinical form, geographic setting and host factors.",
+  "content": {
+    "definition": "Pharmacologic treatment targets the relevant parasite stage and clinical form.",
+    "explanation": "Leishmaniasis treatment may include liposomal amphotericin B, pentavalent antimonials, miltefosine or other region-specific agents. Lymphatic filariasis control uses combinations selected according to transmission setting.",
+    "mechanism": "Antiparasitic agents act through parasite membrane, metabolic, mitochondrial or other essential pathways depending on the drug.",
+    "clinical_relevance": "Current recommendations differ by species and geography; WHO guidance should be checked for the exact setting.",
+    "treatment": "Treatment should follow current WHO or national guidance and account for species, disease form, contraindications and monitoring needs.",
+    "high_yield": [
+      "Leishmaniasis therapy is species- and region-dependent.",
+      "Liposomal amphotericin B is an important treatment option for visceral leishmaniasis in appropriate settings.",
+      "Filariasis treatment is linked to transmission-control strategy as well as individual infection.",
+      "Drug toxicity and interactions vary among antiparasitic agents."
+    ]
+  },
+  "terminology": [
+    {
+      "term": "Visceral leishmaniasis treatment",
+      "language": "English",
+      "notes": "Search synonym/clinical terminology used for evidence retrieval."
+    }
+  ],
+  "relations": [],
+  "yemen_context": {
+    "relevance": "Leishmaniasis and filarial disease are important infectious-disease pharmacology topics in the region.",
+    "evidence": "General evidence; no Yemen-specific regimen asserted."
+  },
+  "evidence_level": "guideline",
+  "status": "verified",
+  "review_notes": "Original synthesis aligned with current WHO leishmaniasis guidance and standard filariasis guidance.",
+  "last_verified": "2026-09-27",
+  "sources": [
+    {
+      "title": "WHO guidelines on leishmaniases",
+      "source_type": "guideline",
+      "authors": [
+        "World Health Organization"
+      ],
+      "year": 2026,
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK624463/",
+      "license": "WHO / NCBI Bookshelf",
+      "location": "NCBI Bookshelf",
+      "notes": "Updated pharmacological recommendations for visceral leishmaniasis and PKDL."
+    },
+    {
+      "title": "WHO lymphatic filariasis guidance",
+      "source_type": "guideline",
+      "authors": [
+        "World Health Organization"
+      ],
+      "year": 2026,
+      "url": "https://www.who.int/teams/control-of-neglected-tropical-diseases/lymphatic-filariasis",
+      "license": "WHO",
+      "location": "WHO",
+      "notes": "Global lymphatic filariasis treatment and elimination guidance."
+    }
+  ]
+}

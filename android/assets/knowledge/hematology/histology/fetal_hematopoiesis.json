@@ -1,0 +1,142 @@
+{
+  "id": "hematology.histology.fetal_hematopoiesis",
+  "domain": "hematology",
+  "subject": "Histology",
+  "topic": "Fetal Hematopoietic Organs and Stages of Hematopoiesis",
+  "subtopic": "Embryonic and fetal hematopoietic sites",
+  "concept": "Developmental hematopoiesis",
+  "content": {
+    "definition": "Developmental hematopoiesis is the sequential and overlapping production of blood cells during embryonic and fetal development as hematopoietic activity moves through specialized anatomical sites before becoming established predominantly in bone marrow.",
+    "explanation": "In humans, the earliest recognizable blood formation occurs in yolk-sac blood islands. Hematopoietic development then involves hemogenic endothelium and emerging hematopoietic stem and progenitor cells associated with the AGM region and other embryonic sites. These cells seed the fetal liver, which becomes the major hematopoietic organ during much of fetal development. Hematopoietic activity subsequently becomes established in developing bone marrow, which becomes the dominant site by later fetal life and remains the principal site after birth. The transitions are overlapping rather than abrupt, and exact timing varies by developmental stage and by the cell population being considered.",
+    "mechanism": "Primitive hematopoiesis begins in yolk-sac blood islands and produces early erythroid cells and other transient populations. A later definitive wave involves hematopoietic progenitors generated through endothelial-to-hematopoietic transition from hemogenic endothelium. The AGM region is an important site for emergence of bona fide hematopoietic stem cells (HSCs). HSCs and progenitors enter the circulation and home to the fetal liver, where the hematopoietic niche supports expansion and differentiation. Later, HSCs colonize developing bone marrow, establishing the long-term hematopoietic environment used after birth.",
+    "structure": "Major developmental sites include the yolk sac, AGM region, fetal liver, fetal spleen and developing bone marrow. The thymus receives hematopoietic progenitors and supports lymphoid differentiation but should be distinguished from sites of de novo HSC generation.",
+    "function": "Developmental hematopoiesis supplies the growing fetus with oxygen-carrying erythrocytes, immune cells and platelets while progressively establishing the stem-cell reservoir that will maintain blood-cell production after birth.",
+    "causes": [],
+    "effects": [],
+    "clinical_relevance": "Understanding developmental hematopoiesis is important for interpreting fetal and neonatal blood findings, congenital hematologic disorders, pediatric hematology and the biology of childhood hematologic malignancies. Persistent or reactivated blood production outside bone marrow in disease is termed extramedullary hematopoiesis and should not be confused with normal developmental hematopoiesis.",
+    "diagnosis": "Developmental hematopoiesis is studied using fetal tissue morphology, immunophenotyping, molecular and single-cell methods, and examination of hematopoietic progenitor and stem-cell populations. In clinical practice, developmental stage is interpreted together with gestational age and blood-cell findings.",
+    "treatment": "Developmental hematopoiesis itself is a normal biological process and does not require treatment. Disorders involving abnormal fetal or neonatal hematopoiesis are managed according to their underlying diagnosis.",
+    "high_yield": [
+      "Yolk sac blood islands are the earliest major site of embryonic blood formation.",
+      "Primitive hematopoiesis and later definitive hematopoiesis are distinct but overlapping developmental waves.",
+      "Hemogenic endothelium can undergo endothelial-to-hematopoietic transition to generate hematopoietic progenitors.",
+      "The AGM region is a key site for emergence of definitive HSCs.",
+      "The fetal liver becomes the major hematopoietic organ during fetal development.",
+      "Developing bone marrow is progressively colonized and becomes the dominant hematopoietic site later in fetal life and after birth.",
+      "Developmental transitions overlap; exact timing differs between species, tissues and hematopoietic lineages.",
+      "The thymus supports lymphoid differentiation but is not the principal site of de novo HSC generation."
+    ]
+  },
+  "terminology": [
+    {
+      "term": "Hematopoiesis",
+      "language": "English",
+      "arabic": "تكوّن الدم / تكوّن الخلايا الدموية",
+      "pronunciation": "hee-MAT-oh-poy-EE-sis",
+      "etymology": "Greek haima, blood, plus poiesis, making or production.",
+      "notes": "Production of blood cells."
+    },
+    {
+      "term": "Hematopoietic stem cell (HSC)",
+      "language": "English",
+      "arabic": "الخلية الجذعية المكوِّنة للدم",
+      "pronunciation": "hee-MAT-oh-poy-ET-ik stem cell",
+      "etymology": "Hematopoietic means related to blood-cell production.",
+      "notes": "A stem cell capable of self-renewal and multilineage blood-cell production."
+    },
+    {
+      "term": "Hemogenic endothelium",
+      "language": "English",
+      "arabic": "البطانة الوعائية المكوِّنة للدم",
+      "pronunciation": "hee-moh-JEN-ik en-doh-THEE-lee-um",
+      "etymology": "From Greek haima, blood, and genesis, origin.",
+      "notes": "Specialized endothelial cells capable of generating hematopoietic progenitors during development."
+    },
+    {
+      "term": "Endothelial-to-hematopoietic transition (EHT)",
+      "language": "English",
+      "arabic": "التحول من الخلايا البطانية إلى الخلايا المكوِّنة للدم",
+      "pronunciation": "en-doh-THEE-lee-al to hee-MAT-oh-poy-ET-ik transition",
+      "etymology": "Transition describes conversion of an endothelial cell state toward a hematopoietic state.",
+      "notes": "Developmental process involved in emergence of hematopoietic progenitors from hemogenic endothelium."
+    },
+    {
+      "term": "Aorta-gonad-mesonephros (AGM)",
+      "language": "English",
+      "arabic": "منطقة الأبهر-الغدد التناسلية-الميسونفروس",
+      "pronunciation": "AY-or-tuh GOH-nad meh-ZOH-nef-ros",
+      "etymology": "Named for the adjacent embryonic structures.",
+      "notes": "Embryonic region associated with emergence of definitive HSCs."
+    },
+    {
+      "term": "Yolk sac",
+      "language": "English",
+      "arabic": "كيس المُح",
+      "pronunciation": "yohk sak",
+      "etymology": "Named for its yolk-associated extraembryonic structure.",
+      "notes": "Early extraembryonic site of blood formation."
+    }
+  ],
+  "relations": [
+    {
+      "target_id": "hematology.anatomy.bone_marrow",
+      "relation": "developmental_precursor_to",
+      "note": "Developmental hematopoiesis ultimately becomes established predominantly in bone marrow."
+    },
+    {
+      "target_id": "hematology.histology.blood_tissue",
+      "relation": "produces_cells_of",
+      "note": "Developmental hematopoiesis produces the erythrocytes, leukocytes and platelets introduced in the Blood Tissue record."
+    }
+  ],
+  "yemen_context": {
+    "relevance": "Foundational developmental hematology relevant to medical education and interpretation of pediatric and neonatal hematologic findings.",
+    "evidence": "General medical relevance; no Yemen-specific epidemiologic claim is made in this record."
+  },
+  "sources": [
+    {
+      "title": "Increasing Complexity of Molecular Landscapes in Human Hematopoietic Stem and Progenitor Cells during Development and Aging",
+      "source_type": "review",
+      "year": 2022,
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8999121/",
+      "location": "PubMed Central",
+      "notes": "Human developmental timeline including yolk sac, AGM, fetal liver and bone marrow."
+    },
+    {
+      "title": "Decoding human fetal liver haematopoiesis",
+      "source_type": "primary",
+      "year": 2019,
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6861135/",
+      "location": "PubMed Central",
+      "notes": "Human fetal liver hematopoietic development and transition toward fetal bone marrow."
+    },
+    {
+      "title": "Fetal liver hematopoiesis: from development to delivery",
+      "source_type": "review",
+      "year": 2021,
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7890853/",
+      "location": "PubMed Central",
+      "notes": "HSC emergence from hemogenic endothelium and migration to fetal liver."
+    },
+    {
+      "title": "Yolk sac hematopoiesis: does it contribute to the adult hematopoietic system?",
+      "source_type": "review",
+      "year": 2020,
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11104818/",
+      "location": "PubMed Central",
+      "notes": "Modern review distinguishing transient yolk-sac progenitors from definitive HSC development."
+    },
+    {
+      "title": "Bone Marrow, Blood Cells, and the Lymphoid/Lymphatic System",
+      "source_type": "reference",
+      "year": 2017,
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7158316/",
+      "location": "PubMed Central",
+      "notes": "Overview of developmental hematopoiesis and transition to postnatal bone marrow."
+    }
+  ],
+  "evidence_level": "review",
+  "status": "reviewed",
+  "review_notes": "Original synthesized educational record based on the cited literature. Human developmental timing is prioritized where available; animal-model timings are not presented as human gestational timings.",
+  "last_verified": "2026-09-27"
+}

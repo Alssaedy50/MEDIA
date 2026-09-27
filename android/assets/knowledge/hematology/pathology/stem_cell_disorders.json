@@ -1,0 +1,107 @@
+{
+  "id": "hematology.pathology.stem_cell_disorders",
+  "domain": "Hematology",
+  "subject": "Pathology",
+  "topic": "Stem Cell Disorders",
+  "subtopic": "Hematopoietic stem and progenitor cell disorders and bone marrow failure",
+  "concept": "Hematopoietic stem cell disorders arise when the stem/progenitor compartment or its supporting marrow environment is quantitatively or qualitatively abnormal, producing impaired, ineffective, dysregulated or clonal hematopoiesis.",
+  "content": {
+    "definition": "Hematopoietic stem cells (HSCs) maintain lifelong blood-cell production through self-renewal and differentiation. Disorders affecting this compartment can cause bone marrow failure, cytopenias, abnormal maturation, clonal hematopoiesis or progression to myeloid neoplasia.",
+    "explanation": "Stem cell pathology can result from inherited defects in DNA repair, telomere maintenance or other cellular processes, acquired immune-mediated injury, toxic or infectious exposures, or acquired somatic mutations that give a clone a selective advantage. The clinical phenotype depends on whether hematopoiesis is globally reduced, ineffective, dysplastic or excessively proliferative. Because one stem-cell compartment gives rise to multiple blood lineages, a stem-cell-level disorder can affect erythroid, myeloid and megakaryocytic production simultaneously.",
+    "mechanism": "Normal HSCs balance quiescence, self-renewal and differentiation within a specialized bone-marrow microenvironment. Loss or suppression of functional HSCs reduces effective blood-cell production and may produce one or multiple cytopenias. Inherited marrow-failure syndromes can impair genome stability or telomere maintenance. Acquired aplastic anemia commonly involves immune-mediated suppression or destruction of HSCs. In clonal stem/progenitor disorders, acquired genetic alterations allow abnormal cells to expand and can produce ineffective hematopoiesis, dysplasia or myeloproliferation. The biological spectrum can overlap, so morphology, blood counts, marrow examination and genetic/molecular findings are integrated for diagnosis.",
+    "structure": "HSCs reside predominantly in bone marrow niches and are characterized by self-renewal capacity and multilineage differentiation potential. They generate hematopoietic progenitors that ultimately produce erythroid, myeloid, megakaryocytic and lymphoid lineages.",
+    "function": "The normal stem-cell compartment maintains hematopoietic homeostasis, replenishes circulating blood cells and preserves multilineage blood-cell production throughout life.",
+    "causes": [
+      "Inherited defects affecting DNA repair, genomic stability or telomere maintenance",
+      "Acquired immune-mediated stem-cell suppression",
+      "Selected drugs, toxins, radiation or infections",
+      "Acquired somatic mutations producing clonal hematopoiesis or myeloid neoplasia"
+    ],
+    "effects": [
+      "Anemia and reduced oxygen-carrying capacity",
+      "Neutropenia with increased susceptibility to infection",
+      "Thrombocytopenia with bleeding tendency",
+      "Pancytopenia when multiple lineages are affected",
+      "Ineffective or dysplastic hematopoiesis",
+      "Clonal expansion with potential progression to myeloid neoplasia in selected disorders"
+    ],
+    "clinical_relevance": "Stem-cell disorders are important causes of unexplained cytopenias, pancytopenia and abnormal marrow findings. Distinguishing marrow failure from marrow infiltration, nutritional deficiency and clonal myeloid disease is essential because treatment and prognosis differ substantially.",
+    "diagnosis": "Evaluation commonly integrates complete blood count with differential, peripheral blood smear, reticulocyte count when appropriate, bone marrow aspirate and biopsy, cytogenetic/molecular studies when indicated, and targeted testing for inherited marrow-failure syndromes in appropriate patients.",
+    "treatment": "Treatment is disorder-specific and may include removal of an offending exposure, supportive transfusion and infection management, immunosuppressive therapy for selected immune-mediated marrow failure, hematopoietic stem-cell transplantation for appropriate severe or inherited disorders, or disease-specific therapy for clonal myeloid neoplasms.",
+    "high_yield": [
+      "HSCs self-renew and generate all major hematopoietic lineages.",
+      "A stem-cell-level defect can affect multiple blood-cell lineages.",
+      "Bone marrow failure may present with anemia, neutropenia, thrombocytopenia or pancytopenia.",
+      "Inherited marrow-failure syndromes may involve DNA-repair or telomere-maintenance defects.",
+      "Acquired aplastic anemia commonly involves immune-mediated suppression of hematopoietic stem cells.",
+      "Clonal stem/progenitor disorders may produce ineffective hematopoiesis, dysplasia or myeloproliferation.",
+      "Diagnosis requires integration of peripheral blood findings with marrow morphology and, when indicated, cytogenetic or molecular studies.",
+      "Stem-cell disorders are not synonymous with aplastic anemia; the category includes diverse inherited, acquired and clonal disorders."
+    ]
+  },
+  "terminology": [
+    {"term": "Hematopoietic stem cell", "language": "English", "Arabic": "الخلايا الجذعية المكوِّنة للدم", "pronunciation": "hee-MAT-oh-poy-ET-ik stem cell", "etymology": "Hematopoietic, blood-forming.", "notes": "Stem cell capable of self-renewal and multilineage blood-cell production."},
+    {"term": "Self-renewal", "language": "English", "Arabic": "التجدد الذاتي", "pronunciation": "self ree-NEW-ul", "etymology": "Self plus renewal.", "notes": "Ability of a stem cell to generate daughter cells that retain stem-cell properties."},
+    {"term": "Bone marrow failure", "language": "English", "Arabic": "فشل نخاع العظم", "pronunciation": "bone MAR-oh FAYL-yer", "etymology": "Failure of marrow blood-cell production.", "notes": "Clinical state in which marrow cannot produce adequate blood cells."},
+    {"term": "Pancytopenia", "language": "English", "Arabic": "قلة جميع خلايا الدم", "pronunciation": "pan-sy-toh-PEE-nee-uh", "etymology": "Pan-, all, cyto-, cell, -penia, deficiency.", "notes": "Reduction of erythrocytes, leukocytes and platelets."},
+    {"term": "Clonal hematopoiesis", "language": "English", "Arabic": "تكوّن الدم الاستنسالي", "pronunciation": "KLOH-nul hee-MAT-oh-poy-EE-sis", "etymology": "Clone plus hematopoiesis.", "notes": "Expansion of blood-cell production derived from a genetically related clone."},
+    {"term": "Hematopoiesis", "language": "English", "Arabic": "تكوّن الدم", "pronunciation": "hee-MAT-oh-poy-EE-sis", "etymology": "Greek haima, blood, plus poiesis, making.", "notes": "Production of blood cells."}
+  ],
+  "relations": [
+    {"target_id": "hematology.anatomy.bone_marrow", "relation": "resides_in", "note": "Adult hematopoietic stem cells are primarily maintained in bone marrow niches."},
+    {"target_id": "hematology.histology.fetal_hematopoiesis", "relation": "develops_from", "note": "The stem-cell compartment emerges through developmental hematopoiesis and later supports lifelong marrow hematopoiesis."},
+    {"target_id": "hematology.physiology.rbc_characteristics_functions", "relation": "produces_lineage_for", "note": "HSC-derived erythroid progenitors ultimately generate circulating RBCs."},
+    {"target_id": "hematology.physiology.wbc_characteristics_functions", "relation": "produces_lineage_for", "note": "HSC-derived progenitors generate myeloid and lymphoid leukocyte lineages."},
+    {"target_id": "hematology.histology.platelets_thrombopoiesis", "relation": "produces_lineage_for", "note": "HSCs generate megakaryocytic progenitors that ultimately produce platelets."}
+  ],
+  "yemen_context": {
+    "relevance": "Recognition of marrow-failure and clonal stem-cell disorders is fundamental to hematology diagnosis and interpretation of pancytopenia.",
+    "evidence": "General medical relevance; no Yemen-specific epidemiologic claim is made."
+  },
+  "evidence_level": "review",
+  "status": "reviewed",
+  "review_notes": "Original synthesized educational content with source metadata; deliberately avoids duplicating the dedicated aplastic anemia record that will be developed separately.",
+  "last_verified": "2026-09-27",
+  "sources": [
+    {
+      "title": "Bone Marrow Failure",
+      "source_type": "reference",
+      "authors": ["StatPearls"],
+      "year": 2023,
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK459249/",
+      "license": "NCBI Bookshelf / StatPearls",
+      "location": "NCBI Bookshelf",
+      "notes": "Supports marrow-failure mechanisms, cytopenias and inherited marrow-failure pathology."
+    },
+    {
+      "title": "Aplastic Anemia",
+      "source_type": "reference",
+      "authors": ["StatPearls"],
+      "year": 2025,
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK534212/",
+      "license": "NCBI Bookshelf / StatPearls",
+      "location": "NCBI Bookshelf",
+      "notes": "Supports HSC failure and immune-mediated mechanisms; used here for stem-cell-level pathology context."
+    },
+    {
+      "title": "Aplastic Anemia as a Roadmap for Bone Marrow Failure: An Overview and a Clinical Workflow",
+      "source_type": "review",
+      "authors": ["PMC review"],
+      "year": 2022,
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9569739/",
+      "license": "Open-access review",
+      "location": "PMC",
+      "notes": "Supports the interaction of HSC, immune and marrow-stromal compartments in marrow failure."
+    },
+    {
+      "title": "Pathology of the myeloproliferative diseases",
+      "source_type": "review",
+      "authors": ["Tracy I. George", "Daniel A. Arber"],
+      "year": 2003,
+      "url": "https://pubmed.ncbi.nlm.nih.gov/14560777/",
+      "license": "PubMed indexed review",
+      "location": "PubMed",
+      "notes": "Supports the concept of clonal stem-cell disease and the need for clinical, hematologic and molecular correlation."
+    }
+  ]
+}

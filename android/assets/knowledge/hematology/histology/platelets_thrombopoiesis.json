@@ -1,0 +1,90 @@
+{
+  "id": "hematology.histology.platelets_thrombopoiesis",
+  "domain": "Hematology",
+  "subject": "Histology",
+  "topic": "Platelets and Thrombopoiesis",
+  "subtopic": "Platelet structure, function and formation",
+  "concept": "Platelets (thrombocytes) are anucleate cytoplasmic fragments released from mature megakaryocytes in bone marrow and are central to primary hemostasis.",
+  "content": {
+    "definition": "Platelets are small, anucleate cytoplasmic fragments derived from mature megakaryocytes. They circulate in blood and rapidly respond to vascular injury.",
+    "explanation": "In resting blood, platelets are discoid. After vascular injury they adhere to exposed subendothelial structures, become activated, release granule contents, change shape and aggregate to form the primary hemostatic plug.",
+    "mechanism": "Thrombopoiesis occurs mainly in bone marrow. Hematopoietic stem cells generate megakaryocytic progenitors, which mature into megakaryocytes. Thrombopoietin is the major regulator of megakaryocyte and platelet production. Megakaryocytes undergo endomitosis and become highly polyploid, extend proplatelet processes toward marrow sinusoids, and release platelets.",
+    "structure": "Resting platelets are discoid and approximately 2–4 micrometers in diameter. They lack a nucleus but contain mitochondria, glycogen, a marginal microtubule band, a dense tubular system, an open canalicular system, and secretory granules. Alpha granules contain proteins involved in hemostasis, adhesion, inflammation and repair; dense granules contain mediators including ADP, ATP, calcium and serotonin.",
+    "function": "Platelets mediate primary hemostasis through adhesion, activation, secretion and aggregation. Activated platelets also provide a procoagulant phospholipid surface that supports coagulation reactions and contributes to fibrin formation and stabilization.",
+    "clinical_relevance": "Reduced platelet number causes thrombocytopenia and may impair primary hemostasis. Increased platelet number is thrombocytosis. Platelet function disorders can cause bleeding despite a normal platelet count.",
+    "diagnosis": "Evaluation commonly begins with a complete blood count and peripheral blood smear. Depending on the clinical context, platelet function studies and coagulation testing may be added.",
+    "treatment": "Management of platelet disorders is cause-directed and depends on whether the problem is reduced platelet production, increased destruction or consumption, increased platelet number, or abnormal platelet function.",
+    "high_yield": [
+      "Platelets are anucleate cytoplasmic fragments, not complete nucleated cells.",
+      "They are released from mature megakaryocytes, primarily in bone marrow.",
+      "Thrombopoietin is the major regulator of thrombopoiesis.",
+      "Megakaryocytes undergo endomitosis and polyploidization before platelet release.",
+      "Platelets form a primary hemostatic plug through adhesion, activation, secretion and aggregation.",
+      "Alpha granules contain proteins involved in hemostasis, adhesion, inflammation and tissue repair.",
+      "Dense granules contain ADP, ATP, calcium and serotonin.",
+      "Typical platelet lifespan is about 7–10 days."
+    ]
+  },
+  "terminology": [
+    {"term": "Platelet", "language": "English", "Arabic": "الصفيحة الدموية", "pronunciation": "PLAYT-let", "etymology": "From platelet, a small plate-like cell fragment.", "notes": "Anucleate blood element involved in primary hemostasis."},
+    {"term": "Thrombocyte", "language": "English", "Arabic": "الخُثرة/الصفيحة الدموية", "pronunciation": "THROM-bo-site", "etymology": "Greek thrombos, clot, plus kytos, cell.", "notes": "Another term for platelet."},
+    {"term": "Megakaryocyte", "language": "English", "Arabic": "الخلايا العملاقة المكوّنة للصفائح", "pronunciation": "MEG-uh-KAR-ee-oh-site", "etymology": "Greek megas, large, karyon, nucleus, kytos, cell.", "notes": "Large polyploid marrow cell that produces platelets."},
+    {"term": "Thrombopoiesis", "language": "English", "Arabic": "تكوّن الصفائح الدموية", "pronunciation": "THROM-bo-poy-EE-sis", "etymology": "Thrombo-, clot/platelet, plus -poiesis, formation.", "notes": "Process of platelet production."},
+    {"term": "Thrombopoietin", "language": "English", "Arabic": "الثرومبوبويتين", "pronunciation": "THROM-bo-POY-eh-tin", "etymology": "Thrombo-, platelet, plus poietin, a forming/regulating factor.", "notes": "Major physiological regulator of megakaryopoiesis and platelet production."},
+    {"term": "Megakaryopoiesis", "language": "English", "Arabic": "تكوّن الخلايا العملاقة المكوّنة للصفائح", "pronunciation": "MEG-uh-KAR-ee-oh-poy-EE-sis", "etymology": "Megakaryocyte plus -poiesis, formation.", "notes": "Development and maturation of megakaryocytes."}
+  ],
+  "relations": [
+    {"target_id": "hematology.histology.blood_tissue", "relation": "is_form_element_of", "note": "Platelets are one of the formed elements of blood."},
+    {"target_id": "hematology.anatomy.bone_marrow", "relation": "produced_by", "note": "Platelets are generated from mature megakaryocytes in bone marrow."}
+  ],
+  "yemen_context": {
+    "relevance": "The platelet concepts are foundational for understanding anemia and bleeding investigations and hematology practice.",
+    "evidence": "General medical relevance; no Yemen-specific epidemiologic claim is made."
+  },
+  "evidence_level": "reference",
+  "status": "reviewed",
+  "review_notes": "Original synthesized educational content with source metadata; no copyrighted textbook text copied.",
+  "last_verified": "2026-09-27",
+  "sources": [
+    {
+      "title": "Histology, Platelets",
+      "source_type": "reference",
+      "authors": ["StatPearls"],
+      "year": 2022,
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK557800/",
+      "license": "NCBI Bookshelf / StatPearls",
+      "location": "NCBI Bookshelf",
+      "notes": "Supports platelet structure, megakaryocyte origin, lifespan, activation and platelet disorders."
+    },
+    {
+      "title": "Thrombopoiesis",
+      "source_type": "reference",
+      "authors": ["NCBI MeSH"],
+      "year": 2026,
+      "url": "https://www.ncbi.nlm.nih.gov/mesh/?term=Thrombopoiesis",
+      "license": "NCBI",
+      "location": "NCBI MeSH",
+      "notes": "Supports thrombopoiesis, hematopoietic origin and thrombopoietin regulation."
+    },
+    {
+      "title": "Megakaryopoiesis and platelet production: insight into hematopoietic stem cell proliferation and differentiation",
+      "source_type": "review",
+      "authors": ["PMC review"],
+      "year": 2016,
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4905017/",
+      "license": "Open-access review",
+      "location": "PMC",
+      "notes": "Supports megakaryocyte maturation, endomitosis and platelet production."
+    },
+    {
+      "title": "Understanding platelet generation from megakaryocytes",
+      "source_type": "review",
+      "authors": ["PMC review"],
+      "year": 2016,
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5023470/",
+      "license": "Open-access review",
+      "location": "PMC",
+      "notes": "Supports proplatelet formation and platelet release mechanisms."
+    }
+  ]
+}

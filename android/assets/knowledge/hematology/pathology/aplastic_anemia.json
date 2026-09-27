@@ -1,0 +1,105 @@
+{
+  "id": "hematology.pathology.aplastic_anemia",
+  "domain": "Hematology",
+  "subject": "Pathology",
+  "topic": "Aplastic Anemia",
+  "subtopic": "Acquired and inherited bone marrow failure with hypocellular marrow",
+  "concept": "Aplastic anemia is a bone marrow failure syndrome characterized by peripheral cytopenias with a markedly hypocellular marrow and without substantial marrow fibrosis or replacement by an abnormal infiltrative process.",
+  "content": {
+    "definition": "Aplastic anemia is a syndrome of bone marrow failure in which hematopoietic stem and progenitor cells are markedly reduced or functionally suppressed, resulting in decreased production of one or more blood-cell lineages and typically a hypocellular bone marrow.",
+    "explanation": "Most acquired cases are immune-mediated, with cytotoxic T-cell activity contributing to destruction or suppression of hematopoietic stem and progenitor cells. Causes can also include drugs, chemicals, radiation, selected viral infections and inherited marrow-failure syndromes. The result is reduced production of erythrocytes, leukocytes and platelets, producing anemia, neutropenia and thrombocytopenia; when all three lineages are reduced, pancytopenia occurs.",
+    "mechanism": "In acquired immune-mediated aplastic anemia, activated immune cells and inflammatory signaling impair the hematopoietic stem-cell compartment. Loss of functional stem/progenitor cells causes severe reduction in marrow cellularity and decreased output of mature blood cells. The marrow is usually hypocellular and lacks the extensive malignant infiltration or fibrosis that can explain other causes of pancytopenia. The severity is determined by the degree of cytopenia and marrow hypocellularity, with severe disease carrying substantial risks from infection and bleeding.",
+    "structure": "Bone marrow in aplastic anemia is markedly hypocellular and contains increased fat spaces relative to normal hematopoietic tissue. Peripheral blood commonly shows reductions in multiple cell lines, while abnormal blasts are not a defining feature.",
+    "function": "Normal marrow hematopoiesis is impaired, so production of RBCs, neutrophils and platelets falls. This leads to reduced oxygen delivery, impaired host defense and impaired primary hemostasis.",
+    "causes": [
+      "Acquired immune-mediated bone marrow failure",
+      "Selected medications and chemical exposures",
+      "Ionizing radiation",
+      "Some viral infections",
+      "Inherited marrow-failure syndromes such as Fanconi anemia and telomere biology disorders"
+    ],
+    "effects": [
+      "Anemia causing fatigue, weakness or dyspnea",
+      "Neutropenia causing increased risk of bacterial and fungal infection",
+      "Thrombocytopenia causing petechiae, mucosal bleeding or other hemorrhagic manifestations",
+      "Pancytopenia when all three major lineages are significantly reduced"
+    ],
+    "clinical_relevance": "Aplastic anemia should be considered in unexplained pancytopenia or persistent cytopenias when marrow production is inadequate. Prompt recognition matters because severe neutropenia and thrombocytopenia can produce life-threatening infection or bleeding.",
+    "diagnosis": "Evaluation includes complete blood count with differential, reticulocyte count and peripheral smear, followed by bone marrow aspiration and biopsy demonstrating hypocellularity. The workup should exclude alternative causes of pancytopenia such as nutritional deficiencies, acute leukemia, myelodysplastic neoplasms, marrow infiltration and other inherited or acquired marrow-failure disorders. Cytogenetic, molecular, infectious, immune and inherited-disease testing is selected according to the clinical context.",
+    "treatment": "Management depends on disease severity, age, comorbidities, donor availability and whether the disease is inherited or acquired. Options include supportive transfusion and infection management, hematopoietic stem-cell transplantation for appropriate patients, and immunosuppressive therapy for selected acquired cases. Offending drugs or exposures should be discontinued when relevant.",
+    "high_yield": [
+      "Aplastic anemia is a bone marrow failure syndrome with peripheral cytopenias and hypocellular marrow.",
+      "Acquired disease is commonly immune-mediated and targets the hematopoietic stem/progenitor compartment.",
+      "Pancytopenia reflects reduced production of RBCs, WBCs and platelets.",
+      "Reticulocyte production is reduced because erythropoiesis is impaired.",
+      "Bone marrow biopsy demonstrates marked hypocellularity with replacement by fat rather than a packed malignant infiltrate.",
+      "Severe neutropenia increases infection risk and severe thrombocytopenia increases bleeding risk.",
+      "Diagnosis requires exclusion of other causes of pancytopenia and correlation of peripheral blood with marrow findings.",
+      "Treatment may include hematopoietic stem-cell transplantation or immunosuppressive therapy in appropriately selected patients."
+    ]
+  },
+  "terminology": [
+    {"term": "Aplastic anemia", "language": "English", "Arabic": "فقر الدم اللاتنسجي", "pronunciation": "uh-PLAS-tik uh-NEE-mee-uh", "etymology": "Aplastic, from a-, without, plus plassein, to form; anemia, reduced red-cell mass or hemoglobin.", "notes": "Bone marrow failure syndrome characterized by cytopenias and hypocellular marrow."},
+    {"term": "Hypocellular", "language": "English", "Arabic": "ناقص الخلوية", "pronunciation": "HY-poh-SELL-yoo-lar", "etymology": "Hypo-, under or reduced, plus cellular.", "notes": "Containing fewer cells than expected for the tissue and age."},
+    {"term": "Pancytopenia", "language": "English", "Arabic": "قلة جميع خلايا الدم", "pronunciation": "pan-sy-toh-PEE-nee-uh", "etymology": "Pan-, all, cyto-, cell, -penia, deficiency.", "notes": "Reduction of RBCs, WBCs and platelets."},
+    {"term": "Reticulocyte", "language": "English", "Arabic": "الخلايا الشبكية", "pronunciation": "reh-TIK-yoo-loh-site", "etymology": "Reticulum, a small network, plus -cyte, cell.", "notes": "Immature RBC retaining residual RNA; its count helps assess marrow erythropoietic response."},
+    {"term": "Immunosuppressive therapy", "language": "English", "Arabic": "العلاج المثبط للمناعة", "pronunciation": "im-yoo-noh-suh-PRESS-iv", "etymology": "Immune plus suppressive.", "notes": "Therapy that reduces pathological immune activity; used in selected acquired aplastic anemia."}
+  ],
+  "relations": [
+    {"target_id": "hematology.pathology.stem_cell_disorders", "relation": "specific_disorder_of", "note": "Aplastic anemia is a defined marrow-failure disorder involving marked impairment of the hematopoietic stem/progenitor compartment."},
+    {"target_id": "hematology.anatomy.bone_marrow", "relation": "pathology_of", "note": "The defining tissue abnormality is marked reduction in marrow hematopoietic cellularity."},
+    {"target_id": "hematology.physiology.rbc_characteristics_functions", "relation": "impairs_production_of", "note": "Reduced erythropoiesis causes anemia and low reticulocyte production."},
+    {"target_id": "hematology.physiology.wbc_characteristics_functions", "relation": "impairs_production_of", "note": "Reduced leukocyte production, especially neutrophils, contributes to infection risk."},
+    {"target_id": "hematology.histology.platelets_thrombopoiesis", "relation": "impairs_production_of", "note": "Reduced megakaryopoiesis contributes to thrombocytopenia and bleeding risk."}
+  ],
+  "yemen_context": {
+    "relevance": "Aplastic anemia is an important cause of pancytopenia that requires differentiation from nutritional deficiency, infection, malignancy and other marrow-failure disorders.",
+    "evidence": "General medical relevance; no Yemen-specific epidemiologic claim is made."
+  },
+  "evidence_level": "guideline",
+  "status": "reviewed",
+  "review_notes": "Original synthesized educational content with source metadata; no copyrighted textbook text copied.",
+  "last_verified": "2026-09-27",
+  "sources": [
+    {
+      "title": "Aplastic Anemia",
+      "source_type": "reference",
+      "authors": ["StatPearls"],
+      "year": 2025,
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK534212/",
+      "license": "NCBI Bookshelf / StatPearls",
+      "location": "NCBI Bookshelf",
+      "notes": "Supports definition, clinical presentation, diagnosis and treatment."
+    },
+    {
+      "title": "Aplastic Anemia as a Roadmap for Bone Marrow Failure: An Overview and a Clinical Workflow",
+      "source_type": "review",
+      "authors": ["PMC review"],
+      "year": 2022,
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9569739/",
+      "license": "Open-access review",
+      "location": "PMC",
+      "notes": "Supports immune-mediated stem-cell injury and diagnostic workflow."
+    },
+    {
+      "title": "Guidelines for the diagnosis and management of adult aplastic anaemia",
+      "source_type": "guideline",
+      "authors": ["British Society for Haematology"],
+      "year": 2024,
+      "url": "https://pubmed.ncbi.nlm.nih.gov/38987918/",
+      "license": "PubMed indexed guideline",
+      "location": "PubMed",
+      "notes": "Supports contemporary diagnostic and management principles."
+    },
+    {
+      "title": "International Consensus Classification of Myeloid Neoplasms and Acute Leukemias",
+      "source_type": "reference",
+      "authors": ["Arber DA", "Orazi A", "Hasserjian RP", "et al."],
+      "year": 2022,
+      "url": "https://pubmed.ncbi.nlm.nih.gov/35732831/",
+      "license": "PubMed indexed consensus classification",
+      "location": "PubMed",
+      "notes": "Used to maintain diagnostic separation from clonal myeloid neoplasms."
+    }
+  ]
+}

@@ -1,0 +1,151 @@
+{
+  "id": "hematology.histology.blood_tissue",
+  "domain": "hematology",
+  "subject": "Histology",
+  "topic": "Blood Tissue",
+  "subtopic": "Composition, plasma and formed elements",
+  "concept": "Blood tissue: plasma and formed elements",
+  "content": {
+    "definition": "Blood is a specialized connective tissue in which formed elements are suspended in a fluid extracellular matrix called plasma. The formed elements are erythrocytes, leukocytes and platelets.",
+    "explanation": "Whole blood has a fluid phase, plasma, and cellular or cell-derived formed elements. Plasma is the major liquid component and contains water, proteins, electrolytes, nutrients, gases, hormones and metabolic waste products. The formed elements include erythrocytes for gas transport, leukocytes for immune defense, and platelets for primary hemostasis and participation in coagulation. In a typical adult, plasma accounts for about 55% of blood volume and cellular elements for about 45%, although the exact proportions vary with physiological state and hematocrit.",
+    "mechanism": "Blood functions as a continuously circulating transport and regulatory tissue. Plasma provides the fluid medium and carries dissolved substances, while erythrocytes, leukocytes and platelets perform specialized functions. Erythrocytes carry oxygen primarily through hemoglobin and contribute to carbon dioxide transport. Leukocytes circulate between blood and tissues and mediate innate and adaptive immune responses. Platelets adhere to sites of vascular injury, become activated, aggregate and provide a surface that supports coagulation reactions.",
+    "structure": "Plasma is the straw-colored fluid matrix of blood. Its major constituent is water, with dissolved plasma proteins, electrolytes, nutrients, gases, hormones and waste products. The formed elements are erythrocytes, leukocytes and platelets. Erythrocytes are anucleate biconcave cells in normal adult peripheral blood. Leukocytes are nucleated cells and are classified histologically into granulocytes (neutrophils, eosinophils and basophils) and agranulocytes (lymphocytes and monocytes). Platelets are small cytoplasmic fragments derived from megakaryocytes rather than complete cells.",
+    "function": "Blood supports transport, defense, hemostasis and homeostasis. Plasma transports nutrients, hormones, electrolytes, proteins and metabolic products; albumin contributes substantially to plasma colloid osmotic pressure and also transports several substances; immunoglobulins contribute to humoral immunity; fibrinogen and other coagulation proteins participate in hemostasis. Erythrocytes transport oxygen and contribute to carbon dioxide transport and acid-base buffering. Leukocytes provide immune surveillance and defense. Platelets participate in primary hemostasis and support secondary coagulation.",
+    "causes": [],
+    "effects": [],
+    "clinical_relevance": "The composition of blood underlies common laboratory measurements such as hematocrit, complete blood count and plasma protein measurements. Abnormalities of plasma proteins, erythrocytes, leukocytes or platelets can produce clinically important disorders. Centrifugation of anticoagulated blood separates plasma from the cellular components, whereas serum is the fluid remaining after blood has clotted and therefore lacks fibrinogen and several other clotting factors.",
+    "diagnosis": "Blood tissue is evaluated using tests selected according to the clinical question, including complete blood count with differential, hematocrit, peripheral blood smear, plasma protein measurements and coagulation studies. Histologic identification of formed elements is commonly performed on a stained peripheral blood film.",
+    "treatment": "There is no single treatment for an abnormal blood-tissue composition; management depends on the underlying disorder. Examples include replacement of deficient blood components when clinically indicated, treatment of nutritional deficiencies or hematologic disease, and targeted management of coagulation or immune disorders.",
+    "high_yield": [
+      "Blood is a specialized connective tissue with plasma as its fluid extracellular matrix.",
+      "The three formed-element groups are erythrocytes, leukocytes and platelets.",
+      "Plasma is approximately 55% of total blood volume in a typical adult; the cellular fraction is approximately 45%.",
+      "Plasma is predominantly water and contains proteins, electrolytes, nutrients, gases, hormones and waste products.",
+      "Erythrocytes are anucleate biconcave cells specialized for gas transport.",
+      "Leukocytes are nucleated and are classified into granulocytes and agranulocytes.",
+      "Platelets are cytoplasmic fragments derived from megakaryocytes and are central to primary hemostasis.",
+      "Plasma and serum are not interchangeable: serum is obtained after clotting and lacks fibrinogen and several clotting factors."
+    ]
+  },
+  "terminology": [
+    {
+      "term": "Blood tissue",
+      "language": "English",
+      "arabic": "نسيج الدم",
+      "pronunciation": "blud TISH-oo",
+      "etymology": "Blood derives from Old English blod; tissue derives from Old French tissu, meaning woven material.",
+      "notes": "A specialized connective tissue composed of formed elements suspended in plasma."
+    },
+    {
+      "term": "Plasma",
+      "language": "English",
+      "arabic": "البلازما",
+      "pronunciation": "PLAZ-muh",
+      "etymology": "From Greek plasma, meaning something molded or formed.",
+      "notes": "The fluid component of blood in which formed elements are suspended."
+    },
+    {
+      "term": "Formed elements",
+      "language": "English",
+      "arabic": "العناصر المُشكَّلة",
+      "pronunciation": "FORMD EL-uh-ments",
+      "etymology": "Formed refers to cellular or cell-derived components that have a defined physical form.",
+      "notes": "Collective term for erythrocytes, leukocytes and platelets."
+    },
+    {
+      "term": "Erythrocyte",
+      "language": "English",
+      "arabic": "كُرية دم حمراء",
+      "pronunciation": "eh-RITH-roh-site",
+      "etymology": "Greek erythros, red, plus kytos, cell.",
+      "notes": "Red blood cell; specialized for oxygen transport."
+    },
+    {
+      "term": "Leukocyte",
+      "language": "English",
+      "arabic": "كُرية دم بيضاء",
+      "pronunciation": "LOO-koh-site",
+      "etymology": "Greek leukos, white, plus kytos, cell.",
+      "notes": "White blood cell involved in immune and inflammatory responses."
+    },
+    {
+      "term": "Thrombocyte",
+      "language": "English",
+      "arabic": "صفيحة دموية",
+      "pronunciation": "THROM-boh-site",
+      "etymology": "Greek thrombos, clot, plus kytos, cell.",
+      "notes": "Traditional term for platelet."
+    },
+    {
+      "term": "Hematocrit",
+      "language": "English",
+      "arabic": "الهيماتوكريت / مكداس الدم",
+      "pronunciation": "hee-MAT-oh-krit",
+      "etymology": "Greek haima, blood, plus kritos, separated.",
+      "notes": "The proportion of blood volume occupied by erythrocytes."
+    },
+    {
+      "term": "Serum",
+      "language": "English",
+      "arabic": "المصل",
+      "pronunciation": "SEER-um",
+      "etymology": "Latin serum, watery fluid.",
+      "notes": "Fluid remaining after blood coagulates; unlike plasma, it normally lacks fibrinogen."
+    }
+  ],
+  "relations": [
+    {
+      "target_id": "hematology.anatomy.bone_marrow",
+      "relation": "formed_elements_produced_by",
+      "note": "Bone marrow is the principal site of hematopoiesis for the circulating formed elements in normal adult physiology."
+    }
+  ],
+  "yemen_context": {
+    "relevance": "A foundational blood-tissue concept relevant to interpretation of routine hematology and transfusion-related laboratory findings in medical practice.",
+    "evidence": "General medical relevance; no Yemen-specific epidemiologic claim is made in this record."
+  },
+  "sources": [
+    {
+      "title": "Physiology, Blood Plasma",
+      "source_type": "reference",
+      "authors": [
+        "Sujatha Mahadevarao Premnath",
+        "Parvathy Sankar",
+        "Bassem Khalil"
+      ],
+      "year": 2026,
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK531504/",
+      "location": "NCBI Bookshelf / StatPearls",
+      "notes": "Describes blood as specialized connective tissue, plasma as the fluid component, and approximate plasma volume."
+    },
+    {
+      "title": "In brief: What does blood do?",
+      "source_type": "educational",
+      "year": 2022,
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK279392/",
+      "location": "NCBI Bookshelf",
+      "notes": "Summarizes blood composition, plasma contents and the major formed elements."
+    },
+    {
+      "title": "Blood and the cells it contains",
+      "source_type": "reference",
+      "year": 2005,
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK2263/",
+      "location": "NCBI Bookshelf",
+      "notes": "Provides an overview of plasma, formed elements and separation of blood components."
+    },
+    {
+      "title": "The components and functions of whole blood",
+      "source_type": "guideline",
+      "year": 2011,
+      "url": "https://cdn.who.int/media/docs/default-source/blood-transfusion-safety/guidelines-and-principles-for-safe-blood-transfusion-practice-module-3-.pdf",
+      "location": "World Health Organization",
+      "license": "WHO publication",
+      "notes": "Defines plasma, erythrocytes, leukocytes and platelets and describes their major functions."
+    }
+  ],
+  "evidence_level": "reference",
+  "status": "reviewed",
+  "review_notes": "Original synthesized educational record based on the cited sources; no textbook passage is reproduced. Detailed erythrocyte, leukocyte and platelet morphology is intentionally deferred to dedicated Histology records.",
+  "last_verified": "2026-09-27"
+}

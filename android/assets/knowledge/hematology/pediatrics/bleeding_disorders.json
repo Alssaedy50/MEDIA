@@ -1,0 +1,121 @@
+{
+  "id": "hematology.pediatrics.bleeding_disorders",
+  "domain": "Hematology",
+  "subject": "Pediatrics",
+  "topic": "Pediatric Bleeding Disorders",
+  "subtopic": "Clinical picture, diagnosis, treatment and prognosis",
+  "concept": "Pediatric bleeding disorders arise from platelet number/function abnormalities, von Willebrand factor defects, coagulation factor deficiencies or acquired consumption.",
+  "content": {
+    "definition": "A bleeding disorder is impaired primary or secondary hemostasis causing abnormal bleeding after injury or spontaneously.",
+    "explanation": "Mucocutaneous bleeding such as epistaxis, gum bleeding and petechiae suggests platelet or von Willebrand-related disease. Deep tissue bleeding, hemarthroses and delayed post-procedural bleeding suggest coagulation-factor deficiency such as hemophilia. DIC is an acquired consumptive process.",
+    "mechanism": "Primary hemostasis depends on platelets and vWF. Secondary hemostasis generates thrombin and fibrin through coagulation factors.",
+    "clinical_relevance": "Bleeding phenotype guides the differential but does not replace laboratory confirmation. Pediatric diagnosis should include family history and medication review before invasive procedures.",
+    "diagnosis": "Initial assessment includes bleeding history, family history, CBC with platelet count, PT/INR and aPTT. Hemophilia requires factor VIII/IX assays. VWD evaluation uses VWF antigen, VWF activity and factor VIII; repeat testing may be necessary.",
+    "treatment": "Treatment is cause- and severity-specific. Hemophilia may require factor replacement or appropriate non-factor therapy. Selected VWD patients may respond to desmopressin, while VWF-containing therapy is used when indicated. Severe platelet bleeding may require platelet support. DIC requires urgent treatment of the underlying cause plus supportive hemostatic management when clinically indicated.",
+    "high_yield": [
+      "Mucocutaneous bleeding suggests platelet/vWF dysfunction; hemarthrosis suggests coagulation-factor deficiency.",
+      "Hemophilia A is factor VIII deficiency; hemophilia B is factor IX deficiency.",
+      "VWD can have normal routine screening tests, so specific VWF testing is required.",
+      "Factor assays establish hemophilia type and severity.",
+      "Interpret laboratory results in clinical context and repeat when appropriate."
+    ]
+  },
+  "terminology": [
+    {
+      "term": "Hemarthrosis",
+      "language": "English",
+      "Arabic": "نزف داخل المفصل",
+      "pronunciation": "HEE-mar-THROH-sis"
+    },
+    {
+      "term": "Von Willebrand disease",
+      "language": "English",
+      "Arabic": "داء فون ويلبراند",
+      "pronunciation": "von VIL-uh-brand"
+    },
+    {
+      "term": "Desmopressin",
+      "language": "English",
+      "Arabic": "ديسموبريسين",
+      "pronunciation": "dez-moh-PRES-in"
+    },
+    {
+      "term": "Hemophilia",
+      "language": "English",
+      "notes": "Search synonym/clinical terminology used for evidence retrieval."
+    },
+    {
+      "term": "Hemophilia A",
+      "language": "English",
+      "notes": "Search synonym/clinical terminology used for evidence retrieval."
+    },
+    {
+      "term": "Hemophilia B",
+      "language": "English",
+      "notes": "Search synonym/clinical terminology used for evidence retrieval."
+    },
+    {
+      "term": "Hemophilia in children",
+      "language": "English",
+      "notes": "Search synonym/clinical terminology used for evidence retrieval."
+    }
+  ],
+  "relations": [
+    {
+      "target_id": "hematology.pathology.bleeding_disorders_investigations",
+      "relation": "extends",
+      "note": "Pediatric phenotype and management context."
+    },
+    {
+      "target_id": "hematology.physiology.hemostasis_coagulation",
+      "relation": "depends_on",
+      "note": "Clinical disorders arise from defects in physiologic hemostasis."
+    }
+  ],
+  "yemen_context": {
+    "relevance": "Recognition of inherited bleeding disorders is important before surgery and in children with recurrent unexplained bleeding.",
+    "evidence": "No Yemen-specific prevalence estimate is asserted."
+  },
+  "evidence_level": "guideline",
+  "status": "reviewed",
+  "review_notes": "Original pediatric synthesis using CDC hemophilia/VWD resources and ASH/ISTH/NHF/WFH VWD guidance.",
+  "last_verified": "2026-09-27",
+  "sources": [
+    {
+      "title": "Diagnosing Hemophilia",
+      "source_type": "reference",
+      "authors": [
+        "Centers for Disease Control and Prevention"
+      ],
+      "year": 2024,
+      "url": "https://www.cdc.gov/hemophilia/testing/index.html",
+      "license": "CDC",
+      "location": "CDC"
+    },
+    {
+      "title": "Diagnosing von Willebrand Disease",
+      "source_type": "reference",
+      "authors": [
+        "Centers for Disease Control and Prevention"
+      ],
+      "year": 2024,
+      "url": "https://cdc.gov/von-willebrand/diagnosis/index.html",
+      "license": "CDC",
+      "location": "CDC"
+    },
+    {
+      "title": "ASH ISTH NHF WFH Clinical Practice Guidelines on von Willebrand Disease",
+      "source_type": "guideline",
+      "authors": [
+        "American Society of Hematology",
+        "International Society on Thrombosis and Haemostasis",
+        "National Hemophilia Foundation",
+        "World Federation of Hemophilia"
+      ],
+      "year": 2021,
+      "url": "https://www.hematology.org/education/clinicians/guidelines-and-quality-care/clinical-practice-guidelines/von-willebrand-disease",
+      "license": "ASH",
+      "location": "Hematology.org"
+    }
+  ]
+}

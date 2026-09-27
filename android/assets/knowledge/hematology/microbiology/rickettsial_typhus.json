@@ -1,0 +1,65 @@
+{
+  "id": "hematology.microbiology.rickettsial_typhus",
+  "domain": "Hematology",
+  "subject": "Microbiology",
+  "topic": "Rickettsial Typhus Fevers",
+  "subtopic": "Rickettsial Typhus Fevers: organism, transmission, pathogenesis, clinical features, diagnosis, treatment and prevention",
+  "concept": "Rickettsial typhus includes epidemic typhus caused by Rickettsia prowazekii, flea-borne typhus caused by R. typhi, and scrub typhus caused by Orientia tsutsugamushi. Vector exposure and intracellular endothelial infection are central to disease.",
+  "content": {
+    "definition": "Rickettsial typhus includes epidemic typhus caused by Rickettsia prowazekii, flea-borne typhus caused by R. typhi, and scrub typhus caused by Orientia tsutsugamushi. Vector exposure and intracellular endothelial infection are central to disease.",
+    "explanation": "Rickettsial typhus includes epidemic typhus caused by Rickettsia prowazekii, flea-borne typhus caused by R. typhi, and scrub typhus caused by Orientia tsutsugamushi. Vector exposure and intracellular endothelial infection are central to disease.",
+    "mechanism": "The pathogen's tissue tropism, replication or intracellular persistence explains the characteristic clinical syndrome.",
+    "structure": "Organism-specific structural and biologic features are summarized in the concept and high-yield fields.",
+    "function": "Biologic properties determine transmission and tissue injury.",
+    "causes": [
+      "body lice for epidemic",
+      "fleas for murine",
+      "chiggers for scrub"
+    ],
+    "effects": [
+      "fever, headache, rash may occur",
+      "severe systemic, pulmonary or neurologic disease is possible"
+    ],
+    "clinical_relevance": "Rickettsial Typhus Fevers is an official Hematology microbiology syllabus topic.",
+    "diagnosis": "Diagnosis uses compatible illness/exposure with PCR or paired serology when available. Doxycycline should not be delayed when clinical suspicion is strong.",
+    "treatment": "Treatment is clinical-context dependent and should follow current local/international guidance; supportive care and management of complications are important where applicable.",
+    "high_yield": [
+      "Rickettsial typhus includes epidemic typhus caused by Rickettsia prowazekii, flea-borne typhus caused by R. typhi, and scrub typhus caused by Orientia tsutsugamushi. Vector exposure and intracellular endothelial infection are central to disease.",
+      "body lice for epidemic",
+      "fleas for murine",
+      "chiggers for scrub",
+      "fever, headache, rash may occur",
+      "severe systemic, pulmonary or neurologic disease is possible"
+    ]
+  },
+  "terminology": [
+    {
+      "term": "Rickettsial Typhus Fevers",
+      "language": "English",
+      "arabic": "مصطلح طبي",
+      "pronunciation": "see source",
+      "etymology": "Medical terminology.",
+      "notes": "Core syllabus term."
+    }
+  ],
+  "relations": [],
+  "yemen_context": {
+    "relevance": "Relevant to medical microbiology education; no unsupported Yemen-specific incidence is asserted.",
+    "evidence": "General CDC/WHO evidence."
+  },
+  "evidence_level": "guideline",
+  "status": "reviewed",
+  "review_notes": "Original synthesis based on CDC Clinical Overview of Typhus Fevers; no textbook text copied.",
+  "last_verified": "2026-09-27",
+  "sources": [
+    {
+      "title": "CDC Clinical Overview of Typhus Fevers",
+      "source_type": "guideline",
+      "year": 2025,
+      "url": "https://www.cdc.gov/typhus/hcp/clinical-overview/index.html",
+      "license": "CDC",
+      "location": "CDC",
+      "notes": "Clinical overview."
+    }
+  ]
+}

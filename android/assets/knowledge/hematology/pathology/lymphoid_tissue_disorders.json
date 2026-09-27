@@ -1,0 +1,74 @@
+{
+  "id":"hematology.pathology.lymphoid_tissue_disorders",
+  "domain":"Hematology",
+  "subject":"Pathology",
+  "topic":"Lymphoid Tissue Disorders",
+  "subtopic":"Reactive lymphadenopathy, non-Hodgkin lymphoma, Hodgkin lymphoma and multiple myeloma",
+  "concept":"Lymphoid tissue disorders include reactive proliferations caused by immune or infectious stimuli and neoplastic disorders such as Hodgkin lymphoma, non-Hodgkin lymphomas and plasma-cell myeloma. Distinguishing reactive enlargement from neoplasia requires clinical assessment, morphology and, when indicated, immunophenotypic and molecular studies.",
+  "content":{
+    "definition":"Reactive lymphadenopathy is lymph-node enlargement caused by immune activation or inflammation, whereas lymphoma is a clonal malignant lymphoid proliferation. Hodgkin lymphoma is characterized by Hodgkin/Reed-Sternberg cells in an appropriate inflammatory background in classical forms; non-Hodgkin lymphomas comprise diverse B-cell, T-cell and NK-cell neoplasms. Multiple myeloma is a malignant clonal plasma-cell neoplasm involving bone marrow and producing a monoclonal immunoglobulin or light-chain product.",
+    "explanation":"Reactive nodes may show follicular, paracortical, sinusoidal or mixed patterns depending on the stimulus. Infectious mononucleosis and autoimmune disease can produce reactive hyperplasia. Lymphomas may present with persistent lymphadenopathy, extranodal disease or systemic symptoms such as fever, drenching night sweats and weight loss. NHL is biologically heterogeneous and may be indolent or aggressive. Hodgkin lymphoma has classical and nodular lymphocyte-predominant forms. Multiple myeloma primarily affects marrow and bone and may produce anemia, renal dysfunction, hypercalcemia and lytic bone disease.",
+    "mechanism":"Reactive lymphadenopathy reflects antigen-driven activation and proliferation of normal lymphoid populations. Lymphoma results from acquired genetic and epigenetic abnormalities that allow a lymphoid clone to survive and proliferate autonomously. In classical Hodgkin lymphoma, the neoplastic Hodgkin/Reed-Sternberg population is usually derived from germinal-center B cells and recruits a prominent reactive inflammatory microenvironment. In multiple myeloma, a clonal plasma-cell population expands in marrow and secretes monoclonal immunoglobulin or free light chains; marrow replacement, cytokine-mediated bone remodeling and monoclonal protein effects contribute to organ damage.",
+    "structure":"Lymph-node assessment integrates architecture, cytology and lineage. Histologic examination may identify follicular, diffuse, nodular or mixed patterns. Immunohistochemistry and flow cytometry help establish lineage and clonality; selected cases require cytogenetic or molecular studies. For suspected multiple myeloma, evaluation integrates peripheral blood counts, serum and urine monoclonal-protein studies, serum free light chains, bone-marrow examination and appropriate skeletal imaging.",
+    "function":"Normal lymphoid tissues provide immune surveillance, antigen presentation and lymphocyte maturation/activation. Reactive enlargement is therefore a functional immune response, while neoplastic proliferation disrupts normal architecture and can impair immune, marrow or organ function.",
+    "causes":[
+      "Acute or chronic infections causing reactive lymph-node hyperplasia or lymphadenitis",
+      "Autoimmune and inflammatory disorders causing reactive lymphoid proliferation",
+      "Clonal B-cell, T-cell or NK-cell neoplasms causing non-Hodgkin lymphoma",
+      "Classical or nodular lymphocyte-predominant Hodgkin lymphoma",
+      "Clonal plasma-cell neoplasia causing multiple myeloma"
+    ],
+    "effects":[
+      "Localized or generalized lymphadenopathy",
+      "Fever, drenching night sweats and weight loss in some lymphomas",
+      "Extranodal involvement depending on lymphoma subtype",
+      "Cytopenias from marrow involvement or treatment",
+      "Bone pain, lytic lesions, hypercalcemia, anemia and renal dysfunction in multiple myeloma",
+      "Immunodeficiency or abnormal immunoglobulin production in selected lymphoid neoplasms"
+    ],
+    "clinical_relevance":"Persistent, progressive, generalized, hard or fixed lymphadenopathy, unexplained systemic symptoms, or abnormal blood counts may require tissue diagnosis rather than assuming a reactive process. The distinction between reactive and neoplastic lymphoid proliferation is a major pathology task. Multiple myeloma should be considered when compatible combinations of anemia, renal dysfunction, hypercalcemia, bone pain/lytic lesions or a monoclonal protein are present.",
+    "diagnosis":"Begin with history, examination and characterization of node distribution, duration and associated symptoms. CBC, peripheral smear and targeted infectious or autoimmune studies may be appropriate. If malignancy is suspected, adequate lymph-node tissue for histology and ancillary studies is important; fine-needle aspiration alone may be insufficient for full lymphoma classification because architecture can be essential. NHL classification uses morphology plus immunophenotype and, when relevant, cytogenetic/molecular findings. Hodgkin lymphoma diagnosis depends on histologic identification of the characteristic neoplastic cells and their background, supported by immunophenotyping. Suspected multiple myeloma is evaluated with CBC, renal function, calcium, serum protein electrophoresis/immunofixation, serum free light chains, urine studies when indicated, bone-marrow examination and imaging. Modern myeloma diagnosis integrates clonal plasma-cell burden with myeloma-defining events rather than relying only on historical CRAB findings.",
+    "treatment":"Treatment depends on the specific diagnosis, stage/risk and patient factors. Reactive lymphadenopathy is managed by treating the underlying cause when identified. Lymphoma treatment may include observation for selected indolent disease, systemic therapy, immunotherapy, targeted therapy, radiotherapy or hematopoietic-cell transplantation in appropriate settings. Hodgkin lymphoma is commonly treated with stage-adapted systemic therapy with or without radiotherapy. Multiple myeloma management may include combinations of anti-myeloma systemic therapy, corticosteroids, targeted or immune-based agents, autologous stem-cell transplantation for eligible patients, and supportive treatment for bone, renal and other complications. Exact regimens should follow current disease-specific guidelines.",
+    "high_yield":[
+      "Reactive lymphadenopathy is a response of otherwise non-neoplastic lymphoid tissue to immune, infectious or inflammatory stimuli.",
+      "A lymph node can enlarge from infection, autoimmune disease, metastatic cancer or lymphoma; lymphadenopathy is a finding, not a diagnosis.",
+      "Architecture is important in distinguishing reactive lymphoid proliferation from lymphoma; adequate tissue may therefore be required.",
+      "Non-Hodgkin lymphoma is a heterogeneous group of B-cell, T-cell and NK-cell neoplasms and may be indolent or aggressive.",
+      "Classical Hodgkin lymphoma is characterized by Hodgkin/Reed-Sternberg cells in a characteristic reactive inflammatory background.",
+      "Hodgkin lymphoma is distinct from NHL and includes classical and nodular lymphocyte-predominant forms.",
+      "Multiple myeloma is a clonal plasma-cell neoplasm associated with monoclonal protein and may cause hypercalcemia, renal dysfunction, anemia and bone disease.",
+      "For suspected lymphoma, histology is integrated with immunophenotyping and selected molecular/cytogenetic studies.",
+      "For suspected myeloma, serum/urine monoclonal-protein studies, free light chains, marrow examination and imaging are complementary."
+    ]
+  },
+  "terminology":[
+    {"term":"Lymphadenopathy","language":"English","arabic":"اعتلال العقد اللمفية","pronunciation":"lim-FAD-en-OP-uh-thee","etymology":"Lymph, lymphatic fluid; aden, gland; -pathy, disease.","notes":"Abnormal enlargement or alteration of lymph nodes."},
+    {"term":"Reactive hyperplasia","language":"English","arabic":"فرط التنسج التفاعلي","pronunciation":"ree-AK-tiv hy-per-PLAY-zhuh","etymology":"Reactive, responding to a stimulus; hyperplasia, increased cell proliferation.","notes":"Non-neoplastic expansion of lymphoid cells in response to antigenic or inflammatory stimulation."},
+    {"term":"Non-Hodgkin lymphoma","language":"English","arabic":"لمفوما لاهودجكينية","pronunciation":"non-HODJ-kin lim-FOH-muh","etymology":"Lymphoma, tumor of lymphoid tissue; non-Hodgkin distinguishes the group from Hodgkin lymphoma.","notes":"Heterogeneous group of lymphoid malignancies."},
+    {"term":"Hodgkin lymphoma","language":"English","arabic":"لمفوما هودجكينية","pronunciation":"HODJ-kin lim-FOH-muh","etymology":"Named after Thomas Hodgkin.","notes":"Lymphoid malignancy with characteristic neoplastic cells and inflammatory microenvironment."},
+    {"term":"Reed-Sternberg cell","language":"English","arabic":"خلية ريد-شتيرنبرغ","pronunciation":"REED STERN-berg cell","etymology":"Named after pathologists Dorothy Reed and Carl Sternberg.","notes":"Characteristic neoplastic cell of classical Hodgkin lymphoma."},
+    {"term":"Multiple myeloma","language":"English","arabic":"الورم النقوي المتعدد","pronunciation":"MUL-ti-pul my-eh-LOH-muh","etymology":"Myeloma, neoplasm arising from marrow-associated plasma cells; multiple refers to multifocal disease.","notes":"Clonal plasma-cell malignancy with monoclonal protein and potential end-organ injury."}
+  ],
+  "relations":[
+    {"target_id":"hematology.anatomy.lymph_nodes","relation":"affects","note":"Many lymphoid disorders arise in or alter lymph-node architecture."},
+    {"target_id":"hematology.anatomy.spleen","relation":"intersects_with","note":"Lymphoid neoplasms and reactive disorders can involve splenic tissue."},
+    {"target_id":"hematology.pathology.leukemias_acute_chronic","relation":"differential_from","note":"Lymphoma and leukemia can overlap biologically and require integrated blood, marrow and tissue evaluation."},
+    {"target_id":"hematology.pathology.bleeding_disorders_investigations","relation":"intersects_with","note":"Advanced lymphoid and plasma-cell neoplasms may cause cytopenias or other hematologic abnormalities requiring investigation."},
+    {"target_id":"hematology.anatomy.bone_marrow","relation":"involves","note":"Bone marrow is central to hematopoiesis and is a major site for plasma-cell myeloma evaluation."}
+  ],
+  "yemen_context":{"relevance":"The diagnostic framework is applicable to lymphadenopathy and hematologic malignancy assessment in clinical practice; no Yemen-specific incidence estimate is asserted.","evidence":"General medical evidence; no Yemen-specific prevalence estimate is asserted."},
+  "evidence_level":"reference",
+  "status":"reviewed",
+  "review_notes":"Original synthesis grounded in NCBI clinical references, peer-reviewed reactive lymphadenopathy literature, NCI lymphoma/plasma-cell neoplasm summaries and WHO/IARC classification context. Treatment is intentionally high-level and not patient-specific.",
+  "last_verified":"2026-09-27",
+  "sources":[
+    {"title":"Lymphadenopathy - StatPearls","source_type":"reference","authors":["Farmer A","Matto P"],"year":2026,"url":"https://www.ncbi.nlm.nih.gov/books/NBK513250/","license":"NCBI Bookshelf / StatPearls","location":"NCBI Bookshelf","notes":"Current clinical approach to lymphadenopathy."},
+    {"title":"Histology, Lymph Nodes - StatPearls","source_type":"reference","year":2023,"url":"https://www.ncbi.nlm.nih.gov/books/NBK559053/","license":"NCBI Bookshelf / StatPearls","location":"NCBI Bookshelf","notes":"Reactive lymph-node patterns and lymphoma context."},
+    {"title":"The Pathology of Reactive Lymphadenopathies: A Discussion of Common Reactive Patterns and Their Malignant Mimics","source_type":"review","authors":["Slack GW"],"year":2016,"url":"https://pubmed.ncbi.nlm.nih.gov/27575263/","license":"PubMed abstract","location":"Archives of Pathology & Laboratory Medicine","notes":"Reactive versus neoplastic lymph-node pathology."},
+    {"title":"Lymphoma—Health Professional Version","source_type":"reference","year":2026,"url":"https://www.cancer.gov/types/lymphoma/hp","license":"NCI","location":"National Cancer Institute","notes":"Evidence-based lymphoma classification and treatment resources."},
+    {"title":"Hodgkin Lymphoma Treatment (PDQ)","source_type":"reference","year":2025,"url":"https://www.cancer.gov/types/lymphoma/patient/adult-hodgkin-treatment-pdq","license":"NCI","location":"National Cancer Institute","notes":"Hodgkin lymphoma clinical overview."},
+    {"title":"Non-Hodgkin Lymphoma Treatment (PDQ)","source_type":"reference","year":2024,"url":"https://www.cancer.gov/types/lymphoma/patient/adult-nhl-treatment-pdq","license":"NCI","location":"National Cancer Institute","notes":"NHL clinical overview."},
+    {"title":"Plasma Cell Neoplasms (Including Multiple Myeloma) Treatment—Health Professional Version","source_type":"reference","year":2025,"url":"https://www.cancer.gov/types/myeloma/hp/myeloma-treatment-pdq","license":"NCI","location":"National Cancer Institute","notes":"Current plasma-cell neoplasm and multiple-myeloma overview."},
+    {"title":"Multiple Myeloma - StatPearls","source_type":"reference","authors":["Albagoush SA","Shumway C","Azevedo AM"],"year":2023,"url":"https://www.ncbi.nlm.nih.gov/books/NBK534764/","license":"NCBI Bookshelf / StatPearls","location":"NCBI Bookshelf","notes":"Clinical presentation, diagnostic evaluation and pathophysiology."}
+  ]
+}

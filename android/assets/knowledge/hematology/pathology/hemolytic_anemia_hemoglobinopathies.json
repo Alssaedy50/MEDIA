@@ -1,0 +1,78 @@
+{
+  "id":"hematology.pathology.hemolytic_anemia_hemoglobinopathies",
+  "domain":"Hematology",
+  "subject":"Pathology",
+  "topic":"Hemolytic Anemia and Hemoglobinopathies",
+  "subtopic":"Hereditary and acquired hemolysis, sickle cell disease, thalassemia, hereditary spherocytosis, G6PD deficiency and immune hemolytic anemia",
+  "concept":"Hemolytic anemia results from premature red-cell destruction that exceeds effective marrow replacement. Hemolysis may be intrinsic to the RBC or extrinsic, and hereditary disorders include membrane, enzyme and hemoglobin defects while acquired causes include immune, mechanical, infectious and other processes.",
+  "content":{
+    "definition":"Hemolytic anemia is anemia caused by shortened erythrocyte survival. The marrow normally compensates by increasing erythropoiesis and reticulocyte production; clinically significant anemia develops when destruction exceeds this compensatory capacity.",
+    "explanation":"Hemolysis can be predominantly extravascular, with RBC removal by macrophages in the spleen and liver, or intravascular, with RBC destruction within the circulation. Laboratory evidence commonly includes increased reticulocytes, indirect bilirubin and LDH with reduced haptoglobin, although the pattern varies by cause. The major hereditary categories relevant to this block are hemoglobinopathies, membrane defects such as hereditary spherocytosis, and enzymopathies such as G6PD deficiency.",
+    "mechanism":"Sickle cell disease results from HbS polymerization during deoxygenation, producing rigid sickled RBCs, hemolysis and vaso-occlusion. Thalassemia results from reduced synthesis of alpha- or beta-globin chains, causing globin-chain imbalance, ineffective erythropoiesis and variable peripheral hemolysis. Hereditary spherocytosis results from defects in RBC membrane-cytoskeletal proteins, producing spherical less-deformable cells that are preferentially removed by the spleen. G6PD deficiency reduces protection against oxidative stress, allowing oxidant injury and episodic hemolysis. Immune hemolytic anemia involves antibodies and/or complement directed against RBCs and is evaluated with the direct antiglobulin test.",
+    "structure":"Hemolytic disorders can be organized as intrinsic versus extrinsic and hereditary versus acquired. Intrinsic hereditary defects include hemoglobin, membrane and enzyme abnormalities. Acquired extrinsic causes include autoimmune hemolysis, microangiopathic destruction, infection, mechanical trauma and transfusion-related hemolysis.",
+    "function":"Premature RBC destruction reduces circulating red-cell survival and oxygen-carrying capacity. Increased erythropoietin stimulates marrow compensation, producing reticulocytosis when marrow reserve is adequate.",
+    "causes":[
+      "Sickle cell disease and other structural hemoglobinopathies",
+      "Alpha- and beta-thalassemia",
+      "Hereditary spherocytosis and other RBC membrane disorders",
+      "G6PD and other RBC enzymopathies",
+      "Warm or cold autoimmune hemolytic anemia",
+      "Microangiopathic hemolytic anemia",
+      "Malaria and other infections",
+      "Transfusion reactions and mechanical RBC destruction"
+    ],
+    "effects":[
+      "Anemia and compensatory reticulocytosis",
+      "Jaundice and indirect hyperbilirubinemia",
+      "Splenomegaly in many predominantly extravascular hemolytic states",
+      "Pigment gallstones with chronic hemolysis",
+      "Hemoglobinuria in predominantly intravascular hemolysis",
+      "Iron overload in chronically transfused hemoglobinopathies",
+      "Vaso-occlusion and progressive organ damage in sickle cell disease"
+    ],
+    "clinical_relevance":"The combination of CBC, reticulocyte count, bilirubin, LDH, haptoglobin and peripheral smear establishes whether hemolysis is present, after which targeted tests identify the cause. Hemoglobin analysis by electrophoresis, HPLC or related methods is central for many hemoglobinopathies. A direct antiglobulin test helps identify immune hemolysis.",
+    "diagnosis":"Initial evaluation includes CBC, reticulocyte count, peripheral smear, bilirubin, LDH and haptoglobin. Hemoglobinopathies are evaluated with hemoglobin analysis and, when needed, molecular testing. Sickle cell disease is confirmed by identifying significant HbS with hemoglobin assay or appropriate genetic testing. Thalassemia evaluation integrates red-cell indices, iron studies, hemoglobin analysis and sometimes molecular testing. Hereditary spherocytosis is supported by spherocytes and specialized membrane testing when required. G6PD deficiency is assessed with quantitative enzyme activity testing, recognizing that testing during or soon after acute hemolysis may require repeat assessment. Immune hemolysis is evaluated with direct and indirect antiglobulin testing in the appropriate clinical setting.",
+    "treatment":"Management is cause-specific. Sickle cell disease requires prevention and treatment of vaso-occlusive and organ complications and may include disease-modifying therapy or selected curative approaches. Thalassemia management ranges from observation in carriers to transfusion and iron-overload management in severe disease. Hereditary spherocytosis may require folate support, transfusion in selected cases and consideration of splenic interventions based on severity. G6PD management emphasizes trigger avoidance and supportive care during hemolysis. Immune hemolytic anemia requires treatment directed at the immune mechanism and underlying cause. This record intentionally provides principles rather than patient-specific prescribing.",
+    "high_yield":[
+      "Hemolytic anemia is due to shortened RBC survival with marrow compensation manifested by reticulocytosis when adequate.",
+      "Typical hemolysis markers are increased LDH and indirect bilirubin with decreased haptoglobin.",
+      "Sickle cell disease is caused by HbS; deoxygenation promotes HbS polymerization, sickling, hemolysis and vaso-occlusion.",
+      "Sickle cell disease is confirmed by hemoglobin analysis or appropriate molecular testing; smear findings alone are not confirmatory.",
+      "Thalassemia is a globin-chain synthesis disorder and commonly causes microcytic hypochromic anemia; iron deficiency should be considered and excluded appropriately.",
+      "Hereditary spherocytosis produces spherocytes because of RBC membrane-cytoskeletal defects and predominantly splenic destruction.",
+      "G6PD deficiency predisposes to episodic oxidant-induced hemolysis; quantitative enzyme activity is the key laboratory test.",
+      "Immune hemolytic anemia is evaluated with the direct antiglobulin test.",
+      "Hemoglobin electrophoresis, HPLC or capillary electrophoresis can identify and quantify many abnormal hemoglobins.",
+      "Chronic transfusion in severe hemoglobinopathies can produce iron overload."
+    ]
+  },
+  "terminology":[
+    {"term":"Hemolysis","language":"English","Arabic":"انحلال الدم","pronunciation":"hee-MOL-ih-sis","etymology":"Hemo-, blood; -lysis, loosening or destruction.","notes":"Premature destruction of red blood cells."},
+    {"term":"Hemoglobinopathy","language":"English","Arabic":"اعتلال الهيموغلوبين","pronunciation":"hee-moh-gloh-bin-OP-uh-thee","etymology":"Hemoglobin plus -pathy, disease.","notes":"Inherited disorder involving hemoglobin structure or production."},
+    {"term":"Sickle cell disease","language":"English","Arabic":"مرض الخلايا المنجلية","pronunciation":"SIK-ul cell dih-ZEEZ","etymology":"Sickle, curved blade-like shape; cell disease.","notes":"Group of disorders involving HbS and clinically significant sickling."},
+    {"term":"Thalassemia","language":"English","Arabic":"الثلاسيميا","pronunciation":"thal-uh-SEE-mee-uh","etymology":"From Greek thalassa, sea, historically referring to the Mediterranean.","notes":"Inherited reduction in globin-chain synthesis."},
+    {"term":"Hereditary spherocytosis","language":"English","Arabic":"تكور الكريات الحمراء الوراثي","pronunciation":"heh-RED-ih-tair-ee sfair-oh-sy-TOH-sis","etymology":"Sphero-, sphere; -cytosis, cellular condition.","notes":"Inherited RBC membrane disorder producing spherocytes."},
+    {"term":"Glucose-6-phosphate dehydrogenase deficiency","language":"English","Arabic":"نقص إنزيم G6PD","pronunciation":"GLOO-kohs siks FOS-fate dee-HY-droh-jeh-nays","etymology":"Enzyme named for its substrate and oxidative reaction.","notes":"X-linked RBC enzymopathy causing susceptibility to oxidative hemolysis."},
+    {"term":"Direct antiglobulin test","language":"English","Arabic":"اختبار مضاد الغلوبولين المباشر","pronunciation":"uh-tee-GLOB-yoo-lin test","etymology":"Anti-, against; globulin, antibody-related protein.","notes":"Detects immunoglobulin and/or complement bound to RBCs."}
+  ],
+  "relations":[
+    {"target_id":"hematology.pathology.anemia_classification_nutritional","relation":"differential_from","note":"Hemolytic anemia is a major mechanistic category distinct from nutritional anemia."},
+    {"target_id":"hematology.histology.rbc_erythropoiesis","relation":"compensated_by","note":"Marrow increases erythropoiesis in response to shortened RBC survival."},
+    {"target_id":"hematology.physiology.rbc_characteristics_functions","relation":"alters","note":"Hemolysis reduces effective RBC lifespan and oxygen transport."},
+    {"target_id":"hematology.physiology.blood_groups","relation":"complicated_by","note":"Transfusion and alloimmune phenomena can contribute to acquired hemolysis."},
+    {"target_id":"hematology.anatomy.spleen","relation":"involves","note":"The spleen is a major site of extravascular RBC clearance and clinically important in several hemolytic disorders."}
+  ],
+  "yemen_context":{"relevance":"Hemoglobinopathies, G6PD deficiency and infectious causes of hemolysis are clinically relevant differential diagnoses when evaluating anemia.","evidence":"General medical relevance; no Yemen-specific prevalence estimate is asserted."},
+  "evidence_level":"reference",
+  "status":"reviewed",
+  "review_notes":"Original synthesis using NCBI/GeneReviews and clinical laboratory references. Treatment statements are high-level educational principles.",
+  "last_verified":"2026-09-27",
+  "sources":[
+    {"title":"Sickle Cell Disease","source_type":"reference","authors":["Bender MA","Carlberg K"],"year":2025,"url":"https://www.ncbi.nlm.nih.gov/books/NBK1377/","license":"NCBI Bookshelf / GeneReviews","location":"NCBI Bookshelf","notes":"Current GeneReviews overview of SCD diagnosis and molecular basis."},
+    {"title":"Sickle Cell Anemia","source_type":"reference","authors":["Mangla A","Agarwal N","Maruvada S"],"year":2023,"url":"https://www.ncbi.nlm.nih.gov/books/NBK482164/","license":"NCBI Bookshelf / StatPearls","location":"NCBI Bookshelf","notes":"Pathophysiology, diagnosis and clinical complications of sickle cell anemia."},
+    {"title":"Laboratory Evaluation of Beta Thalassemia","source_type":"reference","authors":["Khan A","Rehman AU"],"year":2023,"url":"https://www.ncbi.nlm.nih.gov/books/NBK585044/","license":"NCBI Bookshelf / StatPearls","location":"NCBI Bookshelf","notes":"Laboratory evaluation and hemoglobin analysis in beta-thalassemia."},
+    {"title":"Thalassemia","source_type":"reference","authors":["StatPearls"],"year":2023,"url":"https://www.ncbi.nlm.nih.gov/books/NBK545151/","license":"NCBI Bookshelf / StatPearls","location":"NCBI Bookshelf","notes":"Clinical and laboratory evaluation of thalassemia."},
+    {"title":"Laboratory Evaluation of Immune Hemolytic Anemias","source_type":"reference","authors":["Tripathi AK","Chuda R"],"year":2024,"url":"https://www.ncbi.nlm.nih.gov/books/NBK606096/","license":"NCBI Bookshelf / StatPearls","location":"NCBI Bookshelf","notes":"Laboratory approach to immune hemolytic anemia and antiglobulin testing."},
+    {"title":"Erythrocyte Inclusions","source_type":"reference","authors":["StatPearls"],"year":2025,"url":"https://www.ncbi.nlm.nih.gov/books/NBK594259/","license":"NCBI Bookshelf / StatPearls","location":"NCBI Bookshelf","notes":"Includes G6PD testing and oxidative hemolysis context."}
+  ]
+}

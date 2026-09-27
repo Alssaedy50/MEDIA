@@ -1,0 +1,185 @@
+{
+  "id": "hematology.physiology.blood_groups",
+  "domain": "Hematology",
+  "subject": "Physiology",
+  "topic": "Blood Groups",
+  "subtopic": "ABO and Rh blood group physiology and transfusion compatibility",
+  "concept": "Blood groups are inherited antigenic systems expressed on red blood cells and other blood components. The ABO and Rh systems are especially important because antibodies against incompatible antigens can cause clinically significant transfusion reactions.",
+  "content": {
+    "definition": "The ABO blood group system classifies individuals according to A and B carbohydrate antigens on the red-cell surface and corresponding naturally occurring antibodies in plasma. The Rh system includes several protein antigens, with D being the principal antigen used to classify a person as Rh-positive or Rh-negative.",
+    "explanation": "In the ABO system, group A red cells express A antigen and plasma normally contains anti-B; group B expresses B antigen and has anti-A; group AB expresses both A and B antigens and normally lacks anti-A and anti-B; group O lacks A and B antigens and normally has both anti-A and anti-B. ABO antibodies are predominantly IgM with some IgG components and can activate complement. RhD is different: anti-D is generally an immune antibody produced after exposure rather than a naturally occurring antibody, and is predominantly IgG. Rh antibodies can cross the placenta and can cause hemolytic disease of the fetus and newborn.",
+    "mechanism": "ABO compatibility depends on preventing recipient antibodies from binding donor red-cell antigens. An ABO-incompatible red-cell transfusion can produce antibody-mediated agglutination and complement-associated intravascular hemolysis. Blood typing commonly uses forward typing to identify A and B antigens on patient RBCs and reverse typing to detect expected anti-A and anti-B antibodies in plasma. RhD typing identifies whether D antigen is present. Antibody screening and crossmatching provide additional compatibility assessment before transfusion.",
+    "structure": "ABO antigens are carbohydrate structures carried on glycoproteins and glycolipids of the RBC membrane. The ABO locus has major A, B and O allelic forms; A and B encode functional glycosyltransferases, whereas common O alleles produce little or no functional A/B transferase. Rh antigens are membrane proteins; the clinically most important Rh antigen is D.",
+    "function": "Blood group antigens are inherited cell-surface markers with important immunohematologic significance. Their normal physiological functions are not fully established for ABO antigens, while Rh proteins may contribute to RBC membrane biology and transport functions.",
+    "causes": [],
+    "effects": [],
+    "clinical_relevance": "ABO and Rh compatibility are essential in transfusion medicine. ABO-incompatible RBC transfusion can cause an acute hemolytic transfusion reaction. RhD alloimmunization is important in transfusion and pregnancy because maternal anti-D IgG can cross the placenta and destroy RhD-positive fetal RBCs in subsequent or sensitized pregnancies.",
+    "diagnosis": "Blood grouping uses serologic ABO and RhD typing. ABO forward typing detects RBC antigens and reverse typing detects expected plasma antibodies. Pretransfusion testing also includes an antibody screen and, when indicated, a serologic crossmatch.",
+    "treatment": "Management of an incompatible or hemolytic transfusion reaction requires immediate recognition, stopping the transfusion and urgent clinical and transfusion-service evaluation. Prevention relies on correct patient identification, blood typing, antibody screening, compatibility testing and selection of appropriate blood components. RhD alloimmunization in pregnancy can be prevented in appropriate RhD-negative pregnant patients with anti-D immunoprophylaxis according to clinical guidelines.",
+    "high_yield": [
+      "ABO groups are A, B, AB and O.",
+      "Group A: A antigen on RBCs, anti-B in plasma.",
+      "Group B: B antigen on RBCs, anti-A in plasma.",
+      "Group AB: A and B antigens, no expected anti-A or anti-B.",
+      "Group O: no A or B antigens, both anti-A and anti-B.",
+      "ABO antibodies can cause severe acute hemolytic transfusion reactions when incompatible RBCs are transfused.",
+      "Rh-positive means D antigen is present; Rh-negative means D antigen is absent.",
+      "Anti-D is generally an immune IgG antibody produced after exposure and can cause hemolytic disease of the fetus and newborn.",
+      "Forward typing tests RBC antigens; reverse typing tests expected ABO antibodies in plasma.",
+      "Crossmatching is performed to further assess donor-recipient compatibility before transfusion."
+    ]
+  },
+  "terminology": [
+    {
+      "term": "ABO blood group",
+      "language": "English",
+      "Arabic": "نظام فصائل الدم ABO",
+      "pronunciation": "AY-BEE-OH",
+      "etymology": "Named from A, B and O blood-group phenotypes.",
+      "notes": "Major inherited blood group system based on A and B antigens."
+    },
+    {
+      "term": "Antigen",
+      "language": "English",
+      "Arabic": "مستضد",
+      "pronunciation": "AN-ti-jen",
+      "etymology": "Antibody-generating substance.",
+      "notes": "Molecule recognized by an immune receptor or antibody."
+    },
+    {
+      "term": "Agglutination",
+      "language": "English",
+      "Arabic": "التراص",
+      "pronunciation": "uh-gloo-tih-NAY-shun",
+      "etymology": "Latin agglutinare, to glue together.",
+      "notes": "Visible clumping of cells caused by antibody-mediated cross-linking."
+    },
+    {
+      "term": "RhD",
+      "language": "English",
+      "Arabic": "مستضد RhD",
+      "pronunciation": "R-H-D",
+      "etymology": "Rh system designation; D is the major clinically important antigen.",
+      "notes": "Presence defines Rh-positive status; absence defines Rh-negative status."
+    },
+    {
+      "term": "Crossmatch",
+      "language": "English",
+      "Arabic": "اختبار التوافق",
+      "pronunciation": "CROSS-match",
+      "etymology": "Cross, compare, plus match, compatibility.",
+      "notes": "Laboratory compatibility test between recipient and donor blood components."
+    },
+    {
+      "term": "Alloimmunization",
+      "language": "English",
+      "Arabic": "التحصين المناعي ضد مستضدات الغير",
+      "pronunciation": "al-oh-im-yoo-nye-ZAY-shun",
+      "etymology": "Allo-, other, plus immunization.",
+      "notes": "Formation of antibodies against antigens from another individual of the same species."
+    },
+    {
+      "term": "Forward typing",
+      "language": "English",
+      "notes": "Search synonym/clinical terminology used for evidence retrieval."
+    },
+    {
+      "term": "Reverse typing",
+      "language": "English",
+      "notes": "Search synonym/clinical terminology used for evidence retrieval."
+    },
+    {
+      "term": "Crossmatching",
+      "language": "English",
+      "notes": "Search synonym/clinical terminology used for evidence retrieval."
+    }
+  ],
+  "relations": [
+    {
+      "target_id": "hematology.physiology.rbc_characteristics_functions",
+      "relation": "expressed_on",
+      "note": "ABO and Rh antigens are associated with red blood cells."
+    },
+    {
+      "target_id": "hematology.physiology.hemostasis_coagulation",
+      "relation": "transfusion_related_to",
+      "note": "Blood-group compatibility is a core safety component of transfusion and complements hemostasis knowledge."
+    },
+    {
+      "target_id": "hematology.histology.blood_tissue",
+      "relation": "component_of",
+      "note": "Blood groups are properties of blood cells and plasma relevant to transfusion."
+    }
+  ],
+  "yemen_context": {
+    "relevance": "ABO and Rh physiology is foundational for safe transfusion practice and interpretation of blood-group testing in clinical medicine.",
+    "evidence": "General medical relevance; no Yemen-specific blood-group frequency claim is made."
+  },
+  "evidence_level": "reference",
+  "status": "reviewed",
+  "review_notes": "Original synthesized educational content with source metadata; no copyrighted textbook text copied.",
+  "last_verified": "2026-09-27",
+  "sources": [
+    {
+      "title": "The ABO blood group",
+      "source_type": "reference",
+      "authors": [
+        "Laura Dean"
+      ],
+      "year": 2005,
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK2267/",
+      "license": "NCBI Bookshelf",
+      "location": "NCBI Bookshelf",
+      "notes": "Supports ABO antigens, antibodies, inheritance and transfusion significance."
+    },
+    {
+      "title": "ABO Blood Group System",
+      "source_type": "reference",
+      "authors": [
+        "Eleny C. Romanos-Sirakis",
+        "Diana Desai"
+      ],
+      "year": 2025,
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK580518/",
+      "license": "NCBI Bookshelf / StatPearls",
+      "location": "NCBI Bookshelf",
+      "notes": "Supports current ABO typing, forward/reverse typing and clinical transfusion considerations."
+    },
+    {
+      "title": "The Rh blood group",
+      "source_type": "reference",
+      "authors": [
+        "Laura Dean"
+      ],
+      "year": 2005,
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK2269/",
+      "license": "NCBI Bookshelf",
+      "location": "NCBI Bookshelf",
+      "notes": "Supports Rh antibodies, transfusion reactions and hemolytic disease of the newborn."
+    },
+    {
+      "title": "Rh Blood Group System",
+      "source_type": "reference",
+      "authors": [
+        "StatPearls"
+      ],
+      "year": 2023,
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK594252/",
+      "license": "NCBI Bookshelf / StatPearls",
+      "location": "NCBI Bookshelf",
+      "notes": "Supports RhD immunogenicity and clinical relevance."
+    },
+    {
+      "title": "Blood transfusions and the immune system",
+      "source_type": "reference",
+      "authors": [
+        "Laura Dean"
+      ],
+      "year": 2005,
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK2265/",
+      "license": "NCBI Bookshelf",
+      "location": "NCBI Bookshelf",
+      "notes": "Supports compatibility testing and immune consequences of incompatible transfusion."
+    }
+  ]
+}
