@@ -214,6 +214,13 @@ def _score(query_tokens: list[str], record: Record) -> tuple[float, dict[str, An
         }
         if query_ngrams & content_ngrams:
             score += 40.0 * size
+            if size == 2:
+                matched_phrases = query_ngrams & content_ngrams
+                if any(
+                    len(phrase[0]) >= 5 and len(phrase[1]) >= 5
+                    for phrase in matched_phrases
+                ):
+                    score += 1000.0
             break
 
     if field == "terminology":
@@ -316,8 +323,15 @@ def retrieve(
                 score += 400.0
         topic_tokens = tokenize(_field_text(record, "topic"))
         exact_topic_match = (
-            len(topic_tokens) >= 2
-            and set(topic_tokens).issubset(set(query_tokens))
+            (
+                len(topic_tokens) >= 2
+                and set(topic_tokens).issubset(set(query_tokens))
+            )
+            or (
+                len(topic_tokens) == 1
+                and len(topic_tokens[0]) >= 6
+                and topic_tokens[0] in query_tokens
+            )
         )
         if score > 0 and (match["coverage"] >= MIN_COVERAGE or exact_topic_match) and any(
             token in set(tokenize(_field_text(record, field)))
