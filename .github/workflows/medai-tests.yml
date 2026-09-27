@@ -26,6 +26,8 @@ jobs:
       - name: Run training pipeline tests
         working-directory: training
         run: python -m unittest test_build_dataset.py -v
+      - name: Run corpus validator tests
+        run: python -m unittest training/test_validate_corpus.py -v
       - name: Run tokenizer foundation tests
         run: python -m unittest training/test_tokenizer.py -v
       - name: Install model dependencies
@@ -34,6 +36,8 @@ jobs:
         run: python -m unittest model/test_transformer.py model/test_size.py -v
       - name: Generate Hematology training dataset
         run: python training/build_dataset.py
+      - name: Validate generated corpus
+        run: python training/validate_corpus.py datasets/hematology/train.jsonl datasets/hematology/validation.jsonl datasets/hematology/test.jsonl
       - name: Run corpus analysis unit tests
         run: python -m unittest training/test_analyze_corpus.py -v
       - name: Run tokenizer audit unit tests
@@ -70,8 +74,7 @@ jobs:
           from pathlib import Path
           spec = json.loads(Path("model/foundation_spec.json").read_text())
           assert spec["status"] == "candidate_pending_freeze", spec
-          assert spec["transformer"]["parameter_count"] > 95_000_000, spec
-          assert spec["transformer"]["parameter_count"] < 105_000_000, spec
+          assert 95_000_000 < spec["transformer"]["parameter_count"] < 105_000_000, spec
           assert spec["transformer"]["max_seq_len"] == 256, spec
           assert spec["transformer"]["weight_tying"] is True, spec
           assert spec["selected_tokenizer"]["actual_vocab_size"] > 0, spec
