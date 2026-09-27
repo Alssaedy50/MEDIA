@@ -167,10 +167,10 @@
                 android:id="@+id/prompt_3"
                 android:layout_width="0dp"
                 android:layout_height="48dp"
-                android:layout_weight="1"
                 android:text="Iron deficiency"
                 android:textSize="11sp"
                 android:layout_marginStart="6dp"
+                android:layout_weight="1"
                 android:contentDescription="Ask about iron deficiency anemia"/>
         </LinearLayout>
 
@@ -213,9 +213,10 @@
             android:background="@drawable/bg_answer"/>
 
         <TextView
+            android:id="@+id/scope"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Current scope: Hematology • 51 local medical records"
+            android:text="Current scope: Hematology • loading..."
             android:textColor="#71808C"
             android:textSize="12sp"
             android:gravity="center"
