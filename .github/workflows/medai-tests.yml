@@ -61,22 +61,28 @@ jobs:
           assert all(r["token_count_including_specials"] > 0 for r in data["results"]), data
           print(data)
           PY
-      - name: Materialize candidate 100M foundation specification
-        run: python training/select_model_spec.py datasets/hematology/tokenizer_benchmark.json --output model/foundation_spec.json
-      - name: Verify candidate 100M foundation specification
+      - name: Recompute candidate foundation and compare with frozen spec
         run: |
+          python training/select_model_spec.py datasets/hematology/tokenizer_benchmark.json --output /tmp/foundation_candidate.json
           python - <<'PY'
           import json
           from pathlib import Path
-          spec = json.loads(Path("model/foundation_spec.json").read_text())
-          assert spec["status"] == "candidate_pending_freeze", spec
-          assert 95_000_000 < spec["transformer"]["parameter_count"] < 105_000_000, spec
-          assert spec["transformer"]["max_seq_len"] == 256, spec
-          assert spec["transformer"]["weight_tying"] is True, spec
-          assert spec["selected_tokenizer"]["actual_vocab_size"] > 0, spec
-          print(json.dumps(spec, ensure_ascii=False, indent=2))
+          frozen = json.loads(Path("model/foundation_spec.json").read_text())
+          candidate = json.loads(Path("/tmp/foundation_candidate.json").read_text())
+          assert frozen["status"] == "frozen", frozen
+          assert candidate["selected_tokenizer"]["requested_vocab_size"] == frozen["selected_tokenizer"]["requested_vocab_size"], (candidate, frozen)
+          assert candidate["selected_tokenizer"]["actual_vocab_size"] == frozen["selected_tokenizer"]["actual_vocab_size"], (candidate, frozen)
+          assert candidate["selected_tokenizer"]["unknown_token_count"] == 0, candidate
+          assert candidate["transformer"]["parameter_count"] == frozen["transformer"]["parameter_count"], (candidate, frozen)
+          assert candidate["transformer"]["d_model"] == frozen["transformer"]["d_model"], (candidate, frozen)
+          assert candidate["transformer"]["n_layers"] == frozen["transformer"]["n_layers"], (candidate, frozen)
+          assert candidate["transformer"]["n_heads"] == frozen["transformer"]["n_heads"], (candidate, frozen)
+          assert candidate["transformer"]["d_ff"] == frozen["transformer"]["d_ff"], (candidate, frozen)
+          assert candidate["transformer"]["max_seq_len"] == frozen["transformer"]["max_seq_len"] == 256, (candidate, frozen)
+          assert frozen["transformer"]["weight_tying"] is True, frozen
+          print({"foundation":"frozen","vocab":frozen["selected_tokenizer"]["actual_vocab_size"],"params":frozen["transformer"]["parameter_count"]})
           PY
-      - name: Build tokenizer artifact from selected foundation
+      - name: Build tokenizer artifact from frozen foundation
         run: |
           python - <<'PY'
           import json
@@ -84,7 +90,6 @@ jobs:
           from pathlib import Path
           spec = json.loads(Path("model/foundation_spec.json").read_text())
           requested_vocab_size = int(spec["selected_tokenizer"]["requested_vocab_size"])
-          print({"selected_requested_vocab_size": requested_vocab_size, "selected_actual_vocab_size": spec["selected_tokenizer"]["actual_vocab_size"]})
           subprocess.run([
               "python",
               "training/tokenizer.py",
@@ -104,15 +109,16 @@ jobs:
           python - <<'PY'
           import json
           from pathlib import Path
+          spec = json.loads(Path("model/foundation_spec.json").read_text())
           p = Path("datasets/hematology/tokenizer.json")
           data = json.loads(p.read_text())
           assert data["version"] == "media-bpe-v1", data
+          assert data["vocab_size"] == spec["selected_tokenizer"]["actual_vocab_size"], (data, spec)
           assert len(data["vocab"]) == data["vocab_size"], data
           assert all(t in data["vocab"] for t in ["<pad>", "<unk>", "<bos>", "<eos>"]), data
-          print({"vocab_size": data["vocab_size"], "merge_count": len(data["merges"])})
           audit = json.loads(Path("datasets/hematology/tokenizer_audit.json").read_text())
           assert audit["unknown_token_count"] == 0, audit
-          print({"train_token_count": audit["token_count_including_specials"], "max_tokens": audit["max_tokens"]})
+          print({"vocab_size": data["vocab_size"], "merge_count": len(data["merges"]), "train_tokens": audit["token_count_including_specials"]})
           holdout = json.loads(Path("datasets/hematology/tokenizer_holdout_audit.json").read_text())
           print({"heldout_unknown_token_count": holdout["unknown_token_count"], "heldout_token_count": holdout["token_count_including_specials"]})
           PY
