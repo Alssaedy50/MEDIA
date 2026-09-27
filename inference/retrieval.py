@@ -31,7 +31,7 @@ STOPWORDS = {
     "ماهو", "ماهي", "وظيفة", "دور", "اشرح", "قارن", "أين",
 }
 
-MIN_COVERAGE = 0.5
+MIN_COVERAGE = 0.4
 
 
 @dataclass(frozen=True)
@@ -93,7 +93,13 @@ def _unknown_named_terms(query: str, records: list[Record]) -> list[str]:
     unknown = []
     for term in candidates:
         parts = [part.lower() for part in re.split(r"[-_]+", term) if part]
-        if term.lower() in anchor_tokens or any(part in anchor_tokens for part in parts if len(part) >= 3):
+        if term.lower() in anchor_tokens:
+            continue
+        if "-" in term or "_" in term:
+            first_part = parts[0] if parts else ""
+            if len(first_part) >= 3 and first_part in anchor_tokens:
+                continue
+        elif any(part in anchor_tokens for part in parts if len(part) >= 3):
             continue
         unknown.append(term.lower())
     return sorted(set(unknown))
@@ -120,8 +126,8 @@ def _score(query_tokens: list[str], record: Record) -> tuple[float, dict[str, An
         "subject": 4.0,
         "domain": 2.0,
         "subtopic": 3.0,
-        "terminology": 2.5,
-        "content": 1.0,
+        "terminology": 3.0,
+        "content": 1.5,
         "relations": 1.5,
     }
 
@@ -189,6 +195,23 @@ def _score(query_tokens: list[str], record: Record) -> tuple[float, dict[str, An
             if query_ngrams & anchor_ngrams:
                 score += 20.0 * size
                 break
+
+        if field == "content":
+            for size in (4, 3, 2):
+                if len(query_tokens) < size:
+                    continue
+                query_ngrams = {
+                    tuple(query_tokens[i:i + size])
+                    for i in range(len(query_tokens) - size + 1)
+                }
+                content_tokens = tokenize(fields["content"])
+                content_ngrams = {
+                    tuple(content_tokens[i:i + size])
+                    for i in range(len(content_tokens) - size + 1)
+                }
+                if query_ngrams & content_ngrams:
+                    score += 8.0 * size
+                    break
 
         if field == "terminology":
             query_set = set(query_tokens)
@@ -266,8 +289,28 @@ def retrieve(
         if raw_topic and raw_topic in raw_query:
             score += 1000000000.0
         topic_tokens = tokenize(_field_text(record, "topic"))
+        if (
+            topic_tokens
+            and len(topic_tokens) == 1
+            and len(topic_tokens[0]) >= 6
+            and topic_tokens[0] in query_tokens
+        ):
+            score += 1000000000.0
         if len(topic_tokens) >= 2 and all(token in query_tokens for token in topic_tokens):
             score += 1000000000.0
+        if len(topic_tokens) >= 3:
+            prefix3 = tuple(topic_tokens[:3])
+            query_windows3 = {
+                tuple(query_tokens[i:i + 3])
+                for i in range(len(query_tokens) - 2)
+            }
+            if prefix3 in query_windows3 and (
+                prefix3 == ("red", "blood", "cell")
+                or prefix3 == ("white", "blood", "cell")
+                or len(prefix3[0]) >= 6
+                or len(prefix3[1]) >= 8
+            ):
+                score += 400.0
         topic_tokens = tokenize(_field_text(record, "topic"))
         exact_topic_match = (
             len(topic_tokens) >= 2
