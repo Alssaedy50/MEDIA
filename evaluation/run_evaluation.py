@@ -21,9 +21,12 @@ DEFAULT_CASES = ROOT / "evaluation" / "anatomy_eval.json"
 def evaluate_case(case: dict[str, Any]) -> dict[str, Any]:
     result = answer(case["query"], mode=case.get("mode", "quick"), top_k=3)
 
-    expected_ids = set(case.get("expected_concepts", []))
+    # Support both the canonical evaluation schema and legacy checked-in cases.
+    # Canonical keys: expected_concepts / expected_evidence_state.
+    # Legacy keys: expected_ids / expected_state.
+    expected_ids = set(case.get("expected_concepts", case.get("expected_ids", [])))
     actual_ids = set(result.get("retrieved_ids", []))
-    expected_state = case["expected_evidence_state"]
+    expected_state = case.get("expected_evidence_state", case.get("expected_state", "insufficient"))
 
     state_ok = result.get("evidence_state") == expected_state
 
@@ -57,8 +60,8 @@ def run(path: Path = DEFAULT_CASES) -> dict[str, Any]:
     passed = sum(item["passed"] for item in results)
 
     return {
-        "evaluation": data["name"],
-        "version": data["version"],
+        "evaluation": data.get("name", data.get("scope", path.stem)),
+        "version": data.get("version", "0.1.0"),
         "total_cases": len(results),
         "passed_cases": passed,
         "failed_cases": len(results) - passed,
