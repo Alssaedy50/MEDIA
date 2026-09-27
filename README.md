@@ -44,7 +44,7 @@ It currently contains **51 reviewed/verified knowledge records** covering:
 - Pediatrics
 - Community Medicine
 
-The next stage is no longer adding another block. MEDIA now has a Web/API prototype, a deterministic bilingual tokenizer, a reproducible training corpus, and a from-scratch Tiny Transformer foundation.
+The immediate goal is a usable student-facing Android Alpha. The current Hematology block is the initial knowledge domain; larger corpus expansion and final model training will follow after the application experience is validated with students.
 
 The first training corpus is generated reproducibly from these registered records. Examples retain their originating record ID and use a record-level train/validation/test split to reduce semantic leakage.
 
