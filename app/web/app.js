@@ -5,6 +5,9 @@ const askEl = document.getElementById("ask");
 const resultEl = document.getElementById("result");
 const statusEl = document.getElementById("status");
 const scopeEl = document.getElementById("scope");
+const installEl = document.getElementById("install");
+
+let deferredInstallPrompt = null;
 
 function escapeHtml(value) {
   return String(value ?? "")
@@ -100,6 +103,15 @@ async function checkHealth() {
   } catch {
     scopeEl.textContent = "";
   }
+
+  try {
+    const response = await fetch("/api/runtime");
+    const data = await response.json();
+    const suffix = data.weights_available ? " · model ready" : " · retrieval mode";
+    statusEl.textContent = `${statusEl.textContent}${suffix}`;
+  } catch {
+    // Health status remains authoritative for the shell.
+  }
 }
 
 async function ask() {
@@ -139,6 +151,30 @@ async function ask() {
     askEl.disabled = false;
     askEl.textContent = "Ask MEDIA";
   }
+}
+
+window.addEventListener("beforeinstallprompt", event => {
+  event.preventDefault();
+  deferredInstallPrompt = event;
+  installEl.classList.remove("hidden");
+});
+
+installEl.addEventListener("click", async () => {
+  if (!deferredInstallPrompt) return;
+  deferredInstallPrompt.prompt();
+  await deferredInstallPrompt.userChoice;
+  deferredInstallPrompt = null;
+  installEl.classList.add("hidden");
+});
+
+window.addEventListener("appinstalled", () => {
+  installEl.classList.add("hidden");
+});
+
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker.register("/static/service-worker.js").catch(() => {});
+  });
 }
 
 askEl.addEventListener("click", ask);
