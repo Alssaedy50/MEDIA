@@ -1,0 +1,138 @@
+{
+  "id": "hematology.anatomy.lymph_nodes",
+  "domain": "Hematology",
+  "subject": "Anatomy",
+  "topic": "Lymph Nodes",
+  "subtopic": "Gross anatomy, histological organization and immune surveillance",
+  "concept": "Lymph nodes are secondary lymphoid organs positioned along lymphatic vessels that filter lymph and provide organized sites for antigen presentation and adaptive immune responses.",
+  "content": {
+    "definition": "A lymph node is a small, encapsulated secondary lymphoid organ located along lymphatic vessels. It receives lymph through afferent lymphatic vessels, filters its contents, and returns lymph through efferent lymphatic vessels.",
+    "explanation": "The lymph node is organized so that lymph-borne antigens, antigen-presenting cells, and lymphocytes meet in specialized compartments. B-cell follicles are concentrated in the cortex, T cells and dendritic cells in the paracortex, and plasma cells, macrophages, medullary cords and sinuses in the medulla.",
+    "mechanism": "Lymph from peripheral tissues enters through afferent lymphatics and reaches the subcapsular sinus. It then passes through cortical/trabecular and medullary sinus pathways toward the efferent lymphatic vessel. Antigens and antigen-presenting cells are sampled along this route. Naive lymphocytes also enter from the blood through high endothelial venules in the paracortex. Appropriate antigen recognition activates B- and T-cell responses, while activated B cells can differentiate into plasma cells and memory B cells.",
+    "structure": "A typical lymph node is bean-shaped and enclosed by a connective-tissue capsule. Trabeculae extend inward. The parenchyma is classically divided into cortex, paracortex and medulla. The cortex contains lymphoid follicles, usually B-cell rich; the paracortex is the principal T-cell zone and contains high endothelial venules; the medulla contains medullary cords and medullary sinuses. The concave hilum is associated with efferent lymphatics and blood vessels.",
+    "function": "Major functions include filtration of lymph, antigen capture and processing, immune surveillance, organization of B- and T-cell interactions, and support of adaptive immune responses. Lymph nodes also provide a route through which lymph returns toward the venous circulation.",
+    "causes": [],
+    "effects": [],
+    "clinical_relevance": "Lymph nodes are important in regional infections, reactive lymphadenopathy, lymphoma, metastatic cancer, and immune responses. Their predictable drainage patterns make regional lymph-node examination clinically useful.",
+    "diagnosis": "Lymph-node abnormalities may be evaluated by physical examination, imaging, cytology or biopsy, with histopathology, immunophenotyping, flow cytometry and molecular testing selected according to the clinical question.",
+    "treatment": "Treatment is directed at the underlying cause, such as infection, inflammatory disease, lymphoma, or metastatic malignancy; the node itself is not treated as a single disease entity.",
+    "high_yield": [
+      "Lymph nodes are secondary lymphoid organs, unlike the thymus and bone marrow, which are primary lymphoid organs.",
+      "Afferent lymphatic vessels enter the convex surface of a lymph node; efferent lymphatic vessels leave at the hilum.",
+      "Lymph flow proceeds through the subcapsular sinus and deeper sinus pathways toward the efferent lymphatic vessel.",
+      "The cortex contains B-cell-rich lymphoid follicles.",
+      "The paracortex is the major T-cell zone and contains high endothelial venules (HEVs), which permit lymphocyte entry from blood.",
+      "The medulla contains medullary cords and medullary sinuses; plasma cells are prominent in the cords.",
+      "Lymph nodes filter lymph and provide organized sites for antigen presentation and lymphocyte activation.",
+      "Secondary follicles develop germinal centers after appropriate antigenic stimulation."
+    ]
+  },
+  "terminology": [
+    {
+      "term": "Lymph node",
+      "language": "English",
+      "Arabic": "العقدة اللمفاوية",
+      "pronunciation": "LIMF nohd",
+      "etymology": "Lymph derives from Latin lympha, water/clear fluid; node derives from Latin nodus, knot.",
+      "notes": "A secondary lymphoid organ positioned along lymphatic drainage pathways."
+    },
+    {
+      "term": "Afferent lymphatic vessel",
+      "language": "English",
+      "Arabic": "وعاء لمفاوي وارد",
+      "pronunciation": "AF-er-ent lim-FAT-ik VES-el",
+      "etymology": "Afferent means carrying toward a structure.",
+      "notes": "Carries lymph into the lymph node."
+    },
+    {
+      "term": "Efferent lymphatic vessel",
+      "language": "English",
+      "Arabic": "وعاء لمفاوي صادر",
+      "pronunciation": "EF-er-ent lim-FAT-ik VES-el",
+      "etymology": "Efferent means carrying away from a structure.",
+      "notes": "Carries lymph away from the node, usually through the hilum."
+    },
+    {
+      "term": "Paracortex",
+      "language": "English",
+      "Arabic": "المنطقة جانب القشرة / المنطقة التائية",
+      "pronunciation": "PAR-ah-KOR-teks",
+      "etymology": "Para- means beside or alongside; cortex refers to the outer region.",
+      "notes": "The major T-cell-rich region between the cortex and medulla."
+    },
+    {
+      "term": "High endothelial venule (HEV)",
+      "language": "English",
+      "Arabic": "وريد ذو بطانة عالية",
+      "pronunciation": "hy EN-doh-THEE-lee-al VEN-yool",
+      "etymology": "Named for the relatively tall endothelial cells lining these specialized venules.",
+      "notes": "A specialized blood vessel important for entry of naive lymphocytes into lymph nodes."
+    },
+    {
+      "term": "Hilum",
+      "language": "English",
+      "Arabic": "سُرّة العضو / نقير العقدة",
+      "pronunciation": "HY-lum",
+      "etymology": "Latin hilum, a small spot or depression where vessels and structures enter or leave an organ.",
+      "notes": "The concave region associated with efferent lymphatic and vascular structures."
+    }
+  ],
+  "relations": [
+    {
+      "target_id": "hematology.anatomy.thymus",
+      "relation": "receives_mature_lymphocytes_from",
+      "note": "Mature naive T cells generated and selected in the thymus populate secondary lymphoid tissues including lymph nodes."
+    },
+    {
+      "target_id": "hematology.anatomy.bone_marrow",
+      "relation": "depends_on_hematopoietic_origin",
+      "note": "The lymphoid cells participating in lymph-node responses ultimately derive from hematopoietic stem and progenitor cells."
+    }
+  ],
+  "evidence_level": "reference",
+  "status": "reviewed",
+  "review_notes": "Original synthesis checked against current NCBI/NIH reference material and peer-reviewed reviews. The record separates stable gross/histological anatomy from more detailed descriptions of cellular microenvironments.",
+  "last_verified": "2026-09-27",
+  "sources": [
+    {
+      "title": "Anatomy, Lymph Nodes",
+      "source_type": "reference",
+      "authors": ["Maciej Więcław", "Vikas Gupta"],
+      "year": 2026,
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK557717/",
+      "license": "NCBI Bookshelf / StatPearls",
+      "location": "NCBI Bookshelf",
+      "notes": "Gross anatomy, cortex/paracortex/medulla, lymphatic flow, HEVs and function."
+    },
+    {
+      "title": "Histology, Lymph Nodes",
+      "source_type": "reference",
+      "authors": [],
+      "year": 2022,
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK559053/",
+      "license": "NCBI Bookshelf / StatPearls",
+      "location": "NCBI Bookshelf",
+      "notes": "Histological organization, follicles, lymphatic vessels and clinical pathology."
+    },
+    {
+      "title": "Normal structure, function, and histology of lymph nodes",
+      "source_type": "review",
+      "authors": ["Cynthia L Willard-Mack"],
+      "year": 2006,
+      "url": "https://pubmed.ncbi.nlm.nih.gov/17067937/",
+      "license": "Peer-reviewed publication",
+      "location": "PubMed",
+      "notes": "Classic review of cortex, paracortex, medulla and functional organization."
+    },
+    {
+      "title": "New tools for immunologists: models of lymph node function from cells to tissues",
+      "source_type": "review",
+      "authors": [],
+      "year": 2023,
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10206051/",
+      "license": "PMC",
+      "location": "Peer-reviewed review",
+      "notes": "Modern view of lymph-node spatial organization, cellular niches and immune-cell interactions."
+    }
+  ]
+}
