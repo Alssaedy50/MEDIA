@@ -76,6 +76,22 @@ def _field_text(record: Record, field: str) -> str:
     return flatten_text(record.data.get(field, ""))
 
 
+
+def _unknown_named_terms(query: str, records: list[Record]) -> list[str]:
+    """Return distinctive capitalized query terms absent from registered anchors."""
+    candidates = re.findall(r"\\b[A-Z][A-Za-z0-9_-]{3,}\\b", query)
+    ignored = {"What", "How", "Where", "Which", "Why", "Give", "Explain", "Describe"}
+    candidates = [term.lower() for term in candidates if term not in ignored]
+    if not candidates:
+        return []
+    anchor_text = " ".join(
+        _field_text(record, field)
+        for record in records
+        for field in ("concept", "topic", "subject", "subtopic", "terminology", "relations")
+    ).lower()
+    return sorted({term for term in candidates if term not in anchor_text})
+
+
 def _score(query_tokens: list[str], record: Record) -> tuple[float, dict[str, Any]]:
     if not query_tokens:
         return 0.0, {"matched_terms": [], "coverage": 0.0}
