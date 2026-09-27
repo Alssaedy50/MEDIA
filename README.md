@@ -44,7 +44,7 @@ It currently contains **51 reviewed/verified knowledge records** covering:
 - Pediatrics
 - Community Medicine
 
-The next stage is no longer adding another block. MEDIA is now moving from knowledge engineering to model-training engineering.
+The next stage is no longer adding another block. MEDIA now has a Web/API prototype over the existing evidence pipeline while model-training engineering continues.
 
 The first training corpus is generated reproducibly from these registered records. Examples retain their originating record ID and use a record-level train/validation/test split to reduce semantic leakage.
 
@@ -102,7 +102,7 @@ evaluation/     Evaluation datasets and tests
 datasets/       Training/evaluation data
 model/          Model artifacts and configuration
 training/       Training pipeline
-app/            Future Android application
+app/            Web/API prototype and future Android application
 docs/           Architecture and project documentation
 releases/       Versioned knowledge snapshots
 ```
