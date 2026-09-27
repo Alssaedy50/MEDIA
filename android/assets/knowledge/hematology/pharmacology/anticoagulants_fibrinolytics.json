@@ -1,0 +1,44 @@
+{
+  "id": "hematology.pharmacology.anticoagulants_fibrinolytics",
+  "domain": "Hematology",
+  "subject": "Pharmacology",
+  "topic": "Anticoagulants and Fibrinolytics",
+  "concept": "Antithrombotic medicines reduce coagulation or promote fibrin breakdown.",
+  "content": {
+    "definition": "Antithrombotic medicines reduce coagulation or promote fibrin breakdown.",
+    "explanation": "Heparins act through antithrombin; warfarin reduces vitamin-K-dependent clotting factor synthesis; direct oral anticoagulants inhibit thrombin or factor Xa; fibrinolytics promote plasmin-mediated fibrin breakdown.",
+    "mechanism": "Heparins act through antithrombin; warfarin reduces vitamin-K-dependent clotting factor synthesis; direct oral anticoagulants inhibit thrombin or factor Xa; fibrinolytics promote plasmin-mediated fibrin breakdown.",
+    "clinical_relevance": "Anticoagulants mainly prevent clot propagation, whereas fibrinolytics actively dissolve established fibrin thrombi.",
+    "high_yield": [
+      "Anticoagulants mainly prevent clot propagation, whereas fibrinolytics actively dissolve established fibrin thrombi."
+    ],
+    "treatment": "Therapy is indication- and patient-specific and should follow current authoritative guidance rather than a fixed universal regimen.",
+    "effects": [
+      "Bleeding is the principal adverse effect; anticoagulant choice depends on indication, renal function, interactions and bleeding risk."
+    ]
+  },
+  "terminology": [],
+  "relations": [],
+  "yemen_context": {
+    "relevance": "Relevant to the Hematology block and infectious-disease pharmacology; local availability and national guidance may differ.",
+    "evidence": "General evidence; no Yemen-specific regimen asserted."
+  },
+  "evidence_level": "guideline",
+  "status": "reviewed",
+  "review_notes": "Original educational synthesis; treatment is intentionally presented as principles rather than patient-specific prescribing.",
+  "last_verified": "2026-09-27",
+  "sources": [
+    {
+      "title": "ASH clinical practice guidelines; standard hematology pharmacology references.",
+      "source_type": "guideline",
+      "authors": [
+        "World Health Organization"
+      ],
+      "year": 2026,
+      "url": "https://www.who.int/",
+      "license": "WHO",
+      "location": "WHO",
+      "notes": "Authoritative guidance or clinical reference for the topic."
+    }
+  ]
+}
