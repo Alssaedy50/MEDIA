@@ -101,7 +101,12 @@ public final class OfflineKnowledge {
 
     private static Set<String> tokens(String s) {
         Set<String> out = new HashSet<>();
-        for (String t : s.split(" ")) if (t.length() >= 2) out.add(t);
+        String[] stop = {"a","an","the","what","which","who","where","when","why","how","is","are","was","were","do","does","did","can","could","would","should","please","explain","describe","tell","me","about","of","for","to","in","on","with","and","or"};
+        Set<String> stopWords = new HashSet<>();
+        Collections.addAll(stopWords, stop);
+        for (String t : s.split(" ")) {
+            if (t.length() >= 2 && !stopWords.contains(t)) out.add(t);
+        }
         return out;
     }
 
