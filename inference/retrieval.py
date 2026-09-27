@@ -164,7 +164,7 @@ def _score(query_tokens: list[str], record: Record) -> tuple[float, dict[str, An
                     for i in range(len(query_tokens) - len(topic_phrase) + 1)
                 }
                 if topic_phrase in query_windows:
-                    score += 500.0
+                    score += 5000.0
                 elif len(anchor_tokens) >= 2:
                     prefix = tuple(anchor_tokens[:2])
                     prefix_windows = {
