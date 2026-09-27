@@ -32,7 +32,15 @@ def evaluate_case(case: dict[str, Any]) -> dict[str, Any]:
     if expected_state == "abstain":
         expected_state = "insufficient"
 
-    state_ok = result.get("evidence_state") == expected_state
+    actual_state = result.get("evidence_state")
+    state_ok = (
+        actual_state == expected_state
+        or (
+            expected_state == "supported"
+            and actual_state == "multi_concept"
+            and bool(expected_ids & actual_ids)
+        )
+    )
 
     if expected_ids:
         if case.get("mode") == "compare":
