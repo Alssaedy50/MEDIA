@@ -24,6 +24,10 @@ jobs:
         run: python -m unittest test_build_dataset.py -v
       - name: Generate Hematology training dataset
         run: python training/build_dataset.py
+      - name: Run corpus analysis unit tests
+        run: python -m unittest training/test_analyze_corpus.py -v
+      - name: Run corpus analysis
+        run: python training/analyze_corpus.py --output datasets/hematology/corpus_analysis.json
       - name: Verify generated corpus manifest
         run: |
           python - <<'PY'
