@@ -21,7 +21,7 @@ Engine        (only when compatible weights exist)
 Registered Hematology Knowledge
 ```
 
-The API does not fabricate medical facts. Evidence retrieval remains independently traceable, and safe abstention is preserved.
+The API does not fabricate medical facts. Evidence retrieval remains independently traceable, and safe abstention is preserved. The Android Alpha is intentionally an online application at this stage; offline local AI will be added after the model is trained and packaged.
 
 ## Current Alpha capabilities
 
