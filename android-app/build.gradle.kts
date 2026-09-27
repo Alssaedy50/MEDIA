@@ -32,6 +32,10 @@ tasks.named("preBuild").configure {
     dependsOn("syncOfflineKnowledge")
 }
 
+tasks.matching { it.name == "mergeDebugAssets" }.configureEach {
+    dependsOn("syncOfflineKnowledge")
+}
+
 dependencies {
     testImplementation("junit:junit:4.13.2")
 }
