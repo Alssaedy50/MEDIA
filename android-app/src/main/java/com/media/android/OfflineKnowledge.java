@@ -14,6 +14,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Locale;
 import java.util.Set;
+import java.util.Iterator;
 
 public final class OfflineKnowledge {
     public static final class Result {
@@ -107,7 +108,9 @@ public final class OfflineKnowledge {
     private static String contentText(JSONObject o) {
         if (o == null) return "";
         StringBuilder b = new StringBuilder();
-        for (String k : JSONObject.getNames(o) == null ? new String[0] : JSONObject.getNames(o)) {
+        Iterator<String> keys = o.keys();
+        while (keys.hasNext()) {
+            String k = keys.next();
             Object v = o.opt(k);
             b.append(' ').append(k).append(' ').append(v == null ? "" : v.toString());
         }
