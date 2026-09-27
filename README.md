@@ -4,7 +4,7 @@
 
 The project is being built around a source-traceable medical knowledge layer, retrieval, verification, evaluation, and an eventual offline Android runtime.
 
-> **Current milestone: MEDIA — Hematology training-data foundation**
+> **Current milestone: MEDIA — Hematology model-foundation engineering**
 
 ## Vision
 
@@ -44,7 +44,7 @@ It currently contains **51 reviewed/verified knowledge records** covering:
 - Pediatrics
 - Community Medicine
 
-The next stage is no longer adding another block. MEDIA now has a Web/API prototype over the existing evidence pipeline while model-training engineering continues.
+The next stage is no longer adding another block. MEDIA now has a Web/API prototype, a deterministic bilingual tokenizer, a reproducible training corpus, and a from-scratch Tiny Transformer foundation.
 
 The first training corpus is generated reproducibly from these registered records. Examples retain their originating record ID and use a record-level train/validation/test split to reduce semantic leakage.
 
@@ -60,17 +60,19 @@ The first training corpus is generated reproducibly from these registered record
 
 ### Stage 2 — Tokenizer and corpus analysis
 - [x] Medical English + Arabic tokenizer
-- [ ] Vocabulary analysis
-- [ ] Exact token counts
-- [ ] Sequence-length analysis
-- [ ] Dataset quality audit
+- [x] Exact token audit
+- [x] Sequence-length audit
+- [x] Unknown-token verification
+- [x] Dataset quality audit
 
 ### Stage 3 — Model foundation
 - [x] Tiny Transformer foundation + overfit test
-- [ ] ~100M-parameter architecture
+- [x] Exact parameter-count calculator
+- [x] Architecture search near 100M parameters
 - [x] From-scratch initialization
 - [x] Checkpointing and resume
 - [ ] GPU training configuration
+- [ ] Final ~100M architecture freeze
 
 ### Stage 4 — Medical AI
 - [ ] Retrieval integration
@@ -103,7 +105,7 @@ datasets/       Training/evaluation data
 model/          Model artifacts and configuration
 training/       Training pipeline
 app/            Web/API prototype and future Android application
-docs/           Architecture and project documentation
+docs/            Architecture and project documentation
 releases/       Versioned knowledge snapshots
 ```
 
