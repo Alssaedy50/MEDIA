@@ -16,7 +16,23 @@
       "Folate treats folate deficiency but does not replace B12 when B12 deficiency is present."
     ]
   },
-  "terminology": [],
+  "terminology": [
+    {
+      "term": "Iron replacement",
+      "language": "English",
+      "notes": "Search synonym/clinical terminology used for evidence retrieval."
+    },
+    {
+      "term": "Vitamin B12 deficiency",
+      "language": "English",
+      "notes": "Search synonym/clinical terminology used for evidence retrieval."
+    },
+    {
+      "term": "Folate replacement",
+      "language": "English",
+      "notes": "Search synonym/clinical terminology used for evidence retrieval."
+    }
+  ],
   "relations": [],
   "yemen_context": {
     "relevance": "Core Hematology pharmacology topic; local availability may vary.",

@@ -30,17 +30,86 @@
     ]
   },
   "terminology": [
-    {"term": "ABO blood group", "language": "English", "Arabic": "نظام فصائل الدم ABO", "pronunciation": "AY-BEE-OH", "etymology": "Named from A, B and O blood-group phenotypes.", "notes": "Major inherited blood group system based on A and B antigens."},
-    {"term": "Antigen", "language": "English", "Arabic": "مستضد", "pronunciation": "AN-ti-jen", "etymology": "Antibody-generating substance.", "notes": "Molecule recognized by an immune receptor or antibody."},
-    {"term": "Agglutination", "language": "English", "Arabic": "التراص", "pronunciation": "uh-gloo-tih-NAY-shun", "etymology": "Latin agglutinare, to glue together.", "notes": "Visible clumping of cells caused by antibody-mediated cross-linking."},
-    {"term": "RhD", "language": "English", "Arabic": "مستضد RhD", "pronunciation": "R-H-D", "etymology": "Rh system designation; D is the major clinically important antigen.", "notes": "Presence defines Rh-positive status; absence defines Rh-negative status."},
-    {"term": "Crossmatch", "language": "English", "Arabic": "اختبار التوافق", "pronunciation": "CROSS-match", "etymology": "Cross, compare, plus match, compatibility.", "notes": "Laboratory compatibility test between recipient and donor blood components."},
-    {"term": "Alloimmunization", "language": "English", "Arabic": "التحصين المناعي ضد مستضدات الغير", "pronunciation": "al-oh-im-yoo-nye-ZAY-shun", "etymology": "Allo-, other, plus immunization.", "notes": "Formation of antibodies against antigens from another individual of the same species."}
+    {
+      "term": "ABO blood group",
+      "language": "English",
+      "Arabic": "نظام فصائل الدم ABO",
+      "pronunciation": "AY-BEE-OH",
+      "etymology": "Named from A, B and O blood-group phenotypes.",
+      "notes": "Major inherited blood group system based on A and B antigens."
+    },
+    {
+      "term": "Antigen",
+      "language": "English",
+      "Arabic": "مستضد",
+      "pronunciation": "AN-ti-jen",
+      "etymology": "Antibody-generating substance.",
+      "notes": "Molecule recognized by an immune receptor or antibody."
+    },
+    {
+      "term": "Agglutination",
+      "language": "English",
+      "Arabic": "التراص",
+      "pronunciation": "uh-gloo-tih-NAY-shun",
+      "etymology": "Latin agglutinare, to glue together.",
+      "notes": "Visible clumping of cells caused by antibody-mediated cross-linking."
+    },
+    {
+      "term": "RhD",
+      "language": "English",
+      "Arabic": "مستضد RhD",
+      "pronunciation": "R-H-D",
+      "etymology": "Rh system designation; D is the major clinically important antigen.",
+      "notes": "Presence defines Rh-positive status; absence defines Rh-negative status."
+    },
+    {
+      "term": "Crossmatch",
+      "language": "English",
+      "Arabic": "اختبار التوافق",
+      "pronunciation": "CROSS-match",
+      "etymology": "Cross, compare, plus match, compatibility.",
+      "notes": "Laboratory compatibility test between recipient and donor blood components."
+    },
+    {
+      "term": "Alloimmunization",
+      "language": "English",
+      "Arabic": "التحصين المناعي ضد مستضدات الغير",
+      "pronunciation": "al-oh-im-yoo-nye-ZAY-shun",
+      "etymology": "Allo-, other, plus immunization.",
+      "notes": "Formation of antibodies against antigens from another individual of the same species."
+    },
+    {
+      "term": "Forward typing",
+      "language": "English",
+      "notes": "Search synonym/clinical terminology used for evidence retrieval."
+    },
+    {
+      "term": "Reverse typing",
+      "language": "English",
+      "notes": "Search synonym/clinical terminology used for evidence retrieval."
+    },
+    {
+      "term": "Crossmatching",
+      "language": "English",
+      "notes": "Search synonym/clinical terminology used for evidence retrieval."
+    }
   ],
   "relations": [
-    {"target_id": "hematology.physiology.rbc_characteristics_functions", "relation": "expressed_on", "note": "ABO and Rh antigens are associated with red blood cells."},
-    {"target_id": "hematology.physiology.hemostasis_coagulation", "relation": "transfusion_related_to", "note": "Blood-group compatibility is a core safety component of transfusion and complements hemostasis knowledge."},
-    {"target_id": "hematology.histology.blood_tissue", "relation": "component_of", "note": "Blood groups are properties of blood cells and plasma relevant to transfusion."}
+    {
+      "target_id": "hematology.physiology.rbc_characteristics_functions",
+      "relation": "expressed_on",
+      "note": "ABO and Rh antigens are associated with red blood cells."
+    },
+    {
+      "target_id": "hematology.physiology.hemostasis_coagulation",
+      "relation": "transfusion_related_to",
+      "note": "Blood-group compatibility is a core safety component of transfusion and complements hemostasis knowledge."
+    },
+    {
+      "target_id": "hematology.histology.blood_tissue",
+      "relation": "component_of",
+      "note": "Blood groups are properties of blood cells and plasma relevant to transfusion."
+    }
   ],
   "yemen_context": {
     "relevance": "ABO and Rh physiology is foundational for safe transfusion practice and interpretation of blood-group testing in clinical medicine.",
@@ -54,7 +123,9 @@
     {
       "title": "The ABO blood group",
       "source_type": "reference",
-      "authors": ["Laura Dean"],
+      "authors": [
+        "Laura Dean"
+      ],
       "year": 2005,
       "url": "https://www.ncbi.nlm.nih.gov/books/NBK2267/",
       "license": "NCBI Bookshelf",
@@ -64,7 +135,10 @@
     {
       "title": "ABO Blood Group System",
       "source_type": "reference",
-      "authors": ["Eleny C. Romanos-Sirakis", "Diana Desai"],
+      "authors": [
+        "Eleny C. Romanos-Sirakis",
+        "Diana Desai"
+      ],
       "year": 2025,
       "url": "https://www.ncbi.nlm.nih.gov/books/NBK580518/",
       "license": "NCBI Bookshelf / StatPearls",
@@ -74,7 +148,9 @@
     {
       "title": "The Rh blood group",
       "source_type": "reference",
-      "authors": ["Laura Dean"],
+      "authors": [
+        "Laura Dean"
+      ],
       "year": 2005,
       "url": "https://www.ncbi.nlm.nih.gov/books/NBK2269/",
       "license": "NCBI Bookshelf",
@@ -84,7 +160,9 @@
     {
       "title": "Rh Blood Group System",
       "source_type": "reference",
-      "authors": ["StatPearls"],
+      "authors": [
+        "StatPearls"
+      ],
       "year": 2023,
       "url": "https://www.ncbi.nlm.nih.gov/books/NBK594252/",
       "license": "NCBI Bookshelf / StatPearls",
@@ -94,7 +172,9 @@
     {
       "title": "Blood transfusions and the immune system",
       "source_type": "reference",
-      "authors": ["Laura Dean"],
+      "authors": [
+        "Laura Dean"
+      ],
       "year": 2005,
       "url": "https://www.ncbi.nlm.nih.gov/books/NBK2265/",
       "license": "NCBI Bookshelf",

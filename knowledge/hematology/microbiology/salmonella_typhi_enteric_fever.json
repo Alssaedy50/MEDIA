@@ -1,22 +1,22 @@
 {
-  "id":"hematology.microbiology.salmonella_typhi_enteric_fever",
-  "domain":"Hematology",
-  "subject":"Microbiology",
-  "topic":"Salmonella Typhi and Enteric Fever",
-  "subtopic":"Typhoid fever: organism, transmission, pathogenesis, clinical features, diagnosis, treatment and prevention",
-  "concept":"Salmonella enterica serovar Typhi is a human-restricted Gram-negative enteric pathogen that causes typhoid (enteric) fever. Infection is usually acquired by ingestion of food or water contaminated with feces from an infected person or carrier and can progress from intestinal invasion to systemic bloodstream infection.",
-  "content":{
-    "definition":"Typhoid fever is a systemic bacterial infection caused by Salmonella Typhi. The organism is adapted to humans and is transmitted predominantly by the fecal-oral route through contaminated food or water.",
-    "explanation":"After ingestion, Salmonella Typhi crosses the intestinal barrier, survives within host cells and disseminates through lymphatic and bloodstream pathways. The illness commonly presents with prolonged fever, headache, malaise, abdominal symptoms and sometimes a transient rose-colored rash. Severe disease can produce encephalopathy, gastrointestinal bleeding or intestinal perforation.",
-    "mechanism":"Following intestinal entry, Salmonella Typhi interacts with intestinal immune tissues and can survive intracellularly in macrophages. Systemic dissemination produces bacteremia and allows multiplication in reticuloendothelial tissues. Subsequent reseeding of the intestine contributes to intestinal inflammation and bacterial shedding. Gallbladder colonization can contribute to chronic carriage in a minority of infected individuals.",
-    "structure":"Salmonella Typhi is a Gram-negative rod in the Enterobacterales/Enterobacteriaceae group. Important virulence-associated structures and determinants include lipopolysaccharide endotoxin, flagella and the Vi capsular polysaccharide. The organism is motile and facultatively anaerobic.",
-    "function":"The organism's motility, invasion mechanisms and intracellular survival promote intestinal invasion and systemic dissemination. The Vi capsule contributes to immune evasion and is also an important antigenic target used in typhoid conjugate vaccines.",
-    "causes":[
+  "id": "hematology.microbiology.salmonella_typhi_enteric_fever",
+  "domain": "Hematology",
+  "subject": "Microbiology",
+  "topic": "Salmonella Typhi and Enteric Fever",
+  "subtopic": "Typhoid fever: organism, transmission, pathogenesis, clinical features, diagnosis, treatment and prevention",
+  "concept": "Salmonella enterica serovar Typhi is a human-restricted Gram-negative enteric pathogen that causes typhoid (enteric) fever. Infection is usually acquired by ingestion of food or water contaminated with feces from an infected person or carrier and can progress from intestinal invasion to systemic bloodstream infection.",
+  "content": {
+    "definition": "Typhoid fever is a systemic bacterial infection caused by Salmonella Typhi. The organism is adapted to humans and is transmitted predominantly by the fecal-oral route through contaminated food or water.",
+    "explanation": "After ingestion, Salmonella Typhi crosses the intestinal barrier, survives within host cells and disseminates through lymphatic and bloodstream pathways. The illness commonly presents with prolonged fever, headache, malaise, abdominal symptoms and sometimes a transient rose-colored rash. Severe disease can produce encephalopathy, gastrointestinal bleeding or intestinal perforation.",
+    "mechanism": "Following intestinal entry, Salmonella Typhi interacts with intestinal immune tissues and can survive intracellularly in macrophages. Systemic dissemination produces bacteremia and allows multiplication in reticuloendothelial tissues. Subsequent reseeding of the intestine contributes to intestinal inflammation and bacterial shedding. Gallbladder colonization can contribute to chronic carriage in a minority of infected individuals.",
+    "structure": "Salmonella Typhi is a Gram-negative rod in the Enterobacterales/Enterobacteriaceae group. Important virulence-associated structures and determinants include lipopolysaccharide endotoxin, flagella and the Vi capsular polysaccharide. The organism is motile and facultatively anaerobic.",
+    "function": "The organism's motility, invasion mechanisms and intracellular survival promote intestinal invasion and systemic dissemination. The Vi capsule contributes to immune evasion and is also an important antigenic target used in typhoid conjugate vaccines.",
+    "causes": [
       "Ingestion of food or drinking water contaminated with Salmonella Typhi",
       "Fecal-oral transmission from symptomatic patients or asymptomatic carriers",
       "Inadequate sanitation, unsafe water and poor food hygiene increase transmission risk"
     ],
-    "effects":[
+    "effects": [
       "Prolonged fever, headache and constitutional symptoms",
       "Abdominal pain with constipation or diarrhea",
       "Possible rose spots on the trunk",
@@ -24,10 +24,10 @@
       "Relapse after treatment in a minority of inadequately treated cases",
       "Chronic fecal carriage in a small proportion of infected people"
     ],
-    "clinical_relevance":"Typhoid should be considered in compatible prolonged febrile illness with relevant exposure or epidemiologic risk. Antimicrobial resistance can substantially alter treatment choices, so susceptibility data and current local guidance matter.",
-    "diagnosis":"Blood culture is the mainstay of diagnosis. Multiple cultures may be required because sensitivity is imperfect. Bone-marrow culture can remain positive despite prior antibiotics and may have higher sensitivity in selected settings. Stool and urine cultures are less consistently positive during acute illness. Serologic tests such as the Widal test are not recommended by CDC because of false-positive results.",
-    "treatment":"Typhoid fever requires antibiotic treatment. Choice should be guided by antimicrobial susceptibility, travel or geographic exposure and current local resistance patterns. CDC notes that resistance increasingly limits empiric options; current guidance should be followed rather than relying on a fixed historical regimen. Supportive care and management of complications are also important.",
-    "high_yield":[
+    "clinical_relevance": "Typhoid should be considered in compatible prolonged febrile illness with relevant exposure or epidemiologic risk. Antimicrobial resistance can substantially alter treatment choices, so susceptibility data and current local guidance matter.",
+    "diagnosis": "Blood culture is the mainstay of diagnosis. Multiple cultures may be required because sensitivity is imperfect. Bone-marrow culture can remain positive despite prior antibiotics and may have higher sensitivity in selected settings. Stool and urine cultures are less consistently positive during acute illness. Serologic tests such as the Widal test are not recommended by CDC because of false-positive results.",
+    "treatment": "Typhoid fever requires antibiotic treatment. Choice should be guided by antimicrobial susceptibility, travel or geographic exposure and current local resistance patterns. CDC notes that resistance increasingly limits empiric options; current guidance should be followed rather than relying on a fixed historical regimen. Supportive care and management of complications are also important.",
+    "high_yield": [
       "Salmonella Typhi causes typhoid fever and is primarily a human-restricted pathogen.",
       "Transmission is classically fecal-oral through contaminated food or water.",
       "The disease is systemic, not merely a localized gastroenteritis.",
@@ -38,27 +38,124 @@
       "Typhoid conjugate vaccination, safe water, sanitation and food hygiene are major prevention strategies."
     ]
   },
-  "terminology":[
-    {"term":"Salmonella Typhi","language":"English","arabic":"السلمونيلة التيفية","pronunciation":"sal-muh-NEL-uh TY-fee","etymology":"Salmonella is named after Daniel E. Salmon; Typhi refers to typhoid.","notes":"The bacterium responsible for typhoid fever."},
-    {"term":"Enteric fever","language":"English","arabic":"الحمى المعوية","pronunciation":"EN-ter-ik FEE-ver","etymology":"Enteric refers to the intestine; fever describes the systemic febrile illness.","notes":"Clinical term encompassing typhoid and paratyphoid fever."},
-    {"term":"Vi capsular antigen","language":"English","arabic":"مستضد المحفظة Vi","pronunciation":"VEE CAP-syoo-lar AN-ti-jen","etymology":"Vi refers to the virulence-associated capsular antigen of Salmonella Typhi.","notes":"Capsular polysaccharide antigen associated with immune evasion and vaccine development."},
-    {"term":"Rose spots","language":"English","arabic":"البقع الوردية","pronunciation":"ROHZ spots","etymology":"Named for their characteristic rose-colored appearance.","notes":"Transient maculopapular lesions that may occur in typhoid fever."},
-    {"term":"Chronic carrier","language":"English","arabic":"حامل مزمن","pronunciation":"KRON-ik KAYR-ee-er","etymology":"Carrier denotes persistent organism carriage without necessarily having active symptoms.","notes":"A person who continues to shed Salmonella Typhi after clinical recovery."}
+  "terminology": [
+    {
+      "term": "Salmonella Typhi",
+      "language": "English",
+      "arabic": "السلمونيلة التيفية",
+      "pronunciation": "sal-muh-NEL-uh TY-fee",
+      "etymology": "Salmonella is named after Daniel E. Salmon; Typhi refers to typhoid.",
+      "notes": "The bacterium responsible for typhoid fever."
+    },
+    {
+      "term": "Enteric fever",
+      "language": "English",
+      "arabic": "الحمى المعوية",
+      "pronunciation": "EN-ter-ik FEE-ver",
+      "etymology": "Enteric refers to the intestine; fever describes the systemic febrile illness.",
+      "notes": "Clinical term encompassing typhoid and paratyphoid fever."
+    },
+    {
+      "term": "Vi capsular antigen",
+      "language": "English",
+      "arabic": "مستضد المحفظة Vi",
+      "pronunciation": "VEE CAP-syoo-lar AN-ti-jen",
+      "etymology": "Vi refers to the virulence-associated capsular antigen of Salmonella Typhi.",
+      "notes": "Capsular polysaccharide antigen associated with immune evasion and vaccine development."
+    },
+    {
+      "term": "Rose spots",
+      "language": "English",
+      "arabic": "البقع الوردية",
+      "pronunciation": "ROHZ spots",
+      "etymology": "Named for their characteristic rose-colored appearance.",
+      "notes": "Transient maculopapular lesions that may occur in typhoid fever."
+    },
+    {
+      "term": "Chronic carrier",
+      "language": "English",
+      "arabic": "حامل مزمن",
+      "pronunciation": "KRON-ik KAYR-ee-er",
+      "etymology": "Carrier denotes persistent organism carriage without necessarily having active symptoms.",
+      "notes": "A person who continues to shed Salmonella Typhi after clinical recovery."
+    },
+    {
+      "term": "Typhoid fever diagnostic test",
+      "language": "English",
+      "notes": "Search synonym/clinical terminology used for evidence retrieval."
+    },
+    {
+      "term": "Widal testing",
+      "language": "English",
+      "notes": "Search synonym/clinical terminology used for evidence retrieval."
+    },
+    {
+      "term": "Blood culture",
+      "language": "English",
+      "notes": "Search synonym/clinical terminology used for evidence retrieval."
+    }
   ],
-  "relations":[
-    {"target_id":"hematology.anatomy.spleen","relation":"involves","note":"Systemic infection engages reticuloendothelial tissues including splenic immune functions."},
-    {"target_id":"hematology.physiology.wbc_characteristics_functions","relation":"activates","note":"Host leukocyte and macrophage responses participate in defense against invasive Salmonella Typhi."},
-    {"target_id":"hematology.pathology.anemia_classification_nutritional","relation":"intersects_with","note":"Severe or prolonged enteric infection can contribute to anemia through inflammation, bleeding or nutritional effects."}
+  "relations": [
+    {
+      "target_id": "hematology.anatomy.spleen",
+      "relation": "involves",
+      "note": "Systemic infection engages reticuloendothelial tissues including splenic immune functions."
+    },
+    {
+      "target_id": "hematology.physiology.wbc_characteristics_functions",
+      "relation": "activates",
+      "note": "Host leukocyte and macrophage responses participate in defense against invasive Salmonella Typhi."
+    },
+    {
+      "target_id": "hematology.pathology.anemia_classification_nutritional",
+      "relation": "intersects_with",
+      "note": "Severe or prolonged enteric infection can contribute to anemia through inflammation, bleeding or nutritional effects."
+    }
   ],
-  "yemen_context":{"relevance":"Enteric fever is relevant to settings where safe water, sanitation and food hygiene remain important determinants of enteric infection risk.","evidence":"General WHO/CDC evidence; no Yemen-specific incidence estimate is asserted."},
-  "evidence_level":"guideline",
-  "status":"reviewed",
-  "review_notes":"Original synthesis based on WHO and CDC clinical and public-health guidance. Antibiotic treatment is deliberately described as resistance-aware rather than as a fixed regimen.",
-  "last_verified":"2026-09-27",
-  "sources":[
-    {"title":"Clinical Guidance for Typhoid Fever and Paratyphoid Fever","source_type":"guideline","year":2024,"url":"https://www.cdc.gov/typhoid-fever/hcp/clinical-guidance/index.html","license":"CDC","location":"CDC","notes":"Diagnosis, treatment, complications and prevention guidance."},
-    {"title":"Clinical Overview of Typhoid Fever and Paratyphoid Fever","source_type":"reference","year":2024,"url":"https://www.cdc.gov/typhoid-fever/hcp/clinical-overview/index.html","license":"CDC","location":"CDC","notes":"Transmission, incubation and antimicrobial-resistance context."},
-    {"title":"Typhoid","source_type":"reference","year":2023,"url":"https://www.who.int/news-room/fact-sheets/detail/typhoid","license":"WHO","location":"World Health Organization","notes":"Epidemiology, symptoms, treatment and prevention."},
-    {"title":"Typhoid","source_type":"reference","year":2025,"url":"https://www.who.int/health-topics/typhoid","license":"WHO","location":"World Health Organization","notes":"Current overview and global context."}
+  "yemen_context": {
+    "relevance": "Enteric fever is relevant to settings where safe water, sanitation and food hygiene remain important determinants of enteric infection risk.",
+    "evidence": "General WHO/CDC evidence; no Yemen-specific incidence estimate is asserted."
+  },
+  "evidence_level": "guideline",
+  "status": "reviewed",
+  "review_notes": "Original synthesis based on WHO and CDC clinical and public-health guidance. Antibiotic treatment is deliberately described as resistance-aware rather than as a fixed regimen.",
+  "last_verified": "2026-09-27",
+  "sources": [
+    {
+      "title": "Clinical Guidance for Typhoid Fever and Paratyphoid Fever",
+      "source_type": "guideline",
+      "year": 2024,
+      "url": "https://www.cdc.gov/typhoid-fever/hcp/clinical-guidance/index.html",
+      "license": "CDC",
+      "location": "CDC",
+      "notes": "Diagnosis, treatment, complications and prevention guidance."
+    },
+    {
+      "title": "Clinical Overview of Typhoid Fever and Paratyphoid Fever",
+      "source_type": "reference",
+      "year": 2024,
+      "url": "https://www.cdc.gov/typhoid-fever/hcp/clinical-overview/index.html",
+      "license": "CDC",
+      "location": "CDC",
+      "notes": "Transmission, incubation and antimicrobial-resistance context."
+    },
+    {
+      "title": "Typhoid",
+      "source_type": "reference",
+      "year": 2023,
+      "url": "https://www.who.int/news-room/fact-sheets/detail/typhoid",
+      "license": "WHO",
+      "location": "World Health Organization",
+      "notes": "Epidemiology, symptoms, treatment and prevention."
+    },
+    {
+      "title": "Typhoid",
+      "source_type": "reference",
+      "year": 2025,
+      "url": "https://www.who.int/health-topics/typhoid",
+      "license": "WHO",
+      "location": "World Health Organization",
+      "notes": "Current overview and global context."
+    }
   ]
 }

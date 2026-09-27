@@ -53,6 +53,11 @@
       "term": "Hemophilia B",
       "language": "English",
       "notes": "Search synonym/clinical terminology used for evidence retrieval."
+    },
+    {
+      "term": "Hemophilia in children",
+      "language": "English",
+      "notes": "Search synonym/clinical terminology used for evidence retrieval."
     }
   ],
   "relations": [

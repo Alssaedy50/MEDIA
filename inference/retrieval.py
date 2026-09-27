@@ -101,9 +101,12 @@ def _unknown_named_terms(query: str, records: list[Record]) -> list[str]:
             continue
         if "-" in term or "_" in term:
             first_part = parts_raw[0] if parts_raw else ""
+            if any(len(part) == 1 and part.isupper() for part in parts_raw):
+                unknown.append(term.lower())
+                continue
             if first_part.isupper() and len(first_part) >= 3 and first_part.lower() in anchor_tokens:
                 continue
-            if any(ch.isdigit() for ch in term) or len(first_part) == 1:
+            if any(ch.isdigit() for ch in term):
                 unknown.append(term.lower())
                 continue
             continue
@@ -202,6 +205,8 @@ def _score(query_tokens: list[str], record: Record) -> tuple[float, dict[str, An
             }
             if query_ngrams & anchor_ngrams:
                 score += 20.0 * size
+                if field == "terminology":
+                    score += 500.0
                 break
 
         content_tokens = tokenize(fields["content"])
