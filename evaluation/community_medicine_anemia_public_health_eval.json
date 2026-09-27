@@ -1,0 +1,60 @@
+{
+  "name": "MEDAI Hematology Community Medicine evaluation set",
+  "version": "0.1.0",
+  "scope": "hematology.community_medicine.anemia_public_health",
+  "purpose": "Validate source-grounded retrieval and safe abstention.",
+  "cases": [
+    {
+      "id": "anemia_public_health-001",
+      "query": "Why is anemia considered a public-health problem?",
+      "mode": "explain",
+      "expected_concepts": [
+        "hematology.community_medicine.anemia_public_health"
+      ],
+      "expected_evidence_state": "supported"
+    },
+    {
+      "id": "anemia_public_health-002",
+      "query": "Why is anemia not synonymous with iron deficiency at population level?",
+      "mode": "explain",
+      "expected_concepts": [
+        "hematology.community_medicine.anemia_public_health"
+      ],
+      "expected_evidence_state": "supported"
+    },
+    {
+      "id": "anemia_public_health-003",
+      "query": "What are the major public-health approaches to reducing anemia?",
+      "mode": "explain",
+      "expected_concepts": [
+        "hematology.community_medicine.anemia_public_health"
+      ],
+      "expected_evidence_state": "supported"
+    },
+    {
+      "id": "anemia_public_health-004",
+      "query": "Why is standardized hemoglobin measurement important in anemia surveys?",
+      "mode": "quick",
+      "expected_concepts": [
+        "hematology.community_medicine.anemia_public_health"
+      ],
+      "expected_evidence_state": "supported"
+    },
+    {
+      "id": "anemia_public_health-005",
+      "query": "What factors should guide an anemia-control programme?",
+      "mode": "quick",
+      "expected_concepts": [
+        "hematology.community_medicine.anemia_public_health"
+      ],
+      "expected_evidence_state": "supported"
+    },
+    {
+      "id": "anemia_public_health-006",
+      "query": "What is the fictional population anemia index X-ANA?",
+      "mode": "quick",
+      "expected_concepts": [],
+      "expected_evidence_state": "insufficient"
+    }
+  ]
+}
