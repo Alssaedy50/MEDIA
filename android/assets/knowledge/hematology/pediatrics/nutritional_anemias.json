@@ -1,0 +1,36 @@
+{
+  "id":"hematology.pediatrics.nutritional_anemias",
+  "domain":"Hematology",
+  "subject":"Pediatrics",
+  "topic":"Pediatric Nutritional Anemias",
+  "subtopic":"Iron deficiency, vitamin B12 deficiency and folate deficiency",
+  "concept":"Nutritional anemia in children is commonly related to iron deficiency; vitamin B12 and folate deficiency cause megaloblastic anemia.",
+  "content":{
+    "definition":"Anemia caused by inadequate nutrient supply, absorption or increased requirements.",
+    "explanation":"Iron deficiency progresses from depleted stores to iron-restricted erythropoiesis and microcytic hypochromic anemia. B12 or folate deficiency impairs DNA synthesis and produces megaloblastic hematopoiesis.",
+    "mechanism":"Iron is required for heme synthesis. B12 and folate are required for normal DNA synthesis.",
+    "clinical_relevance":"Pediatric assessment should consider diet, growth, blood loss, malabsorption, inflammation and inherited disorders.",
+    "diagnosis":"Use age-appropriate hemoglobin interpretation, CBC with MCV/RDW, reticulocyte count and peripheral smear. Ferritin and other iron studies assess iron status; ferritin is influenced by inflammation. Macrocytosis or megaloblastic morphology prompts B12/folate assessment.",
+    "treatment":"Treatment is cause-directed: replace the deficient nutrient, correct the dietary or medical cause, and monitor clinical and hematologic response.",
+    "high_yield":["Iron deficiency is classically microcytic and hypochromic.","Ferritin reflects iron stores but is also an acute-phase reactant.","B12 deficiency may cause neurologic manifestations.","Failure to respond to appropriate iron therapy requires diagnostic reassessment."]
+  },
+  "terminology":[
+    {"term":"Iron deficiency anemia","language":"English","Arabic":"فقر الدم بعوز الحديد","pronunciation":"EYE-urn dih-FISH-un-see uh-NEE-mee-uh"},
+    {"term":"Pica","language":"English","Arabic":"اشتهاء مواد غير غذائية","pronunciation":"PIE-kuh"},
+    {"term":"Megaloblastic","language":"English","Arabic":"ضخم الأرومات","pronunciation":"meg-uh-loh-BLAS-tik"}
+  ],
+  "relations":[
+    {"target_id":"hematology.pathology.anemia_classification_nutritional","relation":"extends","note":"Pediatric context."},
+    {"target_id":"hematology.histology.rbc_erythropoiesis","relation":"impairs","note":"Nutritional deficiency disrupts erythropoiesis."}
+  ],
+  "yemen_context":{"relevance":"Pediatric anemia assessment is relevant where nutritional deficiency, infection, inflammation and inherited disorders may coexist.","evidence":"No Yemen-specific prevalence estimate is asserted."},
+  "evidence_level":"guideline",
+  "status":"reviewed",
+  "review_notes":"Original pediatric synthesis based on WHO anemia guidance and pediatric hematology review.",
+  "last_verified":"2026-09-27",
+  "sources":[
+    {"title":"Guideline on haemoglobin cutoffs to define anaemia in individuals and populations","source_type":"guideline","authors":["World Health Organization"],"year":2024,"url":"https://www.who.int/publications/i/item/9789240088542","license":"WHO","location":"WHO"},
+    {"title":"Daily iron supplementation in infants and children","source_type":"guideline","authors":["World Health Organization"],"year":2016,"url":"https://www.who.int/publications/i/item/9789241549523","license":"WHO","location":"WHO"},
+    {"title":"Anemia in the pediatric patient","source_type":"review","authors":["American Society of Hematology"],"year":2022,"url":"https://ashpublications.org/blood/article/140/6/571/484178/Anemia-in-the-pediatric-patient","license":"ASH","location":"Blood"}
+  ]
+}
