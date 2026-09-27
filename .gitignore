@@ -5,3 +5,9 @@ android/build/
 .gradle/
 build/
 *.apk
+
+# Corpus working directory and tokens
+.env
+*.env
+datasets/medical_corpus/
+*.jsonl.gz
