@@ -190,7 +190,17 @@ public final class MainActivity extends Activity {
         return b.toString();
     }
 
-    private static void appendArray(StringBuilder b, String title, JSONArray values) {\n        if (values == null || values.length() == 0) return;\n        b.append(title).append("\\n");\n        for (int i = 0; i < Math.min(values.length(), 8); i++) {\n            String value = values.optString(i, "").trim();\n            if (!value.isEmpty()) b.append("• ").append(value).append("\\n");\n        }\n        b.append("\\n");\n    }\n\n    private static void append(StringBuilder b, String title, String text) {
+    private static void appendArray(StringBuilder b, String title, JSONArray values) {
+        if (values == null || values.length() == 0) return;
+        b.append(title).append("\n");
+        for (int i = 0; i < Math.min(values.length(), 8); i++) {
+            String value = values.optString(i, "").trim();
+            if (!value.isEmpty()) b.append("• ").append(value).append("\n");
+        }
+        b.append("\n");
+    }
+
+    private static void append(StringBuilder b, String title, String text) {
         if (text != null && !text.trim().isEmpty() && !text.trim().equals("[]")) {
             b.append(title).append("\n").append(text.trim()).append("\n\n");
         }
