@@ -6,7 +6,7 @@ on:
   pull_request:
 
 jobs:
-  medai-evaluation:
+  medai-tests:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -19,6 +19,23 @@ jobs:
         run: python -m unittest discover -s inference -p 'test_*.py' -v
       - name: Run evaluation tests
         run: python -m unittest discover -s evaluation -p 'test_*.py' -v
+      - name: Run training pipeline tests
+        working-directory: training
+        run: python -m unittest test_build_dataset.py -v
+      - name: Generate Hematology training dataset
+        run: python training/build_dataset.py
+      - name: Verify generated corpus manifest
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p = Path("datasets/hematology/manifest.json")
+          data = json.loads(p.read_text())
+          assert data["record_count"] == 51, data
+          assert data["example_count"] > 0, data
+          assert data["split_counts"]["test"] >= 2, data
+          print(data)
+          PY
       - name: Run Anatomy evaluation report
         run: python evaluation/run_evaluation.py
       - name: Run Histology evaluation report
