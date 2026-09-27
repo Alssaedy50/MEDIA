@@ -1,0 +1,60 @@
+{
+  "name": "MEDAI Hematology Community Medicine evaluation set",
+  "version": "0.1.0",
+  "scope": "hematology.community_medicine.blood_borne_infections",
+  "purpose": "Validate source-grounded retrieval and safe abstention.",
+  "cases": [
+    {
+      "id": "blood_borne_infections-001",
+      "query": "What are the main public-health routes of blood-borne infection transmission?",
+      "mode": "explain",
+      "expected_concepts": [
+        "hematology.community_medicine.blood_borne_infections"
+      ],
+      "expected_evidence_state": "supported"
+    },
+    {
+      "id": "blood_borne_infections-002",
+      "query": "How can hepatitis B transmission be prevented in a population?",
+      "mode": "explain",
+      "expected_concepts": [
+        "hematology.community_medicine.blood_borne_infections"
+      ],
+      "expected_evidence_state": "supported"
+    },
+    {
+      "id": "blood_borne_infections-003",
+      "query": "What are standard precautions for preventing blood-borne infections?",
+      "mode": "quick",
+      "expected_concepts": [
+        "hematology.community_medicine.blood_borne_infections"
+      ],
+      "expected_evidence_state": "supported"
+    },
+    {
+      "id": "blood_borne_infections-004",
+      "query": "Why is blood safety important for HIV and hepatitis prevention?",
+      "mode": "explain",
+      "expected_concepts": [
+        "hematology.community_medicine.blood_borne_infections"
+      ],
+      "expected_evidence_state": "supported"
+    },
+    {
+      "id": "blood_borne_infections-005",
+      "query": "What should happen after a healthcare worker has a potentially infectious needle-stick exposure?",
+      "mode": "quick",
+      "expected_concepts": [
+        "hematology.community_medicine.blood_borne_infections"
+      ],
+      "expected_evidence_state": "supported"
+    },
+    {
+      "id": "blood_borne_infections-006",
+      "query": "What is the fictional virus Bloodex-7?",
+      "mode": "quick",
+      "expected_concepts": [],
+      "expected_evidence_state": "insufficient"
+    }
+  ]
+}
