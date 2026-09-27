@@ -276,7 +276,21 @@ def retrieve(
             ranked.append((score, record, match))
 
     ranked.sort(key=lambda item: (-item[0], item[1].id))
-    selected = ranked[: max(1, top_k)]
+
+    # Exact topic-entity matches are authoritative for retrieval ordering.
+    # This prevents broad terms from displacing a record whose registered
+    # topic is explicitly named by the query.
+    exact_topic = [
+        item for item in ranked
+        if len(tokenize(_field_text(item[1], "topic"))) >= 2
+        and set(tokenize(_field_text(item[1], "topic"))).issubset(set(query_tokens))
+    ]
+    if exact_topic:
+        exact_ids = {item[1].id for item in exact_topic}
+        selected = exact_topic + [item for item in ranked if item[1].id not in exact_ids]
+        selected = selected[: max(1, top_k)]
+    else:
+        selected = ranked[: max(1, top_k)]
 
     hits = []
     for score, record, match in selected:
