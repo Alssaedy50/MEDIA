@@ -1,0 +1,176 @@
+{
+  "id": "hematology.histology.leukocytes",
+  "domain": "hematology",
+  "subject": "Histology",
+  "topic": "Granular and Agranular Leukocytes",
+  "subtopic": "White blood cell morphology, classification and function",
+  "concept": "Leukocyte structure, classification and function",
+  "content": {
+    "definition": "Leukocytes or white blood cells are nucleated blood cells involved in innate and adaptive immune defense, inflammation and tissue surveillance. On routine light microscopy they are traditionally classified as granulocytes and agranulocytes according to the appearance of cytoplasmic granules.",
+    "explanation": "The five major circulating leukocyte types are neutrophils, eosinophils, basophils, lymphocytes and monocytes. Granulocytes comprise neutrophils, eosinophils and basophils. Agranulocytes comprise lymphocytes and monocytes; these cells lack prominent specific granules on routine light microscopy but can contain azurophilic lysosomal granules. Leukocytes are nucleated and can leave the circulation by regulated adhesion and transmigration into tissues.",
+    "mechanism": "Leukocytes arise from hematopoietic stem and progenitor cells in bone marrow through myeloid and lymphoid differentiation pathways. Neutrophils rapidly migrate to acute inflammatory sites and phagocytose microorganisms and debris. Eosinophils participate in defense against helminths and modulation of allergic inflammation. Basophils bind IgE through high-affinity receptors and can degranulate during allergic responses. Monocytes circulate and can differentiate into macrophage-lineage cells after entering tissues. Lymphocytes mediate adaptive and other immune functions; B cells can differentiate into antibody-secreting plasma cells, while T-cell subsets coordinate or execute cellular immune responses.",
+    "structure": "Neutrophils typically have segmented nuclei with 3–5 lobes and fine, pale granules. Eosinophils have bilobed nuclei and large eosinophilic red-pink granules. Basophils have irregular or S-shaped nuclei and coarse basophilic blue-purple granules that can obscure the nucleus. Monocytes are large cells with indented or kidney-shaped nuclei and abundant blue-gray cytoplasm containing fine azurophilic granules. Lymphocytes usually have a large round, densely staining nucleus with a thin rim of cytoplasm in small circulating forms. Giemsa or Leishman staining helps distinguish leukocyte morphology.",
+    "function": "Neutrophils are major early effector cells in acute inflammation and bacterial defense. Eosinophils contribute to anti-helminth defense and allergic/inflammatory modulation. Basophils participate in IgE-associated allergic inflammation and release mediators such as histamine. Monocytes contribute to phagocytosis, antigen presentation and tissue macrophage-lineage functions. Lymphocytes provide adaptive immune recognition and effector functions, including antibody-mediated and cell-mediated immunity.",
+    "causes": [],
+    "effects": [],
+    "clinical_relevance": "CBC with differential and peripheral blood smear are central tools for evaluating leukocyte abnormalities. Neutrophilia commonly accompanies acute inflammation or infection; eosinophilia can occur with helminth infection or allergic disease; basophilia may occur in some myeloproliferative disorders; monocytosis occurs in selected chronic inflammatory or infectious conditions; and lymphocyte abnormalities occur in infections, immune disorders and hematologic malignancies. Interpretation requires clinical context and absolute counts rather than percentages alone.",
+    "diagnosis": "Leukocyte disorders are assessed using CBC with differential, absolute leukocyte counts and peripheral blood smear. Flow cytometry, molecular testing, cultures, imaging or bone marrow examination may be added when infection, immune disease or hematologic malignancy is suspected.",
+    "treatment": "Treatment is directed at the underlying cause rather than at a leukocyte percentage alone. Depending on the condition, management may involve antimicrobial or antiparasitic therapy, treatment of inflammatory or allergic disease, immune-directed therapy, or specific treatment of hematologic malignancy.",
+    "high_yield": [
+      "Granulocytes: neutrophils, eosinophils and basophils.",
+      "Agranulocytes: lymphocytes and monocytes.",
+      "Neutrophils have multilobed nuclei and are prominent early responders in acute inflammation.",
+      "Eosinophils have bilobed nuclei and large eosinophilic granules; they are important in helminth defense and allergic disease.",
+      "Basophils have coarse basophilic granules and high-affinity IgE receptors.",
+      "Monocytes are large agranulocytes with indented or kidney-shaped nuclei and can differentiate into macrophage-lineage cells in tissues.",
+      "Small lymphocytes have a large round nucleus with scant cytoplasm; B and T cells are distinguished primarily by immunophenotype and function rather than routine morphology.",
+      "Azurophilic granules are lysosomal granules and may occur in both granulocytes and agranulocytes.",
+      "Giemsa or Leishman stain is commonly used to evaluate leukocyte morphology on blood smears.",
+      "A differential count should be interpreted with the total WBC count and, when clinically relevant, absolute cell counts."
+    ]
+  },
+  "terminology": [
+    {
+      "term": "Leukocyte",
+      "language": "English",
+      "arabic": "كُرية الدم البيضاء",
+      "pronunciation": "LOO-koh-site",
+      "etymology": "Greek leukos, white, plus kytos, cell.",
+      "notes": "White blood cell."
+    },
+    {
+      "term": "Granulocyte",
+      "language": "English",
+      "arabic": "خلية محببة",
+      "pronunciation": "GRAN-yoo-loh-site",
+      "etymology": "Granule plus -cyte, cell.",
+      "notes": "Neutrophil, eosinophil or basophil in the conventional histologic classification."
+    },
+    {
+      "term": "Agranulocyte",
+      "language": "English",
+      "arabic": "خلية غير محببة",
+      "pronunciation": "ay-GRAN-yoo-loh-site",
+      "etymology": "A-, without, plus granulocyte.",
+      "notes": "Lymphocyte or monocyte in the conventional histologic classification."
+    },
+    {
+      "term": "Neutrophil",
+      "language": "English",
+      "arabic": "العدلة / الخلية المتعادلة",
+      "pronunciation": "NOO-troh-fil",
+      "etymology": "Neutro-, neutral staining, plus -phil, loving or attracted to.",
+      "notes": "Multilobed granulocyte important in acute inflammation and bacterial defense."
+    },
+    {
+      "term": "Eosinophil",
+      "language": "English",
+      "arabic": "الحمضة / الخلية اليوزينية",
+      "pronunciation": "ee-oh-SIN-oh-fil",
+      "etymology": "Eosin, a red dye, plus -phil.",
+      "notes": "Bilobed granulocyte with eosinophilic granules."
+    },
+    {
+      "term": "Basophil",
+      "language": "English",
+      "arabic": "القاعدية / الخلية القاعدية",
+      "pronunciation": "BAY-soh-fil",
+      "etymology": "Baso-, base, plus -phil; refers to affinity for basic dyes.",
+      "notes": "Granulocyte involved in IgE-associated allergic inflammation."
+    },
+    {
+      "term": "Monocyte",
+      "language": "English",
+      "arabic": "الخلية الوحيدة",
+      "pronunciation": "MON-oh-site",
+      "etymology": "Mono-, one, plus -cyte, cell.",
+      "notes": "Large circulating agranulocyte that can enter tissues and contribute to macrophage-lineage populations."
+    },
+    {
+      "term": "Lymphocyte",
+      "language": "English",
+      "arabic": "الخلية اللمفاوية",
+      "pronunciation": "LIM-foh-site",
+      "etymology": "Lymph plus -cyte, cell.",
+      "notes": "Immune cell including B and T lymphocytes."
+    },
+    {
+      "term": "Diapedesis",
+      "language": "English",
+      "arabic": "النفاذ عبر جدار الوعاء",
+      "pronunciation": "dye-ah-peh-DEE-sis",
+      "etymology": "Greek dia, through, plus pedan, to leap or pass.",
+      "notes": "Transmigration of leukocytes from blood across the vascular wall into tissues."
+    }
+  ],
+  "relations": [
+    {
+      "target_id": "hematology.histology.blood_tissue",
+      "relation": "is_form_element_of",
+      "note": "Leukocytes are one of the formed elements of blood."
+    },
+    {
+      "target_id": "hematology.histology.fetal_hematopoiesis",
+      "relation": "develops_during",
+      "note": "Leukocyte lineages arise through developmental hematopoiesis."
+    },
+    {
+      "target_id": "hematology.anatomy.bone_marrow",
+      "relation": "produced_in",
+      "note": "Bone marrow is a major site of leukocyte production and hematopoietic progenitor development."
+    },
+    {
+      "target_id": "hematology.anatomy.thymus",
+      "relation": "T_cell_development_related_to",
+      "note": "T-cell precursors generated from hematopoietic progenitors undergo key maturation and selection processes in the thymus."
+    },
+    {
+      "target_id": "hematology.anatomy.lymph_nodes",
+      "relation": "immune_surveillance_related_to",
+      "note": "Lymphocytes traffic through lymph nodes where antigen-driven immune responses can be organized."
+    }
+  ],
+  "yemen_context": {
+    "relevance": "Foundational leukocyte histology relevant to infectious disease, parasitic disease, inflammation and hematologic disorders in medical education.",
+    "evidence": "General medical relevance; no Yemen-specific epidemiologic claim is made in this record."
+  },
+  "sources": [
+    {
+      "title": "Histology, White Blood Cell",
+      "source_type": "reference",
+      "authors": ["Alyssa Tigner", "Sherif A. Ibrahim", "Ian V. Murray"],
+      "year": 2026,
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK563148/",
+      "location": "NCBI Bookshelf",
+      "notes": "Updated February 14, 2026; morphology, classification, staining and functions of leukocytes."
+    },
+    {
+      "title": "The White Blood Cell and Differential Count",
+      "source_type": "reference",
+      "year": 1990,
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK261/",
+      "location": "NCBI Bookshelf",
+      "notes": "Classification, development and clinical interpretation of leukocyte differential counts."
+    },
+    {
+      "title": "Renewal by Multipotent Stem Cells: Blood Cell Formation",
+      "source_type": "reference",
+      "year": 2002,
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK26919/",
+      "location": "NCBI Bookshelf",
+      "notes": "Granulocyte and monocyte morphology and functional overview."
+    },
+    {
+      "title": "The components of the immune system",
+      "source_type": "reference",
+      "year": 2001,
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK27092/",
+      "location": "NCBI Bookshelf",
+      "notes": "Innate and adaptive immune functions of leukocyte classes."
+    }
+  ],
+  "evidence_level": "reference",
+  "status": "reviewed",
+  "review_notes": "Original synthesized educational record based on cited references. Conventional granulocyte/agranulocyte terminology is retained for histology teaching; the absence of prominent specific granules does not imply complete absence of cytoplasmic granules.",
+  "last_verified": "2026-09-27"
+}
