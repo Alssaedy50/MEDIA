@@ -97,7 +97,7 @@ def _unknown_named_terms(query: str, records: list[Record]) -> list[str]:
             continue
         if "-" in term or "_" in term:
             first_part = parts[0] if parts else ""
-            if len(first_part) >= 3 and first_part in anchor_tokens:
+            if first_part.isupper() and len(first_part) >= 3 and first_part.lower() in anchor_tokens:
                 continue
         elif any(part in anchor_tokens for part in parts if len(part) >= 3):
             continue
@@ -127,7 +127,7 @@ def _score(query_tokens: list[str], record: Record) -> tuple[float, dict[str, An
         "domain": 2.0,
         "subtopic": 3.0,
         "terminology": 3.0,
-        "content": 1.5,
+        "content": 4.0,
         "relations": 1.5,
     }
 
@@ -196,24 +196,23 @@ def _score(query_tokens: list[str], record: Record) -> tuple[float, dict[str, An
                 score += 20.0 * size
                 break
 
-        if field == "content":
-            for size in (4, 3, 2):
-                if len(query_tokens) < size:
-                    continue
-                query_ngrams = {
-                    tuple(query_tokens[i:i + size])
-                    for i in range(len(query_tokens) - size + 1)
-                }
-                content_tokens = tokenize(fields["content"])
-                content_ngrams = {
-                    tuple(content_tokens[i:i + size])
-                    for i in range(len(content_tokens) - size + 1)
-                }
-                if query_ngrams & content_ngrams:
-                    score += 8.0 * size
-                    break
+        content_tokens = tokenize(fields["content"])
+    for size in (4, 3, 2):
+        if len(query_tokens) < size:
+            continue
+        query_ngrams = {
+            tuple(query_tokens[i:i + size])
+            for i in range(len(query_tokens) - size + 1)
+        }
+        content_ngrams = {
+            tuple(content_tokens[i:i + size])
+            for i in range(len(content_tokens) - size + 1)
+        }
+        if query_ngrams & content_ngrams:
+            score += 8.0 * size
+            break
 
-        if field == "terminology":
+    if field == "terminology":
             query_set = set(query_tokens)
             terminology_tokens = set(anchor_tokens)
             exact_terms = query_set & terminology_tokens
