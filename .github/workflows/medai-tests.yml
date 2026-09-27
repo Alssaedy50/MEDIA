@@ -40,10 +40,12 @@ jobs:
         run: python -m unittest training/test_tokenizer_audit.py -v
       - name: Run tokenizer benchmark unit tests
         run: python -m unittest training/test_tokenizer_benchmark.py -v
+      - name: Run model foundation selector tests
+        run: python -m unittest training/test_select_model_spec.py -v
       - name: Run corpus analysis
         run: python training/analyze_corpus.py --output datasets/hematology/corpus_analysis.json
       - name: Build tokenizer artifact
-        run: python training/tokenizer.py datasets/hematology/train.jsonl datasets/hematology/validation.jsonl datasets/hematology/test.jsonl --vocab-size 4096 --output datasets/hematology/tokenizer.json
+        run: python training/tokenizer.py datasets/hematology/train.jsonl --vocab-size 4096 --output datasets/hematology/tokenizer.json
       - name: Run exact tokenizer audit
         run: python training/tokenizer_audit.py datasets/hematology/train.jsonl datasets/hematology/validation.jsonl datasets/hematology/test.jsonl --tokenizer datasets/hematology/tokenizer.json --output datasets/hematology/tokenizer_audit.json
       - name: Benchmark candidate tokenizer vocabularies
@@ -58,6 +60,22 @@ jobs:
           assert all(r["unknown_token_count"] == 0 for r in data["results"]), data
           assert all(r["token_count_including_specials"] > 0 for r in data["results"]), data
           print(data)
+          PY
+      - name: Materialize candidate 100M foundation specification
+        run: python training/select_model_spec.py datasets/hematology/tokenizer_benchmark.json --output model/foundation_spec.json
+      - name: Verify candidate 100M foundation specification
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          spec = json.loads(Path("model/foundation_spec.json").read_text())
+          assert spec["status"] == "candidate_pending_freeze", spec
+          assert spec["transformer"]["parameter_count"] > 95_000_000, spec
+          assert spec["transformer"]["parameter_count"] < 105_000_000, spec
+          assert spec["transformer"]["max_seq_len"] == 256, spec
+          assert spec["transformer"]["weight_tying"] is True, spec
+          assert spec["selected_tokenizer"]["actual_vocab_size"] > 0, spec
+          print(json.dumps(spec, ensure_ascii=False, indent=2))
           PY
       - name: Verify tokenizer artifact
         run: |
