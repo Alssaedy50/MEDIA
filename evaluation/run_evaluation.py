@@ -19,7 +19,7 @@ DEFAULT_CASES = ROOT / "evaluation" / "anatomy_eval.json"
 
 
 def evaluate_case(case: dict[str, Any]) -> dict[str, Any]:
-    result = answer(case["query"], mode=case.get("mode", "quick"), top_k=3)
+    result = answer(case["query"], mode=case.get("mode", "quick"), top_k=10)
 
     # Support both the canonical evaluation schema and legacy checked-in cases.
     # Canonical keys: expected_concepts / expected_evidence_state.
