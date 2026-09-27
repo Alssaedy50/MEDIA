@@ -1,0 +1,44 @@
+{
+  "id": "hematology.medicine.transplantation",
+  "domain": "Hematology",
+  "subject": "Medicine",
+  "topic": "Hematopoietic Stem Cell Transplantation",
+  "concept": "Hematopoietic stem cell transplantation restores hematopoiesis using autologous or allogeneic stem cells after conditioning.",
+  "content": {
+    "definition": "Hematopoietic stem cell transplantation restores hematopoiesis using autologous or allogeneic stem cells after conditioning.",
+    "explanation": "Autologous transplantation returns the patient's collected cells; allogeneic transplantation uses donor cells and can provide graft-versus-malignancy effects.",
+    "mechanism": "Autologous transplantation returns the patient's collected cells; allogeneic transplantation uses donor cells and can provide graft-versus-malignancy effects.",
+    "clinical_relevance": "Autologous uses the patient's own stem cells. Allogeneic uses donor stem cells. Graft-versus-host disease is an important allogeneic complication.",
+    "diagnosis": "Diagnosis uses the appropriate clinical, laboratory, microbiologic, marrow or blood-bank studies for the suspected condition.",
+    "treatment": "Management is disease- and patient-specific and should follow current authoritative guidance.",
+    "high_yield": [
+      "Autologous uses the patient's own stem cells.",
+      "Allogeneic uses donor stem cells.",
+      "Graft-versus-host disease is an important allogeneic complication."
+    ]
+  },
+  "terminology": [],
+  "relations": [],
+  "yemen_context": {
+    "relevance": "Official Hematology Medicine block topic.",
+    "evidence": "General evidence; no Yemen-specific regimen or availability asserted."
+  },
+  "evidence_level": "guideline",
+  "status": "reviewed",
+  "review_notes": "Original educational synthesis; not a patient-specific treatment protocol.",
+  "last_verified": "2026-09-27",
+  "sources": [
+    {
+      "title": "Hematopoietic Cell Transplantation",
+      "source_type": "reference",
+      "authors": [
+        "National Cancer Institute"
+      ],
+      "year": 2026,
+      "url": "https://www.cancer.gov/",
+      "license": "NCI",
+      "location": "NCI",
+      "notes": "Transplant principles and complications."
+    }
+  ]
+}
