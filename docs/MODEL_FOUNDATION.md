@@ -6,9 +6,28 @@ This document defines the reproducible gate between tokenizer benchmarking and n
 
 The 100M model is **not trained from the current Hematology corpus**. The current corpus is a verified seed/evaluation domain. A substantially larger medical corpus is required before genuine pretraining.
 
+## Frozen foundation
+
+The first foundation has now been frozen in `model/foundation_spec.json`:
+
+- Requested tokenizer vocabulary: **8192**
+- Actual tokenizer vocabulary: **4709**
+- BPE merges: **4591**
+- Training unknown tokens: **0**
+- `d_model`: **896**
+- Layers: **10**
+- Attention heads: **8**
+- FFN dimension: **3584**
+- Context: **256**
+- Weight tying: **enabled**
+- Parameter count: **101,266,816**
+- Status: **frozen**
+
+The freeze is an engineering baseline, not a claim about final model quality. No pretrained weights are included.
+
 ## Foundation pipeline
 
-`Registered Medical Knowledge → Dataset Generation → Tokenizer Benchmark → Foundation Selection → Large-Corpus Pretraining → Evaluation → Retrieval + Verification → Offline Android`
+`Registered Medical Knowledge → Dataset Generation → Tokenizer Benchmark → Foundation Selection → Frozen Foundation → Large-Corpus Pretraining → Evaluation → Retrieval + Verification → Offline Android`
 
 ## Tokenizer selection gate
 
@@ -20,29 +39,15 @@ The deterministic selector in `training/select_model_spec.py`:
 2. Keeps candidates within 2% of that minimum.
 3. Chooses the smallest actual vocabulary inside that efficiency band.
 4. Takes the nearest-100M Transformer architecture calculated for that vocabulary.
-5. Records every candidate and the selection rule in `model/foundation_spec.json`.
+5. Records the decision inputs.
 
-The selector deliberately does not claim that the current small corpus predicts final pretraining quality. Its purpose is to make the engineering decision reproducible.
-
-## Model constraints
-
-- Decoder-only causal Transformer
-- Maximum sequence length: 256 for the initial foundation
-- Tied token input/output embeddings
-- Target parameter count: approximately 100M
-- Multi-head causal self-attention
-- Pre-norm Transformer blocks
-- GELU MLP
-- Deterministic parameter-count calculation in `model/size.py`
+CI now recomputes the candidate and compares its critical fields against the committed frozen specification. A corpus change that alters the frozen foundation therefore fails CI instead of silently changing the model contract.
 
 ## Pretraining gate
 
 Do **not** start 100M pretraining until all of these are true:
 
-- tokenizer candidate benchmark completed;
-- foundation specification generated and reviewed;
-- tokenizer final artifact is trained from the intended training split only;
-- held-out tokenizer coverage is reported separately and does not feed vocabulary selection;
+- frozen foundation remains compatible with the current corpus release;
 - large corpus has provenance and source metadata;
 - train/validation/test leakage checks pass;
 - sequence-length distribution is measured;
@@ -63,6 +68,22 @@ The 51 reviewed/verified Hematology knowledge records and their generated exampl
 
 They are not sufficient as a 100M pretraining corpus.
 
+## Android Alpha boundary
+
+The application layer can now consume the frozen foundation contract without pretending that pretrained weights exist.
+
+Current Alpha behavior:
+
+- deterministic registered-knowledge retrieval;
+- evidence-aware answer modes;
+- explicit safe abstention;
+- source display;
+- local Transformer runtime boundary;
+- explicit `weights_unavailable` state until a compatible checkpoint exists;
+- installable web application shell for Android testing.
+
+The Android shell is therefore useful for validating the **student experience and application contract** before the expensive 100M training stage.
+
 ## Reproducibility
 
-The benchmark JSON records the candidate tokenizer metrics and the corresponding nearest-100M architecture. The generated foundation specification records the exact decision inputs. Any future corpus expansion must trigger a new tokenizer benchmark before freezing the final production tokenizer.
+The benchmark JSON records candidate tokenizer metrics. The committed foundation specification records the frozen decision. Any future corpus expansion must trigger a new benchmark and an explicit foundation review before changing the frozen production tokenizer/model contract.
