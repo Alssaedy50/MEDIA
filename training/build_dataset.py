@@ -77,13 +77,13 @@ def build_record_rows(record):
         pronunciation = str(term.get("pronunciation") or "").strip()
         if notes:
             add(rows, record_id, split, "terminology", "en",
-                f"What does the medical term {word} mean?", notes, source_title)
+                f"What does the medical term {word} mean in {record.get('topic', concept)}?", notes, source_title)
         if arabic:
             add(rows, record_id, split, "terminology_arabic", "ar",
-                f"ما معنى المصطلح الطبي {word}؟", arabic, source_title)
+                f"ما معنى المصطلح الطبي {word} في موضوع {record.get('topic', concept)}؟", arabic, source_title)
         if pronunciation:
             add(rows, record_id, split, "pronunciation", "en",
-                f"How is {word} pronounced?", pronunciation, source_title)
+                f"How is the medical term {word} pronounced in the context of {record.get('topic', concept)}?", pronunciation, source_title)
     return rows
 
 ABSTENTION = [
