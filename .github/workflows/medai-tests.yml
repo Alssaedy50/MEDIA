@@ -48,10 +48,6 @@ jobs:
         run: python -m unittest training/test_select_model_spec.py -v
       - name: Run corpus analysis
         run: python training/analyze_corpus.py --output datasets/hematology/corpus_analysis.json
-      - name: Build tokenizer artifact
-        run: python training/tokenizer.py datasets/hematology/train.jsonl --vocab-size 4096 --output datasets/hematology/tokenizer.json
-      - name: Run exact tokenizer audit
-        run: python training/tokenizer_audit.py datasets/hematology/train.jsonl datasets/hematology/validation.jsonl datasets/hematology/test.jsonl --tokenizer datasets/hematology/tokenizer.json --output datasets/hematology/tokenizer_audit.json
       - name: Benchmark candidate tokenizer vocabularies
         run: python training/tokenizer_benchmark.py datasets/hematology/train.jsonl datasets/hematology/validation.jsonl datasets/hematology/test.jsonl --vocab-sizes 4096 8192 16384 32768 50000 --output datasets/hematology/tokenizer_benchmark.json
       - name: Verify tokenizer benchmark
@@ -80,6 +76,27 @@ jobs:
           assert spec["selected_tokenizer"]["actual_vocab_size"] > 0, spec
           print(json.dumps(spec, ensure_ascii=False, indent=2))
           PY
+      - name: Build tokenizer artifact from selected foundation
+        run: |
+          python - <<'PY'
+          import json
+          import subprocess
+          from pathlib import Path
+          spec = json.loads(Path("model/foundation_spec.json").read_text())
+          requested_vocab_size = int(spec["selected_tokenizer"]["requested_vocab_size"])
+          print({"selected_requested_vocab_size": requested_vocab_size, "selected_actual_vocab_size": spec["selected_tokenizer"]["actual_vocab_size"]})
+          subprocess.run([
+              "python",
+              "training/tokenizer.py",
+              "datasets/hematology/train.jsonl",
+              "--vocab-size",
+              str(requested_vocab_size),
+              "--output",
+              "datasets/hematology/tokenizer.json",
+          ], check=True)
+          PY
+      - name: Run exact tokenizer audit
+        run: python training/tokenizer_audit.py datasets/hematology/train.jsonl datasets/hematology/validation.jsonl datasets/hematology/test.jsonl --tokenizer datasets/hematology/tokenizer.json --output datasets/hematology/tokenizer_audit.json
       - name: Verify tokenizer artifact
         run: |
           python - <<'PY'
