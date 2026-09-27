@@ -17,7 +17,6 @@ body {
 }
 
 button, textarea, select { font: inherit; }
-
 button { cursor: pointer; }
 
 .shell {
@@ -67,8 +66,14 @@ h1 {
   color: #9db0c5;
 }
 
-.status {
+.hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
   margin-left: auto;
+}
+
+.status {
   padding: 7px 10px;
   border: 1px solid #23415c;
   border-radius: 999px;
@@ -76,6 +81,18 @@ h1 {
   font-size: 12px;
   white-space: nowrap;
 }
+
+.install {
+  padding: 7px 11px;
+  border: 1px solid #2d5f72;
+  border-radius: 999px;
+  background: #0d2b35;
+  color: #8bd5ff;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.hidden { display: none !important; }
 
 .panel {
   border: 1px solid #1e354c;
@@ -229,11 +246,7 @@ ul {
 }
 
 .source strong { color: #dbe8f4; }
-
-.source a {
-  color: #76b9e8;
-  overflow-wrap: anywhere;
-}
+.source a { color: #76b9e8; overflow-wrap: anywhere; }
 
 .abstain {
   padding: 14px;
@@ -242,10 +255,7 @@ ul {
   background: #1e180f;
 }
 
-.comparison {
-  display: grid;
-  gap: 12px;
-}
+.comparison { display: grid; gap: 12px; }
 
 .card {
   padding: 14px;
@@ -269,6 +279,7 @@ footer {
 
 @media (max-width: 680px) {
   .hero { align-items: flex-start; }
+  .hero-actions { align-items: flex-start; flex-direction: column-reverse; }
   .status { display: none; }
   .controls { grid-template-columns: 1fr 1fr; }
   #ask { grid-column: 1 / -1; }
