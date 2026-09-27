@@ -20,7 +20,7 @@ android {
     // Expose that directory to Android AssetManager at runtime.
     sourceSets {
         getByName("main") {
-            assets.srcDir("../android/assets")
+            assets.srcDir(rootProject.projectDir.parentFile.resolve("android/assets"))
         }
     }
 
