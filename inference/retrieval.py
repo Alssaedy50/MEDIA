@@ -79,7 +79,7 @@ def _field_text(record: Record, field: str) -> str:
 
 def _unknown_named_terms(query: str, records: list[Record]) -> list[str]:
     """Return distinctive capitalized query terms absent from registered anchors."""
-    candidates = re.findall(r"\\b[A-Z][A-Za-z0-9_-]{3,}\\b", query)
+    candidates = re.findall(r"\b[A-Z][A-Za-z0-9_-]{3,}\b", query)
     ignored = {"What", "How", "Where", "Which", "Why", "Give", "Explain", "Describe"}
     candidates = [term.lower() for term in candidates if term not in ignored]
     if not candidates:
