@@ -1,0 +1,164 @@
+{
+  "id": "hematology.anatomy.lymphatic_vessels",
+  "domain": "hematology",
+  "subject": "anatomy",
+  "topic": "Lymphatic Vessels",
+  "subtopic": "Lymphatic capillaries, collecting vessels, lymphatic ducts, flow and embryology",
+  "concept": "Lymphatic vessels",
+  "content": {
+    "definition": "Lymphatic vessels are a one-way vascular network that collects excess interstitial fluid, macromolecules, immune cells and other material from tissues and returns lymph to the venous circulation.",
+    "explanation": "The lymphatic network begins as blind-ended lymphatic capillaries in tissues. These converge into collecting lymphatic vessels, pass lymph through lymph nodes, and ultimately drain into the right lymphatic duct or thoracic duct before lymph returns to the venous circulation.",
+    "mechanism": "Interstitial fluid enters lymphatic capillaries through overlapping endothelial cell junctions that act as one-way microvalves. Collecting vessels contain valves and, in larger vessels, smooth muscle that assists lymph propulsion. Skeletal-muscle contraction, respiratory pressure changes, arterial pulsation and intrinsic vessel contraction contribute to lymph movement. Lymph is ultimately returned to the venous system at the venous angles.",
+    "structure": "Lymphatic capillaries are blind-ended, thin-walled channels with overlapping endothelial cells and an incomplete or absent conventional basement membrane. They form lymphatic plexuses that converge into collecting vessels. Collecting vessels contain valves and are organized into lymphangions, functional segments between valves. Larger channels converge into lymphatic trunks and two major ducts: the right lymphatic duct and thoracic duct. Specialized intestinal lymphatic capillaries called lacteals absorb dietary lipids.",
+    "function": "Major functions include maintaining tissue-fluid homeostasis, returning plasma proteins and fluid to the bloodstream, transporting immune cells and antigens for immune surveillance, and transporting absorbed dietary lipids from the intestine through lacteals.",
+    "causes": [],
+    "effects": [],
+    "clinical_relevance": "Obstruction, malformation or damage of lymphatic vessels can impair lymph drainage and produce lymphedema. Lymphatic pathways also provide routes for immune-cell trafficking and can serve as pathways for tumor spread. Surgical or radiation injury may damage regional lymphatic drainage.",
+    "diagnosis": "Lymphatic disorders are assessed using history and physical examination, distribution and characteristics of edema, and selected imaging when needed. Depending on the clinical question, ultrasound, CT, MRI, lymphoscintigraphy or specialized lymphatic imaging may be used.",
+    "treatment": "Treatment depends on the underlying cause and may include compression therapy, exercise and movement strategies, skin care, treatment of the underlying obstruction or disease, and selected microsurgical or interventional procedures for appropriate patients.",
+    "high_yield": [
+      "Lymphatic capillaries are blind-ended and collect excess interstitial fluid.",
+      "Overlapping endothelial cells in lymphatic capillaries permit entry of fluid, proteins and cells when tissue pressure rises.",
+      "Lacteals are specialized lymphatic capillaries in intestinal villi that absorb dietary lipids.",
+      "Afferent lymphatic vessels carry lymph toward a lymph node; efferent vessels carry lymph away from a lymph node.",
+      "The right lymphatic duct drains the right upper quadrant of the body.",
+      "The thoracic duct drains most of the rest of the body and usually enters the venous system near the left internal jugular-subclavian junction.",
+      "Lymphatic vessels develop after the blood vascular system and arise predominantly from specialized lymphatic endothelial progenitors associated with embryonic veins; modern developmental biology recognizes additional regional complexity."
+    ]
+  },
+  "terminology": [
+    {
+      "term": "Lymphatic capillary",
+      "language": "English",
+      "Arabic": "شعيرة لمفاوية",
+      "pronunciation": "lim-FAT-ik KAP-ih-lair-ee",
+      "etymology": "Lymphatic derives from lymph; capillary refers to a very small vessel.",
+      "notes": "Blind-ended initial lymphatic vessel that collects interstitial fluid."
+    },
+    {
+      "term": "Collecting lymphatic vessel",
+      "language": "English",
+      "Arabic": "وعاء لمفاوي جامع",
+      "pronunciation": "kuh-LEKT-ing lim-FAT-ik VES-el",
+      "etymology": "Collecting indicates its role in gathering lymph from smaller channels.",
+      "notes": "Larger lymphatic vessel containing valves and facilitating directional lymph transport."
+    },
+    {
+      "term": "Lacteal",
+      "language": "English",
+      "Arabic": "وعاء لبني",
+      "pronunciation": "LAK-tee-ul",
+      "etymology": "From Latin lacteus, milk-like, referring to the milky appearance of lipid-rich lymph.",
+      "notes": "Specialized intestinal lymphatic capillary involved in dietary lipid absorption."
+    },
+    {
+      "term": "Thoracic duct",
+      "language": "English",
+      "Arabic": "القناة الصدرية",
+      "pronunciation": "thor-ASS-ik duct",
+      "etymology": "Named for its course through the thorax.",
+      "notes": "Largest lymphatic duct; drains most of the body."
+    },
+    {
+      "term": "Right lymphatic duct",
+      "language": "English",
+      "Arabic": "القناة اللمفاوية اليمنى",
+      "pronunciation": "right lim-FAT-ik duct",
+      "etymology": "Descriptive anatomical term.",
+      "notes": "Drains the right upper quadrant."
+    },
+    {
+      "term": "Lymphangiogenesis",
+      "language": "English",
+      "Arabic": "تكوّن الأوعية اللمفاوية",
+      "pronunciation": "lim-FAN-jee-oh-JEN-uh-sis",
+      "etymology": "Lymphangion plus genesis, formation.",
+      "notes": "Formation and growth of lymphatic vessels."
+    },
+    {
+      "term": "Lymphedema",
+      "language": "English",
+      "Arabic": "الوذمة اللمفية",
+      "pronunciation": "lim-feh-DEE-muh",
+      "etymology": "Lymph plus edema, swelling caused by fluid accumulation.",
+      "notes": "Tissue swelling caused by impaired lymphatic drainage."
+    }
+  ],
+  "relations": [
+    {
+      "target_id": "hematology.anatomy.lymph_nodes",
+      "relation": "drains_through",
+      "note": "Collecting lymphatic vessels carry lymph toward lymph nodes through afferent vessels and away through efferent vessels."
+    },
+    {
+      "target_id": "hematology.anatomy.spleen",
+      "relation": "related_lymphoid_system",
+      "note": "Lymphatic vessels participate in the broader lymphatic and immune system, while the spleen primarily filters blood rather than lymph."
+    },
+    {
+      "target_id": "hematology.anatomy.thymus",
+      "relation": "related_lymphoid_system",
+      "note": "Lymphatic vessels are part of the system that supports lymphoid-organ organization and immune surveillance."
+    }
+  ],
+  "yemen_context": {
+    "relevance": "The anatomy and physiology of lymphatic vessels are relevant to clinical evaluation of edema, lymphadenopathy, infection, malignancy, and complications following surgery or tissue injury.",
+    "evidence": ""
+  },
+  "sources": [
+    {
+      "title": "Anatomy, Lymphatic System",
+      "source_type": "reference",
+      "authors": [],
+      "year": 2026,
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK513247/",
+      "license": "NCBI Bookshelf / StatPearls",
+      "location": "Structure, function and embryology sections",
+      "notes": "Used for lymphatic capillary structure, lymph flow, ducts, lacteals and embryologic development."
+    },
+    {
+      "title": "Anatomy, Thorax, Thoracic Duct",
+      "source_type": "reference",
+      "authors": [],
+      "year": 2023,
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK513227/",
+      "license": "NCBI Bookshelf / StatPearls",
+      "location": "Structure and embryology sections",
+      "notes": "Used for thoracic duct anatomy, lymphatic drainage and embryologic remodeling."
+    },
+    {
+      "title": "LYMPHATIC VESSELS IN HEALTH AND DISEASE",
+      "source_type": "review",
+      "authors": [],
+      "year": 2013,
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3527689/",
+      "license": "Open-access PMC article; license as stated by publisher",
+      "location": "Lymphatic vessel development",
+      "notes": "Used for timing and general mechanisms of lymphatic vessel development."
+    },
+    {
+      "title": "Lymphatic vessel development: fluid flow and valve-forming cells",
+      "source_type": "review",
+      "authors": [],
+      "year": 2015,
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4563766/",
+      "license": "Open-access PMC article; license as stated by publisher",
+      "location": "Development and lymphatic endothelial specification",
+      "notes": "Used for PROX1-mediated lymphatic endothelial specification and developmental mechanisms."
+    },
+    {
+      "title": "Lymphatic vessel network structure and physiology",
+      "source_type": "review",
+      "authors": [],
+      "year": 2019,
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6459625/",
+      "license": "Open-access PMC article; license as stated by publisher",
+      "location": "Development of lymphatic vessel networks",
+      "notes": "Used to preserve modern nuance regarding venous and regional contributions to lymphatic development."
+    }
+  ],
+  "evidence_level": "reference",
+  "status": "reviewed",
+  "review_notes": "Original synthesis checked against NCBI Bookshelf and peer-reviewed PMC reviews. Developmental wording deliberately uses predominantly venous origin with regional complexity rather than treating a simplified venous-origin model as universally complete.",
+  "last_verified": "2026-09-27"
+}
