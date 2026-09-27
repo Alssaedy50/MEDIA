@@ -92,11 +92,12 @@ def _unknown_named_terms(query: str, records: list[Record]) -> list[str]:
     anchor_tokens = set(tokenize(anchor_text))
     unknown = []
     for term in candidates:
-        parts = [part.lower() for part in re.split(r"[-_]+", term) if part]
+        parts_raw = [part for part in re.split(r"[-_]+", term) if part]
+        parts = [part.lower() for part in parts_raw]
         if term.lower() in anchor_tokens:
             continue
         if "-" in term or "_" in term:
-            first_part = parts[0] if parts else ""
+            first_part = parts_raw[0] if parts_raw else ""
             if first_part.isupper() and len(first_part) >= 3 and first_part.lower() in anchor_tokens:
                 continue
         elif any(part in anchor_tokens for part in parts if len(part) >= 3):
