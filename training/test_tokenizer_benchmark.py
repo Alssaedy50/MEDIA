@@ -18,9 +18,7 @@ class TokenizerBenchmarkTests(unittest.TestCase):
             ]
             corpus = root / "tiny.jsonl"
             corpus.write_text(
-                "
-".join(json.dumps(r, ensure_ascii=False) for r in rows) + "
-",
+                "\n".join(json.dumps(r, ensure_ascii=False) for r in rows) + "\n",
                 encoding="utf-8",
             )
             output = root / "benchmark.json"
