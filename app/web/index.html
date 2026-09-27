@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="MEDIA — Medical Education AI">
+  <title>MEDIA — Medical Education AI</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <main class="shell">
+    <header class="hero">
+      <div class="brand-mark">M</div>
+      <div>
+        <p class="eyebrow">MEDICAL EDUCATION AI · v0.1</p>
+        <h1>Ask MEDIA</h1>
+        <p class="subtitle">Evidence-aware answers from the registered Hematology knowledge base.</p>
+      </div>
+      <span id="status" class="status">Checking API…</span>
+    </header>
+
+    <section class="panel question-panel">
+      <label for="query">Medical question</label>
+      <textarea id="query" rows="4" maxlength="1000"
+        placeholder="Example: What is the function of red blood cells?"></textarea>
+
+      <div class="controls">
+        <label>
+          Mode
+          <select id="mode">
+            <option value="quick">Quick</option>
+            <option value="explain">Explain</option>
+            <option value="compare">Compare</option>
+            <option value="exam">Exam review</option>
+            <option value="sources">Sources</option>
+          </select>
+        </label>
+        <label>
+          Evidence items
+          <select id="top-k">
+            <option value="3">3</option>
+            <option value="5">5</option>
+            <option value="10">10</option>
+          </select>
+        </label>
+        <button id="ask" type="button">Ask MEDIA</button>
+      </div>
+
+      <div class="examples" aria-label="Example questions">
+        <button data-query="What is the function of red blood cells?">RBC function</button>
+        <button data-query="Explain fetal hematopoiesis">Fetal hematopoiesis</button>
+        <button data-query="What is lymphatic filariasis?">Lymphatic filariasis</button>
+      </div>
+    </section>
+
+    <section id="result" class="panel result-panel" aria-live="polite">
+      <div class="empty-state">
+        <span class="pulse"></span>
+        <h2>Ready</h2>
+        <p>Ask a question to retrieve registered evidence.</p>
+      </div>
+    </section>
+
+    <footer>
+      <span>MEDIA is an educational research prototype, not a clinical decision-support system.</span>
+      <span id="scope"></span>
+    </footer>
+  </main>
+  <script src="/static/app.js"></script>
+</body>
+</html>
