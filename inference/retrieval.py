@@ -103,6 +103,10 @@ def _unknown_named_terms(query: str, records: list[Record]) -> list[str]:
             first_part = parts_raw[0] if parts_raw else ""
             if first_part.isupper() and len(first_part) >= 3 and first_part.lower() in anchor_tokens:
                 continue
+            if any(ch.isdigit() for ch in term) or len(first_part) == 1:
+                unknown.append(term.lower())
+                continue
+            continue
         elif any(part in anchor_tokens for part in parts if len(part) >= 3):
             continue
         unknown.append(term.lower())
