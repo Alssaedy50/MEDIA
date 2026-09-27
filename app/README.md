@@ -55,7 +55,7 @@ Endpoints:
 
 ## Model boundary
 
-`model/foundation_spec.json` is frozen at approximately 101.27M parameters. It is an architecture/tokenizer contract only.
+`model/foundation_spec.json` is frozen at 100,824,192 parameters. It is an architecture/tokenizer contract only. It is an architecture/tokenizer contract only.
 
 No pretrained checkpoint is shipped yet. When a compatible checkpoint becomes available, `inference/model_runtime.py` can load it and expose local generation without changing the application contract.
 
