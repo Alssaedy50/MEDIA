@@ -1,0 +1,12 @@
+{
+  "name":"MEDAI Hematology Pediatrics evaluation set","version":"0.1.0","scope":"hematology.pediatrics.nutritional_anemias",
+  "purpose":"Validate pediatric nutritional-anemia retrieval and safe abstention.",
+  "cases":[
+    {"id":"pna-001","query":"How does iron deficiency anemia present and how is it evaluated in children?","mode":"explain","expected_concepts":["hematology.pediatrics.nutritional_anemias"],"expected_evidence_state":"supported"},
+    {"id":"pna-002","query":"What does ferritin mean in a child with suspected iron deficiency?","mode":"quick","expected_concepts":["hematology.pediatrics.nutritional_anemias"],"expected_evidence_state":"supported"},
+    {"id":"pna-003","query":"What is the difference between iron deficiency and megaloblastic anemia in children?","mode":"compare","expected_concepts":["hematology.pediatrics.nutritional_anemias"],"expected_evidence_state":"supported"},
+    {"id":"pna-004","query":"How are pediatric nutritional anemias treated?","mode":"explain","expected_concepts":["hematology.pediatrics.nutritional_anemias"],"expected_evidence_state":"supported"},
+    {"id":"pna-005","query":"Why should vitamin B12 deficiency be considered before giving folate alone?","mode":"quick","expected_concepts":["hematology.pediatrics.nutritional_anemias"],"expected_evidence_state":"supported"},
+    {"id":"pna-006","query":"What does fictional Nutriferon do?","mode":"quick","expected_concepts":[],"expected_evidence_state":"insufficient"}
+  ]
+}
