@@ -12,7 +12,7 @@ The 100M model is **not trained from the current Hematology corpus**. The curren
 
 ## Tokenizer selection gate
 
-Candidate vocabularies are benchmarked on the generated corpus. A candidate is valid only when its unknown-token count is zero.
+Candidate vocabularies are benchmarked on the generated **training split only**, because the final tokenizer must be trained from training data without using validation/test text. A candidate is valid only when its training-split unknown-token count is zero. Validation/test are held out for downstream evaluation and tokenizer coverage reporting.
 
 The deterministic selector in `training/select_model_spec.py`:
 
@@ -41,7 +41,8 @@ Do **not** start 100M pretraining until all of these are true:
 
 - tokenizer candidate benchmark completed;
 - foundation specification generated and reviewed;
-- tokenizer final artifact is trained from the intended training corpus only;
+- tokenizer final artifact is trained from the intended training split only;
+- held-out tokenizer coverage is reported separately and does not feed vocabulary selection;
 - large corpus has provenance and source metadata;
 - train/validation/test leakage checks pass;
 - sequence-length distribution is measured;
