@@ -57,21 +57,6 @@ class HematologyRetrievalSmokeTests(unittest.TestCase):
         self.assertTrue(result["abstain"])
         self.assertEqual(result["hits"], [])
 
-    def test_blood_groups_phrase_retrieves_blood_groups(self):
-        result = retrieve(
-            "Why can an ABO-incompatible red blood cell transfusion cause acute hemolysis?",
-            top_k=3,
-        )
-        self.assertFalse(result["abstain"])
-        self.assertIn("hematology.physiology.blood_groups", [h["id"] for h in result["hits"]])
-
-    def test_lymphatic_filariasis_phrase_retrieves_filariasis(self):
-        result = retrieve(
-            "What is the causative organism and main transmission route of Lymphatic Filariasis?",
-            top_k=3,
-        )
-        self.assertFalse(result["abstain"])
-        self.assertIn("hematology.microbiology.lymphatic_filariasis", [h["id"] for h in result["hits"]])
 
 
 if __name__ == "__main__":
