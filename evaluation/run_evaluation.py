@@ -92,6 +92,12 @@ def main() -> None:
         for item in report["results"]:
             mark = "PASS" if item["passed"] else "FAIL"
             print(f"[{mark}] {item['id']}")
+            if not item["passed"]:
+                print(
+                    f"    expected_state={item['expected_evidence_state']} "
+                    f"actual_state={item['actual_evidence_state']} "
+                    f"expected_ids={item['expected_ids']} actual_ids={item['actual_ids']}"
+                )
 
 
 if __name__ == "__main__":
