@@ -48,23 +48,34 @@ jobs:
         run: gradle :android-app:assembleDebug
 
       - name: Verify APK contains offline knowledge
-        working-directory: android
         run: |
+          set -eu
           apk=android-app/build/outputs/apk/debug/android-app-debug.apk
-          test -f "$apk"
+          if [ ! -f "$apk" ]; then
+            echo "APK not found at $apk" >&2
+            echo "Build outputs:" >&2
+            find . -path ./.git -prune -o -name '*.apk' -print >&2
+            exit 1
+          fi
           rm -rf /tmp/media-apk-check
           mkdir -p /tmp/media-apk-check
           unzip -q "$apk" -d /tmp/media-apk-check
-          count=$(find /tmp/media-apk-check/assets/knowledge/hematology -type f -name "*.json" | wc -l)
+          asset_dir=/tmp/media-apk-check/assets/knowledge/hematology
+          if [ ! -d "$asset_dir" ]; then
+            echo "Missing assets/knowledge/hematology inside the APK" >&2
+            exit 1
+          fi
+          count=$(find "$asset_dir" -type f -name "*.json" | wc -l)
           echo "APK contains $count bundled Hematology JSON entries"
           test "$count" -eq 51
 
       - name: Verify APK metadata
-        working-directory: android
         run: |
+          set -eu
           apk=android-app/build/outputs/apk/debug/android-app-debug.apk
-          $ANDROID_HOME/build-tools/35.0.0/aapt dump badging "$apk" | grep -F "package: name='com.media.android'"
-          $ANDROID_HOME/build-tools/35.0.0/aapt dump badging "$apk" | grep -F "versionName='0.2.0'"
+          badging=$("$ANDROID_HOME/build-tools/35.0.0/aapt" dump badging "$apk")
+          echo "$badging" | grep -F "package: name='com.media.android'"
+          echo "$badging" | grep -F "versionName='0.2.0'"
 
       - name: Run Android unit tests
         working-directory: android

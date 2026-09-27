@@ -1,0 +1,7 @@
+# Android / Gradle build outputs
+android-app/build/
+android/.gradle/
+android/build/
+.gradle/
+build/
+*.apk

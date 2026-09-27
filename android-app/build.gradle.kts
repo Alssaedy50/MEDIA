@@ -2,15 +2,9 @@ plugins {
     id("com.android.application")
 }
 
-val offlineKnowledgeSource = rootProject.projectDir.parentFile.resolve("android/assets/knowledge/hematology")
-val offlineKnowledgeTarget = projectDir.resolve("src/main/assets/knowledge/hematology")
-
-// Materialize the repository-level offline knowledge before Android source sets are evaluated.
-copy {
-    from(offlineKnowledgeSource)
-    into(offlineKnowledgeTarget)
-    include("**/*.json")
-}
+// The offline Hematology knowledge lives at the repository level under android/assets.
+// Register it as an assets source directory so it is packaged without duplicating the files.
+val offlineAssetsDir = rootProject.projectDir.resolve("assets")
 
 android {
     namespace = "com.media.android"
@@ -27,6 +21,8 @@ android {
     buildFeatures { buildConfig = true }
 
     packaging { resources.excludes += "/META-INF/{AL2.0,LGPL2.1}" }
+
+    sourceSets.getByName("main").assets.srcDir(offlineAssetsDir)
 }
 
 dependencies {
