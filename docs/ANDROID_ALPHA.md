@@ -6,7 +6,7 @@ MEDIA Android Alpha now treats local medical knowledge as the primary source. Th
 
 Android app → local Hematology assets → deterministic local retrieval → evidence-aware answer rendering → safe abstention.
 
-The APK bundles the reviewed Hematology records currently stored under `knowledge/hematology`. Android's `assets/` directory is packaged with the application and can be read through `AssetManager`, so the records are available without a network connection. cite_placeholder
+The APK bundles the reviewed Hematology records currently stored under `knowledge/hematology`. Android's `assets/` directory is packaged with the application and can be read through `AssetManager`, so the records are available without a network connection.
 
 ## What the Alpha can do offline
 
