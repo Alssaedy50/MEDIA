@@ -1,0 +1,60 @@
+{
+  "name": "MEDAI Hematology Pediatrics evaluation set",
+  "version": "0.1.0",
+  "scope": "hematology.pediatrics.bleeding_disorders",
+  "purpose": "Validate Pediatric bleeding-disorder retrieval and safe abstention.",
+  "cases": [
+    {
+      "id": "pediatrics_bleeding_disorders_eval-001",
+      "query": "How does hemophilia usually present in children?",
+      "mode": "explain",
+      "expected_concepts": [
+        "hematology.pediatrics.bleeding_disorders"
+      ],
+      "expected_evidence_state": "supported"
+    },
+    {
+      "id": "pediatrics_bleeding_disorders_eval-002",
+      "query": "What tests diagnose hemophilia A and B?",
+      "mode": "quick",
+      "expected_concepts": [
+        "hematology.pediatrics.bleeding_disorders"
+      ],
+      "expected_evidence_state": "supported"
+    },
+    {
+      "id": "pediatrics_bleeding_disorders_eval-003",
+      "query": "Why can routine screening tests be normal in von Willebrand disease?",
+      "mode": "explain",
+      "expected_concepts": [
+        "hematology.pediatrics.bleeding_disorders"
+      ],
+      "expected_evidence_state": "supported"
+    },
+    {
+      "id": "pediatrics_bleeding_disorders_eval-004",
+      "query": "What is the difference between mucocutaneous bleeding and hemarthrosis?",
+      "mode": "compare",
+      "expected_concepts": [
+        "hematology.pediatrics.bleeding_disorders"
+      ],
+      "expected_evidence_state": "supported"
+    },
+    {
+      "id": "pediatrics_bleeding_disorders_eval-005",
+      "query": "What are the general treatment principles for pediatric bleeding disorders?",
+      "mode": "explain",
+      "expected_concepts": [
+        "hematology.pediatrics.bleeding_disorders"
+      ],
+      "expected_evidence_state": "supported"
+    },
+    {
+      "id": "pediatrics_bleeding_disorders_eval-006",
+      "query": "What does fictional Coagulozyme-X treat?",
+      "mode": "quick",
+      "expected_concepts": [],
+      "expected_evidence_state": "insufficient"
+    }
+  ]
+}
