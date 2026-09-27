@@ -255,8 +255,12 @@ def retrieve(
         }
 
     ranked = []
+    normalized_query = " ".join(query_tokens)
     for record in records:
         score, match = _score(query_tokens, record)
+        topic_phrase = " ".join(tokenize(_field_text(record, "topic")))
+        if topic_phrase and topic_phrase in normalized_query:
+            score += 100000.0
         if score > 0 and match["coverage"] >= MIN_COVERAGE and any(
             token in set(tokenize(_field_text(record, field)))
             for token in query_tokens
