@@ -20,6 +20,8 @@ CASES = [
     ("pediatrics_aplastic_anemia_eval.json", 6),
     ("pediatrics_hemolytic_anemias_eval.json", 6),
     ("pediatrics_bleeding_disorders_eval.json", 6),
+    ("community_medicine_blood_borne_infections_eval.json", 6),
+    ("community_medicine_anemia_public_health_eval.json", 6),
 ]
 
 class PharmacologyEvaluationTests(unittest.TestCase):
