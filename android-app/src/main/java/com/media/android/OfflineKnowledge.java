@@ -9,7 +9,6 @@ import java.io.InputStream;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Comparator;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Locale;
@@ -25,6 +24,7 @@ public final class OfflineKnowledge {
 
     private final AssetManager assets;
     private final List<JSONObject> records = new ArrayList<>();
+    private int loadFailures = 0;
 
     public OfflineKnowledge(Context context) {
         assets = context.getAssets();
@@ -32,10 +32,12 @@ public final class OfflineKnowledge {
     }
 
     public int size() { return records.size(); }
+    public int loadFailures() { return loadFailures; }
+    public boolean isReady() { return records.size() > 0 && loadFailures == 0; }
 
     public List<Result> search(String query, int limit) {
         String q = normalize(query);
-        if (q.isEmpty()) return Collections.emptyList();
+        if (q.isEmpty() || limit <= 0) return Collections.emptyList();
         Set<String> qTokens = tokens(q);
         List<Result> out = new ArrayList<>();
         for (JSONObject r : records) {
@@ -46,11 +48,11 @@ public final class OfflineKnowledge {
             String subject = value(r, "subject");
             String searchable = normalize(concept + " " + topic + " " + subtopic + " " + domain + " " + subject + " " + contentText(r.optJSONObject("content")) + " " + terminologyText(r.optJSONArray("terminology")));
             double score = 0.0;
-            if (!q.isEmpty() && searchable.contains(q)) score += 0.55;
+            if (searchable.contains(q)) score += 0.55;
             String ntopic = normalize(topic);
             String nconcept = normalize(concept);
-            if (!q.isEmpty() && ntopic.equals(q)) score += 0.80;
-            if (!q.isEmpty() && nconcept.contains(q)) score += 0.45;
+            if (ntopic.equals(q)) score += 0.80;
+            if (nconcept.contains(q)) score += 0.45;
             int matched = 0;
             for (String t : qTokens) if (searchable.contains(t)) matched++;
             if (!qTokens.isEmpty()) score += 0.45 * matched / (double) qTokens.size();
@@ -70,7 +72,10 @@ public final class OfflineKnowledge {
     private void loadDirectory(String path) {
         try {
             String[] names = assets.list(path);
-            if (names == null) return;
+            if (names == null) {
+                loadFailures++;
+                return;
+            }
             for (String name : names) {
                 String child = path + "/" + name;
                 String[] nested = assets.list(child);
@@ -79,10 +84,14 @@ public final class OfflineKnowledge {
                 } else if (name.endsWith(".json")) {
                     try (InputStream in = assets.open(child)) {
                         records.add(new JSONObject(read(in)));
-                    } catch (Exception ignored) {}
+                    } catch (Exception ignored) {
+                        loadFailures++;
+                    }
                 }
             }
-        } catch (Exception ignored) {}
+        } catch (Exception ignored) {
+            loadFailures++;
+        }
     }
 
     private static String read(InputStream in) throws Exception {
