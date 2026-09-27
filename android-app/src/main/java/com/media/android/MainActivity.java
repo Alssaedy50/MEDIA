@@ -4,7 +4,6 @@ import android.app.Activity;
 import android.content.ClipData;
 import android.content.ClipboardManager;
 import android.content.Context;
-import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.View;
@@ -38,8 +37,7 @@ public final class MainActivity extends Activity {
         copy = findViewById(R.id.copy_button);
 
         knowledge = new OfflineKnowledge(this);
-        status.setText("● OFFLINE  •  " + knowledge.size() + " medical records ready");
-        status.setTextColor(0xFF0B6B55);
+        updateStatus();
 
         ask.setOnClickListener(v -> answerQuestion());
         clear.setOnClickListener(v -> clearQuestion());
@@ -60,6 +58,19 @@ public final class MainActivity extends Activity {
         findViewById(R.id.prompt_3).setOnClickListener(v -> askPrompt("What causes iron deficiency anemia?"));
     }
 
+    private void updateStatus() {
+        if (knowledge.loadFailures() == 0 && knowledge.size() > 0) {
+            status.setText("● OFFLINE  •  " + knowledge.size() + " medical records ready");
+            status.setTextColor(0xFF0B6B55);
+        } else if (knowledge.size() > 0) {
+            status.setText("● OFFLINE  •  " + knowledge.size() + " records loaded  •  " + knowledge.loadFailures() + " load error(s)");
+            status.setTextColor(0xFF9A6700);
+        } else {
+            status.setText("● OFFLINE LIBRARY ERROR  •  No medical records loaded");
+            status.setTextColor(0xFFB42318);
+        }
+    }
+
     private void askPrompt(String text) {
         question.setText(text);
         question.setSelection(question.length());
@@ -70,6 +81,7 @@ public final class MainActivity extends Activity {
         question.setText("");
         answer.setText("Ask about a topic in the current offline medical library.\n\nMEDIA will only display an evidence-backed local result when the match is sufficiently strong.");
         copy.setVisibility(View.GONE);
+        updateStatus();
         question.requestFocus();
     }
 
@@ -101,18 +113,16 @@ public final class MainActivity extends Activity {
         ClipboardManager clipboard = (ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE);
         if (clipboard != null) {
             clipboard.setPrimaryClip(ClipData.newPlainText("MEDIA answer", text));
-            status.setText("✓ ANSWER COPIED  •  Offline");
+            status.setText("✓ ANSWER COPIED  •  " + knowledge.size() + " records • Offline");
         }
     }
 
     private String formatAnswer(JSONObject r, double score) {
-        StringBuilder b = new StringBuilder();
         String topic = r.optString("topic", r.optString("concept", "Medical topic"));
         String concept = r.optString("concept", "");
+        StringBuilder b = new StringBuilder();
         b.append(topic).append("\n");
-        if (!concept.isEmpty() && !concept.equalsIgnoreCase(topic)) {
-            b.append(concept).append("\n");
-        }
+        if (!concept.isEmpty() && !concept.equalsIgnoreCase(topic)) b.append(concept).append("\n");
         b.append("────────────────────────\n");
 
         JSONObject c = r.optJSONObject("content");
@@ -120,6 +130,10 @@ public final class MainActivity extends Activity {
             append(b, "DEFINITION", c.optString("definition", ""));
             append(b, "EXPLANATION", c.optString("explanation", ""));
             append(b, "MECHANISM", c.optString("mechanism", ""));
+            append(b, "STRUCTURE", c.optString("structure", ""));
+            append(b, "FUNCTION", c.optString("function", ""));
+            append(b, "CAUSES", c.optString("causes", ""));
+            append(b, "EFFECTS", c.optString("effects", ""));
             append(b, "CLINICAL RELEVANCE", c.optString("clinical_relevance", ""));
             append(b, "DIAGNOSIS", c.optString("diagnosis", ""));
             append(b, "TREATMENT", c.optString("treatment", ""));
@@ -132,6 +146,23 @@ public final class MainActivity extends Activity {
                 }
                 b.append("\n");
             }
+        }
+
+        JSONArray terminology = r.optJSONArray("terminology");
+        if (terminology != null && terminology.length() > 0) {
+            b.append("KEY TERMINOLOGY\n");
+            for (int i = 0; i < Math.min(terminology.length(), 6); i++) {
+                JSONObject t = terminology.optJSONObject(i);
+                if (t == null) continue;
+                String term = t.optString("term", "");
+                String arabic = t.optString("Arabic", "");
+                if (!term.isEmpty()) {
+                    b.append("• ").append(term);
+                    if (!arabic.isEmpty()) b.append(" — ").append(arabic);
+                    b.append("\n");
+                }
+            }
+            b.append("\n");
         }
 
         JSONArray sources = r.optJSONArray("sources");
@@ -153,12 +184,11 @@ public final class MainActivity extends Activity {
         b.append("LOCAL EVIDENCE MATCH  ")
          .append(String.format(Locale.US, "%.2f", score))
          .append("\nOFFLINE RETRIEVAL  •  NO INTERNET REQUIRED");
-
         return b.toString();
     }
 
     private static void append(StringBuilder b, String title, String text) {
-        if (text != null && !text.trim().isEmpty()) {
+        if (text != null && !text.trim().isEmpty() && !text.trim().equals("[]")) {
             b.append(title).append("\n").append(text.trim()).append("\n\n");
         }
     }
