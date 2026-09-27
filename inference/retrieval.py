@@ -265,6 +265,9 @@ def retrieve(
             score += 100000.0
         if raw_topic and raw_topic in raw_query:
             score += 1000000000.0
+        topic_tokens = tokenize(_field_text(record, "topic"))
+        if len(topic_tokens) >= 2 and all(token in query_tokens for token in topic_tokens):
+            score += 1000000000.0
         if score > 0 and match["coverage"] >= MIN_COVERAGE and any(
             token in set(tokenize(_field_text(record, field)))
             for token in query_tokens
