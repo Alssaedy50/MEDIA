@@ -1,15 +1,17 @@
 {
-  "id":"hematology.community_medicine.blood_borne_infections",
-  "domain":"Hematology","subject":"Community Medicine","topic":"Blood-borne infections",
-  "concept":"Blood-borne infections are infections transmitted through exposure to infected blood or specific body fluids; major public-health examples include HIV, hepatitis B and hepatitis C.",
-  "content":{
-    "definition":"Blood-borne infections are communicable infections for which infected blood or relevant body-fluid exposure can transmit the pathogen.",
-    "explanation":"Public-health prevention combines safe blood systems, vaccination where available, injection and sharps safety, infection-prevention measures, testing and linkage to care, and prevention of mother-to-child transmission.",
-    "mechanism":"Transmission occurs when infectious material reaches susceptible tissue, commonly through transfusion of contaminated blood, contaminated needles or sharps, sexual exposure for infections with relevant genital-fluid transmission, or vertical transmission.",
-    "clinical_relevance":"Healthcare workers and patients can be exposed through unsafe injections, sharps injuries and inadequately processed equipment. Community programmes therefore need both source control and exposure prevention.",
-    "diagnosis":"Population programmes use validated testing strategies and linkage to confirmatory testing or care according to the pathogen and national algorithm. A positive screening result should not automatically be treated as a final diagnosis when confirmatory testing is required.",
-    "treatment":"Public-health treatment is pathogen-specific and should be linked to prevention: effective HIV antiretroviral therapy reduces onward sexual transmission; chronic HBV can be treated with oral antivirals in eligible patients; HCV is curable with direct-acting antivirals.",
-    "high_yield":[
+  "id": "hematology.community_medicine.blood_borne_infections",
+  "domain": "Hematology",
+  "subject": "Community Medicine",
+  "topic": "Blood-borne infections",
+  "concept": "Blood-borne infections are infections transmitted through exposure to infected blood or specific body fluids; major public-health examples include HIV, hepatitis B and hepatitis C.",
+  "content": {
+    "definition": "Blood-borne infections are communicable infections for which infected blood or relevant body-fluid exposure can transmit the pathogen.",
+    "explanation": "Public-health prevention combines safe blood systems, vaccination where available, injection and sharps safety, infection-prevention measures, testing and linkage to care, and prevention of mother-to-child transmission.",
+    "mechanism": "Transmission occurs when infectious material reaches susceptible tissue, commonly through transfusion of contaminated blood, contaminated needles or sharps, sexual exposure for infections with relevant genital-fluid transmission, or vertical transmission.",
+    "clinical_relevance": "Healthcare workers and patients can be exposed through unsafe injections, sharps injuries and inadequately processed equipment. Community programmes therefore need both source control and exposure prevention.",
+    "diagnosis": "Population programmes use validated testing strategies and linkage to confirmatory testing or care according to the pathogen and national algorithm. A positive screening result should not automatically be treated as a final diagnosis when confirmatory testing is required.",
+    "treatment": "Public-health treatment is pathogen-specific and should be linked to prevention: effective HIV antiretroviral therapy reduces onward sexual transmission; chronic HBV can be treated with oral antivirals in eligible patients; HCV is curable with direct-acting antivirals.",
+    "high_yield": [
       "Hepatitis B is vaccine-preventable; WHO recommends a birth dose as soon as possible, preferably within 24 hours.",
       "All donated blood should be screened for relevant transfusion-transmissible infections according to national and WHO standards.",
       "Standard precautions treat blood and relevant body fluids as potentially infectious.",
@@ -18,22 +20,85 @@
       "For infants under 18 months exposed to HIV, virological testing is required because antibody testing alone is insufficient."
     ]
   },
-  "terminology":[
-    {"term":"Blood-borne infection","language":"English","Arabic":"عدوى منقولة بالدم","pronunciation":"BLUD-born in-FEK-shun"},
-    {"term":"Standard precautions","language":"English","Arabic":"الاحتياطات القياسية","pronunciation":"STAN-dard pre-KAW-shuns"},
-    {"term":"Post-exposure prophylaxis","language":"English","Arabic":"الوقاية بعد التعرض","pronunciation":"post-eks-POH-zhur pro-fih-LAK-sis"}
+  "terminology": [
+    {
+      "term": "Blood-borne infection",
+      "language": "English",
+      "Arabic": "عدوى منقولة بالدم",
+      "pronunciation": "BLUD-born in-FEK-shun"
+    },
+    {
+      "term": "Standard precautions",
+      "language": "English",
+      "Arabic": "الاحتياطات القياسية",
+      "pronunciation": "STAN-dard pre-KAW-shuns"
+    },
+    {
+      "term": "Post-exposure prophylaxis",
+      "language": "English",
+      "Arabic": "الوقاية بعد التعرض",
+      "pronunciation": "post-eks-POH-zhur pro-fih-LAK-sis"
+    }
   ],
-  "relations":[
-    {"target_id":"hematology.medicine.blood_transfusion_precautions_reactions","relation":"extends","note":"Community prevention and blood safety context."},
-    {"target_id":"hematology.pharmacology.anticoagulants_fibrinolytics","relation":"unrelated","note":"No therapeutic dependency; retained only as a domain-level boundary."}
+  "relations": [
+    {
+      "target_id": "hematology.medicine.blood_transfusion_precautions_reactions",
+      "relation": "extends",
+      "note": "Community prevention and blood safety context."
+    }
   ],
-  "yemen_context":{"relevance":"Blood safety, injection safety, vaccination, infection prevention and access to testing are relevant public-health priorities in Yemen.","evidence":"WHO Yemen country strategy identifies infectious-disease surveillance and WASH/infection prevention among health-system priorities; no Yemen-specific blood-borne infection prevalence is asserted."},
-  "evidence_level":"guideline","status":"reviewed","review_notes":"Original synthesis based on WHO 2026 hepatitis guidance, WHO HIV guidance and WHO infection-prevention guidance.",
-  "last_verified":"2026-09-27",
-  "sources":[
-    {"title":"Consolidated guidance on hepatitis B and C prevention, testing, treatment, service delivery and monitoring","source_type":"guideline","authors":["World Health Organization"],"year":2026,"url":"https://www.who.int/publications/i/item/9789240119529","license":"WHO","location":"WHO"},
-    {"title":"HIV and AIDS","source_type":"guideline","authors":["World Health Organization"],"year":2026,"url":"https://www.who.int/news-room/fact-sheets/detail/hiv-aids","license":"WHO","location":"WHO"},
-    {"title":"Preventing hepatitis in health care settings","source_type":"guideline","authors":["World Health Organization"],"year":2026,"url":"https://www.who.int/europe/activities/preventing-hepatitis-in-health-care-settings","license":"WHO","location":"WHO"},
-    {"title":"Global status report on blood safety and availability 2025","source_type":"report","authors":["World Health Organization"],"year":2026,"url":"https://www.who.int/publications/b/82618","license":"WHO","location":"WHO"}
+  "yemen_context": {
+    "relevance": "Blood safety, injection safety, vaccination, infection prevention and access to testing are relevant public-health priorities in Yemen.",
+    "evidence": "WHO Yemen country strategy identifies infectious-disease surveillance and WASH/infection prevention among health-system priorities; no Yemen-specific blood-borne infection prevalence is asserted."
+  },
+  "evidence_level": "guideline",
+  "status": "reviewed",
+  "review_notes": "Original synthesis based on WHO 2026 hepatitis guidance, WHO HIV guidance and WHO infection-prevention guidance.",
+  "last_verified": "2026-09-27",
+  "sources": [
+    {
+      "title": "Consolidated guidance on hepatitis B and C prevention, testing, treatment, service delivery and monitoring",
+      "source_type": "guideline",
+      "authors": [
+        "World Health Organization"
+      ],
+      "year": 2026,
+      "url": "https://www.who.int/publications/i/item/9789240119529",
+      "license": "WHO",
+      "location": "WHO"
+    },
+    {
+      "title": "HIV and AIDS",
+      "source_type": "guideline",
+      "authors": [
+        "World Health Organization"
+      ],
+      "year": 2026,
+      "url": "https://www.who.int/news-room/fact-sheets/detail/hiv-aids",
+      "license": "WHO",
+      "location": "WHO"
+    },
+    {
+      "title": "Preventing hepatitis in health care settings",
+      "source_type": "guideline",
+      "authors": [
+        "World Health Organization"
+      ],
+      "year": 2026,
+      "url": "https://www.who.int/europe/activities/preventing-hepatitis-in-health-care-settings",
+      "license": "WHO",
+      "location": "WHO"
+    },
+    {
+      "title": "Global status report on blood safety and availability 2025",
+      "source_type": "report",
+      "authors": [
+        "World Health Organization"
+      ],
+      "year": 2026,
+      "url": "https://www.who.int/publications/b/82618",
+      "license": "WHO",
+      "location": "WHO"
+    }
   ]
 }
