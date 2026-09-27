@@ -1,0 +1,44 @@
+{
+  "id": "hematology.medicine.bone_marrow_aspiration_biopsy",
+  "domain": "Hematology",
+  "subject": "Medicine",
+  "topic": "Bone Marrow Aspiration and Biopsy",
+  "concept": "Bone marrow aspiration and core biopsy directly evaluate hematopoiesis, marrow cellularity, architecture and infiltrative or neoplastic disease.",
+  "content": {
+    "definition": "Bone marrow aspiration and core biopsy directly evaluate hematopoiesis, marrow cellularity, architecture and infiltrative or neoplastic disease.",
+    "explanation": "Aspiration samples liquid marrow for cellular morphology and ancillary studies; core biopsy preserves architecture and evaluates cellularity, fibrosis and infiltration.",
+    "mechanism": "Aspiration samples liquid marrow for cellular morphology and ancillary studies; core biopsy preserves architecture and evaluates cellularity, fibrosis and infiltration.",
+    "clinical_relevance": "Aspiration is useful for cellular morphology and many ancillary tests. Core biopsy evaluates architecture and fibrosis. A dry tap can occur with fibrosis or dense infiltration.",
+    "diagnosis": "Diagnosis uses the appropriate clinical, laboratory, microbiologic, marrow or blood-bank studies for the suspected condition.",
+    "treatment": "Management is disease- and patient-specific and should follow current authoritative guidance.",
+    "high_yield": [
+      "Aspiration is useful for cellular morphology and many ancillary tests.",
+      "Core biopsy evaluates architecture and fibrosis.",
+      "A dry tap can occur with fibrosis or dense infiltration."
+    ]
+  },
+  "terminology": [],
+  "relations": [],
+  "yemen_context": {
+    "relevance": "Official Hematology Medicine block topic.",
+    "evidence": "General evidence; no Yemen-specific regimen or availability asserted."
+  },
+  "evidence_level": "guideline",
+  "status": "reviewed",
+  "review_notes": "Original educational synthesis; not a patient-specific treatment protocol.",
+  "last_verified": "2026-09-27",
+  "sources": [
+    {
+      "title": "Bone Marrow Examination",
+      "source_type": "reference",
+      "authors": [
+        "NCBI Bookshelf"
+      ],
+      "year": 2025,
+      "url": "https://www.ncbi.nlm.nih.gov/books/",
+      "license": "NCBI Bookshelf",
+      "location": "NCBI Bookshelf",
+      "notes": "Diagnostic marrow examination principles."
+    }
+  ]
+}
