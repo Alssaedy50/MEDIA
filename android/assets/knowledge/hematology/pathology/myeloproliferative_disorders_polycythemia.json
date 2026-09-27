@@ -1,0 +1,116 @@
+{
+  "id": "hematology.pathology.myeloproliferative_disorders_polycythemia",
+  "domain": "Hematology",
+  "subject": "Pathology",
+  "topic": "Myeloproliferative Disorders and Polycythemia",
+  "subtopic": "Myeloproliferative neoplasms, polycythemia vera and erythrocytosis",
+  "concept": "Myeloproliferative neoplasms are clonal myeloid disorders characterized by abnormal proliferation of one or more myeloid lineages. Polycythemia refers to increased red-cell mass or elevated hemoglobin/hematocrit and may be relative, secondary or primary, including polycythemia vera.",
+  "content": {
+    "definition": "Classic BCR::ABL1-negative myeloproliferative neoplasms include polycythemia vera, essential thrombocythemia and primary myelofibrosis; chronic myeloid leukemia is a distinct BCR::ABL1-positive myeloproliferative neoplasm. Polycythemia vera is a clonal myeloid neoplasm with predominant erythrocytosis and frequent multilineage proliferation.",
+    "explanation": "Driver mutations affecting signaling pathways produce abnormal proliferation and survival of hematopoietic clones. JAK2 mutations are characteristic of polycythemia vera, while JAK2, CALR or MPL mutations are common drivers in essential thrombocythemia and primary myelofibrosis. Polycythemia must be separated into relative erythrocytosis from reduced plasma volume and true erythrocytosis from increased red-cell production. True erythrocytosis may be primary, as in polycythemia vera with low erythropoietin, or secondary, usually driven by increased erythropoietin from hypoxia, renal disease, high-altitude exposure or erythropoietin-producing tumors.",
+    "mechanism": "In polycythemia vera, constitutive JAK-STAT signaling promotes erythroid proliferation that becomes relatively independent of normal erythropoietin regulation. Bone marrow commonly shows hypercellularity with panmyelosis involving erythroid, granulocytic and megakaryocytic lineages. Increased cell mass and blood viscosity contribute to microvascular symptoms and thrombosis, while abnormal platelet function can also contribute to bleeding. Essential thrombocythemia is dominated by clonal megakaryocytic proliferation and sustained thrombocytosis. Primary myelofibrosis is characterized by abnormal megakaryocytes, progressive marrow fibrosis and, frequently, extramedullary hematopoiesis.",
+    "structure": "Myeloproliferative neoplasms originate from clonal hematopoietic stem/progenitor cells and involve myeloid lineages. Their classification and diagnosis integrate peripheral blood counts, marrow morphology, molecular genetics and exclusion of reactive or secondary causes.",
+    "function": "Normal hematopoietic regulation is disrupted, causing excessive production of mature myeloid cells and/or abnormal marrow architecture rather than effective physiological homeostasis.",
+    "causes": [
+      "Acquired clonal driver mutations, including JAK2, CALR or MPL in classic BCR::ABL1-negative MPNs",
+      "BCR::ABL1 fusion in chronic myeloid leukemia",
+      "Secondary erythrocytosis from hypoxemia, high altitude, renal disease or erythropoietin-producing tumors",
+      "Relative erythrocytosis from plasma-volume contraction"
+    ],
+    "effects": [
+      "Erythrocytosis and hyperviscosity in polycythemia vera",
+      "Thrombocytosis and thrombotic or bleeding complications in essential thrombocythemia",
+      "Marrow fibrosis, splenomegaly and extramedullary hematopoiesis in primary myelofibrosis",
+      "Progressive cytopenias or transformation to advanced myeloid neoplasia in selected cases"
+    ],
+    "clinical_relevance": "MPNs may be discovered incidentally through abnormal blood counts or present with thrombosis, bleeding, microvascular symptoms, constitutional symptoms or splenomegaly. Polycythemia requires distinction between relative, primary and secondary causes before labeling a patient with polycythemia vera.",
+    "diagnosis": "Evaluation uses complete blood count, peripheral smear, serum erythropoietin when erythrocytosis is present, molecular testing, bone marrow examination when indicated, and targeted evaluation for secondary causes. PV is supported by elevated hemoglobin/hematocrit, characteristic marrow panmyelosis and JAK2 mutation, with low serum erythropoietin as a minor criterion. ET requires sustained thrombocytosis with characteristic megakaryocytic morphology and appropriate molecular/exclusion criteria.",
+    "treatment": "Management is disease- and risk-specific. PV management aims to reduce thrombosis and symptoms, commonly using phlebotomy and antithrombotic or cytoreductive strategies when indicated. ET and PMF management is individualized according to thrombotic risk, symptoms, blood counts, molecular findings and disease progression. Secondary erythrocytosis is treated by addressing its underlying cause rather than assuming a primary MPN.",
+    "high_yield": [
+      "Classic BCR::ABL1-negative MPNs include PV, ET and PMF.",
+      "PV is strongly associated with JAK2 mutations and causes predominant erythrocytosis with possible leukocytosis and thrombocytosis.",
+      "PV marrow commonly shows panmyelosis.",
+      "PV usually has low serum erythropoietin after secondary causes are considered.",
+      "ET is characterized by sustained thrombocytosis and megakaryocytic proliferation; JAK2, CALR and MPL are important driver mutations.",
+      "PMF features atypical megakaryocytes, progressive marrow fibrosis and often extramedullary hematopoiesis.",
+      "Polycythemia can be relative or true; true erythrocytosis can be primary or secondary.",
+      "Secondary erythrocytosis is commonly associated with increased erythropoietin and should be investigated for hypoxia, renal disease and other causes.",
+      "Thrombosis is a major complication of several MPNs, while bleeding can also occur."
+    ]
+  },
+  "terminology": [
+    {"term": "Myeloproliferative neoplasm", "language": "English", "Arabic": "ورم نقوي تكاثري", "pronunciation": "MY-eh-loh-proh-LIF-er-uh-tiv nee-oh-plaz-um", "etymology": "Myelo-, marrow, proliferative, excessive growth, neoplasm, new abnormal growth.", "notes": "Clonal myeloid neoplasm with excessive production of mature myeloid cells."},
+    {"term": "Polycythemia vera", "language": "English", "Arabic": "كثرة الحمر الحقيقية", "pronunciation": "pol-ee-sy-THEE-mee-uh VAY-ruh", "etymology": "Poly-, many, cyto-, cells, -emia, blood condition; vera, true.", "notes": "Clonal MPN with predominant erythrocytosis."},
+    {"term": "Erythrocytosis", "language": "English", "Arabic": "كثرة الكريات الحمراء", "pronunciation": "eh-RITH-roh-sy-TOH-sis", "etymology": "Erythrocyte plus -osis.", "notes": "Increase in red-cell mass or red-cell concentration."},
+    {"term": "Panmyelosis", "language": "English", "Arabic": "تكاثر جميع السلاسل النقوية", "pronunciation": "pan-my-eh-LOH-sis", "etymology": "Pan-, all, plus myelosis, marrow proliferation.", "notes": "Proliferation involving erythroid, granulocytic and megakaryocytic lineages."},
+    {"term": "Hyperviscosity", "language": "English", "Arabic": "فرط لزوجة الدم", "pronunciation": "HY-per-vis-KOS-ih-tee", "etymology": "Hyper-, excessive, plus viscosity.", "notes": "Increased resistance to blood flow that can contribute to microvascular symptoms."},
+    {"term": "Extramedullary hematopoiesis", "language": "English", "Arabic": "تكوّن الدم خارج نخاع العظم", "pronunciation": "EX-truh-MED-yoo-lair-ee hee-MAT-oh-poy-EE-sis", "etymology": "Extra-medullary, outside marrow, plus hematopoiesis.", "notes": "Blood-cell production outside the bone marrow, often involving spleen or liver in marrow-fibrosis states."}
+  ],
+  "relations": [
+    {"target_id": "hematology.pathology.stem_cell_disorders", "relation": "clonal_disorder_of", "note": "Classic MPNs arise from clonal hematopoietic stem/progenitor cells."},
+    {"target_id": "hematology.pathology.aplastic_anemia", "relation": "differential_from", "note": "MPNs represent excessive/clonal hematopoiesis and must be distinguished from hypocellular marrow failure."},
+    {"target_id": "hematology.physiology.rbc_characteristics_functions", "relation": "alters_rbc_mass_in", "note": "PV directly increases erythrocyte production and red-cell mass."},
+    {"target_id": "hematology.physiology.hemostasis_coagulation", "relation": "complicates", "note": "MPNs can cause both thrombosis and bleeding through abnormal blood-cell number and function."},
+    {"target_id": "hematology.anatomy.bone_marrow", "relation": "pathology_of", "note": "Bone marrow morphology is central to classification of several MPNs."}
+  ],
+  "yemen_context": {
+    "relevance": "Understanding primary versus secondary erythrocytosis is important when evaluating elevated hemoglobin or hematocrit in clinical practice.",
+    "evidence": "General medical relevance; no Yemen-specific prevalence or risk claim is made."
+  },
+  "evidence_level": "reference",
+  "status": "reviewed",
+  "review_notes": "Original synthesized educational content with current reference metadata; polycythemia is deliberately separated from secondary erythrocytosis and from the dedicated leukemia records that will follow.",
+  "last_verified": "2026-09-27",
+  "sources": [
+    {
+      "title": "Myeloproliferative Neoplasms",
+      "source_type": "reference",
+      "authors": ["Bicky Thapa", "Salman Fazal", "Meghana Parsi", "Heesun J. Rogers"],
+      "year": 2023,
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK531464/",
+      "license": "NCBI Bookshelf / StatPearls",
+      "location": "NCBI Bookshelf",
+      "notes": "Supports MPN classification, pathophysiology, morphology and clinical presentation."
+    },
+    {
+      "title": "Polycythemia Vera",
+      "source_type": "reference",
+      "authors": ["Xiao Lu", "Richard Chang"],
+      "year": 2023,
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK557660/",
+      "license": "NCBI Bookshelf / StatPearls",
+      "location": "NCBI Bookshelf",
+      "notes": "Supports PV pathophysiology, JAK2 association, diagnostic criteria and management principles."
+    },
+    {
+      "title": "Polycythemia",
+      "source_type": "reference",
+      "authors": ["Ashwin A. Pillai", "Anahat Kaur", "Shiva Kumar R. Mukkamalla"],
+      "year": 2026,
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK526081/",
+      "license": "NCBI Bookshelf / StatPearls",
+      "location": "NCBI Bookshelf",
+      "notes": "Current reference for relative, primary and secondary polycythemia and contemporary evaluation."
+    },
+    {
+      "title": "Essential Thrombocytosis",
+      "source_type": "reference",
+      "authors": ["StatPearls"],
+      "year": 2025,
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK539709/",
+      "license": "NCBI Bookshelf / StatPearls",
+      "location": "NCBI Bookshelf",
+      "notes": "Supports ET molecular drivers, diagnostic evaluation and differential diagnosis."
+    },
+    {
+      "title": "International Consensus Classification of Myeloid Neoplasms and Acute Leukemias",
+      "source_type": "reference",
+      "authors": ["Arber DA", "Orazi A", "Hasserjian RP", "et al."],
+      "year": 2022,
+      "url": "https://pubmed.ncbi.nlm.nih.gov/35732831/",
+      "license": "PubMed indexed consensus classification",
+      "location": "PubMed",
+      "notes": "Used for modern classification context and terminology."
+    }
+  ]
+}
