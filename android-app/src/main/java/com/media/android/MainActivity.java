@@ -135,8 +135,8 @@ public final class MainActivity extends Activity {
             append(b, "MECHANISM", c.optString("mechanism", ""));
             append(b, "STRUCTURE", c.optString("structure", ""));
             append(b, "FUNCTION", c.optString("function", ""));
-            append(b, "CAUSES", c.optString("causes", ""));
-            append(b, "EFFECTS", c.optString("effects", ""));
+            appendArray(b, "CAUSES", c.optJSONArray("causes"));
+            appendArray(b, "EFFECTS", c.optJSONArray("effects"));
             append(b, "CLINICAL RELEVANCE", c.optString("clinical_relevance", ""));
             append(b, "DIAGNOSIS", c.optString("diagnosis", ""));
             append(b, "TREATMENT", c.optString("treatment", ""));
@@ -190,7 +190,7 @@ public final class MainActivity extends Activity {
         return b.toString();
     }
 
-    private static void append(StringBuilder b, String title, String text) {
+    private static void appendArray(StringBuilder b, String title, JSONArray values) {\n        if (values == null || values.length() == 0) return;\n        b.append(title).append("\\n");\n        for (int i = 0; i < Math.min(values.length(), 8); i++) {\n            String value = values.optString(i, "").trim();\n            if (!value.isEmpty()) b.append("• ").append(value).append("\\n");\n        }\n        b.append("\\n");\n    }\n\n    private static void append(StringBuilder b, String title, String text) {
         if (text != null && !text.trim().isEmpty() && !text.trim().equals("[]")) {
             b.append(title).append("\n").append(text.trim()).append("\n\n");
         }
