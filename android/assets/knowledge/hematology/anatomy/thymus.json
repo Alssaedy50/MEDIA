@@ -1,0 +1,133 @@
+{
+  "id": "hematology.anatomy.thymus",
+  "domain": "Hematology",
+  "subject": "Anatomy",
+  "topic": "Thymus",
+  "subtopic": "Gross anatomy, microscopic organization and T-cell development",
+  "concept": "The thymus is a primary lymphoid organ in the anterosuperior mediastinum where bone-marrow-derived T-cell precursors undergo development, selection and maturation.",
+  "content": {
+    "definition": "The thymus is a bilobed lymphoepithelial primary lymphoid organ located mainly in the superior and anterior mediastinum. It provides the specialized microenvironment required for T-lymphocyte development and selection.",
+    "explanation": "The thymus links hematopoiesis to adaptive immunity. T-cell progenitors originate from hematopoietic stem and progenitor cells associated with bone marrow, migrate to the thymus, and pass through ordered developmental stages within cortical and medullary microenvironments before mature naive T cells leave for the peripheral immune system.",
+    "mechanism": "Thymocytes enter the thymus through vessels near the corticomedullary region and move through specialized microenvironments. In the cortex, immature thymocytes undergo differentiation and positive selection. Cells that fail appropriate recognition of self-MHC are eliminated. Surviving cells progress toward the medulla, where additional selection mechanisms involving medullary epithelial cells and antigen-presenting cells remove strongly self-reactive cells and support central tolerance. Mature cells then exit to the periphery.",
+    "structure": "The thymus is surrounded by a connective-tissue capsule that sends septa inward and partially divides the organ into lobules. Each lobule has a lymphocyte-rich cortex and a relatively paler medulla. The stroma is formed largely by thymic epithelial cells together with dendritic cells, macrophages, vascular and mesenchymal elements. Hassall corpuscles are characteristic epithelial structures of the medulla.",
+    "function": "The principal function is development and selection of T lymphocytes, including establishment of a repertoire that is capable of recognizing antigen in the context of self-MHC while maintaining central tolerance to self.",
+    "causes": [],
+    "effects": [],
+    "clinical_relevance": "Thymic anatomy is clinically relevant to mediastinal masses, thymic tumors, thymectomy, myasthenia gravis, and congenital disorders such as DiGeorge syndrome. Loss or severe developmental failure of thymic function can impair T-cell immunity.",
+    "diagnosis": "Thymic disease may be evaluated with clinical assessment, imaging and, when indicated, histopathologic examination. The normal cortical-medullary architecture is important when interpreting thymic tissue.",
+    "treatment": "Treatment depends on the underlying thymic disorder and may include surgery, oncologic therapy, immunologic management, or specialized transplantation approaches in selected congenital conditions.",
+    "high_yield": [
+      "The thymus is a primary lymphoid organ and the major site of T-lymphocyte development and selection.",
+      "It is located mainly in the anterosuperior mediastinum and lies behind the sternum.",
+      "The thymus is classically bilobed and divided by connective-tissue septa into lobules.",
+      "Each lobule has a dark, lymphocyte-rich cortex and a paler medulla.",
+      "Hassall corpuscles are characteristic structures of the thymic medulla.",
+      "The thymus has efferent lymphatics but lacks afferent lymphatic vessels in standard anatomical descriptions.",
+      "Thymic involution begins around puberty and involves progressive replacement of functional lymphoid tissue by adipose and fibrofatty tissue, although thymic tissue is not necessarily completely lost.",
+      "Bone-marrow-derived T-cell precursors mature in the thymus; mature naive T cells are exported to peripheral lymphoid tissues."
+    ]
+  },
+  "terminology": [
+    {
+      "term": "Thymus",
+      "language": "English",
+      "Arabic": "الغدة الزعترية / التوتة",
+      "pronunciation": "THY-mus",
+      "etymology": "The name is derived from the Greek thymos; the historical origin of the anatomical naming is discussed in anatomical literature.",
+      "notes": "A primary lymphoid organ, not an endocrine gland in the usual classification."
+    },
+    {
+      "term": "Thymocyte",
+      "language": "English",
+      "Arabic": "خلية تيموسية / خلية لمفاوية نامية في التيموس",
+      "pronunciation": "THY-mo-site",
+      "etymology": "Thymus + -cyte, meaning cell.",
+      "notes": "A developing T-lineage lymphocyte within the thymus."
+    },
+    {
+      "term": "Thymic cortex",
+      "language": "English",
+      "Arabic": "قشرة التيموس",
+      "pronunciation": "THY-mik KOR-teks",
+      "etymology": "Cortex means outer layer.",
+      "notes": "Contains densely packed immature thymocytes and cortical thymic epithelial cells."
+    },
+    {
+      "term": "Thymic medulla",
+      "language": "English",
+      "Arabic": "لبّ التيموس",
+      "pronunciation": "THY-mik meh-DUL-la",
+      "etymology": "Medulla means inner region.",
+      "notes": "Contains more mature thymocytes, medullary thymic epithelial cells and Hassall corpuscles."
+    },
+    {
+      "term": "Hassall corpuscle",
+      "language": "English",
+      "Arabic": "جسيم هاسال",
+      "pronunciation": "HAS-al KOR-pus-ul",
+      "etymology": "Named after Arthur Hill Hassall.",
+      "notes": "Concentric epithelial structures characteristic of the thymic medulla."
+    },
+    {
+      "term": "Thymic involution",
+      "language": "English",
+      "Arabic": "ضمور/ارتداد التيموس المرتبط بالعمر",
+      "pronunciation": "THY-mik in-vo-LOO-shun",
+      "etymology": "Involution refers to reduction or regression of an organ or tissue.",
+      "notes": "A normal age-associated process involving loss of lymphoid tissue and increasing adipose/fibrofatty replacement."
+    }
+  ],
+  "relations": [
+    {
+      "target_id": "hematology.anatomy.bone_marrow",
+      "relation": "receives_precursors_from",
+      "note": "T-cell precursors arise from hematopoietic progenitors associated with bone marrow and migrate to the thymus for maturation."
+    }
+  ],
+  "evidence_level": "reference",
+  "status": "reviewed",
+  "review_notes": "Original synthesis based on NCBI/NIH reference material and peer-reviewed reviews. The record distinguishes established gross anatomy from evolving details of thymic microenvironment and selection biology.",
+  "last_verified": "2026-09-27",
+  "sources": [
+    {
+      "title": "Anatomy, Head and Neck, Thymus",
+      "source_type": "reference",
+      "authors": ["Remien", "Jozsa", "Jan"],
+      "year": 2025,
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK539748/",
+      "license": "NCBI Bookshelf / StatPearls",
+      "location": "NCBI Bookshelf",
+      "notes": "Gross anatomy, mediastinal relations, function, clinical relevance and involution."
+    },
+    {
+      "title": "The Role of the Thymus in the Immune Response",
+      "source_type": "review",
+      "authors": [],
+      "year": 2019,
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6446584/",
+      "license": "PMC",
+      "location": "Peer-reviewed review",
+      "notes": "Thymic structure, T-cell development, positive and negative selection, central tolerance and age-related changes."
+    },
+    {
+      "title": "The thymus road to a T cell: migration, selection, and atrophy",
+      "source_type": "review",
+      "authors": [],
+      "year": 2024,
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11384998/",
+      "license": "PMC",
+      "location": "Peer-reviewed review",
+      "notes": "Modern description of thymic compartments and thymocyte migration and selection."
+    },
+    {
+      "title": "The thymus: General concepts on embryology, anatomy, histology and immunohistochemistry",
+      "source_type": "review",
+      "authors": ["Ydamis Estrella Perez", "Cesar A Moran"],
+      "year": 2022,
+      "url": "https://pubmed.ncbi.nlm.nih.gov/34147301/",
+      "license": "Peer-reviewed publication",
+      "location": "PubMed",
+      "notes": "Normal thymic anatomy and histology."
+    }
+  ]
+}
