@@ -1,0 +1,83 @@
+{
+  "id": "hematology.microbiology.human_african_trypanosomiasis",
+  "domain": "Hematology",
+  "subject": "Microbiology",
+  "topic": "Human African Trypanosomiasis",
+  "subtopic": "Sleeping sickness: Trypanosoma brucei gambiense/rhodesiense, tsetse transmission, stages, diagnosis and treatment",
+  "concept": "Human African trypanosomiasis is a vector-borne protozoal disease caused by T. brucei gambiense or T. brucei rhodesiense and transmitted by infected tsetse flies.",
+  "content": {
+    "definition": "Human African trypanosomiasis is a vector-borne protozoal disease caused by T. brucei gambiense or T. brucei rhodesiense and transmitted by infected tsetse flies.",
+    "explanation": "Trypanosomes multiply first in blood and lymph (haemolymphatic stage), then may cross the blood-brain barrier causing meningoencephalitic disease with sleep-cycle disturbance and neurologic manifestations.",
+    "mechanism": "Trypanosomes multiply first in blood and lymph (haemolymphatic stage), then may cross the blood-brain barrier causing meningoencephalitic disease with sleep-cycle disturbance and neurologic manifestations.",
+    "structure": "Clinically important organism-specific structural and biologic features are summarized in the explanation and terminology fields.",
+    "function": "The pathogen's biologic properties determine transmission, tissue tropism, clinical manifestations and diagnostic strategy.",
+    "causes": [
+      "Tsetse fly bite",
+      "Gambiense disease is mainly associated with human reservoirs",
+      "Rhodesiense disease has an important animal reservoir"
+    ],
+    "effects": [
+      "First stage: fever, headache, lymphadenopathy and pruritus",
+      "Second stage: behavioral change, confusion, coordination problems and sleep disturbance",
+      "Untreated disease is generally fatal"
+    ],
+    "clinical_relevance": "This is an official Hematology microbiology syllabus organism/disease. Human African Trypanosomiasis should be interpreted using current diagnostic and treatment guidance.",
+    "diagnosis": "Definitive diagnosis rests on microscopic detection of trypanosomes. Blood detection is particularly useful in rhodesiense disease; gambiense diagnosis is more difficult. CSF examination is used for staging.",
+    "treatment": "Treatment depends on subspecies and stage and has changed with modern WHO/CDC guidance; specialist guidance is important because CNS-stage therapy differs from first-stage therapy.",
+    "high_yield": [
+      "Human African trypanosomiasis is a vector-borne protozoal disease caused by T. brucei gambiense or T. brucei rhodesiense and transmitted by infected tsetse flies.",
+      "First stage: fever, headache, lymphadenopathy and pruritus",
+      "Second stage: behavioral change, confusion, coordination problems and sleep disturbance",
+      "Untreated disease is generally fatal",
+      "Tsetse fly bite",
+      "Gambiense disease is mainly associated with human reservoirs",
+      "Rhodesiense disease has an important animal reservoir"
+    ]
+  },
+  "terminology": [
+    {
+      "term": "Tsetse fly",
+      "language": "English",
+      "arabic": "ذبابة التسي تسي",
+      "pronunciation": "TET-see fly",
+      "etymology": "Medical terminology retained for exam and clinical use.",
+      "notes": "Key term for Human African Trypanosomiasis."
+    },
+    {
+      "term": "Haemolymphatic stage",
+      "language": "English",
+      "arabic": "المرحلة الدموية اللمفية",
+      "pronunciation": "HEE-moh-lim-FAT-ik",
+      "etymology": "Medical terminology retained for exam and clinical use.",
+      "notes": "Key term for Human African Trypanosomiasis."
+    },
+    {
+      "term": "Meningoencephalitic stage",
+      "language": "English",
+      "arabic": "المرحلة السحائية الدماغية",
+      "pronunciation": "meh-NIN-joh-en-sef-uh-LIT-ik",
+      "etymology": "Medical terminology retained for exam and clinical use.",
+      "notes": "Key term for Human African Trypanosomiasis."
+    }
+  ],
+  "relations": [],
+  "yemen_context": {
+    "relevance": "Potentially relevant to infectious-disease and hematology teaching in Yemen; no unsupported Yemen-specific incidence is asserted.",
+    "evidence": "General WHO/CDC evidence; local epidemiology should be added only from authoritative Yemen-specific sources."
+  },
+  "evidence_level": "guideline",
+  "status": "reviewed",
+  "review_notes": "Original synthesis based on WHO Human African Trypanosomiasis; no textbook text copied. Treatment statements are intentionally current-guidance aware.",
+  "last_verified": "2026-09-27",
+  "sources": [
+    {
+      "title": "WHO Human African Trypanosomiasis",
+      "source_type": "guideline",
+      "year": 2023,
+      "url": "https://www.who.int/en/news-room/fact-sheets/detail/trypanosomiasis-human-african-%28sleeping-sickness%29",
+      "license": "WHO",
+      "location": "World Health Organization",
+      "notes": "Clinical and microbiology overview."
+    }
+  ]
+}
