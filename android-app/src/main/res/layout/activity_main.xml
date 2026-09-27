@@ -1,64 +1,224 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="20dp"
-    android:background="#F7F9FC">
+    android:fillViewport="true"
+    android:background="#F4F7FA">
 
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="MEDIA"
-        android:textSize="30sp"
-        android:textStyle="bold"
-        android:textColor="#14213D"/>
+        android:orientation="vertical"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:paddingTop="18dp"
+        android:paddingBottom="24dp">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Medical Education AI • Offline Alpha"
-        android:textSize="15sp"
-        android:layout_marginBottom="8dp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
 
-    <TextView
-        android:id="@+id/status"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="● OFFLINE"
-        android:textStyle="bold"
-        android:padding="8dp"
-        android:background="#E8F5E9"/>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
 
-    <EditText
-        android:id="@+id/question"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Ask a medical question…"
-        android:inputType="textCapSentences|textMultiLine"
-        android:minHeight="56dp"
-        android:layout_marginTop="16dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="MEDIA"
+                    android:textColor="#0D2035"
+                    android:textSize="30sp"
+                    android:textStyle="bold"
+                    android:letterSpacing="0.04"/>
 
-    <Button
-        android:id="@+id/ask_button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="ASK MEDIA OFFLINE"
-        android:layout_marginTop="8dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Medical Education AI"
+                    android:textColor="#52606D"
+                    android:textSize="14sp"
+                    android:layout_marginTop="2dp"/>
+            </LinearLayout>
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:layout_marginTop="14dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ALPHA"
+                android:textColor="#0B6B55"
+                android:textStyle="bold"
+                android:textSize="12sp"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:paddingTop="7dp"
+                android:paddingBottom="7dp"
+                android:background="#DDF4EC"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="● OFFLINE  •  Loading local medical library..."
+            android:textColor="#0B6B55"
+            android:textStyle="bold"
+            android:textSize="13sp"
+            android:padding="12dp"
+            android:layout_marginTop="16dp"
+            android:background="#E6F6F0"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ask a question"
+            android:textColor="#0D2035"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginTop="24dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Search the bundled Hematology library. MEDIA answers only when local evidence is sufficiently matched."
+            android:textColor="#667784"
+            android:textSize="14sp"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="10dp"/>
+
+        <EditText
+            android:id="@+id/question"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="58dp"
+            android:hint="e.g. Explain erythropoiesis"
+            android:inputType="textCapSentences|textMultiLine"
+            android:imeOptions="actionSearch"
+            android:textSize="16sp"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:paddingTop="12dp"
+            android:paddingBottom="12dp"
+            android:background="@drawable/bg_input"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp">
+
+            <Button
+                android:id="@+id/ask_button"
+                android:layout_width="0dp"
+                android:layout_height="52dp"
+                android:layout_weight="1"
+                android:text="ASK MEDIA"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:contentDescription="Ask MEDIA a medical question"/>
+
+            <Button
+                android:id="@+id/clear_button"
+                android:layout_width="wrap_content"
+                android:layout_height="52dp"
+                android:text="CLEAR"
+                android:textSize="13sp"
+                android:layout_marginStart="8dp"
+                android:contentDescription="Clear the current question and answer"/>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="QUICK START"
+            android:textColor="#52606D"
+            android:textStyle="bold"
+            android:textSize="12sp"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="8dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/prompt_1"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:text="Bone marrow"
+                android:textSize="11sp"
+                android:contentDescription="Ask about bone marrow"/>
+
+            <Button
+                android:id="@+id/prompt_2"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:text="Erythropoiesis"
+                android:textSize="11sp"
+                android:layout_marginStart="6dp"
+                android:contentDescription="Ask about erythropoiesis"/>
+
+            <Button
+                android:id="@+id/prompt_3"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:text="Iron deficiency"
+                android:textSize="11sp"
+                android:layout_marginStart="6dp"
+                android:contentDescription="Ask about iron deficiency anemia"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="8dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="ANSWER"
+                android:textColor="#0D2035"
+                android:textSize="12sp"
+                android:textStyle="bold"/>
+
+            <Button
+                android:id="@+id/copy_button"
+                android:layout_width="wrap_content"
+                android:layout_height="44dp"
+                android:text="COPY"
+                android:textSize="12sp"
+                android:visibility="gone"
+                android:contentDescription="Copy the current MEDIA answer"/>
+        </LinearLayout>
+
         <TextView
             android:id="@+id/answer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Your answer will appear here.\n\nNo Internet connection is required for this Alpha."
-            android:textSize="16sp"
-            android:lineSpacingExtra="4dp"
-            android:padding="16dp"
-            android:background="#FFFFFF"/>
-    </ScrollView>
-</LinearLayout>
+            android:text="Your answer will appear here.\n\nNo Internet connection is required for the current Alpha."
+            android:textColor="#263746"
+            android:textSize="15sp"
+            android:lineSpacingExtra="5dp"
+            android:padding="18dp"
+            android:background="@drawable/bg_answer"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Current scope: Hematology • 51 local medical records"
+            android:textColor="#71808C"
+            android:textSize="12sp"
+            android:gravity="center"
+            android:layout_marginTop="16dp"/>
+    </LinearLayout>
+</ScrollView>
