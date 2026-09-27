@@ -27,6 +27,10 @@ def evaluate_case(case: dict[str, Any]) -> dict[str, Any]:
     expected_ids = set(case.get("expected_concepts", case.get("expected_ids", [])))
     actual_ids = set(result.get("retrieved_ids", []))
     expected_state = case.get("expected_evidence_state", case.get("expected_state", "insufficient"))
+    # Legacy cases called the safe no-evidence state "abstain"; the answer
+    # engine uses the more precise "insufficient" evidence-state label.
+    if expected_state == "abstain":
+        expected_state = "insufficient"
 
     state_ok = result.get("evidence_state") == expected_state
 
