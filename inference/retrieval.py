@@ -194,7 +194,10 @@ def _score(query_tokens: list[str], record: Record) -> tuple[float, dict[str, An
             query_set = set(query_tokens)
             terminology_tokens = set(anchor_tokens)
             exact_terms = query_set & terminology_tokens
-            if any(len(term) >= 3 for term in exact_terms):
+            # Only short technical tokens receive a large terminology boost;
+            # generic words such as "blood" or "treatment" must not dominate.
+            if any(3 <= len(term) <= 5 and (any(ch.isdigit() for ch in term) or len(term) <= 4)
+                   for term in exact_terms):
                 score += 500.0
 
     status = record.data.get("status")
