@@ -16,18 +16,20 @@ CASES = [
     ("medicine_bone_marrow_aspiration_biopsy_eval.json", 6),
     ("medicine_transplantation_eval.json", 6),
     ("medicine_blood_transfusion_precautions_reactions_eval.json", 6),
+    ("pediatrics_nutritional_anemias_eval.json", 6),
+    ("pediatrics_aplastic_anemia_eval.json", 6),
+    ("pediatrics_hemolytic_anemias_eval.json", 6),
+    ("pediatrics_bleeding_disorders_eval.json", 6),
 ]
 
-
 class PharmacologyEvaluationTests(unittest.TestCase):
-    def test_all_hematology_pharmacology_evaluations_pass(self):
+    def test_all_hematology_evaluations_pass(self):
         for filename, expected_total in CASES:
             with self.subTest(filename=filename):
                 report = run(ROOT / filename)
                 self.assertEqual(report["total_cases"], expected_total)
                 self.assertEqual(report["failed_cases"], 0)
                 self.assertEqual(report["pass_rate"], 1.0)
-
 
 if __name__ == "__main__":
     unittest.main()
