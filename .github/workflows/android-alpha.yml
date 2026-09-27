@@ -4,6 +4,7 @@ on:
   push:
     branches: ["main", "agent/android-alpha", "feature/offline-alpha"]
   pull_request:
+  workflow_dispatch:
 
 permissions:
   contents: read
@@ -37,6 +38,11 @@ jobs:
           test "$count" -eq 51
           echo "Validated $count Hematology JSON records"
 
+      - name: Validate offline-only manifest
+        run: |
+          ! grep -Eq '<uses-permission[^>]+android:name="android.permission.INTERNET"' android-app/src/main/AndroidManifest.xml
+          echo "Validated: INTERNET permission is not declared"
+
       - name: Build Android debug APK
         working-directory: android
         run: gradle :android-app:assembleDebug
@@ -50,6 +56,13 @@ jobs:
           test "$count" -eq 51
           echo "APK contains $count bundled Hematology records"
 
+      - name: Verify APK metadata
+        working-directory: android
+        run: |
+          apk=android-app/build/outputs/apk/debug/android-app-debug.apk
+          $ANDROID_HOME/build-tools/35.0.0/aapt dump badging "$apk" | grep -F "package: name='com.media.android'"
+          $ANDROID_HOME/build-tools/35.0.0/aapt dump badging "$apk" | grep -F "versionName='0.2.0'"
+
       - name: Run Android unit tests
         working-directory: android
         run: gradle :android-app:testDebugUnitTest
@@ -59,3 +72,4 @@ jobs:
         with:
           name: media-android-alpha-debug
           path: android-app/build/outputs/apk/debug/android-app-debug.apk
+          retention-days: 30
