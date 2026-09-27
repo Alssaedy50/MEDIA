@@ -181,6 +181,22 @@ def retrieve(
     records = load_records(kb_dir)
     query_tokens = tokenize(query)
 
+    unknown_named_terms = _unknown_named_terms(query, records)
+    if unknown_named_terms:
+        return {
+            "engine": "MEDAI Retrieval v0.1",
+            "query": query,
+            "knowledge_scope": str(kb_dir.relative_to(ROOT)) if kb_dir.is_relative_to(ROOT) else str(kb_dir),
+            "records_loaded": len(records),
+            "query_terms": query_tokens,
+            "hits": [],
+            "abstain": True,
+            "abstain_reason": (
+                "Query contains distinctive terms absent from registered knowledge: "
+                + ", ".join(unknown_named_terms)
+            ),
+        }
+
     ranked = []
     for record in records:
         score, match = _score(query_tokens, record)
