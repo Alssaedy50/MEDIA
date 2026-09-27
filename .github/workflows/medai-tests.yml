@@ -26,12 +26,28 @@ jobs:
       - name: Run training pipeline tests
         working-directory: training
         run: python -m unittest test_build_dataset.py -v
+      - name: Run tokenizer foundation tests
+        run: python -m unittest training/test_tokenizer.py -v
       - name: Generate Hematology training dataset
         run: python training/build_dataset.py
       - name: Run corpus analysis unit tests
         run: python -m unittest training/test_analyze_corpus.py -v
       - name: Run corpus analysis
         run: python training/analyze_corpus.py --output datasets/hematology/corpus_analysis.json
+      - name: Build tokenizer artifact
+        run: python training/tokenizer.py datasets/hematology/train.jsonl datasets/hematology/validation.jsonl datasets/hematology/test.jsonl --vocab-size 4096 --output datasets/hematology/tokenizer.json
+      - name: Verify tokenizer artifact
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p = Path("datasets/hematology/tokenizer.json")
+          data = json.loads(p.read_text())
+          assert data["version"] == "media-bpe-v1", data
+          assert len(data["vocab"]) == data["vocab_size"], data
+          assert all(t in data["vocab"] for t in ["<pad>", "<unk>", "<bos>", "<eos>"]), data
+          print({"vocab_size": data["vocab_size"], "merge_count": len(data["merges"])})
+          PY
       - name: Verify generated corpus manifest
         run: |
           python - <<'PY'
