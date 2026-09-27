@@ -122,11 +122,6 @@ def _score(query_tokens: list[str], record: Record) -> tuple[float, dict[str, An
     score += 6.0 * coverage
 
     normalized_query = " ".join(query_tokens)
-    anchor_fields = ("concept", "topic", "subject", "subtopic", "terminology", "relations")
-    anchor_hits = set()
-    for token in query_tokens:
-        if any(token in set(tokenize(fields[field])) for field in anchor_fields):
-            anchor_hits.add(token)
     for field in ("concept", "topic", "subject", "subtopic"):
         normalized_field = " ".join(tokenize(fields[field]))
         if normalized_query and normalized_query in normalized_field:
