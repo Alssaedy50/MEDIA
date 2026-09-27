@@ -14,11 +14,20 @@
         android:paddingTop="18dp"
         android:paddingBottom="24dp">
 
+        <!-- Header: medical vector logo + title -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:gravity="center_vertical">
+
+            <ImageView
+                android:id="@+id/logo"
+                android:layout_width="46dp"
+                android:layout_height="46dp"
+                android:layout_marginEnd="12dp"
+                android:contentDescription="MEDIA medical logo"
+                android:src="@drawable/ic_media_logo" />
 
             <LinearLayout
                 android:layout_width="0dp"
@@ -31,7 +40,7 @@
                     android:layout_height="wrap_content"
                     android:text="MEDIA"
                     android:textColor="#0D2035"
-                    android:textSize="30sp"
+                    android:textSize="28sp"
                     android:textStyle="bold"
                     android:letterSpacing="0.04"/>
 
@@ -73,7 +82,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Ask a question"
+            android:text="اسأل سؤالاً طبياً · Ask a question"
             android:textColor="#0D2035"
             android:textSize="20sp"
             android:textStyle="bold"
@@ -82,9 +91,10 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Search the bundled Hematology library. MEDIA answers only when local evidence is sufficiently matched."
-            android:textColor="#667784"
+            android:text="ابحث في مكتبة أمراض الدم المضمّنة، أو أدخل اختصاراً طبياً مثل CBC أو EPO أو IDA.\nSearch the bundled Hematology library. MEDIA answers only when local evidence is sufficiently matched."
+            android:textColor="#52606D"
             android:textSize="14sp"
+            android:lineSpacingExtra="2dp"
             android:layout_marginTop="4dp"
             android:layout_marginBottom="10dp"/>
 
@@ -93,10 +103,16 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:minHeight="58dp"
-            android:hint="e.g. Explain erythropoiesis"
+            android:hint="مثال: اشرح تكون الكريات الحمراء · e.g. Explain erythropoiesis"
+            android:textColor="#0F172A"
+            android:textColorHint="#64748B"
+            android:textSize="16sp"
             android:inputType="textCapSentences|textMultiLine"
             android:imeOptions="actionSearch"
-            android:textSize="16sp"
+            android:maxLines="4"
+            android:breakStrategy="simple"
+            android:hyphenationFrequency="none"
+            android:elevation="4dp"
             android:paddingStart="16dp"
             android:paddingEnd="16dp"
             android:paddingTop="12dp"
@@ -114,9 +130,11 @@
                 android:layout_width="0dp"
                 android:layout_height="52dp"
                 android:layout_weight="1"
-                android:text="ASK MEDIA"
+                android:text="ASK MEDIA · اسأل"
                 android:textStyle="bold"
                 android:textSize="14sp"
+                android:backgroundTint="#0B6B55"
+                android:textColor="#FFFFFF"
                 android:contentDescription="Ask MEDIA a medical question"/>
 
             <Button
@@ -132,47 +150,62 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="QUICK START"
+            android:text="أسئلة سريعة · QUICK START"
             android:textColor="#52606D"
             android:textStyle="bold"
             android:textSize="12sp"
             android:layout_marginTop="24dp"
             android:layout_marginBottom="8dp"/>
 
-        <LinearLayout
+        <!-- Quick-start chips scroll horizontally so labels never wrap -->
+        <HorizontalScrollView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:scrollbars="none"
+            android:fillViewport="false">
 
-            <Button
-                android:id="@+id/prompt_1"
-                android:layout_width="0dp"
-                android:layout_height="48dp"
-                android:layout_weight="1"
-                android:text="Bone marrow"
-                android:textSize="11sp"
-                android:contentDescription="Ask about bone marrow"/>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
 
-            <Button
-                android:id="@+id/prompt_2"
-                android:layout_width="0dp"
-                android:layout_height="48dp"
-                android:layout_weight="1"
-                android:text="Erythropoiesis"
-                android:textSize="11sp"
-                android:layout_marginStart="6dp"
-                android:contentDescription="Ask about erythropoiesis"/>
+                <TextView
+                    android:id="@+id/chip_bone_marrow"
+                    style="@style/Widget.MEDIA.Chip"
+                    android:text="Bone marrow"
+                    android:contentDescription="Ask about bone marrow"/>
 
-            <Button
-                android:id="@+id/prompt_3"
-                android:layout_width="0dp"
-                android:layout_height="48dp"
-                android:text="Iron deficiency"
-                android:textSize="11sp"
-                android:layout_marginStart="6dp"
-                android:layout_weight="1"
-                android:contentDescription="Ask about iron deficiency anemia"/>
-        </LinearLayout>
+                <TextView
+                    android:id="@+id/chip_erythropoiesis"
+                    style="@style/Widget.MEDIA.Chip"
+                    android:text="Erythropoiesis"
+                    android:contentDescription="Ask about erythropoiesis"/>
+
+                <TextView
+                    android:id="@+id/chip_ida"
+                    style="@style/Widget.MEDIA.Chip"
+                    android:text="Iron deficiency anemia (IDA)"
+                    android:contentDescription="Ask about iron deficiency anemia"/>
+
+                <TextView
+                    android:id="@+id/chip_cbc"
+                    style="@style/Widget.MEDIA.Chip"
+                    android:text="CBC"
+                    android:contentDescription="Ask about complete blood count"/>
+
+                <TextView
+                    android:id="@+id/chip_epo"
+                    style="@style/Widget.MEDIA.Chip"
+                    android:text="EPO"
+                    android:contentDescription="Ask about erythropoietin"/>
+
+                <TextView
+                    android:id="@+id/chip_sickle"
+                    style="@style/Widget.MEDIA.Chip"
+                    android:text="Sickle cell disease"
+                    android:contentDescription="Ask about sickle cell disease"/>
+            </LinearLayout>
+        </HorizontalScrollView>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -186,9 +219,9 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="ANSWER"
+                android:text="الإجابة · ANSWER"
                 android:textColor="#0D2035"
-                android:textSize="12sp"
+                android:textSize="14sp"
                 android:textStyle="bold"/>
 
             <Button
@@ -201,14 +234,19 @@
                 android:contentDescription="Copy the current MEDIA answer"/>
         </LinearLayout>
 
+        <!-- Answer card: elevated, readable medical typography, long-press selection enabled -->
         <TextView
             android:id="@+id/answer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Your answer will appear here.\n\nNo Internet connection is required for the current Alpha."
-            android:textColor="#263746"
+            android:text="ستظهر الإجابة هنا.\nYour answer will appear here.\n\nNo Internet connection is required for the current Alpha."
+            android:textColor="#1E293B"
             android:textSize="15sp"
-            android:lineSpacingExtra="5dp"
+            android:lineSpacingExtra="6dp"
+            android:textIsSelectable="true"
+            android:breakStrategy="simple"
+            android:hyphenationFrequency="none"
+            android:elevation="4dp"
             android:padding="18dp"
             android:background="@drawable/bg_answer"/>
 
@@ -216,7 +254,7 @@
             android:id="@+id/scope"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Current scope: Hematology • loading..."
+            android:text="نطاق المعرفة: أمراض الدم • loading..."
             android:textColor="#71808C"
             android:textSize="12sp"
             android:gravity="center"
