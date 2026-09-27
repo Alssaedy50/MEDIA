@@ -3,7 +3,7 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from analyze_corpus import analyze, baseline_tokens
+from training.analyze_corpus import analyze, baseline_tokens
 
 class CorpusAnalysisTests(unittest.TestCase):
     def test_baseline_tokenizer_handles_arabic_english_and_punctuation(self):
