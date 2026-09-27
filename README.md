@@ -1,117 +1,100 @@
-# MEDAI — Medical Education AI
+# MEDIA — Medical Education AI
 
-**MEDAI** is an experimental medical-education AI platform designed for medical students.
+**MEDIA** is an experimental medical-education AI platform designed for medical students.
 
 The project is being built around a source-traceable medical knowledge layer, retrieval, verification, evaluation, and an eventual offline Android runtime.
 
-> **Current milestone: MEDAI v0.1 — Hematology Anatomy retrieval prototype**
+> **Current milestone: MEDIA — Hematology training-data foundation**
 
 ## Vision
 
-MEDAI is not intended to be a generic medical chatbot.
+MEDIA is not intended to be a generic medical chatbot.
 
 Its core principle is:
 
-```text
+```
 Trusted Medical Knowledge
         ↓
-Retrieval
+Training Data + Retrieval
         ↓
-Evidence
+Model
         ↓
-Reasoning
+Evidence / Reasoning
         ↓
 Verification
         ↓
 Student-facing Answer
 ```
 
-The knowledge layer is kept independent from the model so that medical content can be reviewed, corrected, expanded, and updated without retraining the entire system.
+The knowledge layer remains independent from the model so medical content can be reviewed, corrected, expanded, and updated without requiring every knowledge change to be embedded into model weights.
 
 ## Current milestone
 
-The first executable prototype works on the six reviewed Hematology Anatomy records:
+The Hematology block is the first complete academic block in the repository.
 
-- Bone Marrow
-- Thymus
-- Lymph Nodes
-- Spleen
-- Lymphatic Vessels
-- Embryology of Hemopoietic and Lymphatic Systems
+It currently contains **51 reviewed/verified knowledge records** covering:
 
-The retrieval engine returns ranked concepts, structured evidence, terminology, relationships, and source metadata. If the registered knowledge base does not contain a sufficient match, it explicitly abstains instead of inventing medical content.
+- Anatomy
+- Histology
+- Physiology
+- Pathology
+- Microbiology
+- Pharmacology
+- Medicine
+- Pediatrics
+- Community Medicine
 
-See [inference/README.md](inference/README.md) for the prototype and commands.
+The next stage is no longer adding another block. MEDIA is now moving from knowledge engineering to model-training engineering.
 
-## Knowledge architecture
+The first training corpus is generated reproducibly from these registered records. Examples retain their originating record ID and use a record-level train/validation/test split to reduce semantic leakage.
 
-Each medical concept is stored as structured, source-traceable data.
+## Training roadmap
 
-```text
-Hematology
-└── Anatomy
-    ├── Bone Marrow
-    ├── Thymus
-    ├── Lymph Nodes
-    ├── Spleen
-    ├── Lymphatic Vessels
-    └── Embryology
-```
+### Stage 1 — Knowledge-to-dataset
+- [x] Training dataset generator
+- [x] Provenance-preserving examples
+- [x] Record-level 80/10/10 split
+- [x] Abstention test examples
+- [x] Training pipeline unit tests
+- [x] CI generation and corpus-count verification
 
-The schema supports:
+### Stage 2 — Tokenizer and corpus analysis
+- [ ] Medical English + Arabic tokenizer
+- [ ] Vocabulary analysis
+- [ ] Exact token counts
+- [ ] Sequence-length analysis
+- [ ] Dataset quality audit
 
-- definitions and explanations
-- mechanisms
-- structure and function
-- causes/effects
-- clinical relevance
-- diagnosis and treatment
-- terminology and Arabic equivalents
-- concept relationships
-- Yemen-specific context with evidence
-- source metadata and evidence level
-- review/verification status
+### Stage 3 — Model foundation
+- [ ] Tiny Transformer overfit test
+- [ ] ~100M-parameter architecture
+- [ ] From-scratch initialization
+- [ ] Checkpointing and resume
+- [ ] GPU training configuration
 
-## Development roadmap
+### Stage 4 — Medical AI
+- [ ] Retrieval integration
+- [ ] Evidence-grounded generation
+- [ ] Claim verification
+- [ ] Clinical reasoning evaluation
+- [ ] Hallucination and abstention evaluation
 
-### Phase 1 — Foundation
-- [x] Knowledge schema
-- [x] Hematology Anatomy knowledge snapshot
-- [x] Deterministic retrieval prototype
-- [x] Retrieval smoke tests
-- [x] Continuous integration test workflow
-
-### Phase 2 — Medical reasoning
-- [ ] Evidence-aware answer generation
-- [ ] Claim-level verification
-- [ ] Explicit uncertainty and abstention policy
-- [ ] Arabic/English medical response policy
-- [ ] Clinical-case reasoning
-
-### Phase 3 — Evaluation
-- [ ] Curated medical question set
-- [ ] Factual accuracy evaluation
-- [ ] Terminology evaluation
-- [ ] Retrieval evaluation
-- [ ] Hallucination/abstention evaluation
-- [ ] Source correctness evaluation
-
-### Phase 4 — Model and offline runtime
-- [ ] Model selection based on evaluation data
-- [ ] Efficient local inference
-- [ ] Android runtime
-- [ ] Offline knowledge packaging
-- [ ] Incremental knowledge updates
+### Stage 5 — Offline Android
+- [ ] Quantized model
+- [ ] Local inference
+- [ ] Offline knowledge package
+- [ ] Android application
+- [ ] Performance/RAM testing
 
 ## Source policy
 
-MEDAI uses authoritative or peer-reviewed sources where appropriate, including WHO, CDC, NIH/NCBI, PubMed/PMC, recognized guidelines, and established medical references.
+MEDIA uses authoritative or peer-reviewed sources where appropriate, including WHO, CDC, NIH/NCBI, PubMed/PMC, recognized guidelines, and established medical references.
 
-The repository stores **original educational synthesis plus source metadata**, rather than copying copyrighted textbook content.
+The repository stores original educational synthesis plus source metadata rather than copying copyrighted textbook content.
 
 ## Repository structure
 
-```text
+```
 schemas/        Knowledge contracts
 knowledge/      Source-traceable medical concepts
 inference/      Retrieval and inference components
@@ -126,4 +109,4 @@ releases/       Versioned knowledge snapshots
 
 ## Status
 
-This is an active research/prototype project. The current Anatomy engine should be treated as a demonstrator and educational prototype, not as a clinical decision-support system.
+This is an active research/prototype project. MEDIA is an educational system under development and is not a clinical decision-support system.
