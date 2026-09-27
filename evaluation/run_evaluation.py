@@ -45,6 +45,12 @@ def evaluate_case(case: dict[str, Any]) -> dict[str, Any]:
         concept_ok = result.get("abstain") is True and not actual_ids
 
     passed = state_ok and concept_ok
+    if not passed:
+        print(
+            f"[EVAL DEBUG] {case['id']} | query={case['query']!r} | "
+            f"expected_state={expected_state} actual_state={result.get('evidence_state')} | "
+            f"expected_ids={sorted(expected_ids)} actual_ids={sorted(actual_ids)}"
+        )
     return {
         "id": case["id"],
         "passed": passed,
