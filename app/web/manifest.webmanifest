@@ -1,0 +1,13 @@
+{
+  "name": "MEDIA — Medical Education AI",
+  "short_name": "MEDIA",
+  "description": "Evidence-aware medical education for the registered Hematology knowledge base.",
+  "lang": "en",
+  "dir": "ltr",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#07111f",
+  "theme_color": "#07111f",
+  "orientation": "portrait-primary",
+  "icons": []
+}
