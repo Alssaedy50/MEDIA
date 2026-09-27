@@ -20,7 +20,7 @@ The first foundation has now been frozen in `model/foundation_spec.json`:
 - FFN dimension: **3584**
 - Context: **256**
 - Weight tying: **enabled**
-- Parameter count: **101,266,816**
+- Parameter count: **100,824,192**
 - Status: **frozen**
 
 The freeze is an engineering baseline, not a claim about final model quality. No pretrained weights are included.
