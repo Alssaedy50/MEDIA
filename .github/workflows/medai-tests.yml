@@ -74,7 +74,8 @@ jobs:
           assert frozen["status"] == "frozen", frozen
           assert candidate["selected_tokenizer"]["requested_vocab_size"] == frozen["selected_tokenizer"]["requested_vocab_size"], (candidate, frozen)
           assert candidate["selected_tokenizer"]["actual_vocab_size"] == frozen["selected_tokenizer"]["actual_vocab_size"], (candidate, frozen)
-          assert candidate["selected_tokenizer"]["unknown_token_count"] == 0, candidate
+          assert candidate["selected_tokenizer"]["actual_vocab_size"] > 0, candidate
+          assert all(r["unknown_tokens"] == 0 for r in candidate["all_candidates"] if r["requested_vocab_size"] == candidate["selected_tokenizer"]["requested_vocab_size"]), candidate
           assert candidate["transformer"]["parameter_count"] == frozen["transformer"]["parameter_count"], (candidate, frozen)
           assert candidate["transformer"]["d_model"] == frozen["transformer"]["d_model"], (candidate, frozen)
           assert candidate["transformer"]["n_layers"] == frozen["transformer"]["n_layers"], (candidate, frozen)
