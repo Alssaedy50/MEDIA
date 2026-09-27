@@ -80,7 +80,7 @@ def _field_text(record: Record, field: str) -> str:
 def _unknown_named_terms(query: str, records: list[Record]) -> list[str]:
     """Return distinctive capitalized query terms absent from registered anchors."""
     candidates = re.findall(r"\b[A-Z][A-Za-z0-9_-]{3,}\b", query)
-    ignored = {"What", "How", "Where", "Which", "Why", "Give", "Explain", "Describe"}
+    ignored = {"What", "How", "Where", "Which", "Why", "Give", "Explain", "Describe", "Compare"}
     candidates = [term.lower() for term in candidates if term not in ignored]
     if not candidates:
         return []
@@ -156,6 +156,17 @@ def _score(query_tokens: list[str], record: Record) -> tuple[float, dict[str, An
     anchor_fields = ("topic", "subtopic", "terminology", "concept")
     for field in anchor_fields:
         anchor_tokens = tokenize(fields[field])
+        if field == "topic" and len(anchor_tokens) >= 2:
+            query_bigrams = {
+                tuple(query_tokens[i:i + 2])
+                for i in range(len(query_tokens) - 1)
+            }
+            topic_bigrams = {
+                tuple(anchor_tokens[i:i + 2])
+                for i in range(len(anchor_tokens) - 1)
+            }
+            if query_bigrams & topic_bigrams:
+                score += 100.0
         if len(anchor_tokens) < 2:
             continue
         for size in (4, 3, 2):
