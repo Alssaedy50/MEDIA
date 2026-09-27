@@ -11,7 +11,7 @@ import re
 from pathlib import Path
 from typing import Iterable
 
-TOKEN_RE = re.compile(r"[A-Za-z]+(?:[0-9]+)?|[\u0600-\u06FF]+|[^\s]")
+TOKEN_RE = re.compile(r"[A-Za-z][A-Za-z0-9]*|[\u0600-\u06FF]+|[^\s]")
 ARABIC_RE = re.compile(r"[\u0600-\u06FF]")
 LATIN_RE = re.compile(r"[A-Za-z]")
 
