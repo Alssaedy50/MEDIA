@@ -72,7 +72,7 @@ The first training corpus is generated reproducibly from these registered record
 - [x] From-scratch initialization
 - [x] Checkpointing and resume
 - [ ] GPU training configuration
-- [ ] Final ~100M architecture freeze
+- [x] Final ~100M architecture freeze
 
 ### Stage 4 — Medical AI
 - [ ] Retrieval integration
