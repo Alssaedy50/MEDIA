@@ -58,4 +58,4 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: media-android-alpha-debug
-          path: android/android-app/build/outputs/apk/debug/android-app-debug.apk
+          path: android-app/build/outputs/apk/debug/android-app-debug.apk
