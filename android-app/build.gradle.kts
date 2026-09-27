@@ -5,6 +5,7 @@ plugins {
 val mediaWebUrl = providers.gradleProperty("MEDIA_WEB_URL")
     .orElse("http://10.0.2.2:8000/")
     .get()
+    .trimEnd('/') + "/"
 
 android {
     namespace = "com.media.android"
@@ -26,4 +27,5 @@ android {
 
 dependencies {
     implementation("androidx.appcompat:appcompat:1.7.0")
+    testImplementation("junit:junit:4.13.2")
 }
