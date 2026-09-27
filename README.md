@@ -4,7 +4,7 @@
 
 The project is being built around a source-traceable medical knowledge layer, retrieval, verification, evaluation, and an eventual offline Android runtime.
 
-> **Current milestone: MEDIA — Hematology model-foundation engineering**
+> **Current milestone: MEDIA Alpha — Android student application**
 
 ## Vision
 
