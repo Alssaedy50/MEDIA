@@ -8,22 +8,18 @@ import torch
 
 from model.config import TransformerConfig
 from model.transformer import MediaTransformerLM
-from training.test_tokenizer import make_tokenizer
+from training.tokenizer import BPETokenizer, train_vocab
 from training.train_lm import checkpoint_payload, load_checkpoint, save_checkpoint
+
+
+def make_tokenizer():
+    return BPETokenizer(train_vocab(["blood hemoglobin", "red blood cell", "خلايا الدم"], vocab_size=64, min_frequency=1))
 
 
 class TrainPipelineTests(unittest.TestCase):
     def test_checkpoint_round_trip_restores_training_state(self):
         tokenizer = make_tokenizer()
-        config = TransformerConfig(
-            vocab_size=tokenizer.vocab_size,
-            max_seq_len=32,
-            d_model=32,
-            n_heads=4,
-            n_layers=2,
-            d_ff=64,
-            dropout=0.0,
-        )
+        config = TransformerConfig(vocab_size=tokenizer.vocab_size, max_seq_len=32, d_model=32, n_heads=4, n_layers=2, d_ff=64, dropout=0.0)
         model = MediaTransformerLM(config)
         optimizer = torch.optim.AdamW(model.parameters(), lr=1e-3)
         scheduler = torch.optim.lr_scheduler.CosineAnnealingLR(optimizer, T_max=10)
@@ -36,21 +32,12 @@ class TrainPipelineTests(unittest.TestCase):
 
         with tempfile.TemporaryDirectory() as td:
             path = Path(td) / "checkpoint.pt"
-            payload = checkpoint_payload(
-                model, optimizer, scheduler, None, 3, 7, 1.25,
-                {"seed": 42, "test": True},
-            )
-            save_checkpoint(path, payload)
-
+            save_checkpoint(path, checkpoint_payload(model, optimizer, scheduler, None, 3, 7, 1.25, {"seed": 42, "test": True}))
             restored = MediaTransformerLM(config)
             restored_optimizer = torch.optim.AdamW(restored.parameters(), lr=1e-3)
             restored_scheduler = torch.optim.lr_scheduler.CosineAnnealingLR(restored_optimizer, T_max=10)
-            epoch, step, best, saved_config = load_checkpoint(
-                path, restored, restored_optimizer, restored_scheduler
-            )
-            self.assertEqual(epoch, 3)
-            self.assertEqual(step, 7)
-            self.assertEqual(best, 1.25)
+            epoch, step, best, saved_config = load_checkpoint(path, restored, restored_optimizer, restored_scheduler)
+            self.assertEqual((epoch, step, best), (3, 7, 1.25))
             self.assertEqual(saved_config["seed"], 42)
             for left, right in zip(model.parameters(), restored.parameters()):
                 self.assertTrue(torch.equal(left, right))
