@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  MEDIA Design System — colours.
+
+  "Modern clinical AI": deep navy identity, medical teal as the primary action colour,
+  a calm clinical blue secondary and neutral surfaces. No neon, no childish accents.
+  The <color> resources below are the single source of truth referenced by themes/styles.
+-->
+<resources>
+
+    <!-- ======================= LIGHT THEME ======================= -->
+    <color name="md_brand_navy">#0D2035</color>
+    <color name="md_brand_teal">#0E7C66</color>
+    <color name="md_brand_teal_soft">#7BD4C0</color>
+    <color name="md_brand_blue">#1F6FEB</color>
+
+    <color name="md_background">#F5F7FA</color>
+    <color name="md_surface">#FFFFFF</color>
+    <color name="md_surface_variant">#EDF1F6</color>
+    <color name="md_surface_raised">#FFFFFF</color>
+
+    <color name="md_on_background">#0D1B2A</color>
+    <color name="md_on_surface">#0D1B2A</color>
+    <color name="md_on_surface_variant">#52606D</color>
+    <color name="md_on_surface_muted">#71808C</color>
+
+    <color name="md_primary">#0E7C66</color>
+    <color name="md_on_primary">#FFFFFF</color>
+    <color name="md_primary_container">#D6F1E8</color>
+    <color name="md_on_primary_container">#06392F</color>
+
+    <color name="md_secondary">#1F6FEB</color>
+    <color name="md_on_secondary">#FFFFFF</color>
+    <color name="md_secondary_container">#DCE9FF</color>
+    <color name="md_on_secondary_container">#0A3572</color>
+
+    <color name="md_tertiary">#0F766E</color>
+    <color name="md_tertiary_container">#E0F2F1</color>
+    <color name="md_on_tertiary_container">#04302A</color>
+
+    <color name="md_outline">#CBD5E1</color>
+    <color name="md_outline_strong">#94A3B8</color>
+    <color name="md_divider">#E2E8F0</color>
+
+    <color name="md_error">#B42318</color>
+    <color name="md_on_error">#FFFFFF</color>
+    <color name="md_error_container">#FEECE9</color>
+    <color name="md_on_error_container">#7A1C14</color>
+
+    <color name="md_warning">#9A6700</color>
+    <color name="md_warning_container">#FFF6E0</color>
+    <color name="md_success">#0B6B55</color>
+    <color name="md_success_container">#E6F6F0</color>
+
+    <!-- Chat bubbles -->
+    <color name="md_user_bubble">#0E7C66</color>
+    <color name="md_on_user_bubble">#FFFFFF</color>
+    <color name="md_med_message_bubble">#FFFFFF</color>
+    <color name="md_on_med_message_bubble">#16283B</color>
+
+    <!-- Confidence / evidence accents -->
+    <color name="md_confidence_high">#0B6B55</color>
+    <color name="md_confidence_medium">#9A6700</color>
+    <color name="md_confidence_low">#B42318</color>
+
+    <!-- Scrim / ripple -->
+    <color name="md_ripple">#1A0E7C66</color>
+
+</resources>

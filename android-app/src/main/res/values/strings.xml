@@ -1,5 +1,126 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">MEDIA</string>
-    <string name="network_error">MEDIA backend is currently unavailable.\n\nCheck the backend URL and network connection, then try again.</string>
+    <string name="app_tagline">Medical Edge Diagnostics &amp; Intelligent Assistant</string>
+    <string name="app_short_tagline">Medical Education AI</string>
+
+    <!-- Bottom navigation -->
+    <string name="nav_home">Home</string>
+    <string name="nav_chat">Chat</string>
+    <string name="nav_library">Library</string>
+    <string name="nav_history">History</string>
+    <string name="nav_settings">Settings</string>
+
+    <!-- Offline status -->
+    <string name="status_offline_mode">OFFLINE MODE</string>
+    <string name="status_knowledge_ready">Knowledge: Ready</string>
+    <string name="status_knowledge_loading">Knowledge: Loading…</string>
+    <string name="status_knowledge_error">Knowledge: Load error</string>
+    <string name="status_model_ready">AI Model: Ready</string>
+    <string name="status_model_not_installed">AI Model: Not installed</string>
+    <string name="status_offline_short">● Offline</string>
+    <string name="status_records">%1$d local records</string>
+
+    <!-- Home -->
+    <string name="home_greeting">Welcome back</string>
+    <string name="home_headline">Study smarter with trusted local medical knowledge</string>
+    <string name="home_subheadline">Bilingual medical explanations grounded in reviewed, source-traceable records — fully offline.</string>
+    <string name="home_input_hint">Ask a medical question… e.g. Explain erythropoiesis</string>
+    <string name="home_send">Send question</string>
+    <string name="home_mic">Voice input (planned)</string>
+    <string name="home_mic_planned">Voice input is planned but not implemented in this Alpha.</string>
+    <string name="home_quick_actions">Quick actions</string>
+    <string name="home_recent">Recent questions</string>
+    <string name="home_recent_empty">Your recent questions will appear here.</string>
+    <string name="home_view_all">View all</string>
+
+    <string name="action_explain">Explain a concept</string>
+    <string name="action_clinical_case">Clinical Case</string>
+    <string name="action_study">Study a Topic</string>
+    <string name="action_term">Medical Term</string>
+    <string name="action_summarize">Summarize</string>
+
+    <string name="sample_explain">Explain erythropoiesis and its regulation</string>
+    <string name="sample_case">Clinical case: a patient with microcytic anemia</string>
+    <string name="sample_study">Study high-yield points for aplastic anemia</string>
+    <string name="sample_term">CBC</string>
+    <string name="sample_summary">Summarize hemostasis and coagulation</string>
+
+    <!-- Chat -->
+    <string name="chat_title">MEDIA Chat</string>
+    <string name="chat_input_hint">Ask a follow-up medical question…</string>
+    <string name="chat_empty_title">Ask MEDIA a medical question</string>
+    <string name="chat_empty_body">MEDIA answers only when the bundled local evidence is strong enough. Otherwise it abstains instead of guessing.</string>
+    <string name="chat_thinking">Searching local medical knowledge…</string>
+    <string name="label_you">YOU</string>
+    <string name="label_media">MEDIA</string>
+    <string name="label_evidence">EVIDENCE</string>
+    <string name="action_copy">Copy answer</string>
+    <string name="action_regenerate">Regenerate answer</string>
+    <string name="action_share">Share answer</string>
+    <string name="action_helpful">Mark answer as helpful</string>
+    <string name="action_not_helpful">Mark answer as not helpful</string>
+    <string name="action_stop">Stop</string>
+    <string name="action_clear_chat">Clear conversation</string>
+    <string name="toast_copied">Answer copied</string>
+    <string name="toast_feedback_up">Thanks — marked as helpful</string>
+    <string name="toast_feedback_down">Thanks — feedback noted</string>
+
+    <string name="confidence_high">High confidence evidence</string>
+    <string name="confidence_medium">Moderate confidence evidence</string>
+    <string name="confidence_low">Low confidence evidence</string>
+    <string name="evidence_source_count">%1$d supporting record(s)</string>
+
+    <!-- Library -->
+    <string name="library_title">Knowledge Library</string>
+    <string name="library_search_hint">Search topics in the local library…</string>
+    <string name="library_scope">%1$s block · %2$d records</string>
+    <string name="library_empty">No local knowledge is available.</string>
+    <string name="library_no_results">No topics match “%1$s”.</string>
+    <string name="library_subject_count">%1$d records</string>
+
+    <!-- History -->
+    <string name="history_title">History</string>
+    <string name="history_search_hint">Search your questions…</string>
+    <string name="history_empty">No questions yet. Ask MEDIA something to start building your history.</string>
+    <string name="history_no_results">No history matches “%1$s”.</string>
+    <string name="history_delete">Delete</string>
+    <string name="history_clear_all">Clear all history</string>
+    <string name="history_clear_confirm">Delete all saved questions? This cannot be undone.</string>
+    <string name="history_deleted">Deleted</string>
+    <string name="dialog_cancel">Cancel</string>
+    <string name="dialog_delete">Delete</string>
+
+    <!-- Settings -->
+    <string name="settings_title">Settings</string>
+    <string name="settings_section_model">MEDIA MODEL</string>
+    <string name="settings_section_language">LANGUAGE</string>
+    <string name="settings_section_appearance">APPEARANCE</string>
+    <string name="settings_section_about">ABOUT MEDIA</string>
+    <string name="settings_status">Status</string>
+    <string name="settings_model">Model</string>
+    <string name="settings_format">Format</string>
+    <string name="settings_quantization">Quantization</string>
+    <string name="settings_size">Size</string>
+    <string name="settings_runtime">Runtime</string>
+    <string name="settings_runtime_local">Local (offline)</string>
+    <string name="settings_model_not_installed">Model not installed</string>
+    <string name="settings_model_note">MEDIA currently answers from the reviewed local knowledge layer. The foundation model is a future on-device engine and is not bundled in this Alpha.</string>
+    <string name="settings_engines">Registered engines</string>
+    <string name="settings_bilingual">Bilingual answers (Arabic + English)</string>
+    <string name="settings_bilingual_note">Show Arabic section labels alongside English medical terminology.</string>
+    <string name="settings_theme">Theme</string>
+    <string name="settings_theme_system">System default</string>
+    <string name="settings_theme_light">Light</string>
+    <string name="settings_theme_dark">Dark</string>
+    <string name="settings_about_body">MEDIA is an educational medical AI system under development. It is not a clinical decision-support system and must not be used for patient care.</string>
+    <string name="settings_version">Version</string>
+    <string name="settings_scope">Knowledge scope</string>
+    <string name="settings_internet">Internet required</string>
+    <string name="settings_no">No — fully offline</string>
+
+    <!-- Errors / empty states -->
+    <string name="error_empty_query">Please enter a medical question first.</string>
+    <string name="error_no_engine">Local knowledge is unavailable, so MEDIA cannot answer right now.</string>
+    <string name="error_internal">Something went wrong while generating the answer.</string>
 </resources>

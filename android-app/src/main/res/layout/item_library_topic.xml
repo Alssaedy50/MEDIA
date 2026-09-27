@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Library entry: subject badge, topic, concept preview. -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/bg_card"
+    android:layout_marginBottom="@dimen/space_md"
+    android:padding="@dimen/space_lg"
+    android:clickable="true"
+    android:focusable="true">
+
+    <TextView
+        android:id="@+id/library_item_subject"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/md_primary"
+        android:textSize="@dimen/text_caption"
+        android:textStyle="bold"
+        android:letterSpacing="0.08" />
+
+    <TextView
+        android:id="@+id/library_item_topic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_xs"
+        android:textAppearance="@style/TextAppearance.MEDIA.Subtitle" />
+
+    <TextView
+        android:id="@+id/library_item_concept"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_xs"
+        android:maxLines="2"
+        android:ellipsize="end"
+        android:textAppearance="@style/TextAppearance.MEDIA.Caption" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginTop="@dimen/space_sm">
+
+        <TextView
+            android:id="@+id/library_item_ask"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/action_explain"
+            android:textColor="@color/md_secondary"
+            android:textSize="@dimen/text_label"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:contentDescription="@null"
+            android:src="@drawable/ic_chevron_right"
+            app:tint="@color/md_outline_strong" />
+    </LinearLayout>
+</LinearLayout>

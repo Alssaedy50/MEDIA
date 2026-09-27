@@ -11,3 +11,6 @@ build/
 *.env
 datasets/medical_corpus/
 *.jsonl.gz
+
+# Machine-specific Android SDK location
+android/local.properties

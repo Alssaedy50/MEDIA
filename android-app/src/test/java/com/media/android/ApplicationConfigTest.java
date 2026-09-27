@@ -10,7 +10,7 @@ public class ApplicationConfigTest {
     @Test
     public void packageAndVersionMatchTheOfflineAlphaRelease() {
         assertEquals("com.media.android", BuildConfig.APPLICATION_ID);
-        assertEquals("0.2.0", BuildConfig.VERSION_NAME);
+        assertEquals("0.3.0", BuildConfig.VERSION_NAME);
     }
 
     @Test

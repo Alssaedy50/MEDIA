@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- MEDIA spacing / radius / size scale. 4dp base grid. -->
+<resources>
+
+    <!-- Spacing -->
+    <dimen name="space_xxs">2dp</dimen>
+    <dimen name="space_xs">4dp</dimen>
+    <dimen name="space_sm">8dp</dimen>
+    <dimen name="space_md">12dp</dimen>
+    <dimen name="space_lg">16dp</dimen>
+    <dimen name="space_xl">20dp</dimen>
+    <dimen name="space_2xl">24dp</dimen>
+    <dimen name="space_3xl">32dp</dimen>
+    <dimen name="space_4xl">40dp</dimen>
+
+    <!-- Screen gutter -->
+    <dimen name="screen_gutter">20dp</dimen>
+
+    <!-- Corner radii -->
+    <dimen name="radius_sm">10dp</dimen>
+    <dimen name="radius_md">14dp</dimen>
+    <dimen name="radius_lg">18dp</dimen>
+    <dimen name="radius_xl">24dp</dimen>
+    <dimen name="radius_pill">999dp</dimen>
+
+    <!-- Components -->
+    <dimen name="input_min_height">56dp</dimen>
+    <dimen name="button_height">52dp</dimen>
+    <dimen name="icon_button_size">44dp</dimen>
+    <dimen name="divider_thickness">1dp</dimen>
+    <dimen name="elevation_card">3dp</dimen>
+
+    <!-- Touch targets (accessibility minimum 48dp) -->
+    <dimen name="touch_target_min">48dp</dimen>
+
+    <!-- Type scale -->
+    <dimen name="text_display">30sp</dimen>
+    <dimen name="text_title_lg">24sp</dimen>
+    <dimen name="text_title">20sp</dimen>
+    <dimen name="text_title_sm">17sp</dimen>
+    <dimen name="text_body_lg">16sp</dimen>
+    <dimen name="text_body">15sp</dimen>
+    <dimen name="text_label">13sp</dimen>
+    <dimen name="text_caption">12sp</dimen>
+
+    <!-- Line spacing tuned for readability of mixed Arabic/Latin medical prose -->
+    <dimen name="line_spacing_body">6dp</dimen>
+    <dimen name="line_spacing_dense">3dp</dimen>
+
+</resources>
