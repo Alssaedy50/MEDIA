@@ -5,52 +5,57 @@ on:
     branches: ["main", "agent/android-alpha", "feature/offline-alpha"]
   pull_request:
 
+permissions:
+  contents: read
+
 jobs:
   android-alpha:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
       - name: Set up JDK
         uses: actions/setup-java@v4
         with:
           distribution: temurin
           java-version: "17"
+
       - name: Set up Gradle
         uses: gradle/actions/setup-gradle@v4
         with:
           gradle-version: "8.9"
+
       - name: Set up Android SDK
         uses: android-actions/setup-android@v3
         with:
           packages: "platform-tools platforms;android-35 build-tools;35.0.0"
+
       - name: Validate bundled Hematology knowledge
         run: |
           count=$(find android/assets/knowledge/hematology -type f -name "*.json" | wc -l)
           test "$count" -eq 51
           echo "Validated $count Hematology JSON records"
+
       - name: Build Android debug APK
         working-directory: android
         run: gradle :android-app:assembleDebug
+
       - name: Verify APK contains offline knowledge
         working-directory: android
         run: |
           apk=android-app/build/outputs/apk/debug/android-app-debug.apk
           test -f "$apk"
-          count=$(unzip -Z1 "$apk" | grep -E '^assets/knowledge/hematology/.+\\.json        working-directory: android
-        run: gradle :android-app:testDebugUnitTest
-      - name: Upload debug APK
-        uses: actions/upload-artifact@v4
-        with:
-          name: media-android-alpha-debug
-          path: android-app/build/outputs/apk/debug/android-app-debug.apk | wc -l)
+          count=$(unzip -Z1 "$apk" | grep -E '^assets/knowledge/hematology/.+\.json$' | wc -l)
           test "$count" -eq 51
           echo "APK contains $count bundled Hematology records"
+
       - name: Run Android unit tests
         working-directory: android
         run: gradle :android-app:testDebugUnitTest
+
       - name: Upload debug APK
         uses: actions/upload-artifact@v4
         with:
           name: media-android-alpha-debug
-          path: android-app/build/outputs/apk/debug/android-app-debug.apk
+          path: android/android-app/build/outputs/apk/debug/android-app-debug.apk
