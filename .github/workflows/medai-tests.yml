@@ -38,12 +38,27 @@ jobs:
         run: python -m unittest training/test_analyze_corpus.py -v
       - name: Run tokenizer audit unit tests
         run: python -m unittest training/test_tokenizer_audit.py -v
+      - name: Run tokenizer benchmark unit tests
+        run: python -m unittest training/test_tokenizer_benchmark.py -v
       - name: Run corpus analysis
         run: python training/analyze_corpus.py --output datasets/hematology/corpus_analysis.json
       - name: Build tokenizer artifact
         run: python training/tokenizer.py datasets/hematology/train.jsonl datasets/hematology/validation.jsonl datasets/hematology/test.jsonl --vocab-size 4096 --output datasets/hematology/tokenizer.json
       - name: Run exact tokenizer audit
         run: python training/tokenizer_audit.py datasets/hematology/train.jsonl datasets/hematology/validation.jsonl datasets/hematology/test.jsonl --tokenizer datasets/hematology/tokenizer.json --output datasets/hematology/tokenizer_audit.json
+      - name: Benchmark candidate tokenizer vocabularies
+        run: python training/tokenizer_benchmark.py datasets/hematology/train.jsonl datasets/hematology/validation.jsonl datasets/hematology/test.jsonl --vocab-sizes 4096 8192 16384 32768 50000 --output datasets/hematology/tokenizer_benchmark.json
+      - name: Verify tokenizer benchmark
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          data = json.loads(Path("datasets/hematology/tokenizer_benchmark.json").read_text())
+          assert len(data["results"]) == 5, data
+          assert all(r["unknown_token_count"] == 0 for r in data["results"]), data
+          assert all(r["token_count_including_specials"] > 0 for r in data["results"]), data
+          print(data)
+          PY
       - name: Verify tokenizer artifact
         run: |
           python - <<'PY'
