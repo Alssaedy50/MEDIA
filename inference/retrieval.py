@@ -90,8 +90,11 @@ def _unknown_named_terms(query: str, records: list[Record]) -> list[str]:
         for field in ("concept", "topic", "subject", "subtopic", "terminology", "relations")
     )
     anchor_tokens = set(tokenize(anchor_text))
+    anchor_lower = anchor_text.lower()
     unknown = []
     for term in candidates:
+        if term.lower() in anchor_lower:
+            continue
         parts_raw = [part for part in re.split(r"[-_]+", term) if part]
         parts = [part.lower() for part in parts_raw]
         if term.lower() in anchor_tokens:
@@ -210,7 +213,7 @@ def _score(query_tokens: list[str], record: Record) -> tuple[float, dict[str, An
             for i in range(len(content_tokens) - size + 1)
         }
         if query_ngrams & content_ngrams:
-            score += 8.0 * size
+            score += 40.0 * size
             break
 
     if field == "terminology":
