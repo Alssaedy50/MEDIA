@@ -1,0 +1,95 @@
+{
+  "id": "hematology.physiology.wbc_characteristics_functions",
+  "domain": "Hematology",
+  "subject": "Physiology",
+  "topic": "White Blood Cell Characteristics and Functions",
+  "subtopic": "Leukocyte physiology, trafficking, inflammation and immune defense",
+  "concept": "White blood cells are nucleated immune cells that circulate in blood, migrate into tissues when required and coordinate innate and adaptive immune defense.",
+  "content": {
+    "definition": "Leukocytes are nucleated blood cells responsible for immune surveillance, inflammation and host defense. They include neutrophils, eosinophils, basophils, monocytes and lymphocytes.",
+    "explanation": "Leukocytes are produced from hematopoietic stem and progenitor cells and enter the circulation as mobile immune cells. Blood serves partly as a transport compartment; many leukocytes leave the bloodstream and perform their major functions in tissues. Their relative proportions and functions differ according to cell type and physiological or pathological context.",
+    "mechanism": "Leukocyte recruitment to tissues commonly involves margination and selectin-mediated rolling, chemokine-dependent activation, integrin-mediated firm adhesion, and transmigration through the vascular endothelium (diapedesis). Chemotactic signals then guide cells toward sites of infection or tissue injury. Neutrophils are major early responders in acute inflammation and phagocytose microbes and debris. Monocytes enter tissues and can differentiate into macrophage-lineage cells. Eosinophils participate in defense against helminths and allergic inflammation. Basophils contribute to IgE-associated immediate hypersensitivity and release inflammatory mediators. Lymphocytes mediate adaptive and specialized immune functions: B cells support antibody-mediated immunity, T cells coordinate or execute cell-mediated immunity, and natural killer cells contribute to cytotoxic innate defense.",
+    "structure": "All mature leukocytes are nucleated. Granulocytes include neutrophils, eosinophils and basophils; agranulocytes include lymphocytes and monocytes in the traditional histological classification. Leukocytes can change shape and deform through the circulation and tissues.",
+    "function": "Major functions include immune surveillance, phagocytosis, antimicrobial defense, regulation of inflammation, antigen-specific immunity, antibody-mediated immunity and cytotoxic defense.",
+    "causes": [],
+    "effects": [],
+    "clinical_relevance": "Leukocyte count and differential provide information about infection, inflammation, allergy, immune disorders and hematologic disease. Leukopenia can increase susceptibility to infection, while leukocytosis may occur with infection, inflammation, stress, medications or hematologic disorders.",
+    "diagnosis": "Assessment commonly includes a complete blood count with differential and peripheral blood smear when indicated. Further immunologic, microbiologic or hematologic investigations depend on the clinical context.",
+    "treatment": "Treatment is directed at the underlying cause of abnormal leukocyte number or function, such as infection, inflammatory disease, immune dysfunction or hematologic malignancy.",
+    "high_yield": [
+      "Leukocytes are nucleated cells involved in host defense.",
+      "The five major circulating leukocyte types are neutrophils, eosinophils, basophils, monocytes and lymphocytes.",
+      "Neutrophils are major early responders in acute inflammation and are important phagocytes.",
+      "Monocytes can enter tissues and differentiate into macrophage-lineage cells.",
+      "Eosinophils are important in helminth defense and allergic inflammation.",
+      "Basophils participate in IgE-associated immediate hypersensitivity.",
+      "B cells mediate antibody-related adaptive immunity; T cells mediate major cellular immune functions.",
+      "Leukocyte extravasation involves rolling, activation, firm adhesion and diapedesis.",
+      "Chemotaxis directs leukocyte migration toward inflammatory signals."
+    ]
+  },
+  "terminology": [
+    {"term": "Leukocyte", "language": "English", "Arabic": "كُرية الدم البيضاء", "pronunciation": "LOO-koh-site", "etymology": "Greek leukos, white, plus kytos, cell.", "notes": "General term for white blood cells."},
+    {"term": "Leukocytosis", "language": "English", "Arabic": "كثرة الكريات البيضاء", "pronunciation": "LOO-koh-sy-TOH-sis", "etymology": "Leukocyte plus -osis, abnormal condition.", "notes": "Increased circulating white blood cell count."},
+    {"term": "Leukopenia", "language": "English", "Arabic": "قلة الكريات البيضاء", "pronunciation": "LOO-koh-PEE-nee-uh", "etymology": "Leuko-, white, plus -penia, deficiency.", "notes": "Reduced circulating white blood cell count."},
+    {"term": "Chemotaxis", "language": "English", "Arabic": "الانجذاب الكيميائي", "pronunciation": "KEE-moh-TAK-sis", "etymology": "Chemo-, chemical, plus taxis, arrangement or movement.", "notes": "Directed cell movement along a chemical gradient."},
+    {"term": "Diapedesis", "language": "English", "Arabic": "العبور عبر جدار الوعاء", "pronunciation": "dy-uh-peh-DEE-sis", "etymology": "Greek dia, through, plus pedan, to leap or pass.", "notes": "Leukocyte passage through the vascular endothelium into tissues."},
+    {"term": "Phagocytosis", "language": "English", "Arabic": "البلعمة", "pronunciation": "FAG-oh-sy-TOH-sis", "etymology": "Greek phagein, to eat, plus kytos, cell.", "notes": "Cellular engulfment and internalization of particles or microbes."}
+  ],
+  "relations": [
+    {"target_id": "hematology.histology.leukocytes", "relation": "physiology_of", "note": "This record describes the physiological roles and trafficking of leukocytes whose morphology and classification are covered in the histology record."},
+    {"target_id": "hematology.physiology.blood_composition_functions", "relation": "specialized_function_of", "note": "Leukocyte immune defense is a major protective function of blood."},
+    {"target_id": "hematology.anatomy.bone_marrow", "relation": "produced_in", "note": "Leukocyte lineages originate from hematopoietic cells associated with bone marrow."},
+    {"target_id": "hematology.anatomy.lymph_nodes", "relation": "immune_surveillance_related_to", "note": "Lymphocytes and antigen-presenting immune cells participate in immune surveillance within lymphoid tissues."}
+  ],
+  "yemen_context": {
+    "relevance": "Leukocyte physiology is foundational for interpreting infection, inflammation and immune disorders in clinical hematology and medicine.",
+    "evidence": "General medical relevance; no Yemen-specific epidemiologic claim is made."
+  },
+  "evidence_level": "reference",
+  "status": "reviewed",
+  "review_notes": "Original synthesized educational content with source metadata; no copyrighted textbook text copied.",
+  "last_verified": "2026-09-27",
+  "sources": [
+    {
+      "title": "Histology, White Blood Cell",
+      "source_type": "reference",
+      "authors": ["Alyssa Tigner", "Sherif A. Ibrahim", "Ian V. Murray"],
+      "year": 2026,
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK563148/",
+      "license": "NCBI Bookshelf / StatPearls",
+      "location": "NCBI Bookshelf",
+      "notes": "Supports leukocyte types, morphology and major functions."
+    },
+    {
+      "title": "The White Blood Cell and Differential Count",
+      "source_type": "reference",
+      "authors": ["NCBI Bookshelf"],
+      "year": 1990,
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK261/",
+      "license": "NCBI Bookshelf",
+      "location": "NCBI Bookshelf",
+      "notes": "Supports leukocyte differential and physiological/clinical interpretation."
+    },
+    {
+      "title": "Leukocyte Adhesion Deficiency",
+      "source_type": "reference",
+      "authors": ["StatPearls"],
+      "year": 2023,
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK539770/",
+      "license": "NCBI Bookshelf / StatPearls",
+      "location": "NCBI Bookshelf",
+      "notes": "Supports leukocyte adhesion, migration and diapedesis mechanisms."
+    },
+    {
+      "title": "The Leukocyte Adhesion Cascade",
+      "source_type": "review",
+      "authors": ["PMC review"],
+      "year": 2011,
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3102213/",
+      "license": "Open-access review",
+      "location": "PMC",
+      "notes": "Supports rolling, activation, firm adhesion and transmigration during leukocyte recruitment."
+    }
+  ]
+}
