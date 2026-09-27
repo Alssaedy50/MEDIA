@@ -52,7 +52,9 @@ jobs:
         run: |
           apk=android-app/build/outputs/apk/debug/android-app-debug.apk
           test -f "$apk"
-          count=$(unzip -Z1 "$apk" | grep -E '^assets/knowledge/hematology/.+\.json$' | wc -l)
+          echo "Bundled Hematology entries in APK:"
+          $ANDROID_HOME/build-tools/35.0.0/aapt list "$apk" | grep -E '^assets/knowledge/hematology/.+\.json$' | tee /tmp/hematology-assets.txt
+          count=$(wc -l < /tmp/hematology-assets.txt)
           test "$count" -eq 51
           echo "APK contains $count bundled Hematology records"
 
