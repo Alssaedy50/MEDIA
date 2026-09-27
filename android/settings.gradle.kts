@@ -5,3 +5,4 @@ dependencyResolutionManagement {
 }
 rootProject.name = "MEDIA"
 include(":android-app")
+project(":android-app").projectDir = file("../android-app")
