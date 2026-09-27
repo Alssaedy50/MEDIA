@@ -22,7 +22,7 @@ from typing import Any
 ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_KB = ROOT / "knowledge" / "hematology"
 
-TOKEN_RE = re.compile(r"[A-Za-z][A-Za-z0-9_-]*|[\u0600-\u06FF]+")
+TOKEN_RE = re.compile(r"[A-Za-z]+(?:[0-9]+)?|[\u0600-\u06FF]+")
 STOPWORDS = {
     "a", "an", "and", "are", "as", "at", "be", "by", "for", "from", "how",
     "in", "is", "of", "on", "or", "the", "to", "what", "where", "which",
@@ -88,8 +88,15 @@ def _unknown_named_terms(query: str, records: list[Record]) -> list[str]:
         _field_text(record, field)
         for record in records
         for field in ("concept", "topic", "subject", "subtopic", "terminology", "relations")
-    ).lower()
-    return sorted({term for term in candidates if term not in anchor_text})
+    )
+    anchor_tokens = set(tokenize(anchor_text))
+    unknown = []
+    for term in candidates:
+        parts = [part.lower() for part in re.split(r"[-_]+", term) if part]
+        if term.lower() in anchor_tokens or any(part in anchor_tokens for part in parts if len(part) >= 3):
+            continue
+        unknown.append(term.lower())
+    return sorted(set(unknown))
 
 
 def _score(query_tokens: list[str], record: Record) -> tuple[float, dict[str, Any]]:
@@ -163,7 +170,7 @@ def _score(query_tokens: list[str], record: Record) -> tuple[float, dict[str, An
                 for i in range(len(anchor_tokens) - size + 1)
             }
             if query_ngrams & anchor_ngrams:
-                score += 3.0 * size
+                score += 20.0 * size
                 break
 
     status = record.data.get("status")
