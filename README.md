@@ -61,7 +61,7 @@ The first training corpus is generated reproducibly from these registered record
 ### Stage 2 — Tokenizer and corpus analysis
 - [x] Medical English + Arabic tokenizer
 - [ ] Vocabulary analysis
-- [x] Exact token counts
+- [ ] Exact token counts
 - [ ] Sequence-length analysis
 - [ ] Dataset quality audit
 
