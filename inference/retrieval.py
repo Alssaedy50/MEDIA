@@ -268,7 +268,12 @@ def retrieve(
         topic_tokens = tokenize(_field_text(record, "topic"))
         if len(topic_tokens) >= 2 and all(token in query_tokens for token in topic_tokens):
             score += 1000000000.0
-        if score > 0 and match["coverage"] >= MIN_COVERAGE and any(
+        topic_tokens = tokenize(_field_text(record, "topic"))
+        exact_topic_match = (
+            len(topic_tokens) >= 2
+            and set(topic_tokens).issubset(set(query_tokens))
+        )
+        if score > 0 and (match["coverage"] >= MIN_COVERAGE or exact_topic_match) and any(
             token in set(tokenize(_field_text(record, field)))
             for token in query_tokens
             for field in ("concept", "topic", "subject", "subtopic", "terminology", "relations")
