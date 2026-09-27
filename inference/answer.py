@@ -7,7 +7,10 @@ import argparse
 import json
 from typing import Any
 
-try:\n    from .retrieval import retrieve, tokenize\nexcept ImportError:  # pragma: no cover - supports direct CLI execution\n    from retrieval import retrieve, tokenize
+try:
+    from .retrieval import retrieve, tokenize
+except ImportError:  # pragma: no cover - supports direct CLI execution
+    from retrieval import retrieve, tokenize
 
 
 def _first_nonempty(*values: Any) -> str | None:
