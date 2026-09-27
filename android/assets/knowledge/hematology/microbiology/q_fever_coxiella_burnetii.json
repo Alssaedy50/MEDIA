@@ -1,0 +1,81 @@
+{
+  "id": "hematology.microbiology.q_fever_coxiella_burnetii",
+  "domain": "Hematology",
+  "subject": "Microbiology",
+  "topic": "Coxiella burnetii and Q Fever",
+  "subtopic": "Q fever: zoonotic exposure, intracellular organism, acute/chronic disease, diagnosis, treatment and prevention",
+  "concept": "Q fever is a zoonotic infection caused by Coxiella burnetii, commonly acquired by inhaling contaminated aerosols from infected livestock and their birth products.",
+  "content": {
+    "definition": "Q fever is a zoonotic infection caused by Coxiella burnetii, commonly acquired by inhaling contaminated aerosols from infected livestock and their birth products.",
+    "explanation": "C. burnetii is an obligate intracellular bacterium adapted to survive in acidic intracellular compartments. Acute infection may produce a febrile systemic illness; a minority develop chronic infection, classically involving endocarditis in people with risk factors.",
+    "mechanism": "C. burnetii is an obligate intracellular bacterium adapted to survive in acidic intracellular compartments. Acute infection may produce a febrile systemic illness; a minority develop chronic infection, classically involving endocarditis in people with risk factors.",
+    "structure": "Clinically important organism-specific structural and biologic features are summarized in the explanation and terminology fields.",
+    "function": "The pathogen's biologic properties determine transmission, tissue tropism, clinical manifestations and diagnostic strategy.",
+    "causes": [
+      "Inhalation of contaminated dust or aerosols",
+      "Exposure to infected goats, sheep or cattle and birth products",
+      "Contaminated environments; direct animal contact is an important risk"
+    ],
+    "effects": [
+      "Acute Q fever: fever, headache, myalgia, fatigue; pneumonia or hepatitis can occur",
+      "Chronic Q fever: persistent infection, especially endocarditis or vascular infection in high-risk patients"
+    ],
+    "clinical_relevance": "This is an official Hematology microbiology syllabus organism/disease. Coxiella burnetii and Q Fever should be interpreted using current diagnostic and treatment guidance.",
+    "diagnosis": "Diagnosis relies on clinical and exposure context plus serology/PCR according to disease stage; paired serology and phase-specific antibodies are important in interpretation.",
+    "treatment": "Doxycycline is recommended for symptomatic acute Q fever in appropriate patients. Chronic Q fever requires prolonged specialist-guided combination therapy and monitoring.",
+    "high_yield": [
+      "Q fever is a zoonotic infection caused by Coxiella burnetii, commonly acquired by inhaling contaminated aerosols from infected livestock and their birth products.",
+      "Acute Q fever: fever, headache, myalgia, fatigue; pneumonia or hepatitis can occur",
+      "Chronic Q fever: persistent infection, especially endocarditis or vascular infection in high-risk patients",
+      "Inhalation of contaminated dust or aerosols",
+      "Exposure to infected goats, sheep or cattle and birth products",
+      "Contaminated environments; direct animal contact is an important risk"
+    ]
+  },
+  "terminology": [
+    {
+      "term": "Coxiella burnetii",
+      "language": "English",
+      "arabic": "كوكسيلة بورنيتي",
+      "pronunciation": "kok-see-EL-uh bur-NET-ee-eye",
+      "etymology": "Medical terminology retained for exam and clinical use.",
+      "notes": "Key term for Coxiella burnetii and Q Fever."
+    },
+    {
+      "term": "Q fever",
+      "language": "English",
+      "arabic": "حمى كيو",
+      "pronunciation": "KYOO FEE-ver",
+      "etymology": "Medical terminology retained for exam and clinical use.",
+      "notes": "Key term for Coxiella burnetii and Q Fever."
+    },
+    {
+      "term": "Chronic Q fever",
+      "language": "English",
+      "arabic": "حمى كيو المزمنة",
+      "pronunciation": "KRON-ik KYOO FEE-ver",
+      "etymology": "Medical terminology retained for exam and clinical use.",
+      "notes": "Key term for Coxiella burnetii and Q Fever."
+    }
+  ],
+  "relations": [],
+  "yemen_context": {
+    "relevance": "Potentially relevant to infectious-disease and hematology teaching in Yemen; no unsupported Yemen-specific incidence is asserted.",
+    "evidence": "General WHO/CDC evidence; local epidemiology should be added only from authoritative Yemen-specific sources."
+  },
+  "evidence_level": "guideline",
+  "status": "reviewed",
+  "review_notes": "Original synthesis based on CDC About Q Fever; no textbook text copied. Treatment statements are intentionally current-guidance aware.",
+  "last_verified": "2026-09-27",
+  "sources": [
+    {
+      "title": "CDC About Q Fever",
+      "source_type": "guideline",
+      "year": 2024,
+      "url": "https://www.cdc.gov/q-fever/about/index.html",
+      "license": "CDC",
+      "location": "CDC",
+      "notes": "Clinical and microbiology overview."
+    }
+  ]
+}
