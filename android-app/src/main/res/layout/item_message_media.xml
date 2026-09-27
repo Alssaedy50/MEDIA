@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- MEDIA answer card: structured bilingual renderer + evidence + actions. -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingEnd="32dp"
+    android:paddingTop="6dp"
+    android:paddingBottom="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/bg_media_bubble"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:paddingTop="14dp"
+        android:paddingBottom="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:contentDescription="@string/label_media"
+                android:src="@drawable/ic_shield"
+                app:tint="@color/md_primary" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="8dp"
+                android:text="@string/label_media"
+                android:textColor="@color/md_primary"
+                android:textSize="@dimen/text_caption"
+                android:textStyle="bold"
+                android:letterSpacing="0.10" />
+        </LinearLayout>
+
+        <com.media.android.ui.common.AnswerRenderer
+            android:id="@+id/answer_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/md_on_med_message_bubble"
+            android:textSize="@dimen/text_body"
+            android:lineSpacingExtra="@dimen/line_spacing_body"
+            android:breakStrategy="simple"
+            android:hyphenationFrequency="none"
+            android:textDirection="firstStrong"
+            android:textIsSelectable="true" />
+
+        <LinearLayout
+            android:id="@+id/evidence_row"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="10dp"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/label_evidence"
+                android:textColor="@color/md_on_surface_muted"
+                android:textSize="@dimen/text_caption"
+                android:textStyle="bold"
+                android:letterSpacing="0.08" />
+
+            <TextView
+                android:id="@+id/evidence_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:textColor="@color/md_on_surface_variant"
+                android:textSize="@dimen/text_caption"
+                android:lineSpacingExtra="2dp" />
+
+            <TextView
+                android:id="@+id/confidence_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:textSize="@dimen/text_caption"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/message_actions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="8dp">
+
+            <ImageButton
+                android:id="@+id/action_copy"
+                style="@style/Widget.MEDIA.MessageAction"
+                android:contentDescription="@string/action_copy"
+                android:src="@drawable/ic_copy" />
+
+            <ImageButton
+                android:id="@+id/action_regenerate"
+                style="@style/Widget.MEDIA.MessageAction"
+                android:contentDescription="@string/action_regenerate"
+                android:src="@drawable/ic_refresh" />
+
+            <ImageButton
+                android:id="@+id/action_share"
+                style="@style/Widget.MEDIA.MessageAction"
+                android:contentDescription="@string/action_share"
+                android:src="@drawable/ic_share" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1" />
+
+            <ImageButton
+                android:id="@+id/action_up"
+                style="@style/Widget.MEDIA.MessageAction"
+                android:contentDescription="@string/action_helpful"
+                android:src="@drawable/ic_check" />
+
+            <ImageButton
+                android:id="@+id/action_down"
+                style="@style/Widget.MEDIA.MessageAction"
+                android:contentDescription="@string/action_not_helpful"
+                android:src="@drawable/ic_close" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

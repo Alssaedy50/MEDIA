@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  MEDIA Design System — dark theme colours.
+
+  A true dark clinical palette (not a simple inversion): desaturated navy-charcoal surfaces,
+  a brighter teal for contrast on dark backgrounds, and explicit on-* colours so every
+  foreground/background pair keeps WCAG AA contrast.
+-->
+<resources>
+
+    <color name="md_brand_navy">#0A1626</color>
+    <color name="md_brand_teal">#4FD1B0</color>
+    <color name="md_brand_teal_soft">#7BD4C0</color>
+    <color name="md_brand_blue">#7AB0FF</color>
+
+    <color name="md_background">#080F18</color>
+    <color name="md_surface">#101B29</color>
+    <color name="md_surface_variant">#16232F</color>
+    <color name="md_surface_raised">#16232F</color>
+
+    <color name="md_on_background">#E7EEF6</color>
+    <color name="md_on_surface">#E7EEF6</color>
+    <color name="md_on_surface_variant">#A9BACB</color>
+    <color name="md_on_surface_muted">#8497A9</color>
+
+    <color name="md_primary">#4FD1B0</color>
+    <color name="md_on_primary">#04231C</color>
+    <color name="md_primary_container">#0E3B31</color>
+    <color name="md_on_primary_container">#B8EEDA</color>
+
+    <color name="md_secondary">#7AB0FF</color>
+    <color name="md_on_secondary">#06203F</color>
+    <color name="md_secondary_container">#14335C</color>
+    <color name="md_on_secondary_container">#CFE1FF</color>
+
+    <color name="md_tertiary">#63D4C9</color>
+    <color name="md_tertiary_container">#123B38</color>
+    <color name="md_on_tertiary_container">#C2F1EC</color>
+
+    <color name="md_outline">#2C3D4F</color>
+    <color name="md_outline_strong">#43596E</color>
+    <color name="md_divider">#20303F</color>
+
+    <color name="md_error">#FF9B92</color>
+    <color name="md_on_error">#3C0906</color>
+    <color name="md_error_container">#4A1713</color>
+    <color name="md_on_error_container">#FFDAD6</color>
+
+    <color name="md_warning">#F5C365</color>
+    <color name="md_warning_container">#3A2C0B</color>
+    <color name="md_success">#63D4C9</color>
+    <color name="md_success_container">#0E3B31</color>
+
+    <!-- Chat bubbles -->
+    <color name="md_user_bubble">#134E42</color>
+    <color name="md_on_user_bubble">#EAFBF6</color>
+    <color name="md_med_message_bubble">#152331</color>
+    <color name="md_on_med_message_bubble">#E7EEF6</color>
+
+    <!-- Confidence / evidence accents -->
+    <color name="md_confidence_high">#63D4C9</color>
+    <color name="md_confidence_medium">#F5C365</color>
+    <color name="md_confidence_low">#FF9B92</color>
+
+    <color name="md_ripple">#334FD1B0</color>
+
+</resources>

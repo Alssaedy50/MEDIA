@@ -1,309 +1,138 @@
 package com.media.android;
 
-import android.app.Activity;
-import android.content.ClipData;
-import android.content.ClipboardManager;
-import android.content.Context;
 import android.os.Bundle;
-import android.view.KeyEvent;
 import android.view.View;
-import android.view.inputmethod.EditorInfo;
-import android.widget.Button;
-import android.widget.EditText;
 import android.widget.TextView;
-import org.json.JSONArray;
-import org.json.JSONObject;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
+import androidx.lifecycle.ViewModel;
+import androidx.lifecycle.ViewModelProvider;
+import androidx.navigation.NavController;
+import androidx.navigation.fragment.NavHostFragment;
+import androidx.navigation.ui.NavigationUI;
+
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.media.android.data.Preferences;
+import com.media.android.ui.chat.ChatViewModel;
+import com.media.android.ui.common.ChatMessage;
+
 import java.util.Locale;
 
 /**
- * MEDIA Alpha entry screen.
+ * Single-activity host for the MEDIA navigation shell.
  *
- * <p>Renders offline Hematology answers as bilingual, clearly labelled medical sections. When the
- * local evidence is not strong enough the screen shows a polite Arabic abstention instead of a
- * guess.</p>
+ * <p>Owns the persistent offline status strip (knowledge readiness and model availability), wires
+ * the Material bottom navigation to the navigation graph and exposes the shared
+ * {@link ChatViewModel} so Home and Chat operate on one transcript.</p>
  */
-public final class MainActivity extends Activity {
-    private static final String DIVIDER = "────────────────────────";
+public final class MainActivity extends AppCompatActivity {
 
-    private OfflineKnowledge knowledge;
-    private EditText question;
-    private TextView answer;
-    private TextView status;
-    private TextView scope;
-    private Button ask;
-    private Button clear;
-    private Button copy;
+    private TextView statusKnowledge;
+    private TextView statusModel;
+    private TextView statusRecords;
+    private View statusDot;
+
+    private MediaApplication app;
+    private ChatViewModel chatViewModel;
+    private NavController navController;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        // Apply the stored theme before the activity is created to avoid a flash of the wrong mode.
+        Preferences.applyTheme(new Preferences(this).theme());
         super.onCreate(savedInstanceState);
+        app = MediaApplication.from(this);
         setContentView(R.layout.activity_main);
 
-        question = findViewById(R.id.question);
-        answer = findViewById(R.id.answer);
-        status = findViewById(R.id.status);
-        scope = findViewById(R.id.scope);
-        ask = findViewById(R.id.ask_button);
-        clear = findViewById(R.id.clear_button);
-        copy = findViewById(R.id.copy_button);
+        statusKnowledge = findViewById(R.id.status_knowledge);
+        statusModel = findViewById(R.id.status_model);
+        statusRecords = findViewById(R.id.status_records);
+        statusDot = findViewById(R.id.status_dot);
 
-        knowledge = new OfflineKnowledge(this);
-        updateStatus();
-        clearQuestion();
+        chatViewModel = new ViewModelProvider(this, new ChatViewModelFactory(app))
+                .get(ChatViewModel.class);
 
-        ask.setOnClickListener(v -> answerQuestion());
-        clear.setOnClickListener(v -> clearQuestion());
-        copy.setOnClickListener(v -> copyAnswer());
+        NavHostFragment host = (NavHostFragment)
+                getSupportFragmentManager().findFragmentById(R.id.nav_host);
+        if (host != null) {
+            navController = host.getNavController();
+            BottomNavigationView bottomNav = findViewById(R.id.bottom_nav);
+            NavigationUI.setupWithNavController(bottomNav, navController);
+        }
 
-        question.setOnEditorActionListener((v, actionId, event) -> {
-            if (actionId == EditorInfo.IME_ACTION_SEARCH ||
-                actionId == EditorInfo.IME_ACTION_DONE ||
-                (event != null && event.getKeyCode() == KeyEvent.KEYCODE_ENTER)) {
-                answerQuestion();
-                return true;
-            }
-            return false;
-        });
-
-        bindChip(R.id.chip_bone_marrow, "Bone marrow");
-        bindChip(R.id.chip_erythropoiesis, "Erythropoiesis");
-        bindChip(R.id.chip_ida, "Iron deficiency anemia");
-        bindChip(R.id.chip_cbc, "CBC");
-        bindChip(R.id.chip_epo, "EPO");
-        bindChip(R.id.chip_sickle, "Sickle cell disease");
+        renderStatus();
+        app.ensureKnowledgeLoaded(this::renderStatus);
     }
 
-    private void bindChip(int viewId, String query) {
-        View chip = findViewById(viewId);
-        if (chip != null) chip.setOnClickListener(v -> askPrompt(query));
+    public ChatViewModel chatViewModel() {
+        return chatViewModel;
     }
 
-    private void updateStatus() {
-        scope.setText("نطاق المعرفة: أمراض الدم (Hematology) • " + knowledge.size() + " سجلاً طبياً محلياً");
-        if (knowledge.loadFailures() == 0 && knowledge.size() > 0) {
-            status.setText("● يعمل دون اتصال  •  " + knowledge.size() + " records ready");
-            status.setTextColor(0xFF0B6B55);
-        } else if (knowledge.size() > 0) {
-            status.setText("● OFFLINE  •  " + knowledge.size() + " records loaded  •  " + knowledge.loadFailures() + " load error(s)");
-            status.setTextColor(0xFF9A6700);
+    public NavController navController() {
+        return navController;
+    }
+
+    /** Called by Chat when a generation starts/stops so the strip can reflect activity. */
+    public void renderStatus() {
+        int size = app.repository().size();
+        int failures = app.repository().loadFailures();
+
+        if (size > 0 && failures == 0) {
+            statusKnowledge.setText(R.string.status_knowledge_ready);
+            statusKnowledge.setTextColor(ContextCompat.getColor(this, R.color.md_confidence_high));
+        } else if (size > 0) {
+            statusKnowledge.setText(R.string.status_knowledge_error);
+            statusKnowledge.setTextColor(ContextCompat.getColor(this, R.color.md_confidence_medium));
         } else {
-            status.setText("● OFFLINE LIBRARY ERROR  •  No medical records loaded");
-            status.setTextColor(0xFFB42318);
+            statusKnowledge.setText(R.string.status_knowledge_loading);
+            statusKnowledge.setTextColor(ContextCompat.getColor(this, R.color.md_on_surface_muted));
+        }
+
+        boolean modelReady = app.modelManager().isReady();
+        statusModel.setText(modelReady
+                ? R.string.status_model_ready : R.string.status_model_not_installed);
+        statusModel.setTextColor(ContextCompat.getColor(this,
+                modelReady ? R.color.md_confidence_high : R.color.md_on_surface_muted));
+
+        statusRecords.setText(size > 0
+                ? String.format(Locale.US, getString(R.string.status_records), size)
+                : "");
+        statusDot.setBackgroundTintList(android.content.res.ColorStateList.valueOf(
+                ContextCompat.getColor(this,
+                        failures == 0 ? R.color.md_confidence_high : R.color.md_confidence_low)));
+    }
+
+    /** Routes a question into the shared transcript and switches to the Chat destination. */
+    public void askFromHome(String question) {
+        chatViewModel.ask(question);
+        if (navController != null) {
+            navController.navigate(R.id.chatFragment);
+        }
+        renderStatus();
+    }
+
+    /** Brings an existing exchange back into the Chat destination. */
+    public void openConversation(String question, String answer, double confidence, String evidence) {
+        chatViewModel.restore(question, ChatMessage.media(answer, confidence, evidence));
+        if (navController != null) {
+            navController.navigate(R.id.chatFragment);
         }
     }
 
-    private void askPrompt(String text) {
-        question.setText(text);
-        question.setSelection(question.length());
-        answerQuestion();
-    }
+    private static final class ChatViewModelFactory implements ViewModelProvider.Factory {
+        private final MediaApplication app;
 
-    private void clearQuestion() {
-        question.setText("");
-        answer.setText("اسأل عن موضوع في مكتبة أمراض الدم المحلية.\n"
-                + "Ask about a topic in the current offline Hematology library.\n\n"
-                + "MEDIA لا يعرض نتيجة إلا عند وجود دليل محلي موثوق ومطابقة كافية.");
-        copy.setVisibility(View.GONE);
-        updateStatus();
-        question.requestFocus();
-    }
-
-    private void answerQuestion() {
-        String q = question.getText().toString().trim();
-        if (q.isEmpty()) {
-            answer.setText("الرجاء إدخال سؤال طبي أولاً.\nEnter a medical question first.");
-            copy.setVisibility(View.GONE);
-            question.requestFocus();
-            return;
+        ChatViewModelFactory(MediaApplication app) {
+            this.app = app;
         }
 
-        ask.setEnabled(false);
-        OfflineKnowledge.Result result = knowledge.best(q);
-        ask.setEnabled(true);
-
-        if (!knowledge.isConfident(result)) {
-            answer.setText(abstention(q));
-            copy.setVisibility(View.GONE);
-            return;
+        @NonNull
+        @Override
+        @SuppressWarnings("unchecked")
+        public <T extends ViewModel> T create(@NonNull Class<T> modelClass) {
+            return (T) new ChatViewModel(app);
         }
-
-        answer.setText(formatAnswer(result.record, result.score));
-        copy.setVisibility(View.VISIBLE);
-    }
-
-    private void copyAnswer() {
-        String text = answer.getText().toString();
-        ClipboardManager clipboard = (ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE);
-        if (clipboard != null) {
-            clipboard.setPrimaryClip(ClipData.newPlainText("MEDIA answer", text));
-            status.setText("✓ تم نسخ الإجابة  •  " + knowledge.size() + " records • Offline");
-        }
-    }
-
-    /** Bilingual safe abstention shown when no sufficiently supported local evidence exists. */
-    private static String abstention(String query) {
-        return "لا توجد أدلة محلية موثوقة كافية\n"
-                + "NO SUPPORTED LOCAL MATCH\n\n"
-                + "لم نعثر في وحدة أمراض الدم (Hematology) المضمّنة حالياً على دليل محلي موثوق "
-                + "يجيب عن هذا السؤال بثقة كافية، ولذلك يلتزم MEDIA الصمت بدلاً من التخمين.\n\n"
-                + "سؤالك: " + query + "\n\n"
-                + "جرّب مصطلحاً أو اختصاراً طبياً محدّداً مثل:\n"
-                + "• نخاع العظم — Bone marrow\n"
-                + "• تكون الكريات الحمراء — Erythropoiesis\n"
-                + "• فقر الدم بعوز الحديد — Iron deficiency anemia (IDA)\n"
-                + "• تحليل الدم الشامل — CBC\n"
-                + "• الإرثروبويتين — EPO\n"
-                + "• مرض الخلايا المنجلية — Sickle cell disease\n\n"
-                + "تعمل MEDIA دون اتصال بالإنترنت وتقتصر على سجلات وحدة أمراض الدم المُدقَّقة محلياً.";
-    }
-
-    private String formatAnswer(JSONObject r, double score) {
-        String topic = r.optString("topic", r.optString("concept", "Medical topic"));
-        String concept = r.optString("concept", "");
-        String domain = r.optString("domain", "Hematology");
-        String subject = r.optString("subject", "");
-        StringBuilder b = new StringBuilder();
-
-        // Subject & topic badge
-        b.append(DIVIDER).append("\n");
-        String badge = subject.isEmpty() ? domain : domain + " • " + subject;
-        b.append(badge.toUpperCase(Locale.ROOT)).append("\n");
-        b.append(topic).append("\n");
-        b.append(DIVIDER).append("\n\n");
-
-        // Concept name (English)
-        if (!concept.isEmpty() && !concept.equalsIgnoreCase(topic)) {
-            b.append("اسم المفهوم (Concept)\n");
-            b.append(concept).append("\n\n");
-        }
-
-        JSONObject c = r.optJSONObject("content");
-        if (c != null) {
-            append(b, "📌 التعريف الطبي · Definition", c.optString("definition", ""));
-            append(b, "💡 الشرح والتوضيح · Explanation", c.optString("explanation", ""));
-            appendMechanism(b, c);
-            appendCausesEffects(b, c);
-            appendClinical(b, c);
-        }
-
-        appendTerminology(b, r.optJSONArray("terminology"));
-        appendHighYield(b, c == null ? null : c.optJSONArray("high_yield"));
-        appendSources(b, r.optJSONArray("sources"));
-
-        b.append("مطابقة الدليل المحلي · Local evidence match  ")
-                .append(String.format(Locale.US, "%.2f", score)).append("\n")
-                .append("استرجاع دون اتصال · OFFLINE RETRIEVAL  •  NO INTERNET REQUIRED");
-        return b.toString();
-    }
-
-    private static void appendMechanism(StringBuilder b, JSONObject c) {
-        String mechanism = c.optString("mechanism", "");
-        String structure = c.optString("structure", "");
-        String function = c.optString("function", "");
-        if (isBlank(mechanism) && isBlank(structure) && isBlank(function)) return;
-
-        b.append("⚙️ الآلية والمسار · Mechanism & Pathway\n");
-        if (!isBlank(mechanism)) b.append(arrows(mechanism)).append("\n\n");
-        if (!isBlank(structure)) b.append("البنية (Structure): ").append(structure.trim()).append("\n\n");
-        if (!isBlank(function)) b.append("الوظيفة (Function): ").append(function.trim()).append("\n\n");
-    }
-
-    private static void appendCausesEffects(StringBuilder b, JSONObject c) {
-        JSONArray causes = c.optJSONArray("causes");
-        JSONArray effects = c.optJSONArray("effects");
-        boolean hasCauses = causes != null && causes.length() > 0;
-        boolean hasEffects = effects != null && effects.length() > 0;
-        if (!hasCauses && !hasEffects) return;
-
-        b.append("⚠️ الأسباب والنتائج · Causes & Effects\n");
-        if (hasCauses) {
-            b.append("الأسباب (Causes):\n");
-            appendBullets(b, causes);
-        }
-        if (hasEffects) {
-            b.append("النتائج (Effects):\n");
-            appendBullets(b, effects);
-        }
-        b.append("\n");
-    }
-
-    private static void appendClinical(StringBuilder b, JSONObject c) {
-        String clinical = c.optString("clinical_relevance", "");
-        String diagnosis = c.optString("diagnosis", "");
-        String treatment = c.optString("treatment", "");
-        if (isBlank(clinical) && isBlank(diagnosis) && isBlank(treatment)) return;
-
-        b.append("🩺 التطبيق السريري · Clinical Relevance\n");
-        if (!isBlank(clinical)) b.append(clinical.trim()).append("\n\n");
-        if (!isBlank(diagnosis)) b.append("التشخيص (Diagnosis): ").append(diagnosis.trim()).append("\n\n");
-        if (!isBlank(treatment)) b.append("العلاج (Treatment): ").append(treatment.trim()).append("\n\n");
-    }
-
-    private static void appendTerminology(StringBuilder b, JSONArray terminology) {
-        if (terminology == null || terminology.length() == 0) return;
-        StringBuilder body = new StringBuilder();
-        for (int i = 0; i < Math.min(terminology.length(), 6); i++) {
-            JSONObject t = terminology.optJSONObject(i);
-            if (t == null) continue;
-            String term = t.optString("term", "");
-            String arabic = t.optString("Arabic", "");
-            if (term.isEmpty()) continue;
-            body.append("• ").append(term);
-            if (!arabic.isEmpty()) body.append(" — ").append(arabic);
-            body.append("\n");
-        }
-        if (body.length() > 0) {
-            b.append("المصطلحات · Key Terminology\n").append(body).append("\n");
-        }
-    }
-
-    private static void appendHighYield(StringBuilder b, JSONArray high) {
-        if (high == null || high.length() == 0) return;
-        b.append("⭐ لؤلؤة امتحانية · High-Yield Pearls\n");
-        appendBullets(b, high);
-        b.append("\n");
-    }
-
-    private static void appendSources(StringBuilder b, JSONArray sources) {
-        if (sources == null || sources.length() == 0) return;
-        b.append("المصادر · Evidence Sources\n");
-        for (int i = 0; i < Math.min(sources.length(), 4); i++) {
-            JSONObject s = sources.optJSONObject(i);
-            if (s == null) continue;
-            String title = s.optString("title", "");
-            String year = s.optString("year", "");
-            String location = s.optString("location", "");
-            if (title.isEmpty()) continue;
-            b.append("• ").append(title);
-            if (!year.isEmpty()) b.append(" (").append(year).append(")");
-            if (!location.isEmpty()) b.append(" — ").append(location);
-            b.append("\n");
-        }
-        b.append("\n");
-    }
-
-    private static void appendBullets(StringBuilder b, JSONArray values) {
-        for (int i = 0; i < Math.min(values.length(), 8); i++) {
-            String value = values.optString(i, "").trim();
-            if (!value.isEmpty()) b.append("• ").append(value).append("\n");
-        }
-    }
-
-    private static void append(StringBuilder b, String title, String text) {
-        if (!isBlank(text) && !text.trim().equals("[]")) {
-            b.append(title).append("\n").append(text.trim()).append("\n\n");
-        }
-    }
-
-    /** Renders pathway arrows consistently, e.g. "A -> B" becomes "A ➜ B". */
-    private static String arrows(String text) {
-        return text.trim()
-                .replaceAll("\\s*(-{1,2}>|=>|→|➔|➜)\\s*", " \u279C ")
-                .replaceAll("[ \\t]{2,}", " ")
-                .trim();
-    }
-
-    private static boolean isBlank(String s) {
-        return s == null || s.trim().isEmpty();
     }
 }

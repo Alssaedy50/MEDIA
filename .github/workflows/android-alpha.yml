@@ -75,7 +75,7 @@ jobs:
           apk=android-app/build/outputs/apk/debug/android-app-debug.apk
           badging=$("$ANDROID_HOME/build-tools/35.0.0/aapt" dump badging "$apk")
           echo "$badging" | grep -F "package: name='com.media.android'"
-          echo "$badging" | grep -F "versionName='0.2.0'"
+          echo "$badging" | grep -F "versionName='0.3.0'"
 
       - name: Run Android unit tests
         working-directory: android

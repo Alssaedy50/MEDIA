@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Input surface: fully rounded, clear 2dp focus border, light/dark aware via theme colours. -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="rectangle">
+    <solid android:color="@color/md_surface_variant" />
+    <stroke android:width="2dp" android:color="@color/md_outline_strong" />
+    <corners android:radius="@dimen/radius_xl" />
+</shape>
