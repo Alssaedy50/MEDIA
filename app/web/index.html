@@ -3,7 +3,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#07111f">
   <meta name="description" content="MEDIA — Medical Education AI">
+  <link rel="manifest" href="/static/manifest.webmanifest">
   <title>MEDIA — Medical Education AI</title>
   <link rel="stylesheet" href="/static/style.css">
 </head>
@@ -12,11 +14,14 @@
     <header class="hero">
       <div class="brand-mark">M</div>
       <div>
-        <p class="eyebrow">MEDICAL EDUCATION AI · v0.1</p>
+        <p class="eyebrow">MEDICAL EDUCATION AI · ALPHA</p>
         <h1>Ask MEDIA</h1>
         <p class="subtitle">Evidence-aware answers from the registered Hematology knowledge base.</p>
       </div>
-      <span id="status" class="status">Checking API…</span>
+      <div class="hero-actions">
+        <button id="install" class="install hidden" type="button">Install</button>
+        <span id="status" class="status">Checking API…</span>
+      </div>
     </header>
 
     <section class="panel question-panel">
