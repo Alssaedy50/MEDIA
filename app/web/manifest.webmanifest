@@ -9,5 +9,12 @@
   "background_color": "#07111f",
   "theme_color": "#07111f",
   "orientation": "portrait-primary",
-  "icons": []
+  "icons": [
+    {
+      "src": "/static/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
 }
