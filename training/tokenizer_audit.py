@@ -4,7 +4,10 @@ from collections import Counter
 from pathlib import Path
 from statistics import mean
 
-from .tokenizer import BPETokenizer, normalize, pretokenize
+try:
+    from .tokenizer import BPETokenizer, normalize, pretokenize
+except ImportError:  # Support direct script execution from repository root.
+    from tokenizer import BPETokenizer, normalize, pretokenize
 
 def iter_examples(paths):
     for path in paths:
