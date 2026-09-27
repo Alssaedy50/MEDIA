@@ -32,6 +32,20 @@ jobs:
       - name: Build Android debug APK
         working-directory: android
         run: gradle :android-app:assembleDebug
+      - name: Verify APK contains offline knowledge
+        working-directory: android
+        run: |
+          apk=android-app/build/outputs/apk/debug/android-app-debug.apk
+          test -f "$apk"
+          count=$(unzip -Z1 "$apk" | grep -E '^assets/knowledge/hematology/.+\\.json        working-directory: android
+        run: gradle :android-app:testDebugUnitTest
+      - name: Upload debug APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: media-android-alpha-debug
+          path: android-app/build/outputs/apk/debug/android-app-debug.apk | wc -l)
+          test "$count" -eq 51
+          echo "APK contains $count bundled Hematology records"
       - name: Run Android unit tests
         working-directory: android
         run: gradle :android-app:testDebugUnitTest
