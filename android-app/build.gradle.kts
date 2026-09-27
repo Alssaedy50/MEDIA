@@ -16,6 +16,14 @@ android {
 
     buildFeatures { buildConfig = true }
 
+    // Offline Alpha knowledge is stored in the repository-level android/assets tree.
+    // Expose that directory to Android AssetManager at runtime.
+    sourceSets {
+        getByName("main") {
+            assets.srcDir("../android/assets")
+        }
+    }
+
     packaging { resources.excludes += "/META-INF/{AL2.0,LGPL2.1}" }
 }
 
