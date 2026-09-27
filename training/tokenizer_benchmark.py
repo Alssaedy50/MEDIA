@@ -20,7 +20,6 @@ def benchmark(paths: list[str], vocab_sizes: list[int], output: str | None = Non
         tokenizer_path = Path(output).with_suffix(f".{requested_size}.json") if output else None
         if tokenizer_path:
             BPETokenizer(config).save(tokenizer_path)
-        if tokenizer_path:
             result = audit(paths, str(tokenizer_path))
         else:
             tmp = Path(".media-tokenizer-benchmark.json")
@@ -62,8 +61,7 @@ def benchmark(paths: list[str], vocab_sizes: list[int], output: str | None = Non
     }
     if output:
         Path(output).write_text(
-            json.dumps(payload, ensure_ascii=False, indent=2) + "
-", encoding="utf-8"
+            json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
         )
     return payload
 
