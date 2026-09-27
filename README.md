@@ -66,10 +66,10 @@ The first training corpus is generated reproducibly from these registered record
 - [ ] Dataset quality audit
 
 ### Stage 3 — Model foundation
-- [ ] Tiny Transformer overfit test
+- [x] Tiny Transformer foundation + overfit test
 - [ ] ~100M-parameter architecture
-- [ ] From-scratch initialization
-- [ ] Checkpointing and resume
+- [x] From-scratch initialization
+- [x] Checkpointing and resume
 - [ ] GPU training configuration
 
 ### Stage 4 — Medical AI
