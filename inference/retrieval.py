@@ -143,6 +143,29 @@ def _score(query_tokens: list[str], record: Record) -> tuple[float, dict[str, An
         if normalized_query and normalized_query in normalized_field:
             score += 8.0
 
+    # Prefer explicit medical phrases that appear in registered anchors.
+    # This prevents generic terms such as "transmission" or "treatment" from
+    # outranking the record whose topic/terminology names the queried entity.
+    anchor_fields = ("topic", "subtopic", "terminology", "concept")
+    for field in anchor_fields:
+        anchor_tokens = tokenize(fields[field])
+        if len(anchor_tokens) < 2:
+            continue
+        for size in (4, 3, 2):
+            if len(query_tokens) < size:
+                continue
+            query_ngrams = {
+                tuple(query_tokens[i:i + size])
+                for i in range(len(query_tokens) - size + 1)
+            }
+            anchor_ngrams = {
+                tuple(anchor_tokens[i:i + size])
+                for i in range(len(anchor_tokens) - size + 1)
+            }
+            if query_ngrams & anchor_ngrams:
+                score += 3.0 * size
+                break
+
     status = record.data.get("status")
     evidence = record.data.get("evidence_level")
     if status == "verified":
