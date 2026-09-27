@@ -83,6 +83,8 @@ def _score(query_tokens: list[str], record: Record) -> tuple[float, dict[str, An
     fields = {
         "concept": _field_text(record, "concept"),
         "topic": _field_text(record, "topic"),
+        "subject": _field_text(record, "subject"),
+        "domain": _field_text(record, "domain"),
         "subtopic": _field_text(record, "subtopic"),
         "content": _field_text(record, "content"),
         "terminology": _field_text(record, "terminology"),
@@ -92,6 +94,8 @@ def _score(query_tokens: list[str], record: Record) -> tuple[float, dict[str, An
     weights = {
         "concept": 5.0,
         "topic": 4.0,
+        "subject": 4.0,
+        "domain": 2.0,
         "subtopic": 3.0,
         "terminology": 2.5,
         "content": 1.0,
@@ -118,7 +122,12 @@ def _score(query_tokens: list[str], record: Record) -> tuple[float, dict[str, An
     score += 6.0 * coverage
 
     normalized_query = " ".join(query_tokens)
-    for field in ("concept", "topic", "subtopic"):
+    anchor_fields = ("concept", "topic", "subject", "subtopic", "terminology", "relations")
+    anchor_hits = set()
+    for token in query_tokens:
+        if any(token in set(tokenize(fields[field])) for field in anchor_fields):
+            anchor_hits.add(token)
+    for field in ("concept", "topic", "subject", "subtopic"):
         normalized_field = " ".join(tokenize(fields[field]))
         if normalized_query and normalized_query in normalized_field:
             score += 8.0
@@ -164,7 +173,11 @@ def retrieve(
     ranked = []
     for record in records:
         score, match = _score(query_tokens, record)
-        if score > 0 and match["coverage"] >= MIN_COVERAGE:
+        if score > 0 and match["coverage"] >= MIN_COVERAGE and any(
+            token in set(tokenize(_field_text(record, field)))
+            for token in query_tokens
+            for field in ("concept", "topic", "subject", "subtopic", "terminology", "relations")
+        ):
             ranked.append((score, record, match))
 
     ranked.sort(key=lambda item: (-item[0], item[1].id))
