@@ -29,7 +29,7 @@
     "max_seq_len": 256,
     "dropout": 0.1,
     "weight_tying": true,
-    "parameter_count": 101266816
+    "parameter_count": 100824192
   },
   "corpus": {
     "domain": "Hematology",
