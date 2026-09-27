@@ -6,6 +6,13 @@ import argparse
 import json
 import time
 from pathlib import Path
+import sys
+
+# Make repository-root imports deterministic when this file is executed directly
+# by CI as ``python training/tokenizer_benchmark.py``.
+REPO_ROOT = Path(__file__).resolve().parents[1]
+if str(REPO_ROOT) not in sys.path:
+    sys.path.insert(0, str(REPO_ROOT))
 
 from model.size import find_near_target
 from training.tokenizer import BPETokenizer, train_from_jsonl
