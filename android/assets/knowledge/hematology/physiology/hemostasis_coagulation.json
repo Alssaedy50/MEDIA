@@ -1,0 +1,195 @@
+{
+  "id": "hematology.physiology.hemostasis_coagulation",
+  "domain": "Hematology",
+  "subject": "Physiology",
+  "topic": "Homeostasis and Coagulation",
+  "subtopic": "Hemostasis, platelet plug formation and coagulation pathways",
+  "concept": "Hemostasis is the coordinated physiological response that limits blood loss after vascular injury while restricting clot formation to the site of injury.",
+  "content": {
+    "definition": "Hemostasis is the integrated process by which vascular, platelet, coagulation, anticoagulant and fibrinolytic mechanisms stop bleeding and subsequently limit and remove the clot.",
+    "explanation": "Following vascular injury, transient vasoconstriction reduces local blood flow. Primary hemostasis then produces a temporary platelet plug through platelet adhesion, activation and aggregation. Secondary hemostasis generates thrombin and converts fibrinogen into fibrin, stabilizing the platelet plug. Natural anticoagulant mechanisms restrict coagulation, and fibrinolysis later removes fibrin as repair progresses.",
+    "mechanism": "Primary hemostasis begins when vascular injury exposes subendothelial matrix. von Willebrand factor (vWF) bridges exposed collagen to platelet GPIb, promoting platelet adhesion. Platelet activation causes shape change, granule release and activation of GPIIb/IIIa. Fibrinogen then bridges activated GPIIb/IIIa receptors on adjacent platelets, producing aggregation. Secondary hemostasis is initiated physiologically by tissue factor binding factor VIIa. Coagulation reactions generate factor Xa, which with factor Va forms the prothrombinase complex and converts prothrombin (factor II) to thrombin (factor IIa). Thrombin amplifies platelet and coagulation activation and converts fibrinogen (factor I) into fibrin. Factor XIIIa cross-links fibrin to strengthen the clot. The classical intrinsic and extrinsic pathways are useful for understanding laboratory tests, but in vivo coagulation is highly integrated and cell-surface dependent.",
+    "structure": "Hemostasis involves the injured vessel wall and endothelium, platelets, plasma coagulation factors, calcium and phospholipid surfaces, natural anticoagulant systems and the fibrinolytic system.",
+    "function": "The physiological goals are rapid limitation of blood loss, formation of a stable local clot, preservation of blood flow elsewhere in the circulation, and eventual clot removal during tissue repair.",
+    "causes": [],
+    "effects": [],
+    "clinical_relevance": "Defects of primary hemostasis commonly involve platelets or vWF and may cause mucocutaneous bleeding. Defects of secondary hemostasis may produce deeper tissue bleeding or hemarthrosis. Excessive or poorly localized coagulation can cause thrombosis. Laboratory evaluation commonly uses platelet count, PT/INR and aPTT together with targeted testing when indicated.",
+    "diagnosis": "Initial assessment may include complete blood count with platelet count, peripheral smear when indicated, PT/INR and aPTT. Additional tests can evaluate fibrinogen, specific clotting factors, vWF and platelet function according to the clinical context.",
+    "treatment": "Management depends on the cause and may include local hemostatic measures, replacement or correction of deficient factors, platelet-directed treatment, treatment of the underlying disorder, or antithrombotic therapy when pathological thrombosis is present.",
+    "high_yield": [
+      "Primary hemostasis forms the temporary platelet plug.",
+      "Secondary hemostasis stabilizes the platelet plug with fibrin.",
+      "vWF helps platelet adhesion by bridging exposed collagen and platelet GPIb.",
+      "Activated platelet GPIIb/IIIa binds fibrinogen and supports platelet aggregation.",
+      "Tissue factor–factor VIIa is the major physiological trigger of coagulation initiation.",
+      "Factor Xa with factor Va forms prothrombinase and converts prothrombin to thrombin.",
+      "Thrombin converts fibrinogen to fibrin and amplifies coagulation.",
+      "Factor XIIIa cross-links fibrin and stabilizes the clot.",
+      "Intrinsic and extrinsic pathways converge on factor X in the classical cascade model.",
+      "Calcium and negatively charged phospholipid surfaces are important for coagulation complex assembly.",
+      "Hemostasis is balanced by natural anticoagulant and fibrinolytic mechanisms."
+    ]
+  },
+  "terminology": [
+    {
+      "term": "Hemostasis",
+      "language": "English",
+      "Arabic": "الإرقاء / إيقاف النزف",
+      "pronunciation": "hee-moh-STAY-sis",
+      "etymology": "Greek haima, blood, plus stasis, standing still.",
+      "notes": "Coordinated physiological process that limits bleeding."
+    },
+    {
+      "term": "Primary hemostasis",
+      "language": "English",
+      "Arabic": "الإرقاء الأولي",
+      "pronunciation": "PRY-may-ree hee-moh-STAY-sis",
+      "etymology": "Primary, first, plus hemostasis.",
+      "notes": "Platelet-based formation of the temporary plug."
+    },
+    {
+      "term": "Secondary hemostasis",
+      "language": "English",
+      "Arabic": "الإرقاء الثانوي",
+      "pronunciation": "SEK-un-dair-ee hee-moh-STAY-sis",
+      "etymology": "Secondary, following the first stage, plus hemostasis.",
+      "notes": "Coagulation and fibrin formation that stabilize the platelet plug."
+    },
+    {
+      "term": "von Willebrand factor",
+      "language": "English",
+      "Arabic": "عامل فون ويلبراند",
+      "pronunciation": "von VIL-eh-brand",
+      "etymology": "Named after Erik von Willebrand.",
+      "notes": "Mediates platelet adhesion and also carries/stabilizes factor VIII in plasma."
+    },
+    {
+      "term": "Thrombin",
+      "language": "English",
+      "Arabic": "الثرومبين",
+      "pronunciation": "THROM-bin",
+      "etymology": "From thrombus, clot, with enzyme-related naming.",
+      "notes": "Central coagulation protease that converts fibrinogen to fibrin and amplifies hemostasis."
+    },
+    {
+      "term": "Fibrin",
+      "language": "English",
+      "Arabic": "الفيبرين",
+      "pronunciation": "FY-brin",
+      "etymology": "From Latin fibra, fiber.",
+      "notes": "Insoluble protein polymer forming the structural mesh of a stable clot."
+    },
+    {
+      "term": "Fibrinolysis",
+      "language": "English",
+      "Arabic": "تحلل الفيبرين",
+      "pronunciation": "fy-bri-NOL-ih-sis",
+      "etymology": "Fibrin plus -lysis, loosening or dissolution.",
+      "notes": "Enzymatic removal of fibrin as the clot is resolved."
+    },
+    {
+      "term": "Prothrombin time",
+      "language": "English",
+      "Arabic": "زمن البروثرومبين",
+      "pronunciation": "proh-THROM-bin time",
+      "etymology": "Prothrombin plus time.",
+      "notes": "Laboratory test commonly reported with INR and sensitive to tissue-factor/extrinsic and common pathway defects."
+    },
+    {
+      "term": "Activated partial thromboplastin time",
+      "language": "English",
+      "Arabic": "زمن الثرومبوبلاستين الجزئي المُفعّل",
+      "pronunciation": "AK-tih-vay-tid PAR-shul throm-boh-PLAS-tin time",
+      "etymology": "Activated plus partial thromboplastin plus time.",
+      "notes": "Laboratory test commonly used to assess intrinsic and common pathway function."
+    },
+    {
+      "term": "GPIIb/IIIa",
+      "language": "English",
+      "notes": "Search synonym/clinical terminology used for evidence retrieval."
+    },
+    {
+      "term": "Platelet aggregation",
+      "language": "English",
+      "notes": "Search synonym/clinical terminology used for evidence retrieval."
+    }
+  ],
+  "relations": [
+    {
+      "target_id": "hematology.histology.platelets_thrombopoiesis",
+      "relation": "physiology_of",
+      "note": "Platelet structure and thrombopoiesis provide the cellular basis for primary hemostasis."
+    },
+    {
+      "target_id": "hematology.physiology.blood_composition_functions",
+      "relation": "protective_function_of",
+      "note": "Hemostasis is a major protective function of blood."
+    },
+    {
+      "target_id": "hematology.anatomy.bone_marrow",
+      "relation": "cellular_source_related_to",
+      "note": "Bone marrow produces megakaryocytes that give rise to circulating platelets."
+    }
+  ],
+  "yemen_context": {
+    "relevance": "Hemostasis and coagulation are core physiology concepts needed for interpreting bleeding disorders, transfusion medicine and hematologic disease.",
+    "evidence": "General medical relevance; no Yemen-specific epidemiologic claim is made."
+  },
+  "evidence_level": "reference",
+  "status": "reviewed",
+  "review_notes": "Original synthesized educational content with source metadata; no copyrighted textbook text copied.",
+  "last_verified": "2026-09-27",
+  "sources": [
+    {
+      "title": "Physiology, Hemostasis",
+      "source_type": "reference",
+      "authors": [
+        "Andrew LaPelusa",
+        "Heeransh D. Dave"
+      ],
+      "year": 2023,
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK545263/",
+      "license": "NCBI Bookshelf / StatPearls",
+      "location": "NCBI Bookshelf",
+      "notes": "Supports stages and mechanisms of normal hemostasis."
+    },
+    {
+      "title": "Physiological Haemostasis",
+      "source_type": "reference",
+      "authors": [
+        "NCBI Bookshelf"
+      ],
+      "year": 2010,
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK534253/",
+      "license": "NCBI Bookshelf",
+      "location": "NCBI Bookshelf",
+      "notes": "Supports platelet activation, primary hemostasis and integrated coagulation mechanisms."
+    },
+    {
+      "title": "Physiology, Coagulation Pathways",
+      "source_type": "reference",
+      "authors": [
+        "Raheel Chaudhry",
+        "Robert B. Killeen",
+        "Hani M. Babiker"
+      ],
+      "year": 2025,
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK482253/",
+      "license": "NCBI Bookshelf / StatPearls",
+      "location": "NCBI Bookshelf",
+      "notes": "Supports classical intrinsic, extrinsic and common pathway organization."
+    },
+    {
+      "title": "Laboratory Evaluation of Coagulopathies",
+      "source_type": "reference",
+      "authors": [
+        "StatPearls"
+      ],
+      "year": 2024,
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK606118/",
+      "license": "NCBI Bookshelf / StatPearls",
+      "location": "NCBI Bookshelf",
+      "notes": "Supports primary versus secondary hemostasis and laboratory assessment."
+    }
+  ]
+}
