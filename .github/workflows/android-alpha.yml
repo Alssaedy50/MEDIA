@@ -2,7 +2,7 @@ name: MEDIA Android Alpha
 
 on:
   push:
-    branches: ["agent/android-alpha"]
+    branches: ["main", "agent/android-alpha", "feature/offline-alpha"]
   pull_request:
 
 jobs:
