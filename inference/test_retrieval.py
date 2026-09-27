@@ -7,7 +7,7 @@ from retrieval import DEFAULT_KB, load_records, retrieve
 class HematologyRetrievalSmokeTests(unittest.TestCase):
     def test_knowledge_scope_is_loaded(self):
         records = load_records(DEFAULT_KB)
-        self.assertEqual(len(records), 49)
+        self.assertEqual(len(records), 51)
         self.assertTrue(all(r.data.get("status") in {"reviewed", "verified"} for r in records))
 
     def test_red_pulp_query_retrieves_spleen(self):
@@ -38,6 +38,19 @@ class HematologyRetrievalSmokeTests(unittest.TestCase):
         self.assertFalse(result["abstain"])
         ids = [hit["id"] for hit in result["hits"]]
         self.assertIn("hematology.medicine.blood_transfusion_precautions_reactions", ids)
+
+
+    def test_blood_borne_infections_query_retrieves_community_medicine(self):
+        result = retrieve("How can blood-borne infections be prevented in the community?", top_k=3)
+        self.assertFalse(result["abstain"])
+        ids = [hit["id"] for hit in result["hits"]]
+        self.assertIn("hematology.community_medicine.blood_borne_infections", ids)
+
+    def test_anemia_public_health_query_retrieves_community_medicine(self):
+        result = retrieve("Why is anemia a public health problem?", top_k=3)
+        self.assertFalse(result["abstain"])
+        ids = [hit["id"] for hit in result["hits"]]
+        self.assertIn("hematology.community_medicine.anemia_public_health", ids)
 
     def test_unknown_query_abstains(self):
         result = retrieve("What is the molecular mechanism of a fictional drug called Xylomab?", top_k=3)
