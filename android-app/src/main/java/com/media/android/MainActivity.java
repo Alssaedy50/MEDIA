@@ -20,6 +20,7 @@ public final class MainActivity extends Activity {
     private EditText question;
     private TextView answer;
     private TextView status;
+    private TextView scope;
     private Button ask;
     private Button clear;
     private Button copy;
@@ -32,6 +33,7 @@ public final class MainActivity extends Activity {
         question = findViewById(R.id.question);
         answer = findViewById(R.id.answer);
         status = findViewById(R.id.status);
+        scope = findViewById(R.id.scope);
         ask = findViewById(R.id.ask_button);
         clear = findViewById(R.id.clear_button);
         copy = findViewById(R.id.copy_button);
@@ -59,6 +61,7 @@ public final class MainActivity extends Activity {
     }
 
     private void updateStatus() {
+        scope.setText("Current scope: Hematology • " + knowledge.size() + " local medical records");
         if (knowledge.loadFailures() == 0 && knowledge.size() > 0) {
             status.setText("● OFFLINE  •  " + knowledge.size() + " medical records ready");
             status.setTextColor(0xFF0B6B55);
