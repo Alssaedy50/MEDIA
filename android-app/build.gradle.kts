@@ -2,6 +2,16 @@ plugins {
     id("com.android.application")
 }
 
+val offlineKnowledgeSource = rootProject.projectDir.parentFile.resolve("android/assets/knowledge/hematology")
+val offlineKnowledgeTarget = projectDir.resolve("src/main/assets/knowledge/hematology")
+
+// Materialize the repository-level offline knowledge before Android source sets are evaluated.
+copy {
+    from(offlineKnowledgeSource)
+    into(offlineKnowledgeTarget)
+    include("**/*.json")
+}
+
 android {
     namespace = "com.media.android"
     compileSdk = 35
@@ -17,23 +27,6 @@ android {
     buildFeatures { buildConfig = true }
 
     packaging { resources.excludes += "/META-INF/{AL2.0,LGPL2.1}" }
-}
-
-val offlineKnowledgeSource = rootProject.projectDir.parentFile.resolve("android/assets/knowledge/hematology")
-val offlineKnowledgeTarget = projectDir.resolve("src/main/assets/knowledge/hematology")
-
-tasks.register<Copy>("syncOfflineKnowledge") {
-    from(offlineKnowledgeSource)
-    into(offlineKnowledgeTarget)
-    include("**/*.json")
-}
-
-tasks.named("preBuild").configure {
-    dependsOn("syncOfflineKnowledge")
-}
-
-tasks.matching { it.name == "mergeDebugAssets" }.configureEach {
-    dependsOn("syncOfflineKnowledge")
 }
 
 dependencies {
