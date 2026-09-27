@@ -165,6 +165,14 @@ def _score(query_tokens: list[str], record: Record) -> tuple[float, dict[str, An
                 }
                 if topic_phrase in query_windows:
                     score += 500.0
+                elif len(anchor_tokens) >= 2:
+                    prefix = tuple(anchor_tokens[:2])
+                    prefix_windows = {
+                        tuple(query_tokens[i:i + 2])
+                        for i in range(len(query_tokens) - 1)
+                    }
+                    if prefix in prefix_windows and (len(prefix[0]) >= 6 or len(prefix[1]) >= 8):
+                        score += 400.0
         if len(anchor_tokens) < 2:
             continue
         for size in (4, 3, 2):
